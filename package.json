@@ -1,0 +1,13 @@
+{
+  "name": "chomchom",
+  "version": "1.0.0",
+  "description": "HTML CSS project with Tailwind CSS",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build-prod": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+} 

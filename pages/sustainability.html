@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du lịch bền vững - Chôm Chôm Travel</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-yellow-500">Chôm Chôm Travel</div>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="../index.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trang chủ</a></li>
+                    <li><a href="experiences.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trải nghiệm</a></li>
+                    <li><a href="mini-escapes.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Du lịch ngắn ngày</a></li>
+                    <li><a href="about-us.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Về chúng tôi</a></li>
+                    <li><a href="blog-listing.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Blog</a></li>
+                    <li><a href="inquire-now.html" class="btn-primary">Liên hệ</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <ul class="space-y-4">
+                    <li><a href="../index.html" class="block text-gray-700 hover:text-yellow-500">Trang chủ</a></li>
+                    <li><a href="experiences.html" class="block text-gray-700 hover:text-yellow-500">Trải nghiệm</a></li>
+                    <li><a href="mini-escapes.html" class="block text-gray-700 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
+                    <li><a href="about-us.html" class="block text-gray-700 hover:text-yellow-500">Về chúng tôi</a></li>
+                    <li><a href="blog-listing.html" class="block text-gray-700 hover:text-yellow-500">Blog</a></li>
+                    <li><a href="inquire-now.html" class="btn-primary inline-block">Liên hệ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-green-600 to-teal-600 text-white pt-24 pb-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Du lịch bền vững</h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto">
+                Chúng tôi cam kết bảo vệ môi trường và hỗ trợ cộng đồng địa phương
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Commitment -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Cam kết của chúng tôi</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Chôm Chôm Travel cam kết thực hiện du lịch bền vững để bảo vệ môi trường và phát triển cộng đồng
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-leaf text-green-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Bảo vệ môi trường</h3>
+                    <p class="text-gray-600">
+                        Giảm thiểu tác động đến môi trường, sử dụng năng lượng tái tạo và thực hiện các hoạt động bảo tồn thiên nhiên
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Hỗ trợ cộng đồng</h3>
+                    <p class="text-gray-600">
+                        Tạo việc làm cho người dân địa phương, hỗ trợ phát triển kinh tế và bảo tồn văn hóa truyền thống
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-yellow-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Trải nghiệm có ý nghĩa</h3>
+                    <p class="text-gray-600">
+                        Mang đến những trải nghiệm du lịch có ý nghĩa, tôn trọng văn hóa địa phương và tạo giá trị bền vững
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Environmental Initiatives -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Sáng kiến môi trường</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Những hành động cụ thể chúng tôi đang thực hiện để bảo vệ môi trường
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-recycle text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Giảm thiểu rác thải</h3>
+                            <p class="text-gray-600">
+                                Sử dụng các sản phẩm có thể tái chế, giảm thiểu sử dụng nhựa một lần và thực hiện phân loại rác thải trong tất cả các tour.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-solar-panel text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Năng lượng tái tạo</h3>
+                            <p class="text-gray-600">
+                                Sử dụng năng lượng mặt trời tại các homestay và khuyến khích đối tác sử dụng năng lượng sạch.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-tree text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Trồng cây xanh</h3>
+                            <p class="text-gray-600">
+                                Thực hiện chương trình trồng cây xanh với mục tiêu trồng 1 cây cho mỗi khách hàng tham gia tour.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-car text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Vận chuyển xanh</h3>
+                            <p class="text-gray-600">
+                                Ưu tiên sử dụng phương tiện công cộng, xe điện và khuyến khích đi bộ, đạp xe trong các tour ngắn.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Support -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Hỗ trợ cộng đồng</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Chúng tôi cam kết đóng góp tích cực cho sự phát triển của cộng đồng địa phương
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Hợp tác địa phương</h3>
+                    <p class="text-gray-600">
+                        Làm việc trực tiếp với người dân địa phương, homestay và các doanh nghiệp nhỏ để đảm bảo lợi ích được chia sẻ công bằng
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-graduation-cap text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Đào tạo kỹ năng</h3>
+                    <p class="text-gray-600">
+                        Cung cấp các khóa đào tạo về du lịch, ngoại ngữ và kỹ năng dịch vụ cho người dân địa phương
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-store text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Thúc đẩy thương mại</h3>
+                    <p class="text-gray-600">
+                        Hỗ trợ bán sản phẩm địa phương, thủ công mỹ nghệ và ẩm thực truyền thống cho khách du lịch
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainable Tours -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tour du lịch bền vững</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Khám phá những hành trình được thiết kế đặc biệt để tôn trọng môi trường và cộng đồng
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tour 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-600 relative">
+                        <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Bền vững
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <i class="fas fa-leaf text-white text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Sapa Eco Trek</h3>
+                        <p class="text-gray-600 mb-4">Khám phá Sapa với các hoạt động bảo vệ môi trường và hỗ trợ cộng đồng</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-yellow-500 font-semibold">2,800,000 VNĐ</span>
+                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-600 relative">
+                        <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Bền vững
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <i class="fas fa-water text-white text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Vịnh Hạ Long Xanh</h3>
+                        <p class="text-gray-600 mb-4">Du thuyền thân thiện môi trường và hoạt động dọn rác biển</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-yellow-500 font-semibold">2,200,000 VNĐ</span>
+                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-600 relative">
+                        <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Bền vững
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <i class="fas fa-seedling text-white text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Mai Châu Organic</h3>
+                        <p class="text-gray-600 mb-4">Trải nghiệm nông nghiệp hữu cơ và ẩm thực địa phương</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-yellow-500 font-semibold">1,500,000 VNĐ</span>
+                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Chứng nhận bền vững</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Những chứng nhận và giải thưởng về du lịch bền vững của chúng tôi
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-green-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Green Travel</h3>
+                    <p class="text-gray-600 text-sm">Chứng nhận du lịch xanh quốc tế</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Eco Tourism</h3>
+                    <p class="text-gray-600 text-sm">Chứng nhận du lịch sinh thái</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-star text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Community Award</h3>
+                    <p class="text-gray-600 text-sm">Giải thưởng hỗ trợ cộng đồng</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-yellow-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Carbon Neutral</h3>
+                    <p class="text-gray-600 text-sm">Chứng nhận trung hòa carbon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Travel Sustainably -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Làm thế nào để du lịch bền vững?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Những lời khuyên hữu ích cho du khách muốn du lịch có trách nhiệm
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                        <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                        Trước chuyến đi
+                    </h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Chọn tour du lịch bền vững và có chứng nhận</li>
+                        <li>• Tìm hiểu về văn hóa và phong tục địa phương</li>
+                        <li>• Mang theo các sản phẩm thân thiện môi trường</li>
+                        <li>• Đặt khách sạn có chính sách bền vững</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                        <i class="fas fa-map-marked-alt text-green-500 mr-2"></i>
+                        Trong chuyến đi
+                    </h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Tôn trọng văn hóa và con người địa phương</li>
+                        <li>• Giảm thiểu sử dụng nhựa một lần</li>
+                        <li>• Mua sắm sản phẩm địa phương</li>
+                        <li>• Tiết kiệm năng lượng và nước</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                        <i class="fas fa-home text-blue-500 mr-2"></i>
+                        Sau chuyến đi
+                    </h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Chia sẻ trải nghiệm tích cực</li>
+                        <li>• Đánh giá và phản hồi về dịch vụ</li>
+                        <li>• Hỗ trợ các dự án bảo tồn</li>
+                        <li>• Lên kế hoạch cho chuyến đi bền vững tiếp theo</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                        <i class="fas fa-heart text-red-500 mr-2"></i>
+                        Đóng góp tích cực
+                    </h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Tham gia các hoạt động tình nguyện</li>
+                        <li>• Hỗ trợ các dự án giáo dục địa phương</li>
+                        <li>• Mua sắm từ các doanh nghiệp nhỏ</li>
+                        <li>• Chia sẻ kiến thức về du lịch bền vững</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-green-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4">Sẵn sàng du lịch bền vững?</h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                Hãy cùng chúng tôi tạo ra những tác động tích cực cho môi trường và cộng đồng
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="experiences.html" class="bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors text-lg font-semibold">
+                    <i class="fas fa-leaf mr-2"></i>
+                    Xem tour bền vững
+                </a>
+                <a href="inquire-now.html" class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-green-600 transition-colors text-lg font-semibold">
+                    <i class="fas fa-paper-plane mr-2"></i>
+                    Liên hệ tư vấn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-yellow-500 mb-4">Chôm Chôm Travel</h3>
+                    <p class="text-gray-300 mb-4">
+                        Khám phá Việt Nam với những trải nghiệm độc đáo và đáng nhớ
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Dịch vụ</h4>
+                    <ul class="space-y-2">
+                        <li><a href="experiences.html" class="text-gray-300 hover:text-yellow-500">Trải nghiệm</a></li>
+                        <li><a href="mini-escapes.html" class="text-gray-300 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
+                        <li><a href="how-to-book.html" class="text-gray-300 hover:text-yellow-500">Hướng dẫn đặt tour</a></li>
+                        <li><a href="sustainability.html" class="text-gray-300 hover:text-yellow-500">Du lịch bền vững</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Thông tin</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about-us.html" class="text-gray-300 hover:text-yellow-500">Về chúng tôi</a></li>
+                        <li><a href="blog-listing.html" class="text-gray-300 hover:text-yellow-500">Blog</a></li>
+                        <li><a href="faqs.html" class="text-gray-300 hover:text-yellow-500">FAQ</a></li>
+                        <li><a href="inquire-now.html" class="text-gray-300 hover:text-yellow-500">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liên hệ</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-phone mr-2"></i> +84 123 456 789</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@chomchomtravel.com</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Hà Nội, Việt Nam</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2024 Chôm Chôm Travel. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html> 

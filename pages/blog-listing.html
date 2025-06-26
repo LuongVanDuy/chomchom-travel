@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Chôm Chôm Travel</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-yellow-500">Chôm Chôm Travel</div>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="../index.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trang chủ</a></li>
+                    <li><a href="experiences.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trải nghiệm</a></li>
+                    <li><a href="mini-escapes.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Du lịch ngắn ngày</a></li>
+                    <li><a href="about-us.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Về chúng tôi</a></li>
+                    <li><a href="blog-listing.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Blog</a></li>
+                    <li><a href="inquire-now.html" class="btn-primary">Liên hệ</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <ul class="space-y-4">
+                    <li><a href="../index.html" class="block text-gray-700 hover:text-yellow-500">Trang chủ</a></li>
+                    <li><a href="experiences.html" class="block text-gray-700 hover:text-yellow-500">Trải nghiệm</a></li>
+                    <li><a href="mini-escapes.html" class="block text-gray-700 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
+                    <li><a href="about-us.html" class="block text-gray-700 hover:text-yellow-500">Về chúng tôi</a></li>
+                    <li><a href="blog-listing.html" class="block text-gray-700 hover:text-yellow-500">Blog</a></li>
+                    <li><a href="inquire-now.html" class="btn-primary inline-block">Liên hệ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-teal-600 to-blue-600 text-white pt-24 pb-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Blog du lịch</h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto">
+                Khám phá những câu chuyện, kinh nghiệm và bí quyết du lịch Việt Nam
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-white border-b">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button class="px-6 py-2 bg-yellow-500 text-white rounded-full font-semibold">Tất cả</button>
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">Kinh nghiệm</button>
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">Ẩm thực</button>
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">Văn hóa</button>
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">Thiên nhiên</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Blog Post -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="grid md:grid-cols-2">
+                    <div class="h-64 md:h-auto bg-gradient-to-br from-yellow-400 to-orange-600 relative">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <i class="fas fa-camera text-white text-8xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Nổi bật</span>
+                            <span class="text-gray-500 text-sm">15/01/2024</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                            <a href="single-blog.html" class="hover:text-yellow-500 transition-colors">
+                                10 địa điểm không thể bỏ qua khi đến Sapa
+                            </a>
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            Khám phá những điểm đến tuyệt đẹp của Sapa, từ những đỉnh núi hùng vĩ đến những bản làng dân tộc thiểu số đầy màu sắc. Hãy cùng chúng tôi khám phá 10 địa điểm không thể bỏ qua khi đến với vùng đất mây sương này.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://via.placeholder.com/40x40" alt="Author" class="w-10 h-10 rounded-full">
+                                <span class="text-gray-700 font-semibold">Nguyễn Văn A</span>
+                            </div>
+                            <a href="single-blog.html" class="text-yellow-500 hover:text-yellow-600 font-semibold">
+                                Đọc thêm <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-600 relative">
+                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Ẩm thực
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <i class="fas fa-utensils text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <span class="text-gray-500 text-sm">12/01/2024</span>
+                            <span class="text-gray-500 text-sm">5 phút đọc</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            <a href="single-blog.html" class="hover:text-yellow-500 transition-colors">
+                                Khám phá ẩm thực Hội An: Từ cao lầu đến bánh mì Phượng
+                            </a>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Hội An không chỉ nổi tiếng với phố cổ mà còn là thiên đường ẩm thực với những món ăn độc đáo...
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://via.placeholder.com/32x32" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-gray-700 text-sm">Trần Thị B</span>
+                            </div>
+                            <a href="single-blog.html" class="text-yellow-500 hover:text-yellow-600 text-sm font-semibold">
+                                Đọc thêm →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-600 relative">
+                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Văn hóa
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <i class="fas fa-dragon text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <span class="text-gray-500 text-sm">10/01/2024</span>
+                            <span class="text-gray-500 text-sm">7 phút đọc</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            <a href="single-blog.html" class="hover:text-yellow-500 transition-colors">
+                                Lễ hội đền Hùng: Nét đẹp văn hóa dân tộc Việt Nam
+                            </a>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Lễ hội đền Hùng là một trong những lễ hội quan trọng nhất của dân tộc Việt Nam, thể hiện...
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://via.placeholder.com/32x32" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-gray-700 text-sm">Lê Văn C</span>
+                            </div>
+                            <a href="single-blog.html" class="text-yellow-500 hover:text-yellow-600 text-sm font-semibold">
+                                Đọc thêm →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-600 relative">
+                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Thiên nhiên
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <i class="fas fa-mountain text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <span class="text-gray-500 text-sm">08/01/2024</span>
+                            <span class="text-gray-500 text-sm">6 phút đọc</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            <a href="single-blog.html" class="hover:text-yellow-500 transition-colors">
+                                Trekking Fansipan: Hành trình chinh phục nóc nhà Đông Dương
+                            </a>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Fansipan với độ cao 3.143m là đỉnh núi cao nhất Đông Dương. Hành trình trekking lên đỉnh...
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://via.placeholder.com/32x32" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-gray-700 text-sm">Phạm Thị D</span>
+                            </div>
+                            <a href="single-blog.html" class="text-yellow-500 hover:text-yellow-600 text-sm font-semibold">
+                                Đọc thêm →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-600 relative">
+                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Kinh nghiệm
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <span class="text-gray-500 text-sm">05/01/2024</span>
+                            <span class="text-gray-500 text-sm">8 phút đọc</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            <a href="single-blog.html" class="hover:text-yellow-500 transition-colors">
+                                Bí quyết du lịch tiết kiệm tại Việt Nam cho sinh viên
+                            </a>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Du lịch không cần phải tốn kém! Chia sẻ những bí quyết giúp sinh viên có thể khám phá...
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://via.placeholder.com/32x32" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-gray-700 text-sm">Nguyễn Văn A</span>
+                            </div>
+                            <a href="single-blog.html" class="text-yellow-500 hover:text-yellow-600 text-sm font-semibold">
+                                Đọc thêm →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-teal-400 to-green-600 relative">
+                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Ẩm thực
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <i class="fas fa-coffee text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <span class="text-gray-500 text-sm">03/01/2024</span>
+                            <span class="text-gray-500 text-sm">4 phút đọc</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            <a href="single-blog.html" class="hover:text-yellow-500 transition-colors">
+                                Cà phê Việt Nam: Từ phin truyền thống đến specialty coffee
+                            </a>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Việt Nam là một trong những quốc gia sản xuất cà phê lớn nhất thế giới. Khám phá văn hóa...
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://via.placeholder.com/32x32" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-gray-700 text-sm">Trần Thị B</span>
+                            </div>
+                            <a href="single-blog.html" class="text-yellow-500 hover:text-yellow-600 text-sm font-semibold">
+                                Đọc thêm →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-indigo-400 to-purple-600 relative">
+                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Văn hóa
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <i class="fas fa-music text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <span class="text-gray-500 text-sm">01/01/2024</span>
+                            <span class="text-gray-500 text-sm">9 phút đọc</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            <a href="single-blog.html" class="hover:text-yellow-500 transition-colors">
+                                Âm nhạc dân gian Việt Nam: Từ quan họ đến chèo
+                            </a>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Âm nhạc dân gian Việt Nam là một kho tàng văn hóa quý báu, thể hiện tâm hồn và tình cảm...
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://via.placeholder.com/32x32" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-gray-700 text-sm">Lê Văn C</span>
+                            </div>
+                            <a href="single-blog.html" class="text-yellow-500 hover:text-yellow-600 text-sm font-semibold">
+                                Đọc thêm →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12">
+                <nav class="flex items-center space-x-2">
+                    <a href="#" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-yellow-500 hover:text-white transition-colors">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" class="px-4 py-2 bg-yellow-500 text-white rounded-lg">1</a>
+                    <a href="#" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-yellow-500 hover:text-white transition-colors">2</a>
+                    <a href="#" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-yellow-500 hover:text-white transition-colors">3</a>
+                    <span class="px-4 py-2 text-gray-500">...</span>
+                    <a href="#" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-yellow-500 hover:text-white transition-colors">10</a>
+                    <a href="#" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-yellow-500 hover:text-white transition-colors">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-yellow-500 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Đăng ký nhận tin tức</h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                Nhận những bài viết mới nhất về du lịch Việt Nam và ưu đãi đặc biệt
+            </p>
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Nhập email của bạn" 
+                       class="flex-1 px-4 py-3 rounded-l-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                <button type="submit" class="bg-white text-yellow-500 px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-yellow-500 mb-4">Chôm Chôm Travel</h3>
+                    <p class="text-gray-300 mb-4">
+                        Khám phá Việt Nam với những trải nghiệm độc đáo và đáng nhớ
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Dịch vụ</h4>
+                    <ul class="space-y-2">
+                        <li><a href="experiences.html" class="text-gray-300 hover:text-yellow-500">Trải nghiệm</a></li>
+                        <li><a href="mini-escapes.html" class="text-gray-300 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
+                        <li><a href="how-to-book.html" class="text-gray-300 hover:text-yellow-500">Hướng dẫn đặt tour</a></li>
+                        <li><a href="sustainability.html" class="text-gray-300 hover:text-yellow-500">Du lịch bền vững</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Thông tin</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about-us.html" class="text-gray-300 hover:text-yellow-500">Về chúng tôi</a></li>
+                        <li><a href="blog-listing.html" class="text-gray-300 hover:text-yellow-500">Blog</a></li>
+                        <li><a href="faqs.html" class="text-gray-300 hover:text-yellow-500">FAQ</a></li>
+                        <li><a href="inquire-now.html" class="text-gray-300 hover:text-yellow-500">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liên hệ</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-phone mr-2"></i> +84 123 456 789</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@chomchomtravel.com</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Hà Nội, Việt Nam</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2024 Chôm Chôm Travel. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html> 
