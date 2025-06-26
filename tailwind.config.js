@@ -10,11 +10,14 @@ module.exports = {
     extend: {
       colors: {
         primary: "#41B4B4",
-        secondary: "#EAF6F3",
+        secondary: "#124751",
+        dark_primary: "#123E51",
         accent: "#F9B233",
         orange: "#F8C625",
+        orange_dark: "#E96024",
         dark: "#0D2B36",
-        light: "#F8FAFC"
+        light: "#F8FAFC",
+        body: "#FFFCF0"
       },
       fontFamily: {
         heading: ['Montserrat', 'sans-serif'],
