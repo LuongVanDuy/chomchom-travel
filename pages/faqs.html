@@ -1,310 +1,533 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQ - Chôm Chôm Travel</title>
-    <link href="../dist/output.css" rel="stylesheet">
-    <link href="../assets/css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body class="font-sans">
-    <!-- Header -->
-    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-yellow-500">Chôm Chôm Travel</div>
-                
-                <!-- Desktop Menu -->
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="../index.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trang chủ</a></li>
-                    <li><a href="experiences.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trải nghiệm</a></li>
-                    <li><a href="mini-escapes.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Du lịch ngắn ngày</a></li>
-                    <li><a href="about-us.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Về chúng tôi</a></li>
-                    <li><a href="blog-listing.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Blog</a></li>
-                    <li><a href="inquire-now.html" class="btn-primary">Liên hệ</a></li>
-                </ul>
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .tab-swiper .swiper-wrapper {
+        padding: 0 0;
+      }
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        display: none !important;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px;
+        min-height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        position: static;
+        top: auto;
+        transform: none;
+        padding: 0;
+      }
+      .swiper-button-prev img,
+      .swiper-button-next img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+      .flex-1.overflow-hidden {
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+      @media (max-width: 1024px) {
+        .flex-1.overflow-hidden {
+          margin-left: 4px;
+          margin-right: 4px;
+        }
+      }
+      @media (max-width: 640px) {
+        .swiper-button-prev,
+        .swiper-button-next {
+          width: 28px !important;
+          height: 28px !important;
+        }
+        .swiper-button-prev img,
+        .swiper-button-next img {
+          width: 16px;
+          height: 16px;
+        }
+        .flex-1.overflow-hidden {
+          margin-left: 2px;
+          margin-right: 2px;
+        }
+        .swiper-slide {
+          margin-right: 5px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="bg-[#104751] h-[350px] sm:h-[500px] md:h-[719px] flex items-center"
+    >
+      <div class="w-full relative">
+        <img
+          src="../assets/images/faqs/Vietnam.svg"
+          alt="Vietnam landscape"
+          class="w-full h-[38vw] min-h-[120px] max-h-[220px] sm:max-h-[320px] md:max-h-[430px] object-contain sm:object-cover mx-auto"
+        />
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
-                <ul class="space-y-4">
-                    <li><a href="../index.html" class="block text-gray-700 hover:text-yellow-500">Trang chủ</a></li>
-                    <li><a href="experiences.html" class="block text-gray-700 hover:text-yellow-500">Trải nghiệm</a></li>
-                    <li><a href="mini-escapes.html" class="block text-gray-700 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
-                    <li><a href="about-us.html" class="block text-gray-700 hover:text-yellow-500">Về chúng tôi</a></li>
-                    <li><a href="blog-listing.html" class="block text-gray-700 hover:text-yellow-500">Blog</a></li>
-                    <li><a href="inquire-now.html" class="btn-primary inline-block">Liên hệ</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Page Header -->
-    <section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white pt-24 pb-16">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Câu hỏi thường gặp</h1>
-            <p class="text-xl opacity-90 max-w-2xl mx-auto">
-                Tìm hiểu thêm về dịch vụ và chính sách của Chôm Chôm Travel
-            </p>
+        <img
+          src="../assets/images/faqs/Vietnam3.svg"
+          alt="Vietnam 2"
+          class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 rotate-0 w-[98vw] max-w-[360px] sm:max-w-[500px] md:max-w-[745px] h-auto max-h-[220px] sm:max-h-[320px] md:max-h-[455px] object-cover"
+        />
+        <div
+          class="absolute z-10 left-1/2 bottom-0 transform -translate-x-1/2 flex flex-col items-center justify-center w-[92vw] max-w-[320px] sm:max-w-[420px] md:max-w-[600px] md:pb-8 sm:pb-2"
+        >
+          <h1
+            class="text-xl sm:text-2xl md:text-4xl font-bold text-white mb-2 sm:mb-4"
+          >
+            <span class="text-[#FFD600]">F</span>AQs
+          </h1>
+          <p
+            class="text-white text-center text-xs sm:text-sm md:text-lg md:w-[380px] w-[180px]"
+          >
+            We know that planning your next adventure raises a few questions. We
+            are here to help. Get the details you need for booking, travel tips,
+            and everything in between.
+          </p>
         </div>
+      </div>
+    </div>
+
+    <section class="pb-[120px] bg-[#FFFCF1]">
+      <!-- Swiper Tabs -->
+      <div class="w-full py-6">
+        <div
+          class="max-w-[1012px] mx-auto w-full px-2 flex items-center relative min-h-[56px]"
+        >
+          <!-- Swiper Prev Button -->
+          <div
+            class="swiper-button-prev !text-[#F15A29] relative top-0 z-10 flex items-center justify-center self-center w-10 h-10"
+          >
+            <img
+              src="../assets/images/faqs/prev.svg"
+              alt="Prev"
+              class="w-6 h-6"
+            />
+          </div>
+          <div class="flex-1 overflow-hidden px-6 md:px-18 flex items-center">
+            <div class="swiper tab-swiper w-full mt-3">
+              <div class="swiper-wrapper flex items-center">
+                <div
+                  class="swiper-slide !w-auto px-2 cursor-pointer tab-item active"
+                >
+                  <div class="inline-flex flex-col items-center w-max">
+                    <span class="tab-label font-bold text-[#225F63]"
+                      >General Information</span
+                    >
+                    <div class="px-2 w-full">
+                      <img
+                        src="../assets/images/faqs/active-tab.svg"
+                        alt="active"
+                        class="tab-active-svg block mx-auto mt-1 w-[180px] h-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide !w-auto px-2 cursor-pointer tab-item">
+                  <div class="inline-flex flex-col items-center w-max">
+                    <span class="tab-label text-[#2C8B8B]"
+                      >Booking & Payments</span
+                    >
+                    <div class="px-2 w-full">
+                      <img
+                        src="../assets/images/faqs/active-tab.svg"
+                        alt="active"
+                        class="tab-active-svg invisible mx-auto mt-1 w-[180px] h-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide !w-auto px-2 cursor-pointer tab-item">
+                  <div class="inline-flex flex-col items-center w-max">
+                    <span class="tab-label text-[#2C8B8B]"
+                      >Your Adventure with us</span
+                    >
+                    <div class="px-2 w-full">
+                      <img
+                        src="../assets/images/faqs/active-tab.svg"
+                        alt="active"
+                        class="tab-active-svg invisible mx-auto mt-1 w-[180px] h-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide !w-auto px-2 cursor-pointer tab-item">
+                  <div class="inline-flex flex-col items-center w-max">
+                    <span class="tab-label text-[#2C8B8B]"
+                      >Travel & Itinerary Planning</span
+                    >
+                    <div class="px-2 w-full">
+                      <img
+                        src="../assets/images/faqs/active-tab.svg"
+                        alt="active"
+                        class="tab-active-svg invisible mx-auto mt-1 w-[180px] h-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide !w-auto px-2 cursor-pointer tab-item">
+                  <div class="inline-flex flex-col items-center w-max">
+                    <span class="tab-label text-[#2C8B8B]"
+                      >Travel Tips In Vietnam</span
+                    >
+                    <div class="px-2 w-full">
+                      <img
+                        src="../assets/images/faqs/active-tab.svg"
+                        alt="active"
+                        class="tab-active-svg invisible mx-auto mt-1 w-[180px] h-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper Next Button -->
+          <div
+            class="swiper-button-next !text-[#F15A29] relative z-10 flex items-center justify-center self-center w-10 h-10"
+          >
+            <img
+              src="../assets/images/faqs/next.svg"
+              alt="Next"
+              class="w-6 h-6"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="w-full bg-[#FFFCF1]">
+        <div class="max-w-[1012px] mx-auto w-full px-2 pt-10">
+          <div class="tab-content block" data-index="0">
+            <div
+              class="py-6 text-[#225F63] flex flex-col items-center justify-center"
+            >
+              <div class="relative w-full flex flex-col items-center">
+                <h2
+                  class="text-3xl md:text-4xl font-bold text-[#F15A29] text-center mb-2"
+                >
+                  General Information
+                </h2>
+                <img
+                  src="../assets/images/faqs/heading-vector.svg"
+                  alt="vector"
+                  class="absolute -top-[65px] left-[70%] w-32 md:w-40 select-none pointer-events-none"
+                />
+              </div>
+              <p
+                class="mt-2 text-base md:text-lg text-center text-[#225F63] w-[100%]"
+              >
+                Learn more about traveling with Chôm Chôm and the details of how
+                we create personalized, unforgettable adventures.
+              </p>
+              <!-- Accordion FAQ -->
+              <div class="w-full mt-10">
+                <div
+                  class="faq-item border-b border-[#41B4B4] py-4 cursor-pointer"
+                >
+                  <div class="flex justify-between items-center">
+                    <span class="font-semibold text-[15px] md:text-[18px]"
+                      >What is the best time to visit Vietnam?</span
+                    >
+                    <img
+                      src="../assets/images/faqs/down.svg"
+                      class="faq-icon w-[14px] h-[7px] transform transition-transform duration-200"
+                      alt="clock"
+                    />
+                  </div>
+                  <div
+                    class="faq-content text-[#225F63] mt-5 text-base py-2 hidden"
+                  >
+                    Vietnam offers something year-round, with the best times to
+                    visit typically being between October and April.
+                  </div>
+                </div>
+                <div
+                  class="faq-item border-b border-[#41B4B4] py-4 cursor-pointer"
+                >
+                  <div class="flex justify-between items-center">
+                    <span class="font-semibold text-[15px] md:text-[18px]"
+                      >How is Chôm Chôm different from other travel
+                      agencies?</span
+                    >
+                    <img
+                      src="../assets/images/faqs/down.svg"
+                      class="faq-icon w-[14px] h-[7px] transform transition-transform duration-200"
+                      alt="clock"
+                    />
+                  </div>
+                  <div
+                    class="faq-content text-[#225F63] mt-2 text-base py-2 hidden"
+                  >
+                    We focus on personalized, authentic experiences tailored to
+                    your interests, unlike standard package tours.
+                  </div>
+                </div>
+              </div>
+              <!-- End Accordion FAQ -->
+            </div>
+          </div>
+          <div class="tab-content hidden" data-index="1">
+            <div class="p-6 text-[#225F63]">
+              Nội dung cho Booking & Payments
+            </div>
+          </div>
+          <div class="tab-content hidden" data-index="2">
+            <div class="p-6 text-[#225F63]">
+              Nội dung cho Your Adventure with us
+            </div>
+          </div>
+          <div class="tab-content hidden" data-index="3">
+            <div class="p-6 text-[#225F63]">
+              Nội dung cho Travel & Itinerary Planning
+            </div>
+          </div>
+          <div class="tab-content hidden" data-index="4">
+            <div class="p-6 text-[#225F63]">
+              Nội dung cho Travel Tips In Vietnam
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- FAQ Categories -->
-    <section class="py-8 bg-white border-b">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap gap-4 justify-center">
-                <button class="px-6 py-2 bg-yellow-500 text-white rounded-full font-semibold">Tất cả</button>
-                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">Đặt tour</button>
-                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">Thanh toán</button>
-                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">Hủy tour</button>
-                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">An toàn</button>
-            </div>
+    <!-- section to us -->
+    <section class="relative w-full max-h-[780px] bg-[#FFFCF1]">
+      <div
+        class="absolute left-1/2 -translate-x-1/2 md:top-[-10%] top-[-60%] w-full"
+      >
+        <img
+          src="../assets/images/faqs/os3.svg"
+          alt="background-ous"
+          class="md:w-auto md:h-auto w-[160px] h-[60px] block z-0 mx-auto"
+        />
+
+        <div class="flex flex-col md:gap-[20px] gap-[7px]">
+          <h2
+            class="text-[20px] md:text-[32px] w-[100%] font-bold text-[#104751] text-center md:my-3 my-1"
+          >
+            More Question? Reach out to us
+          </h2>
+          <div class="relative">
+            <img
+              src="../assets/images/faqs/button-yellow.svg"
+              alt="button yellow"
+              class="md:w-[287px] md:h-[35px] min-w-[120px] h-[25px] mx-auto object-contain"
+            />
+            <span
+              class="absolute inset-0 flex items-center justify-center md:text-[18px] text-[12px] text-[#104751] select-text"
+              >Info@chomchomtravel.com</span
+            >
+          </div>
+          <div class="relative">
+            <img
+              src="../assets/images/faqs/button-red.svg"
+              alt="button red"
+              class="md:w-[190px] md:h-[35px] min-w-[100px] h-[25px] mx-auto object-contain"
+            />
+            <span
+              class="absolute inset-0 flex items-center justify-center md:text-[18px] text-[12px] text-white select-text"
+              >+84 833 886 750</span
+            >
+          </div>
         </div>
+      </div>
+      <img
+        src="../assets/images/faqs/bg-os.png"
+        alt="background-ous"
+        class="w-full h-auto block z-0"
+      />
+      <img
+        src="../assets/images/faqs/bg-os1.png"
+        alt="break-os"
+        class="w-full h-auto absolute left-0 bottom-[-10px] z-10"
+      />
     </section>
 
-    <!-- FAQ Content -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto space-y-6">
-                <!-- FAQ Item 1 -->
-                <div class="faq-item bg-white rounded-lg shadow-md">
-                    <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-800">Làm thế nào để đặt tour với Chôm Chôm Travel?</h3>
-                        <i class="fas fa-chevron-down text-yellow-500 transition-transform"></i>
-                    </div>
-                    <div class="faq-answer overflow-hidden" style="max-height: 0px;">
-                        <div class="px-6 pb-6 text-gray-600">
-                            <p>Bạn có thể đặt tour bằng nhiều cách:</p>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Gọi điện trực tiếp: +84 123 456 789</li>
-                                <li>Gửi yêu cầu qua form liên hệ trên website</li>
-                                <li>Nhắn tin qua Facebook, Instagram hoặc Zalo</li>
-                                <li>Email: info@chomchomtravel.com</li>
-                            </ul>
-                            <p class="mt-2">Chúng tôi sẽ phản hồi trong vòng 24 giờ và tư vấn chi tiết về tour phù hợp.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- section own -->
+    <section
+      class="min-h-[350px] bg-[#104751] relative pt-[30px] md:px-[10%] px-[10px]"
+    >
+      <div class="flex flex-col gap-5">
+        <div class="flex flex-col md:flex-row gap-8 order-2 md:order-1">
+          <p class="text-[#fff] text-center md:text-start px-[20px]">
+            We believe in adventure because it transcends scale, from grand
+            treks to simple discoveries. It fuels the soul with the thrill of
+            the unknown, unlocking courage and curiosity.
+          </p>
 
-                <!-- FAQ Item 2 -->
-                <div class="faq-item bg-white rounded-lg shadow-md">
-                    <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-800">Tôi cần đặt tour trước bao lâu?</h3>
-                        <i class="fas fa-chevron-down text-yellow-500 transition-transform"></i>
-                    </div>
-                    <div class="faq-answer overflow-hidden" style="max-height: 0px;">
-                        <div class="px-6 pb-6 text-gray-600">
-                            <p>Thời gian đặt tour phụ thuộc vào loại tour và mùa du lịch:</p>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Tour thường: Đặt trước ít nhất 7 ngày</li>
-                                <li>Mùa cao điểm (Tết, hè): Đặt trước 1-2 tháng</li>
-                                <li>Tour riêng/custom: Đặt trước 2-4 tuần</li>
-                                <li>Tour gấp: Liên hệ trực tiếp để kiểm tra khả năng</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 3 -->
-                <div class="faq-item bg-white rounded-lg shadow-md">
-                    <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-800">Chính sách thanh toán như thế nào?</h3>
-                        <i class="fas fa-chevron-down text-yellow-500 transition-transform"></i>
-                    </div>
-                    <div class="faq-answer overflow-hidden" style="max-height: 0px;">
-                        <div class="px-6 pb-6 text-gray-600">
-                            <p>Chúng tôi áp dụng chính sách thanh toán linh hoạt:</p>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Đặt cọc 30% giá trị tour để giữ chỗ</li>
-                                <li>Thanh toán đầy đủ trước ngày khởi hành 7 ngày</li>
-                                <li>Chấp nhận: Chuyển khoản ngân hàng, tiền mặt, thẻ tín dụng</li>
-                                <li>Hóa đơn VAT được cung cấp đầy đủ</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 4 -->
-                <div class="faq-item bg-white rounded-lg shadow-md">
-                    <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-800">Chính sách hủy tour ra sao?</h3>
-                        <i class="fas fa-chevron-down text-yellow-500 transition-transform"></i>
-                    </div>
-                    <div class="faq-answer overflow-hidden" style="max-height: 0px;">
-                        <div class="px-6 pb-6 text-gray-600">
-                            <p>Chính sách hoàn tiền khi hủy tour:</p>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Hủy trước 7 ngày: Hoàn 100% tiền đã thanh toán</li>
-                                <li>Hủy trước 3-7 ngày: Hoàn 50% tiền đã thanh toán</li>
-                                <li>Hủy dưới 3 ngày: Không hoàn tiền</li>
-                                <li>Trường hợp bất khả kháng: Xem xét hoàn tiền theo từng trường hợp cụ thể</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 5 -->
-                <div class="faq-item bg-white rounded-lg shadow-md">
-                    <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-800">Tour có bao gồm bảo hiểm không?</h3>
-                        <i class="fas fa-chevron-down text-yellow-500 transition-transform"></i>
-                    </div>
-                    <div class="faq-answer overflow-hidden" style="max-height: 0px;">
-                        <div class="px-6 pb-6 text-gray-600">
-                            <p>Có, tất cả các tour của chúng tôi đều bao gồm:</p>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Bảo hiểm du lịch với mức bồi thường lên đến 100 triệu VNĐ</li>
-                                <li>Bảo hiểm y tế khẩn cấp</li>
-                                <li>Bảo hiểm trách nhiệm dân sự</li>
-                                <li>Bảo hiểm hành lý và tài sản</li>
-                            </ul>
-                            <p class="mt-2">Bạn có thể mua thêm bảo hiểm bổ sung nếu cần.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 6 -->
-                <div class="faq-item bg-white rounded-lg shadow-md">
-                    <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-800">Hướng dẫn viên có nói tiếng Anh không?</h3>
-                        <i class="fas fa-chevron-down text-yellow-500 transition-transform"></i>
-                    </div>
-                    <div class="faq-answer overflow-hidden" style="max-height: 0px;">
-                        <div class="px-6 pb-6 text-gray-600">
-                            <p>Chúng tôi có đội ngũ hướng dẫn viên đa ngôn ngữ:</p>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Tiếng Việt (mặc định)</li>
-                                <li>Tiếng Anh (có sẵn cho hầu hết các tour)</li>
-                                <li>Tiếng Pháp, Đức, Nhật (theo yêu cầu)</li>
-                                <li>Tất cả hướng dẫn viên đều có chứng chỉ hành nghề</li>
-                            </ul>
-                            <p class="mt-2">Vui lòng thông báo ngôn ngữ mong muốn khi đặt tour.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 7 -->
-                <div class="faq-item bg-white rounded-lg shadow-md">
-                    <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-800">Tour có phù hợp cho trẻ em không?</h3>
-                        <i class="fas fa-chevron-down text-yellow-500 transition-transform"></i>
-                    </div>
-                    <div class="faq-answer overflow-hidden" style="max-height: 0px;">
-                        <div class="px-6 pb-6 text-gray-600">
-                            <p>Chúng tôi có nhiều tour phù hợp cho gia đình:</p>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Tour gia đình được thiết kế riêng cho trẻ em</li>
-                                <li>Giảm giá 50% cho trẻ em dưới 12 tuổi</li>
-                                <li>Trẻ em dưới 5 tuổi: Miễn phí</li>
-                                <li>Hoạt động an toàn và thú vị cho mọi lứa tuổi</li>
-                            </ul>
-                            <p class="mt-2">Liên hệ để được tư vấn tour phù hợp với độ tuổi của trẻ.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 8 -->
-                <div class="faq-item bg-white rounded-lg shadow-md">
-                    <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-800">Có thể tùy chỉnh tour theo ý muốn không?</h3>
-                        <i class="fas fa-chevron-down text-yellow-500 transition-transform"></i>
-                    </div>
-                    <div class="faq-answer overflow-hidden" style="max-height: 0px;">
-                        <div class="px-6 pb-6 text-gray-600">
-                            <p>Có, chúng tôi cung cấp dịch vụ thiết kế tour riêng:</p>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Tour custom theo yêu cầu cá nhân</li>
-                                <li>Tùy chỉnh lịch trình, điểm đến, thời gian</li>
-                                <li>Dịch vụ VIP với hướng dẫn viên riêng</li>
-                                <li>Phương tiện vận chuyển cao cấp</li>
-                                <li>Khách sạn và nhà hàng theo tiêu chuẩn mong muốn</li>
-                            </ul>
-                            <p class="mt-2">Liên hệ để được tư vấn và báo giá chi tiết.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="relative">
+            <img
+              src="../assets/images/faqs/button-red.svg"
+              alt="button red"
+              class="md:w-[281px] md:h-[56px] min-w-[224px] h-[42px] mx-auto object-contain"
+            />
+            <span
+              class="absolute inset-0 flex items-center justify-center md:text-[18px] text-[12px] text-white select-text"
+              >Build your own trip</span
+            >
+          </div>
         </div>
+
+        <div class="swiper own-swiper w-full h-full order-1 md:order-2">
+          <div class="swiper-wrapper flex items-center">
+            <div class="swiper-slide flex items-center justify-center">
+              <img
+                src="../assets/images/faqs/out1.svg"
+                alt="out1"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto"
+              />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img
+                src="../assets/images/faqs/out2.svg"
+                alt="out2"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto"
+              />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img
+                src="../assets/images/faqs/out3.svg"
+                alt="out3"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto"
+              />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img
+                src="../assets/images/faqs/out4.svg"
+                alt="out4"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto"
+              />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img
+                src="../assets/images/faqs/out5.svg"
+                alt="out5"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto"
+              />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img
+                src="../assets/images/faqs/out6.svg"
+                alt="out6"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var ownSwiper = new Swiper(".own-swiper", {
+        slidesPerView: 4,
+        spaceBetween: 8,
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 18,
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 24,
+          },
+        },
+        loop: true,
+        navigation: false,
+      });
+    </script>
 
-    <!-- Still Have Questions -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">Vẫn còn thắc mắc?</h2>
-            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                Nếu bạn không tìm thấy câu trả lời ở trên, hãy liên hệ trực tiếp với chúng tôi
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="inquire-now.html" class="btn-primary text-lg">
-                    <i class="fas fa-paper-plane mr-2"></i>
-                    Gửi câu hỏi
-                </a>
-                <a href="tel:+84123456789" class="btn-secondary text-lg">
-                    <i class="fas fa-phone mr-2"></i>
-                    Gọi ngay
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-2xl font-bold text-yellow-500 mb-4">Chôm Chôm Travel</h3>
-                    <p class="text-gray-300 mb-4">
-                        Khám phá Việt Nam với những trải nghiệm độc đáo và đáng nhớ
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Dịch vụ</h4>
-                    <ul class="space-y-2">
-                        <li><a href="experiences.html" class="text-gray-300 hover:text-yellow-500">Trải nghiệm</a></li>
-                        <li><a href="mini-escapes.html" class="text-gray-300 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
-                        <li><a href="how-to-book.html" class="text-gray-300 hover:text-yellow-500">Hướng dẫn đặt tour</a></li>
-                        <li><a href="sustainability.html" class="text-gray-300 hover:text-yellow-500">Du lịch bền vững</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Thông tin</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about-us.html" class="text-gray-300 hover:text-yellow-500">Về chúng tôi</a></li>
-                        <li><a href="blog-listing.html" class="text-gray-300 hover:text-yellow-500">Blog</a></li>
-                        <li><a href="faqs.html" class="text-gray-300 hover:text-yellow-500">FAQ</a></li>
-                        <li><a href="inquire-now.html" class="text-gray-300 hover:text-yellow-500">Liên hệ</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Liên hệ</h4>
-                    <div class="space-y-2 text-gray-300">
-                        <p><i class="fas fa-phone mr-2"></i> +84 123 456 789</p>
-                        <p><i class="fas fa-envelope mr-2"></i> info@chomchomtravel.com</p>
-                        <p><i class="fas fa-map-marker-alt mr-2"></i> Hà Nội, Việt Nam</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p>&copy; 2024 Chôm Chôm Travel. Tất cả quyền được bảo lưu.</p>
-            </div>
-        </div>
-    </footer>
-
+    <!-- js -->
     <script src="../assets/js/main.js"></script>
-</body>
-</html> 
+    <script>
+      var swiper = new Swiper(".tab-swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        freeMode: true,
+      });
+      // Tab filter logic (Tailwind only)
+      document.querySelectorAll(".tab-item").forEach(function (tab, idx) {
+        tab.addEventListener("click", function () {
+          document.querySelectorAll(".tab-item").forEach(function (t) {
+            t.classList.remove("active");
+            t.querySelector(".tab-label").classList.remove(
+              "font-bold",
+              "text-[#225F63]"
+            );
+            t.querySelector(".tab-label").classList.add("text-[#2C8B8B]");
+            t.querySelector(".tab-active-svg").classList.add("invisible");
+            t.querySelector(".tab-active-svg").classList.remove("block");
+          });
+          tab.classList.add("active");
+          tab
+            .querySelector(".tab-label")
+            .classList.add("font-bold", "text-[#225F63]");
+          tab.querySelector(".tab-label").classList.remove("text-[#2C8B8B]");
+          tab.querySelector(".tab-active-svg").classList.remove("invisible");
+          tab.querySelector(".tab-active-svg").classList.add("block");
+          // Tab content show/hide
+          var tabIdx = Array.from(
+            document.querySelectorAll(".tab-item")
+          ).indexOf(tab);
+          document
+            .querySelectorAll(".tab-content")
+            .forEach(function (content, cidx) {
+              if (cidx === tabIdx) {
+                content.classList.remove("hidden");
+                content.classList.add("block");
+              } else {
+                content.classList.remove("block");
+                content.classList.add("hidden");
+              }
+            });
+        });
+      });
+    </script>
+    <script>
+      // Accordion FAQ logic
+      document.querySelectorAll(".faq-item").forEach(function (item) {
+        item.addEventListener("click", function () {
+          var content = item.querySelector(".faq-content");
+          var icon = item.querySelector(".faq-icon");
+          if (!content || !icon) return;
+          var isOpen = !content.classList.contains("hidden");
+          if (isOpen) {
+            content.classList.add("hidden");
+            content.classList.remove("block");
+            icon.style.transform = "rotate(0deg)";
+          } else {
+            content.classList.remove("hidden");
+            content.classList.add("block");
+            icon.style.transform = "rotate(180deg)";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
