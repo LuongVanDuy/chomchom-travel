@@ -1,378 +1,225 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trải nghiệm - Chôm Chôm Travel</title>
-    <link href="../dist/output.css" rel="stylesheet">
-    <link href="../assets/css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body class="font-sans">
-    <!-- Header -->
-    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-yellow-500">Chôm Chôm Travel</div>
-                
-                <!-- Desktop Menu -->
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="../index.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trang chủ</a></li>
-                    <li><a href="experiences.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trải nghiệm</a></li>
-                    <li><a href="mini-escapes.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Du lịch ngắn ngày</a></li>
-                    <li><a href="about-us.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Về chúng tôi</a></li>
-                    <li><a href="blog-listing.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Blog</a></li>
-                    <li><a href="inquire-now.html" class="btn-primary">Liên hệ</a></li>
-                </ul>
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="font-sans">
+    <section class="bg-[#104751] flex flex-col items-center">
+      <img
+        src="../assets/images/experiences/repos.svg"
+        alt="Vietnam landscape"
+        class="object-contain mx-auto"
+      />
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
+      <div class="relative flex flex-col w-full md:w-[80%] items-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-2">
+          <span class="text-[#F15A29]"> Adventure, </span>
+          <span class="text-[#41B4B4]"> Created Just for You </span>
+        </h2>
+        <img
+          src="../assets/images/experiences/repos2.svg"
+          alt="vector"
+          class="absolute -top-[65px] left-[70%] w-32 md:w-40 select-none pointer-events-none"
+        />
 
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
-                <ul class="space-y-4">
-                    <li><a href="../index.html" class="block text-gray-700 hover:text-yellow-500">Trang chủ</a></li>
-                    <li><a href="experiences.html" class="block text-gray-700 hover:text-yellow-500">Trải nghiệm</a></li>
-                    <li><a href="mini-escapes.html" class="block text-gray-700 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
-                    <li><a href="about-us.html" class="block text-gray-700 hover:text-yellow-500">Về chúng tôi</a></li>
-                    <li><a href="blog-listing.html" class="block text-gray-700 hover:text-yellow-500">Blog</a></li>
-                    <li><a href="inquire-now.html" class="btn-primary inline-block">Liên hệ</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Page Header -->
-    <section class="bg-gradient-to-r from-purple-600 to-pink-600 text-white pt-24 pb-16">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Trải nghiệm du lịch</h1>
-            <p class="text-xl opacity-90 max-w-2xl mx-auto">
-                Khám phá những hành trình độc đáo và đáng nhớ tại Việt Nam
-            </p>
+        <div class="text-[#FFFCF0] text-center leading-4 py-4">
+          <p>
+            At our core, we take pride in curating a unique itinerary crafted
+            exclusively for you and your group. Our
+          </p>
+          <br />
+          <p>
+            dedicated team invests extensive time. And effort into meticulous
+            research, planning, securing
+          </p>
+          <br />
+          <p>reservations and organising logistics.</p>
+          <br />
+          <p>
+            Our approach to bespoke travel makes sure you get to fully immerse
+            yourself
+          </p>
+          <br />
+          <p>in Vietnam's hidden treasures while we handle the rest.</p>
+          <br />
+          <p>
+            Ready to build your own trip? Get inspired by some of our ideas
+            below:
+          </p>
         </div>
-    </section>
+      </div>
 
-    <!-- Filter Section -->
-    <section class="py-8 bg-white border-b">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap gap-4 justify-center">
-                <button class="px-6 py-2 bg-yellow-500 text-white rounded-full font-semibold">Tất cả</button>
-                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">Miền Bắc</button>
-                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">Miền Trung</button>
-                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">Miền Nam</button>
-                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">Đảo ngọc</button>
-            </div>
-        </div>
-    </section>
+      <div class="relative max-w-7xl mx-auto px-4 mt-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article
+            class="border border-[#FFFCF0] h-[496px] rounded-[12px] overflow-hidden relative group"
+          >
+            <a href="/experiences/slow-adventures" class="block h-full">
+              <img
+                src="../assets/images/experiences/blog-item1.jpg"
+                alt="Tiêu đề bài viết 1"
+                class="w-full h-full object-cover"
+              />
 
-    <!-- Experiences Grid -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Experience 1 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-64 bg-gradient-to-br from-blue-400 to-purple-600 relative">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            Miền Bắc
-                        </div>
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-mountain text-white text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Sapa - Núi rừng Tây Bắc</h3>
-                        <p class="text-gray-600 mb-4">Khám phá vẻ đẹp hoang dã của núi rừng Tây Bắc, gặp gỡ người dân tộc thiểu số</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-clock text-gray-400"></i>
-                                <span class="text-gray-600">3 ngày 2 đêm</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-users text-gray-400"></i>
-                                <span class="text-gray-600">2-8 người</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-yellow-500 font-semibold text-lg">2,500,000 VNĐ</span>
-                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Experience 2 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-64 bg-gradient-to-br from-green-400 to-blue-600 relative">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            Miền Bắc
-                        </div>
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-water text-white text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Vịnh Hạ Long - Kỳ quan thiên nhiên</h3>
-                        <p class="text-gray-600 mb-4">Du thuyền qua hàng nghìn đảo đá vôi, khám phá hang động kỳ bí</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-clock text-gray-400"></i>
-                                <span class="text-gray-600">2 ngày 1 đêm</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-users text-gray-400"></i>
-                                <span class="text-gray-600">2-12 người</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-yellow-500 font-semibold text-lg">1,800,000 VNĐ</span>
-                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Experience 3 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-64 bg-gradient-to-br from-yellow-400 to-red-600 relative">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            Miền Trung
-                        </div>
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-city text-white text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Hội An - Phố cổ di sản</h3>
-                        <p class="text-gray-600 mb-4">Dạo bước trong phố cổ UNESCO, thưởng thức ẩm thực địa phương</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-clock text-gray-400"></i>
-                                <span class="text-gray-600">2 ngày 1 đêm</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-users text-gray-400"></i>
-                                <span class="text-gray-600">2-6 người</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-yellow-500 font-semibold text-lg">1,200,000 VNĐ</span>
-                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Experience 4 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-64 bg-gradient-to-br from-purple-400 to-pink-600 relative">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            Miền Nam
-                        </div>
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-tree text-white text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Cần Thơ - Miền Tây sông nước</h3>
-                        <p class="text-gray-600 mb-4">Khám phá văn hóa miền Tây, thưởng thức trái cây và ẩm thực địa phương</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-clock text-gray-400"></i>
-                                <span class="text-gray-600">2 ngày 1 đêm</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-users text-gray-400"></i>
-                                <span class="text-gray-600">2-8 người</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-yellow-500 font-semibold text-lg">1,500,000 VNĐ</span>
-                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Experience 5 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-64 bg-gradient-to-br from-teal-400 to-blue-600 relative">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            Đảo ngọc
-                        </div>
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-umbrella-beach text-white text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Phú Quốc - Thiên đường biển đảo</h3>
-                        <p class="text-gray-600 mb-4">Tận hưởng bãi biển đẹp, lặn ngắm san hô và thưởng thức hải sản tươi ngon</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-clock text-gray-400"></i>
-                                <span class="text-gray-600">4 ngày 3 đêm</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-users text-gray-400"></i>
-                                <span class="text-gray-600">2-10 người</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-yellow-500 font-semibold text-lg">3,200,000 VNĐ</span>
-                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Experience 6 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-64 bg-gradient-to-br from-orange-400 to-red-600 relative">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            Miền Trung
-                        </div>
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-dragon text-white text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Huế - Cố đô di sản</h3>
-                        <p class="text-gray-600 mb-4">Tham quan Đại Nội, lăng tẩm và thưởng thức ẩm thực cung đình</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-clock text-gray-400"></i>
-                                <span class="text-gray-600">3 ngày 2 đêm</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-users text-gray-400"></i>
-                                <span class="text-gray-600">2-8 người</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-yellow-500 font-semibold text-lg">2,100,000 VNĐ</span>
-                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Load More Button -->
-            <div class="text-center mt-12">
-                <button class="btn-secondary text-lg">
-                    <i class="fas fa-plus mr-2"></i>
-                    Xem thêm trải nghiệm
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Our Experiences -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tại sao chọn trải nghiệm của chúng tôi?</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Những điểm nổi bật làm nên sự khác biệt
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-map-marked-alt text-yellow-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Hành trình độc đáo</h3>
-                    <p class="text-gray-600">
-                        Mỗi tour được thiết kế riêng biệt, khám phá những điểm đến ít người biết
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-users text-green-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Nhóm nhỏ</h3>
-                    <p class="text-gray-600">
-                        Giới hạn số lượng khách để đảm bảo trải nghiệm cá nhân hóa
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-star text-blue-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Chất lượng cao</h3>
-                    <p class="text-gray-600">
-                        Dịch vụ 5 sao với hướng dẫn viên chuyên nghiệp và phương tiện chất lượng
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-16 bg-yellow-500 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-4">Không tìm thấy tour phù hợp?</h2>
-            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                Hãy liên hệ với chúng tôi để được tư vấn tour riêng theo ý muốn
-            </p>
-            <a href="inquire-now.html" class="bg-white text-yellow-500 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors text-lg font-semibold">
-                <i class="fas fa-paper-plane mr-2"></i>
-                Tư vấn tour riêng
+              <div
+                class="absolute bottom-0 left-0 h-[20%] rounded-tl-[12px] rounded-tr-[12px] w-full bg-[#FFFCF0] text-[#318D95] flex justify-center items-center text-[16px] md:text-[22px] font-semibold"
+              >
+                <h3>Slow Adventures</h3>
+              </div>
             </a>
+            <button
+              onclick="openModal()"
+              class="absolute left-1/2 top-1/3 z-20 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-lg p-3 hover:bg-orange-100 transition opacity-0 group-hover:opacity-100 focus:opacity-100"
+              aria-label="Xem chi tiết"
+              type="button"
+            >
+              <img
+                src="../assets/images/experiences/click.svg"
+                alt="Click"
+                class="w-[68px] h-[68px]"
+              />
+            </button>
+          </article>
         </div>
+
+        <div class="relative my-8">
+          <a href="/#" class="block">
+            <img
+              src="../assets/images/experiences/repos3.svg"
+              alt="button red"
+              class="relative w-full h-[84px] mx-auto object-contain"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center md:text-[18px] text-[12px] text-white select-text"
+            >
+              <img
+                src="../assets/images/experiences/repos4.svg"
+                alt="button red"
+                class="w-[42px] h-[42px] object-contain"
+              />
+
+              <span> Check out this sample itinerary </span>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-2xl font-bold text-yellow-500 mb-4">Chôm Chôm Travel</h3>
-                    <p class="text-gray-300 mb-4">
-                        Khám phá Việt Nam với những trải nghiệm độc đáo và đáng nhớ
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Dịch vụ</h4>
-                    <ul class="space-y-2">
-                        <li><a href="experiences.html" class="text-gray-300 hover:text-yellow-500">Trải nghiệm</a></li>
-                        <li><a href="mini-escapes.html" class="text-gray-300 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
-                        <li><a href="how-to-book.html" class="text-gray-300 hover:text-yellow-500">Hướng dẫn đặt tour</a></li>
-                        <li><a href="sustainability.html" class="text-gray-300 hover:text-yellow-500">Du lịch bền vững</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Thông tin</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about-us.html" class="text-gray-300 hover:text-yellow-500">Về chúng tôi</a></li>
-                        <li><a href="blog-listing.html" class="text-gray-300 hover:text-yellow-500">Blog</a></li>
-                        <li><a href="faqs.html" class="text-gray-300 hover:text-yellow-500">FAQ</a></li>
-                        <li><a href="inquire-now.html" class="text-gray-300 hover:text-yellow-500">Liên hệ</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Liên hệ</h4>
-                    <div class="space-y-2 text-gray-300">
-                        <p><i class="fas fa-phone mr-2"></i> +84 123 456 789</p>
-                        <p><i class="fas fa-envelope mr-2"></i> info@chomchomtravel.com</p>
-                        <p><i class="fas fa-map-marker-alt mr-2"></i> Hà Nội, Việt Nam</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p>&copy; 2024 Chôm Chôm Travel. Tất cả quyền được bảo lưu.</p>
-            </div>
+    <!-- Modal overlay -->
+    <div
+      id="blogModal"
+      class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50"
+    >
+      <div
+        class="bg-[#FFFCF0] rounded-[7px] w-[1215px] h-[700px] p-8 relative flex"
+      >
+        <div class="absolute right-10 top-5">
+          <button
+            onclick="closeModal()"
+            aria-label="Đóng modal"
+            class="relative"
+          >
+            <img
+              src="../assets/images/experiences/button-close.svg"
+              alt="Đóng"
+              class="w-[50px] h-[38px] mx-auto object-contain"
+            />
+            <span
+              class="absolute inset-0 flex items-center justify-center text-[25px] font-bold text-white select-text pointer-events-none"
+              >X</span
+            >
+          </button>
         </div>
-    </footer>
+        <div class="flex-1 h-full">
+          <div class="flex mt-5 px-[5%] gap-10 h-full pt-[30px]">
+            <div class="w-[45%] h-full relative">
+              <h1
+                class="text-[#318D95] md:text-[48px] leading-[125%] font-semibold mb-10 mt-5"
+              >
+                Slow <br />
+                Adventures
+              </h1>
 
-    <script src="../assets/js/main.js"></script>
-</body>
-</html> 
+              <div class="relative py-2">
+                <p
+                  class="leading-[150%] md:text-[18px] text-[#104751] font-semibold pr-[30px]"
+                >
+                  Travel that gives you time to breathe, discover, and
+                  connect.Perfect for families, couples, and curious travelers
+                  who want meaningful experiences, not rushed sightseeing. Think
+                  multi-day journeys in the same place, scenic countryside
+                  stays, and immersive cultural activities.
+                </p>
+
+                <img
+                  src="../assets/images/experiences/arrow.svg"
+                  alt="Kid"
+                  class="absolute w-[79px] h-[79px] bottom-[-30px] right-0 object-contain"
+                />
+              </div>
+
+              <div class="relative mt-10">
+                <a href="#" aria-label="Đọc thêm bài viết">
+                  <div class="relative inline-block">
+                    <img
+                      src="../assets/images/experiences/button-click.svg"
+                      alt="Nút đọc thêm bài viết"
+                      class="min-w-[272px] h-[56px] object-contain"
+                    />
+                    <span
+                      class="absolute inset-0 flex items-center justify-center md:text-[24px] text-white select-text font-semibold"
+                    >
+                      Build your own trip
+                    </span>
+                  </div>
+                </a>
+              </div>
+
+              <img
+                src="../assets/images/experiences/kid.svg"
+                alt="Kid"
+                class="absolute w-[79px] h-[79px] top-0 right-0 object-contain"
+              />
+              <img
+                src="../assets/images/experiences/frame3.svg"
+                alt="Kid"
+                class="absolute w-[184px] h-[148px] bottom-[85px] left-[-80px] object-contain"
+              />
+            </div>
+            <div class="w-[55%] relative">
+              <img
+                src="../assets/images/experiences/frame5.svg"
+                alt="Kid"
+                class="absolute w-[222px] h-[178px] top-[-100px] left-[-100px] object-contain"
+              />
+              <img
+                src="../assets/images/experiences/frame4.svg"
+                alt="Kid"
+                class="absolute w-[88px] h-[88px] bottom-0 right-0 object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function openModal() {
+        var modal = document.getElementById("blogModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+      function closeModal() {
+        var modal = document.getElementById("blogModal");
+        modal.classList.remove("flex");
+        modal.classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>
