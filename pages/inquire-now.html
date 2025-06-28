@@ -1,310 +1,553 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Liên hệ ngay - Chôm Chôm Travel</title>
-    <link href="../dist/output.css" rel="stylesheet">
-    <link href="../assets/css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body class="font-sans">
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="font-sans">
     <!-- Header -->
     <header class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-yellow-500">Chôm Chôm Travel</div>
-                
-                <!-- Desktop Menu -->
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="../index.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trang chủ</a></li>
-                    <li><a href="experiences.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trải nghiệm</a></li>
-                    <li><a href="mini-escapes.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Du lịch ngắn ngày</a></li>
-                    <li><a href="about-us.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Về chúng tôi</a></li>
-                    <li><a href="blog-listing.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Blog</a></li>
-                    <li><a href="inquire-now.html" class="btn-primary">Liên hệ</a></li>
-                </ul>
+      <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="text-2xl font-bold text-yellow-500">Chôm Chôm Travel</div>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
+          <!-- Desktop Menu -->
+          <ul class="hidden md:flex space-x-8">
+            <li>
+              <a
+                href="../index.html"
+                class="text-gray-700 hover:text-yellow-500 transition-colors"
+                >Trang chủ</a
+              >
+            </li>
+            <li>
+              <a
+                href="experiences.html"
+                class="text-gray-700 hover:text-yellow-500 transition-colors"
+                >Trải nghiệm</a
+              >
+            </li>
+            <li>
+              <a
+                href="mini-escapes.html"
+                class="text-gray-700 hover:text-yellow-500 transition-colors"
+                >Du lịch ngắn ngày</a
+              >
+            </li>
+            <li>
+              <a
+                href="about-us.html"
+                class="text-gray-700 hover:text-yellow-500 transition-colors"
+                >Về chúng tôi</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog-listing.html"
+                class="text-gray-700 hover:text-yellow-500 transition-colors"
+                >Blog</a
+              >
+            </li>
+            <li><a href="inquire-now.html" class="btn-primary">Liên hệ</a></li>
+          </ul>
 
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
-                <ul class="space-y-4">
-                    <li><a href="../index.html" class="block text-gray-700 hover:text-yellow-500">Trang chủ</a></li>
-                    <li><a href="experiences.html" class="block text-gray-700 hover:text-yellow-500">Trải nghiệm</a></li>
-                    <li><a href="mini-escapes.html" class="block text-gray-700 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
-                    <li><a href="about-us.html" class="block text-gray-700 hover:text-yellow-500">Về chúng tôi</a></li>
-                    <li><a href="blog-listing.html" class="block text-gray-700 hover:text-yellow-500">Blog</a></li>
-                    <li><a href="inquire-now.html" class="btn-primary inline-block">Liên hệ</a></li>
-                </ul>
-            </div>
-        </nav>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="../index.html"
+                class="block text-gray-700 hover:text-yellow-500"
+                >Trang chủ</a
+              >
+            </li>
+            <li>
+              <a
+                href="experiences.html"
+                class="block text-gray-700 hover:text-yellow-500"
+                >Trải nghiệm</a
+              >
+            </li>
+            <li>
+              <a
+                href="mini-escapes.html"
+                class="block text-gray-700 hover:text-yellow-500"
+                >Du lịch ngắn ngày</a
+              >
+            </li>
+            <li>
+              <a
+                href="about-us.html"
+                class="block text-gray-700 hover:text-yellow-500"
+                >Về chúng tôi</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog-listing.html"
+                class="block text-gray-700 hover:text-yellow-500"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a href="inquire-now.html" class="btn-primary inline-block"
+                >Liên hệ</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!-- Page Header -->
-    <section class="bg-gradient-to-r from-blue-600 to-green-600 text-white pt-24 pb-16">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Liên hệ ngay</h1>
-            <p class="text-xl opacity-90 max-w-2xl mx-auto">
-                Hãy để chúng tôi giúp bạn lên kế hoạch cho hành trình hoàn hảo
-            </p>
-        </div>
+    <section
+      class="bg-gradient-to-r from-blue-600 to-green-600 text-white pt-24 pb-16"
+    >
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Liên hệ ngay</h1>
+        <p class="text-xl opacity-90 max-w-2xl mx-auto">
+          Hãy để chúng tôi giúp bạn lên kế hoạch cho hành trình hoàn hảo
+        </p>
+      </div>
     </section>
 
     <!-- Contact Form Section -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Contact Form -->
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+              Gửi yêu cầu tư vấn
+            </h2>
+            <form class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Gửi yêu cầu tư vấn</h2>
-                    <form class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="firstName" class="block text-gray-700 font-semibold mb-2">Họ và tên *</label>
-                                <input type="text" id="firstName" name="firstName" required 
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-gray-700 font-semibold mb-2">Số điện thoại *</label>
-                                <input type="tel" id="phone" name="phone" required 
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email *</label>
-                            <input type="email" id="email" name="email" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
-                        </div>
-
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="destination" class="block text-gray-700 font-semibold mb-2">Điểm đến quan tâm</label>
-                                <select id="destination" name="destination" 
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
-                                    <option value="">Chọn điểm đến</option>
-                                    <option value="sapa">Sapa - Tây Bắc</option>
-                                    <option value="halong">Vịnh Hạ Long</option>
-                                    <option value="hoian">Hội An</option>
-                                    <option value="hue">Huế</option>
-                                    <option value="cantho">Cần Thơ</option>
-                                    <option value="phuquoc">Phú Quốc</option>
-                                    <option value="other">Khác</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="duration" class="block text-gray-700 font-semibold mb-2">Thời gian du lịch</label>
-                                <select id="duration" name="duration" 
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
-                                    <option value="">Chọn thời gian</option>
-                                    <option value="1-2">1-2 ngày</option>
-                                    <option value="3-5">3-5 ngày</option>
-                                    <option value="6-10">6-10 ngày</option>
-                                    <option value="10+">Trên 10 ngày</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="startDate" class="block text-gray-700 font-semibold mb-2">Ngày khởi hành dự kiến</label>
-                                <input type="date" id="startDate" name="startDate" 
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
-                            </div>
-                            <div>
-                                <label for="travelers" class="block text-gray-700 font-semibold mb-2">Số lượng khách</label>
-                                <input type="number" id="travelers" name="travelers" min="1" 
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="budget" class="block text-gray-700 font-semibold mb-2">Ngân sách (VNĐ/người)</label>
-                            <select id="budget" name="budget" 
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
-                                <option value="">Chọn ngân sách</option>
-                                <option value="1-2m">1-2 triệu</option>
-                                <option value="2-5m">2-5 triệu</option>
-                                <option value="5-10m">5-10 triệu</option>
-                                <option value="10m+">Trên 10 triệu</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-gray-700 font-semibold mb-2">Yêu cầu chi tiết</label>
-                            <textarea id="message" name="message" rows="4" 
-                                      placeholder="Mô tả chi tiết về hành trình mong muốn, sở thích, yêu cầu đặc biệt..."
-                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full btn-primary text-lg py-4">
-                            <i class="fas fa-paper-plane mr-2"></i>
-                            Gửi yêu cầu tư vấn
-                        </button>
-                    </form>
+                  <label
+                    for="firstName"
+                    class="block text-gray-700 font-semibold mb-2"
+                    >Họ và tên *</label
+                  >
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                  />
                 </div>
-
-                <!-- Contact Information -->
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Thông tin liên hệ</h2>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-phone text-yellow-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Điện thoại</h3>
-                                <p class="text-gray-600">+84 123 456 789</p>
-                                <p class="text-gray-600">+84 987 654 321</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-envelope text-yellow-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
-                                <p class="text-gray-600">info@chomchomtravel.com</p>
-                                <p class="text-gray-600">booking@chomchomtravel.com</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-map-marker-alt text-yellow-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Địa chỉ</h3>
-                                <p class="text-gray-600">123 Đường ABC, Quận XYZ</p>
-                                <p class="text-gray-600">Hà Nội, Việt Nam</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-clock text-yellow-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Giờ làm việc</h3>
-                                <p class="text-gray-600">Thứ 2 - Thứ 6: 8:00 - 18:00</p>
-                                <p class="text-gray-600">Thứ 7: 8:00 - 12:00</p>
-                                <p class="text-gray-600">Chủ nhật: Nghỉ</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Social Media -->
-                    <div class="mt-8">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Kết nối với chúng tôi</h3>
-                        <div class="flex space-x-4">
-                            <a href="#" class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700 transition-colors">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-colors">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white hover:bg-green-700 transition-colors">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Link -->
-                    <div class="mt-8 p-6 bg-gray-50 rounded-lg">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Câu hỏi thường gặp?</h3>
-                        <p class="text-gray-600 mb-4">Tìm hiểu thêm về dịch vụ và chính sách của chúng tôi</p>
-                        <a href="faqs.html" class="text-yellow-500 hover:text-yellow-600 font-semibold">
-                            Xem FAQ <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
-                    </div>
+                  <label
+                    for="phone"
+                    class="block text-gray-700 font-semibold mb-2"
+                    >Số điện thoại *</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                  />
                 </div>
+              </div>
+
+              <div>
+                <label
+                  for="email"
+                  class="block text-gray-700 font-semibold mb-2"
+                  >Email *</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                />
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="destination"
+                    class="block text-gray-700 font-semibold mb-2"
+                    >Điểm đến quan tâm</label
+                  >
+                  <select
+                    id="destination"
+                    name="destination"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                  >
+                    <option value="">Chọn điểm đến</option>
+                    <option value="sapa">Sapa - Tây Bắc</option>
+                    <option value="halong">Vịnh Hạ Long</option>
+                    <option value="hoian">Hội An</option>
+                    <option value="hue">Huế</option>
+                    <option value="cantho">Cần Thơ</option>
+                    <option value="phuquoc">Phú Quốc</option>
+                    <option value="other">Khác</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    for="duration"
+                    class="block text-gray-700 font-semibold mb-2"
+                    >Thời gian du lịch</label
+                  >
+                  <select
+                    id="duration"
+                    name="duration"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                  >
+                    <option value="">Chọn thời gian</option>
+                    <option value="1-2">1-2 ngày</option>
+                    <option value="3-5">3-5 ngày</option>
+                    <option value="6-10">6-10 ngày</option>
+                    <option value="10+">Trên 10 ngày</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="startDate"
+                    class="block text-gray-700 font-semibold mb-2"
+                    >Ngày khởi hành dự kiến</label
+                  >
+                  <input
+                    type="date"
+                    id="startDate"
+                    name="startDate"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="travelers"
+                    class="block text-gray-700 font-semibold mb-2"
+                    >Số lượng khách</label
+                  >
+                  <input
+                    type="number"
+                    id="travelers"
+                    name="travelers"
+                    min="1"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="budget"
+                  class="block text-gray-700 font-semibold mb-2"
+                  >Ngân sách (VNĐ/người)</label
+                >
+                <select
+                  id="budget"
+                  name="budget"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                >
+                  <option value="">Chọn ngân sách</option>
+                  <option value="1-2m">1-2 triệu</option>
+                  <option value="2-5m">2-5 triệu</option>
+                  <option value="5-10m">5-10 triệu</option>
+                  <option value="10m+">Trên 10 triệu</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-gray-700 font-semibold mb-2"
+                  >Yêu cầu chi tiết</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Mô tả chi tiết về hành trình mong muốn, sở thích, yêu cầu đặc biệt..."
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="w-full btn-primary text-lg py-4">
+                <i class="fas fa-paper-plane mr-2"></i>
+                Gửi yêu cầu tư vấn
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Information -->
+          <div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+              Thông tin liên hệ
+            </h2>
+
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-phone text-yellow-600"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                    Điện thoại
+                  </h3>
+                  <p class="text-gray-600">+84 123 456 789</p>
+                  <p class="text-gray-600">+84 987 654 321</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-envelope text-yellow-600"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                    Email
+                  </h3>
+                  <p class="text-gray-600">info@chomchomtravel.com</p>
+                  <p class="text-gray-600">booking@chomchomtravel.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-map-marker-alt text-yellow-600"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                    Địa chỉ
+                  </h3>
+                  <p class="text-gray-600">123 Đường ABC, Quận XYZ</p>
+                  <p class="text-gray-600">Hà Nội, Việt Nam</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-clock text-yellow-600"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                    Giờ làm việc
+                  </h3>
+                  <p class="text-gray-600">Thứ 2 - Thứ 6: 8:00 - 18:00</p>
+                  <p class="text-gray-600">Thứ 7: 8:00 - 12:00</p>
+                  <p class="text-gray-600">Chủ nhật: Nghỉ</p>
+                </div>
+              </div>
             </div>
+
+            <!-- Social Media -->
+            <div class="mt-8">
+              <h3 class="text-lg font-semibold text-gray-800 mb-4">
+                Kết nối với chúng tôi
+              </h3>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700 transition-colors"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-colors"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white hover:bg-green-700 transition-colors"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- FAQ Link -->
+            <div class="mt-8 p-6 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                Câu hỏi thường gặp?
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Tìm hiểu thêm về dịch vụ và chính sách của chúng tôi
+              </p>
+              <a
+                href="faqs.html"
+                class="text-yellow-500 hover:text-yellow-600 font-semibold"
+              >
+                Xem FAQ <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Map Section -->
     <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Vị trí của chúng tôi</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Ghé thăm văn phòng để được tư vấn trực tiếp
-                </p>
-            </div>
-            
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div class="h-96 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                    <div class="text-center">
-                        <i class="fas fa-map-marked-alt text-gray-600 text-6xl mb-4"></i>
-                        <p class="text-gray-600 text-lg">Bản đồ sẽ được tích hợp ở đây</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Vị trí của chúng tôi
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Ghé thăm văn phòng để được tư vấn trực tiếp
+          </p>
         </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div
+            class="h-96 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center"
+          >
+            <div class="text-center">
+              <i class="fas fa-map-marked-alt text-gray-600 text-6xl mb-4"></i>
+              <p class="text-gray-600 text-lg">Bản đồ sẽ được tích hợp ở đây</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-2xl font-bold text-yellow-500 mb-4">Chôm Chôm Travel</h3>
-                    <p class="text-gray-300 mb-4">
-                        Khám phá Việt Nam với những trải nghiệm độc đáo và đáng nhớ
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Dịch vụ</h4>
-                    <ul class="space-y-2">
-                        <li><a href="experiences.html" class="text-gray-300 hover:text-yellow-500">Trải nghiệm</a></li>
-                        <li><a href="mini-escapes.html" class="text-gray-300 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
-                        <li><a href="how-to-book.html" class="text-gray-300 hover:text-yellow-500">Hướng dẫn đặt tour</a></li>
-                        <li><a href="sustainability.html" class="text-gray-300 hover:text-yellow-500">Du lịch bền vững</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Thông tin</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about-us.html" class="text-gray-300 hover:text-yellow-500">Về chúng tôi</a></li>
-                        <li><a href="blog-listing.html" class="text-gray-300 hover:text-yellow-500">Blog</a></li>
-                        <li><a href="faqs.html" class="text-gray-300 hover:text-yellow-500">FAQ</a></li>
-                        <li><a href="inquire-now.html" class="text-gray-300 hover:text-yellow-500">Liên hệ</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Liên hệ</h4>
-                    <div class="space-y-2 text-gray-300">
-                        <p><i class="fas fa-phone mr-2"></i> +84 123 456 789</p>
-                        <p><i class="fas fa-envelope mr-2"></i> info@chomchomtravel.com</p>
-                        <p><i class="fas fa-map-marker-alt mr-2"></i> Hà Nội, Việt Nam</p>
-                    </div>
-                </div>
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold text-yellow-500 mb-4">
+              Chôm Chôm Travel
+            </h3>
+            <p class="text-gray-300 mb-4">
+              Khám phá Việt Nam với những trải nghiệm độc đáo và đáng nhớ
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-300 hover:text-yellow-500"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="text-gray-300 hover:text-yellow-500"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-300 hover:text-yellow-500"
+                ><i class="fab fa-twitter"></i
+              ></a>
             </div>
+          </div>
 
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p>&copy; 2024 Chôm Chôm Travel. Tất cả quyền được bảo lưu.</p>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Dịch vụ</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="experiences.html"
+                  class="text-gray-300 hover:text-yellow-500"
+                  >Trải nghiệm</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mini-escapes.html"
+                  class="text-gray-300 hover:text-yellow-500"
+                  >Du lịch ngắn ngày</a
+                >
+              </li>
+              <li>
+                <a
+                  href="how-to-book.html"
+                  class="text-gray-300 hover:text-yellow-500"
+                  >Hướng dẫn đặt tour</a
+                >
+              </li>
+              <li>
+                <a
+                  href="sustainability.html"
+                  class="text-gray-300 hover:text-yellow-500"
+                  >Du lịch bền vững</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Thông tin</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="about-us.html"
+                  class="text-gray-300 hover:text-yellow-500"
+                  >Về chúng tôi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog-listing.html"
+                  class="text-gray-300 hover:text-yellow-500"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a href="faqs.html" class="text-gray-300 hover:text-yellow-500"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="inquire-now.html"
+                  class="text-gray-300 hover:text-yellow-500"
+                  >Liên hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Liên hệ</h4>
+            <div class="space-y-2 text-gray-300">
+              <p><i class="fas fa-phone mr-2"></i> +84 123 456 789</p>
+              <p>
+                <i class="fas fa-envelope mr-2"></i> info@chomchomtravel.com
+              </p>
+              <p><i class="fas fa-map-marker-alt mr-2"></i> Hà Nội, Việt Nam</p>
             </div>
+          </div>
         </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p>&copy; 2024 Chôm Chôm Travel. Tất cả quyền được bảo lưu.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="../assets/js/main.js"></script>
-</body>
-</html> 
+  </body>
+</html>

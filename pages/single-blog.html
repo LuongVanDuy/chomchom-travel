@@ -1,370 +1,846 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>10 địa điểm không thể bỏ qua khi đến Sapa - Chôm Chôm Travel</title>
-    <link href="../dist/output.css" rel="stylesheet">
-    <link href="../assets/css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body class="font-sans">
-    <!-- Header -->
-    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-yellow-500">Chôm Chôm Travel</div>
-                
-                <!-- Desktop Menu -->
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="../index.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trang chủ</a></li>
-                    <li><a href="experiences.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trải nghiệm</a></li>
-                    <li><a href="mini-escapes.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Du lịch ngắn ngày</a></li>
-                    <li><a href="about-us.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Về chúng tôi</a></li>
-                    <li><a href="blog-listing.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Blog</a></li>
-                    <li><a href="inquire-now.html" class="btn-primary">Liên hệ</a></li>
-                </ul>
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Structured Data for Blog -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Chôm Chôm Travel Blog",
+        "description": "Blog du lịch Việt Nam với những câu chuyện, mẹo và góc nhìn từ Chôm Chôm Travel",
+        "url": "https://chomchomtravel.com/blog",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Chôm Chôm Travel",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "../assets/images/logo.png"
+          }
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "BlogPosting",
+                "headline": "Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary",
+                "description": "Khám phá 5 lý do tại sao Saigon đáng để ghé thăm trong hành trình du lịch Việt Nam của bạn",
+                "image": "../assets/images/blog-list/blog-item.png",
+                "datePublished": "2025-04-09",
+                "dateModified": "2025-04-09",
+                "author": {
+                  "@type": "Organization",
+                  "name": "Chôm Chôm Travel"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Chôm Chôm Travel"
+                }
+              }
+            }
+          ]
+        }
+      }
+    </script>
+  </head>
+  <style>
+    .custom-swiper-pagination {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+      z-index: 20;
+      margin-top: 25px;
+    }
+    .custom-swiper-pagination .swiper-pagination-bullet {
+      width: 18px;
+      height: 18px;
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin: 0 6px;
+      opacity: 1;
+    }
+    .custom-swiper-pagination .swiper-pagination-bullet img {
+      width: 18px;
+      height: 18px;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+    }
+    .custom-swiper-pagination .swiper-pagination-bullet-active img {
+      opacity: 1;
+    }
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
+    /* Swiper slide styles */
+    .blog-swiper .swiper-slide {
+      height: 490px;
+      padding: 0 10px;
+      /* margin-right: 0px !important; */
+    }
 
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
-                <ul class="space-y-4">
-                    <li><a href="../index.html" class="block text-gray-700 hover:text-yellow-500">Trang chủ</a></li>
-                    <li><a href="experiences.html" class="block text-gray-700 hover:text-yellow-500">Trải nghiệm</a></li>
-                    <li><a href="mini-escapes.html" class="block text-gray-700 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
-                    <li><a href="about-us.html" class="block text-gray-700 hover:text-yellow-500">Về chúng tôi</a></li>
-                    <li><a href="blog-listing.html" class="block text-gray-700 hover:text-yellow-500">Blog</a></li>
-                    <li><a href="inquire-now.html" class="btn-primary inline-block">Liên hệ</a></li>
-                </ul>
-            </div>
+    @media (max-width: 768px) {
+      .blog-swiper .swiper-slide {
+        height: 450px;
+      }
+    }
+
+    .custom-swiper-nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    .custom-swiper-pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      position: static;
+      margin: 0;
+    }
+    .swiper-button-prev.custom-swiper-button-prev,
+    .swiper-button-next.custom-swiper-button-next {
+      position: static;
+      background: none;
+      box-shadow: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .swiper-button-prev.custom-swiper-button-prev:hover,
+    .swiper-button-next.custom-swiper-button-next:hover {
+      background: rgba(0, 0, 0, 0.04);
+      border-radius: 50%;
+    }
+    @media (max-width: 768px) {
+      .custom-swiper-nav-wrap {
+        gap: 8px;
+      }
+      .swiper-button-prev.custom-swiper-button-prev,
+      .swiper-button-next.custom-swiper-button-next {
+        width: 28px;
+        height: 28px;
+      }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none !important;
+    }
+  </style>
+
+  <body class="font-sans">
+    <div class="bg-[#FFFCF0] h-[100vh]">
+      <section class="w-full max-w-[815px] mx-auto px-4 sm:px-6 md:px-8">
+        <nav class="text-base sm:text-sm md:text-base" aria-label="Breadcrumb">
+          <ol
+            class="list-reset flex flex-wrap justify-center text-xs sm:text-sm md:text-base"
+          >
+            <li>
+              <a href="/" class="text-[#318D95] font-semibold hover:underline"
+                >Home</a
+              >
+              <span class="mx-2 text-[#318D95]">&gt;</span>
+            </li>
+            <li>
+              <a
+                href="/blog"
+                class="text-[#318D95] font-semibold hover:underline"
+                >Blog</a
+              >
+              <span class="mx-2 text-[#318D95]">&gt;</span>
+            </li>
+            <li aria-current="page" class="text-[#E96024] font-semibold">
+              Sustainable tourism
+            </li>
+          </ol>
         </nav>
-    </header>
-
-    <!-- Article Header -->
-    <section class="pt-24 pb-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <div class="flex items-center space-x-4 mb-6">
-                    <a href="blog-listing.html" class="text-yellow-300 hover:text-yellow-200">
-                        <i class="fas fa-arrow-left mr-2"></i>Quay lại Blog
-                    </a>
-                    <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        Kinh nghiệm
-                    </span>
-                </div>
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                    10 địa điểm không thể bỏ qua khi đến Sapa
-                </h1>
-                <div class="flex items-center space-x-6 text-lg">
-                    <div class="flex items-center space-x-2">
-                        <img src="https://via.placeholder.com/40x40" alt="Author" class="w-10 h-10 rounded-full">
-                        <span>Nguyễn Văn A</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-calendar"></i>
-                        <span>15/01/2024</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-clock"></i>
-                        <span>10 phút đọc</span>
-                    </div>
-                </div>
+        <article class="mx-auto text-center px-2 sm:px-4 py-6 sm:py-8 md:py-10">
+          <h1
+            class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 leading-tight"
+          >
+            Vietnam Isn't a Checklist — Here's How to Really Experience It
+          </h1>
+          <p class="mt-4 text-lg sm:text-xl text-teal-700 font-semibold">
+            In a world obsessed with bucket lists and fast-paced itineraries,
+            slow travel in Vietnam is more than just a trend — it's a return to
+            the kind of travel that truly transforms.
+          </p>
+          <div
+            class="mt-6 flex flex-col sm:flex-row w-full items-center justify-center gap-2 text-slate-700"
+          >
+            <div class="flex items-center gap-2 justify-center">
+              <img
+                src="https://i.pravatar.cc/40?img=3"
+                alt="Author avatar"
+                class="w-8 h-8 rounded-full mx-auto"
+              />
+              <span class="font-semibold">Loc Tran</span>
             </div>
+            <div class="bg-[#E96024] w-[2px] h-[15px] hidden sm:block"></div>
+            <div
+              class="flex items-center gap-1 text-sm sm:text-base justify-center"
+            >
+              <span>5 min read</span>
+            </div>
+          </div>
+          <div class="mt-4 text-xs sm:text-sm text-gray-500">
+            Updated: Apr 9, 2025
+          </div>
+        </article>
+      </section>
+
+      <section class="text-center py-10 bg-[#FFFCF0]">
+        <h2 class="text-2xl font-bold text-slate-800 mb-4">Share this post</h2>
+        <div
+          class="relative flex items-center justify-center max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[280px] w-full mx-auto px-2 sm:px-4 py-2 sm:py-3"
+        >
+          <img
+            src="../assets/images/single-blog/box.svg"
+            alt="Khung chia sẻ"
+            class="absolute inset-0 w-full h-full object-contain pointer-events-none select-none"
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <div
+            class="relative flex gap-2 items-center justify-center w-full z-10"
+          >
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              aria-label="Chia sẻ lên Facebook"
+              title="Chia sẻ lên Facebook"
+              class="flex justify-center items-center w-10 h-10 sm:w-12 sm:h-12 mx-1"
+            >
+              <img
+                src="../assets/images/single-blog/facebook.svg"
+                alt="Chia sẻ lên Facebook"
+                width="40"
+                height="40"
+                class="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                loading="lazy"
+              />
+            </a>
+            <div class="bg-[#318D95] text-[#318D95] w-[2px] h-[32px]"></div>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              aria-label="Chia sẻ lên Instagram"
+              title="Chia sẻ lên Instagram"
+              class="flex justify-center items-center w-10 h-10 sm:w-12 sm:h-12 mx-1"
+            >
+              <img
+                src="../assets/images/single-blog/instagram.svg"
+                alt="Chia sẻ lên Instagram"
+                width="40"
+                height="40"
+                class="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                loading="lazy"
+              />
+            </a>
+            <div class="bg-[#318D95] text-[#318D95] w-[2px] h-[32px]"></div>
+            <a
+              href="#"
+              onclick="navigator.clipboard.writeText(window.location.href);return false;"
+              aria-label="Sao chép liên kết bài viết"
+              title="Sao chép liên kết bài viết"
+              rel="nofollow"
+              class="flex justify-center items-center w-10 h-10 sm:w-12 sm:h-12 mx-1"
+            >
+              <img
+                src="../assets/images/single-blog/copy-link.svg"
+                alt="Sao chép liên kết"
+                width="40"
+                height="40"
+                class="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                loading="lazy"
+              />
+            </a>
+          </div>
         </div>
-    </section>
-
-    <!-- Article Content -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <!-- Featured Image -->
-                <div class="mb-8">
-                    <div class="h-96 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-lg relative">
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-mountain text-white text-8xl"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article Body -->
-                <article class="prose prose-lg max-w-none">
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                        Sapa - vùng đất mây sương của Tây Bắc Việt Nam luôn là điểm đến hấp dẫn với du khách trong và ngoài nước. Với khí hậu mát mẻ quanh năm, cảnh quan thiên nhiên hùng vĩ và văn hóa đa dạng của các dân tộc thiểu số, Sapa mang đến những trải nghiệm du lịch độc đáo không thể quên.
-                    </p>
-
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">1. Đỉnh Fansipan - Nóc nhà Đông Dương</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Với độ cao 3.143m, Fansipan là đỉnh núi cao nhất Đông Dương. Du khách có thể chọn cách trekking mất 2-3 ngày hoặc đi cáp treo để lên đỉnh trong vòng 20 phút. Từ đỉnh Fansipan, bạn sẽ được ngắm toàn cảnh Sapa từ trên cao, đặc biệt đẹp vào lúc bình minh hoặc hoàng hôn.
-                    </p>
-
-                    <div class="bg-yellow-50 p-6 rounded-lg mb-8">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
-                            <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
-                            Mẹo du lịch
-                        </h3>
-                        <p class="text-gray-700">
-                            Nên đi cáp treo vào sáng sớm để tránh đám đông và có cơ hội ngắm bình minh. Giá vé cáp treo khoảng 700,000 VNĐ/người.
-                        </p>
-                    </div>
-
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">2. Bản Cát Cát - Làng văn hóa dân tộc H'Mông</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Cách trung tâm Sapa khoảng 2km, bản Cát Cát là nơi sinh sống của người H'Mông với những ngôi nhà truyền thống, ruộng bậc thang và thác nước đẹp. Du khách có thể tìm hiểu về văn hóa, thưởng thức ẩm thực địa phương và mua sắm các sản phẩm thủ công.
-                    </p>
-
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">3. Thung lũng Mường Hoa</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Nổi tiếng với ruộng bậc thang đẹp nhất Sapa, thung lũng Mường Hoa là nơi lý tưởng để chụp ảnh và khám phá văn hóa dân tộc. Vào mùa lúa chín (tháng 9-10), cả thung lũng chuyển sang màu vàng óng ả tuyệt đẹp.
-                    </p>
-
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">4. Chợ tình Sapa</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Chợ tình Sapa diễn ra vào tối thứ 7 hàng tuần, là nơi giao lưu văn hóa độc đáo của các dân tộc thiểu số. Du khách có thể thưởng thức các món ăn địa phương, xem múa khèn và mua sắm đồ thủ công.
-                    </p>
-
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">5. Bản Tả Van - Làng của người Giáy</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Bản Tả Van cách Sapa khoảng 8km, là nơi sinh sống của người Giáy. Nơi đây có cảnh quan thiên nhiên hoang dã, những con suối trong vắt và không khí trong lành. Du khách có thể homestay để trải nghiệm cuộc sống địa phương.
-                    </p>
-
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">6. Đèo Ô Quy Hồ</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Được mệnh danh là "Tứ đại đỉnh đèo" của Việt Nam, đèo Ô Quy Hồ có độ cao 2.000m với cảnh quan núi non hùng vĩ. Đây là điểm check-in nổi tiếng với giới trẻ và nhiếp ảnh gia.
-                    </p>
-
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">7. Bản Lao Chải</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Bản Lao Chải nổi tiếng với ruộng bậc thang đẹp và văn hóa dân tộc H'Mông đặc sắc. Du khách có thể trekking qua bản để khám phá cuộc sống địa phương và thưởng thức cảnh đẹp thiên nhiên.
-                    </p>
-
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">8. Thác Bạc</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Thác Bạc cao 200m, là một trong những thác nước đẹp nhất Sapa. Vào mùa mưa, thác chảy mạnh tạo thành dòng nước trắng xóa như bạc. Du khách có thể tắm suối và thưởng thức không khí mát mẻ.
-                    </p>
-
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">9. Bản Sín Chải</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Bản Sín Chải là nơi sinh sống của người H'Mông đen với văn hóa truyền thống được bảo tồn tốt. Du khách có thể tìm hiểu về nghề dệt vải, làm bạc và thưởng thức ẩm thực địa phương.
-                    </p>
-
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">10. Nhà thờ đá Sapa</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Được xây dựng từ năm 1895, nhà thờ đá Sapa là công trình kiến trúc cổ đẹp và là biểu tượng của thị trấn Sapa. Nhà thờ có kiến trúc Gothic độc đáo và là điểm check-in không thể bỏ qua.
-                    </p>
-
-                    <div class="bg-blue-50 p-6 rounded-lg mb-8">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
-                            <i class="fas fa-info-circle text-blue-500 mr-2"></i>
-                            Thông tin hữu ích
-                        </h3>
-                        <ul class="text-gray-700 space-y-2">
-                            <li>• Thời gian tốt nhất để đi Sapa: Tháng 3-5 và tháng 9-11</li>
-                            <li>• Nhiệt độ trung bình: 15-20°C</li>
-                            <li>• Nên mang theo áo ấm, giày trekking và thuốc chống say xe</li>
-                            <li>• Có thể thuê xe máy hoặc đi tour để khám phá</li>
-                        </ul>
-                    </div>
-
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Kết luận</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Sapa là điểm đến lý tưởng cho những ai muốn khám phá vẻ đẹp thiên nhiên hùng vĩ và văn hóa đa dạng của Tây Bắc Việt Nam. Với 10 địa điểm trên, bạn sẽ có một hành trình khám phá Sapa đầy thú vị và đáng nhớ.
-                    </p>
-                </article>
-
-                <!-- Tags -->
-                <div class="border-t border-gray-200 pt-8 mt-8">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Tags:</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <a href="#" class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-yellow-500 hover:text-white transition-colors">Sapa</a>
-                        <a href="#" class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-yellow-500 hover:text-white transition-colors">Tây Bắc</a>
-                        <a href="#" class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-yellow-500 hover:text-white transition-colors">Fansipan</a>
-                        <a href="#" class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-yellow-500 hover:text-white transition-colors">Du lịch</a>
-                        <a href="#" class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-yellow-500 hover:text-white transition-colors">Kinh nghiệm</a>
-                    </div>
-                </div>
-
-                <!-- Share -->
-                <div class="border-t border-gray-200 pt-8 mt-8">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Chia sẻ bài viết:</h3>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700 transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-colors">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white hover:bg-green-700 transition-colors">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
+      </section>
+      <section>
+        <div>
+          <div class="relative w-[100%]">
+            <img
+              src="../assets/images/single-blog/Break.svg"
+              alt="Khung chia sẻ"
+              class="block inset-0 w-full h-full object-contain pointer-events-none select-none"
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-full h-[5px] bg-[#123E51] pointer-events-none select-none"
+            ></div>
+          </div>
+          <div class="bg-[#123E51] mt-[-2px] min-h-[500px] relative pb-[50px]">
+            <div class="flex flex-col items-center max-w-[339px] mx-auto">
+              <div class="w-full flex justify-end">
+                <img
+                  src="../assets/images/single-blog/single1.svg"
+                  alt=""
+                  class="w-[210px] h-[65px] object-contain"
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </div>
+              <h1
+                class="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#fff] leading-tight text-center"
+              >
+                Related Posts
+              </h1>
             </div>
+
+            <!-- Swiper container -->
+            <div class="relative w-full max-w-6xl mx-auto px-4 mt-10">
+              <div class="swiper blog-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <article
+                      class="relative rounded-xl overflow-hidden flex flex-col h-full"
+                      itemscope
+                      itemtype="https://schema.org/BlogPosting"
+                    >
+                      <meta itemprop="datePublished" content="2025-04-09" />
+                      <meta itemprop="dateModified" content="2025-04-09" />
+                      <meta itemprop="author" content="Chôm Chôm Travel" />
+                      <meta itemprop="publisher" content="Chôm Chôm Travel" />
+                      <meta itemprop="wordCount" content="1500" />
+                      <meta itemprop="timeRequired" content="PT9M" />
+
+                      <div class="h-full">
+                        <img
+                          src="../assets/images/single-blog/Vector.svg"
+                          alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
+                          class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div
+                        class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+                      >
+                        <img
+                          src="../assets/images/blog-list/blog-item.png"
+                          alt="Ảnh minh họa bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                          class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
+                          itemprop="image"
+                          loading="lazy"
+                        />
+                        <img
+                          src="../assets/images/blog-list/paper-torn.png"
+                          alt="Họa tiết giấy xé trang trí bài viết"
+                          class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
+                      >
+                        <h2
+                          class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                          itemprop="headline"
+                        >
+                          <a
+                            href="/blog/is-saigon-worth-it"
+                            class="hover:text-[#318D95]"
+                            aria-label="Đọc bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                            >Is Saigon Worth It? 5 Reasons Why This Bustling
+                            City Should Be on Your Travel Itinerary</a
+                          >
+                        </h2>
+                        <div
+                          class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                        >
+                          <div
+                            class="flex items-center gap-2 text-[14px] font-semibold"
+                            itemprop="timeRequired"
+                            content="PT9M"
+                          >
+                            <span>9 min read</span>
+
+                            <img
+                              src="../assets/images/blog-list/read.svg"
+                              alt="Biểu tượng thời lượng đọc"
+                              class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div
+                            class="flex items-center text-[16px] text-[#E96024]"
+                          >
+                            <time datetime="2025-04-09"
+                              >Updated: Apr 9, 2025</time
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- Slide 2  -->
+                  <div class="swiper-slide">
+                    <article
+                      class="relative rounded-xl overflow-hidden flex flex-col h-full"
+                      itemscope
+                      itemtype="https://schema.org/BlogPosting"
+                    >
+                      <div class="h-full">
+                        <img
+                          src="../assets/images/single-blog/Vector.svg"
+                          alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
+                          class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
+                          itemprop="image"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div
+                        class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+                      >
+                        <img
+                          src="../assets/images/blog-list/blog-item.png"
+                          alt="Ảnh minh họa bài viết Vietnam Isn't a Checklist"
+                          class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
+                          itemprop="image"
+                          loading="lazy"
+                        />
+                        <img
+                          src="../assets/images/blog-list/paper-torn.png"
+                          alt="Họa tiết giấy xé trang trí bài viết"
+                          class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
+                          itemprop="image"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
+                      >
+                        <h2
+                          class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                          itemprop="headline"
+                        >
+                          <a
+                            href="#"
+                            class="hover:text-[#318D95]"
+                            aria-label="Vietnam Isn't a Checklist — Here's How to Really Experience It"
+                            >Is Saigon Worth It? 5 Reasons Why This Bustling
+                            City Should Be on Your Travel Itinerary</a
+                          >
+                        </h2>
+                        <div
+                          class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                        >
+                          <div
+                            class="flex items-center gap-2 text-[14px] font-semibold"
+                          >
+                            9 min read
+
+                            <img
+                              src="../assets/images/blog-list/read.svg"
+                              alt="Biểu tượng thời lượng đọc"
+                              class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
+                              itemprop="image"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div
+                            class="flex items-center text-[16px] text-[#E96024]"
+                          >
+                            <time datetime="2025-04-09"
+                              >Updated: Apr 9, 2025</time
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- Slide 3-->
+                  <div class="swiper-slide">
+                    <article
+                      class="relative rounded-xl overflow-hidden flex flex-col h-full"
+                      itemscope
+                      itemtype="https://schema.org/BlogPosting"
+                    >
+                      <div class="h-full">
+                        <img
+                          src="../assets/images/single-blog/Vector.svg"
+                          alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
+                          class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
+                          itemprop="image"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div
+                        class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+                      >
+                        <img
+                          src="../assets/images/blog-list/blog-item.png"
+                          alt="Ảnh minh họa bài viết Vietnam Isn't a Checklist"
+                          class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
+                          itemprop="image"
+                          loading="lazy"
+                        />
+                        <img
+                          src="../assets/images/blog-list/paper-torn.png"
+                          alt="Họa tiết giấy xé trang trí bài viết"
+                          class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
+                          itemprop="image"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
+                      >
+                        <h2
+                          class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                          itemprop="headline"
+                        >
+                          <a
+                            href="#"
+                            class="hover:text-[#318D95]"
+                            aria-label="Vietnam Isn't a Checklist — Here's How to Really Experience It"
+                            >Is Saigon Worth It? 5 Reasons Why This Bustling
+                            City Should Be on Your Travel Itinerary</a
+                          >
+                        </h2>
+                        <div
+                          class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                        >
+                          <div
+                            class="flex items-center gap-2 text-[14px] font-semibold"
+                          >
+                            9 min read
+
+                            <img
+                              src="../assets/images/blog-list/read.svg"
+                              alt="Biểu tượng thời lượng đọc"
+                              class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
+                              itemprop="image"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div
+                            class="flex items-center text-[16px] text-[#E96024]"
+                          >
+                            <time datetime="2025-04-09"
+                              >Updated: Apr 9, 2025</time
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- Slide 4-->
+                  <div class="swiper-slide">
+                    <article
+                      class="relative rounded-xl overflow-hidden flex flex-col h-full"
+                      itemscope
+                      itemtype="https://schema.org/BlogPosting"
+                    >
+                      <div class="h-full">
+                        <img
+                          src="../assets/images/single-blog/Vector.svg"
+                          alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
+                          class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
+                          itemprop="image"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div
+                        class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+                      >
+                        <img
+                          src="../assets/images/blog-list/blog-item.png"
+                          alt="Ảnh minh họa bài viết Vietnam Isn't a Checklist"
+                          class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
+                          itemprop="image"
+                          loading="lazy"
+                        />
+                        <img
+                          src="../assets/images/blog-list/paper-torn.png"
+                          alt="Họa tiết giấy xé trang trí bài viết"
+                          class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
+                          itemprop="image"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
+                      >
+                        <h2
+                          class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                          itemprop="headline"
+                        >
+                          <a
+                            href="#"
+                            class="hover:text-[#318D95]"
+                            aria-label="Vietnam Isn't a Checklist — Here's How to Really Experience It"
+                            >Is Saigon Worth It? 5 Reasons Why This Bustling
+                            City Should Be on Your Travel Itinerary</a
+                          >
+                        </h2>
+                        <div
+                          class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                        >
+                          <div
+                            class="flex items-center gap-2 text-[14px] font-semibold"
+                          >
+                            9 min read
+
+                            <img
+                              src="../assets/images/blog-list/read.svg"
+                              alt="Biểu tượng thời lượng đọc"
+                              class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
+                              itemprop="image"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div
+                            class="flex items-center text-[16px] text-[#E96024]"
+                          >
+                            <time datetime="2025-04-09"
+                              >Updated: Apr 9, 2025</time
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+
+                  <!-- Slide 5-->
+                  <div class="swiper-slide">
+                    <article
+                      class="relative rounded-xl overflow-hidden flex flex-col h-full"
+                      itemscope
+                      itemtype="https://schema.org/BlogPosting"
+                    >
+                      <div class="h-full">
+                        <img
+                          src="../assets/images/single-blog/Vector.svg"
+                          alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
+                          class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
+                          itemprop="image"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div
+                        class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+                      >
+                        <img
+                          src="../assets/images/blog-list/blog-item.png"
+                          alt="Ảnh minh họa bài viết Vietnam Isn't a Checklist"
+                          class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
+                          itemprop="image"
+                          loading="lazy"
+                        />
+                        <img
+                          src="../assets/images/blog-list/paper-torn.png"
+                          alt="Họa tiết giấy xé trang trí bài viết"
+                          class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
+                          itemprop="image"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
+                      >
+                        <h2
+                          class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                          itemprop="headline"
+                        >
+                          <a
+                            href="#"
+                            class="hover:text-[#318D95]"
+                            aria-label="Vietnam Isn't a Checklist — Here's How to Really Experience It"
+                            >Is Saigon Worth It? 5 Reasons Why This Bustling
+                            City Should Be on Your Travel Itinerary</a
+                          >
+                        </h2>
+                        <div
+                          class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                        >
+                          <div
+                            class="flex items-center gap-2 text-[14px] font-semibold"
+                          >
+                            9 min read
+
+                            <img
+                              src="../assets/images/blog-list/read.svg"
+                              alt="Biểu tượng thời lượng đọc"
+                              class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
+                              itemprop="image"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div
+                            class="flex items-center text-[16px] text-[#E96024]"
+                          >
+                            <time datetime="2025-04-09"
+                              >Updated: Apr 9, 2025</time
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex justify-center items-center mt-6 mb-2 custom-swiper-nav-wrap"
+              >
+                <div class="custom-swiper-button-prev">
+                  <img
+                    src="../assets/images/blog-list/left.svg"
+                    alt="Previous"
+                    class="w-[17px] h-[26px]"
+                  />
+                </div>
+                <div
+                  class="custom-swiper-pagination flex justify-center items-center !w-[120px]"
+                ></div>
+                <div class="custom-swiper-button-next">
+                  <img
+                    src="../assets/images/blog-list/right.svg"
+                    alt="Next"
+                    class="w-[17px] h-[26px]"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+    </div>
 
-    <!-- Related Posts -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Bài viết liên quan</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Related Post 1 -->
-                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-600 relative">
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-utensils text-white text-4xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">
-                            <a href="single-blog.html" class="hover:text-yellow-500 transition-colors">
-                                Khám phá ẩm thực Hội An: Từ cao lầu đến bánh mì Phượng
-                            </a>
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Hội An không chỉ nổi tiếng với phố cổ mà còn là thiên đường ẩm thực...
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-500 text-sm">12/01/2024</span>
-                            <a href="single-blog.html" class="text-yellow-500 hover:text-yellow-600 text-sm font-semibold">
-                                Đọc thêm →
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Related Post 2 -->
-                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-600 relative">
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-dragon text-white text-4xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">
-                            <a href="single-blog.html" class="hover:text-yellow-500 transition-colors">
-                                Lễ hội đền Hùng: Nét đẹp văn hóa dân tộc Việt Nam
-                            </a>
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Lễ hội đền Hùng là một trong những lễ hội quan trọng nhất...
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-500 text-sm">10/01/2024</span>
-                            <a href="single-blog.html" class="text-yellow-500 hover:text-yellow-600 text-sm font-semibold">
-                                Đọc thêm →
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Related Post 3 -->
-                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-600 relative">
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-mountain text-white text-4xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">
-                            <a href="single-blog.html" class="hover:text-yellow-500 transition-colors">
-                                Trekking Fansipan: Hành trình chinh phục nóc nhà Đông Dương
-                            </a>
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Fansipan với độ cao 3.143m là đỉnh núi cao nhất Đông Dương...
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-500 text-sm">08/01/2024</span>
-                            <a href="single-blog.html" class="text-yellow-500 hover:text-yellow-600 text-sm font-semibold">
-                                Đọc thêm →
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-16 bg-yellow-500 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-4">Sẵn sàng khám phá Sapa?</h2>
-            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                Liên hệ ngay để được tư vấn và đặt tour khám phá Sapa với giá tốt nhất
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="inquire-now.html" class="bg-white text-yellow-500 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors text-lg font-semibold">
-                    <i class="fas fa-paper-plane mr-2"></i>
-                    Tư vấn tour Sapa
-                </a>
-                <a href="experiences.html" class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-yellow-500 transition-colors text-lg font-semibold">
-                    <i class="fas fa-map-marked-alt mr-2"></i>
-                    Xem các tour khác
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-2xl font-bold text-yellow-500 mb-4">Chôm Chôm Travel</h3>
-                    <p class="text-gray-300 mb-4">
-                        Khám phá Việt Nam với những trải nghiệm độc đáo và đáng nhớ
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Dịch vụ</h4>
-                    <ul class="space-y-2">
-                        <li><a href="experiences.html" class="text-gray-300 hover:text-yellow-500">Trải nghiệm</a></li>
-                        <li><a href="mini-escapes.html" class="text-gray-300 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
-                        <li><a href="how-to-book.html" class="text-gray-300 hover:text-yellow-500">Hướng dẫn đặt tour</a></li>
-                        <li><a href="sustainability.html" class="text-gray-300 hover:text-yellow-500">Du lịch bền vững</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Thông tin</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about-us.html" class="text-gray-300 hover:text-yellow-500">Về chúng tôi</a></li>
-                        <li><a href="blog-listing.html" class="text-gray-300 hover:text-yellow-500">Blog</a></li>
-                        <li><a href="faqs.html" class="text-gray-300 hover:text-yellow-500">FAQ</a></li>
-                        <li><a href="inquire-now.html" class="text-gray-300 hover:text-yellow-500">Liên hệ</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Liên hệ</h4>
-                    <div class="space-y-2 text-gray-300">
-                        <p><i class="fas fa-phone mr-2"></i> +84 123 456 789</p>
-                        <p><i class="fas fa-envelope mr-2"></i> info@chomchomtravel.com</p>
-                        <p><i class="fas fa-map-marker-alt mr-2"></i> Hà Nội, Việt Nam</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p>&copy; 2024 Chôm Chôm Travel. Tất cả quyền được bảo lưu.</p>
-            </div>
-        </div>
-    </footer>
-
+    <!-- --------------------------- -->
     <script src="../assets/js/main.js"></script>
-</body>
-</html> 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      // Số nhóm muốn chia (số chấm pagination)
+      const PAGINATION_DOTS = 3;
+      // Lấy số slide thực tế
+      const totalSlides = document.querySelectorAll(
+        ".blog-swiper .swiper-slide"
+      ).length;
+      // Tính số slide mỗi nhóm
+      const slidesPerGroup = Math.ceil(totalSlides / PAGINATION_DOTS);
+
+      const blogSwiper = new Swiper(".blog-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: { delay: 100000, disableOnInteraction: false },
+        pagination: {
+          el: ".custom-swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<span class="${className}">
+              <img src="../assets/images/blog-list/pagination.svg" class="pagination-dot" />
+            </span>`;
+          },
+        },
+        navigation: {
+          nextEl: ".custom-swiper-button-next",
+          prevEl: ".custom-swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+        },
+        on: {
+          init: function (swiper) {
+            // Gán sự kiện click cho từng chấm
+            setTimeout(() => {
+              document
+                .querySelectorAll(
+                  ".custom-swiper-pagination .swiper-pagination-bullet"
+                )
+                .forEach((el, idx) => {
+                  el.onclick = function () {
+                    // Tính index slide đầu của nhóm
+                    const slideTo = idx * slidesPerGroup;
+                    swiper.slideToLoop(slideTo);
+                  };
+                });
+            }, 100);
+          },
+          slideChange: function () {
+            setTimeout(() => {
+              document
+                .querySelectorAll(
+                  ".custom-swiper-pagination .swiper-pagination-bullet"
+                )
+                .forEach((el, idx) => {
+                  const img = el.querySelector("img");
+                  if (
+                    el.classList.contains("swiper-pagination-bullet-active")
+                  ) {
+                    img.src =
+                      "../assets/images/blog-list/pagination-active.svg";
+                  } else {
+                    img.src = "../assets/images/blog-list/pagination.svg";
+                  }
+                });
+            }, 10);
+          },
+        },
+      });
+
+      // Tạo đúng 3 chấm pagination
+      setTimeout(() => {
+        const pag = document.querySelector(".custom-swiper-pagination");
+        if (pag) {
+          pag.innerHTML = "";
+          for (let i = 0; i < PAGINATION_DOTS; i++) {
+            const span = document.createElement("span");
+            span.className =
+              "swiper-pagination-bullet" +
+              (i === 0 ? " swiper-pagination-bullet-active" : "");
+            const img = document.createElement("img");
+            img.src =
+              i === 0
+                ? "../assets/images/blog-list/pagination-active.svg"
+                : "../assets/images/blog-list/pagination.svg";
+            img.className = "pagination-dot";
+            span.appendChild(img);
+            pag.appendChild(span);
+          }
+        }
+      }, 100);
+    </script>
+  </body>
+</html>

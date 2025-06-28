@@ -1,430 +1,267 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Du lịch ngắn ngày - Chôm Chôm Travel</title>
-    <link href="../dist/output.css" rel="stylesheet">
-    <link href="../assets/css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body class="font-sans">
-    <!-- Header -->
-    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-yellow-500">Chôm Chôm Travel</div>
-                
-                <!-- Desktop Menu -->
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="../index.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trang chủ</a></li>
-                    <li><a href="experiences.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Trải nghiệm</a></li>
-                    <li><a href="mini-escapes.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Du lịch ngắn ngày</a></li>
-                    <li><a href="about-us.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Về chúng tôi</a></li>
-                    <li><a href="blog-listing.html" class="text-gray-700 hover:text-yellow-500 transition-colors">Blog</a></li>
-                    <li><a href="inquire-now.html" class="btn-primary">Liên hệ</a></li>
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section
+      class="bg-[#104751] flex flex-col items-center px-2 sm:px-4 md:px-0"
+    >
+      <img
+        src="../assets/images/mini-escapes/element.svg"
+        alt="Vietnam landscape"
+        class="object-contain mx-auto w-full max-w-[186px] mb-5"
+      />
+
+      <div class="relative flex flex-col w-full md:w-[80%] items-center">
+        <h2
+          class="text-2xl xs:text-3xl md:text-4xl font-bold text-center mb-2 text-[#E7BD11]"
+        >
+          Short Trips. Worthwhile Experiences.
+        </h2>
+
+        <div
+          class="text-[#FFFCF0] text-center leading-5 py-4 text-sm md:text-base"
+        >
+          <p>Searching for what to do in Vietnam?</p>
+
+          <p>
+            Whether you're looking to fill a couple of hours or a couple of
+            days, we've got something for you.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative w-full flex justify-center mb-4">
+        <img
+          src="../assets/images/mini-escapes/button.svg"
+          alt="button red"
+          class="w-[180px] h-[40px] md:w-[272px] md:h-[56px] min-w-[100px] mx-auto object-contain"
+        />
+        <span
+          class="absolute inset-0 flex items-center justify-center text-[15px] md:text-[22px] font-semibold text-white select-text"
+          >Book Now</span
+        >
+      </div>
+    </section>
+
+    <section class="py-6 md:py-10 bg-[#104751] px-2 xs:px-4 md:px-[10%]">
+      <div
+        class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-0 my-3"
+      >
+        <div class="flex gap-3 md:gap-5 justify-center md:justify-start">
+          <div
+            class="w-[120px] h-[40px] md:w-[163px] md:h-[51px] rounded-[40px] bg-[#E96024] flex justify-center items-center text-[14px] md:text-[16px] font-semibold text-[#fff] cursor-pointer"
+          >
+            Day Tours
+          </div>
+          <div
+            class="min-w-[180px] h-[40px] md:min-w-[217px] md:h-[51px] rounded-[40px] bg-[#E7BD11] flex justify-center items-center text-[14px] md:text-[16px] font-semibold text-[#000] cursor-pointer"
+          >
+            Weekend Getaways
+          </div>
+        </div>
+
+        <div
+          class="relative flex justify-center md:justify-end w-full md:w-auto"
+        >
+          <button
+            id="dropdownButton"
+            class="flex items-center justify-center gap-3 md:gap-5 w-full md:min-w-[271px] max-w-xs h-[40px] md:h-[54px] px-4 md:px-8 border-2 border-dashed border-[#E7BD11] rounded-full text-white text-[14px] md:text-[16px] font-semibold cursor-pointer focus:outline-none"
+            onclick="toggleDropdown()"
+            type="button"
+          >
+            <span>All Destinations</span>
+            <i
+              class="fa-solid fa-chevron-down text-[14px] md:text-[16px] ml-2 md:ml-4"
+            ></i>
+          </button>
+          <div
+            id="dropdownMenu"
+            class="hidden absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-full mt-2 w-[95vw] max-w-xs md:w-[350px] rounded-[14px] md:rounded-[24px] bg-white border-2 border-dashed border-[#E7BD11] shadow-lg z-10 p-0 py-3 md:py-5"
+          >
+            <div
+              class="dropdown-scroll max-h-[220px] md:max-h-[340px] w-full overflow-y-auto px-3 md:px-6"
+            >
+              <div class="pl-2 pr-2 md:pl-6 md:pr-3">
+                <div
+                  class="text-[#104751] text-[15px] md:text-[16px] font-bold mb-2 border-b-2 border-dashed border-[#2CA6A4]"
+                >
+                  North
+                </div>
+                <ul class="mb-4 pl-4 md:pl-8">
+                  <li class="pt-2 mt-2"></li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      >Ha Noi</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      >Ninh Binh</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      >Ha Long</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      >Mai Chau</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      >Pu Luong</a
+                    >
+                  </li>
                 </ul>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
-                <ul class="space-y-4">
-                    <li><a href="../index.html" class="block text-gray-700 hover:text-yellow-500">Trang chủ</a></li>
-                    <li><a href="experiences.html" class="block text-gray-700 hover:text-yellow-500">Trải nghiệm</a></li>
-                    <li><a href="mini-escapes.html" class="block text-gray-700 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
-                    <li><a href="about-us.html" class="block text-gray-700 hover:text-yellow-500">Về chúng tôi</a></li>
-                    <li><a href="blog-listing.html" class="block text-gray-700 hover:text-yellow-500">Blog</a></li>
-                    <li><a href="inquire-now.html" class="btn-primary inline-block">Liên hệ</a></li>
+                <div
+                  class="text-[#104751] text-[15px] md:text-[16px] font-bold mb-2"
+                >
+                  Central
+                </div>
+                <ul class="mb-4 pl-4 md:pl-8">
+                  <li class="pt-2 mt-2"></li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      >Ha Noi</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      >Ninh Binh</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      >Ha Long</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      >Mai Chau</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      >Pu Luong</a
+                    >
+                  </li>
                 </ul>
+              </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Page Header -->
-    <section class="bg-gradient-to-r from-pink-600 to-orange-600 text-white pt-24 pb-16">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Du lịch ngắn ngày</h1>
-            <p class="text-xl opacity-90 max-w-2xl mx-auto">
-                Giải pháp hoàn hảo cho những kỳ nghỉ cuối tuần và ngày lễ ngắn
-            </p>
+          </div>
         </div>
+      </div>
+
+      <div class="text-[#FFFCF0] my-2 text-center md:text-start">
+        Showing <b>4</b> of <b>15</b> results
+      </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-8 md:gap-8 w-full max-w-6xl mx-auto"
+      >
+        <div
+          class="bg-[#2CA6A4] rounded-[18px] md:rounded-[24px] p-4 md:p-5 flex flex-col items-center h-[420px] md:h-[498px] w-full"
+        >
+          <div class="flex justify-between w-full mb-2">
+            <span class="text-white text-[15px] md:text-[16px]">Sai Gon</span>
+            <span class="text-white text-[15px] md:text-[16px]">Day tour</span>
+          </div>
+          <div
+            class="relative w-full h-[180px] md:h-[260px] rounded-[14px] md:rounded-[16px] overflow-hidden mb-4 flex-1"
+          >
+            <img
+              src="../assets/images/mini-escapes/blog1.png"
+              alt="Saigon Scavenger Hunt"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent px-2 md:px-4 pt-2 md:pt-3 pb-4 md:pb-6 flex justify-center"
+            >
+              <span class="text-white text-center text-[16px] md:text-[18px]"
+                >Saigon Scavenger Hunt</span
+              >
+            </div>
+          </div>
+          <button
+            class="w-full bg-[#E7BD11] rounded-full py-2 md:py-3 text-[#104751] text-[15px] md:text-[18px] transition hover:brightness-95"
+          >
+            Download Brochure
+          </button>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-8">
+        <a href="#" class="underline text-[18px] md:text-[22px] text-[#FFFCF0]">
+          See More Tours
+        </a>
+      </div>
     </section>
-
-    <!-- Filter Section -->
-    <section class="py-8 bg-white border-b">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap gap-4 justify-center">
-                <button class="px-6 py-2 bg-yellow-500 text-white rounded-full font-semibold">Tất cả</button>
-                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">1 ngày</button>
-                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">2 ngày 1 đêm</button>
-                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">3 ngày 2 đêm</button>
-                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-yellow-500 hover:text-white">Cuối tuần</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mini Escapes Grid -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Mini Escape 1 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-64 bg-gradient-to-br from-green-400 to-blue-600 relative">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            1 ngày
-                        </div>
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-leaf text-white text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Ba Vì - Khám phá thiên nhiên</h3>
-                        <p class="text-gray-600 mb-4">Tham quan Vườn Quốc gia Ba Vì, thưởng thức không khí trong lành</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-clock text-gray-400"></i>
-                                <span class="text-gray-600">1 ngày</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-users text-gray-400"></i>
-                                <span class="text-gray-600">2-15 người</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-yellow-500 font-semibold text-lg">800,000 VNĐ</span>
-                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mini Escape 2 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-64 bg-gradient-to-br from-purple-400 to-pink-600 relative">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            2 ngày 1 đêm
-                        </div>
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-umbrella-beach text-white text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Cát Bà - Đảo ngọc Hạ Long</h3>
-                        <p class="text-gray-600 mb-4">Khám phá đảo Cát Bà, tắm biển và thưởng thức hải sản tươi ngon</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-clock text-gray-400"></i>
-                                <span class="text-gray-600">2 ngày 1 đêm</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-users text-gray-400"></i>
-                                <span class="text-gray-600">2-10 người</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-yellow-500 font-semibold text-lg">1,500,000 VNĐ</span>
-                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mini Escape 3 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-64 bg-gradient-to-br from-orange-400 to-red-600 relative">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            1 ngày
-                        </div>
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-mountain text-white text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Tam Đảo - Núi mây sương</h3>
-                        <p class="text-gray-600 mb-4">Thưởng thức không khí mát mẻ, ngắm cảnh núi non hùng vĩ</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-clock text-gray-400"></i>
-                                <span class="text-gray-600">1 ngày</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-users text-gray-400"></i>
-                                <span class="text-gray-600">2-12 người</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-yellow-500 font-semibold text-lg">700,000 VNĐ</span>
-                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mini Escape 4 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-64 bg-gradient-to-br from-blue-400 to-purple-600 relative">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            3 ngày 2 đêm
-                        </div>
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-city text-white text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Hội An - Phố cổ cuối tuần</h3>
-                        <p class="text-gray-600 mb-4">Dạo bước phố cổ, thưởng thức ẩm thực và làm gốm truyền thống</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-clock text-gray-400"></i>
-                                <span class="text-gray-600">3 ngày 2 đêm</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-users text-gray-400"></i>
-                                <span class="text-gray-600">2-8 người</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-yellow-500 font-semibold text-lg">2,200,000 VNĐ</span>
-                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mini Escape 5 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-64 bg-gradient-to-br from-teal-400 to-green-600 relative">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            2 ngày 1 đêm
-                        </div>
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-water text-white text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Vịnh Hạ Long - Du thuyền ngắn</h3>
-                        <p class="text-gray-600 mb-4">Du thuyền qua vịnh, khám phá hang động và tắm biển</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-clock text-gray-400"></i>
-                                <span class="text-gray-600">2 ngày 1 đêm</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-users text-gray-400"></i>
-                                <span class="text-gray-600">2-15 người</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-yellow-500 font-semibold text-lg">1,800,000 VNĐ</span>
-                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mini Escape 6 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-64 bg-gradient-to-br from-yellow-400 to-orange-600 relative">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            1 ngày
-                        </div>
-                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                            <i class="fas fa-tree text-white text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Mai Châu - Văn hóa dân tộc</h3>
-                        <p class="text-gray-600 mb-4">Khám phá văn hóa Thái, thưởng thức rượu cần và múa xòe</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-clock text-gray-400"></i>
-                                <span class="text-gray-600">1 ngày</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-users text-gray-400"></i>
-                                <span class="text-gray-600">2-20 người</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-yellow-500 font-semibold text-lg">600,000 VNĐ</span>
-                            <a href="inquire-now.html" class="btn-primary">Đặt ngay</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Load More Button -->
-            <div class="text-center mt-12">
-                <button class="btn-secondary text-lg">
-                    <i class="fas fa-plus mr-2"></i>
-                    Xem thêm mini escapes
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Mini Escapes -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tại sao chọn du lịch ngắn ngày?</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Giải pháp hoàn hảo cho cuộc sống bận rộn
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-clock text-yellow-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Tiết kiệm thời gian</h3>
-                    <p class="text-gray-600">
-                        Chỉ cần 1-3 ngày để có một kỳ nghỉ thư giãn, phù hợp với lịch trình bận rộn
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-wallet text-green-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Chi phí hợp lý</h3>
-                    <p class="text-gray-600">
-                        Giá cả phải chăng, phù hợp với mọi ngân sách từ sinh viên đến gia đình
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-heart text-blue-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Trải nghiệm đặc biệt</h3>
-                    <p class="text-gray-600">
-                        Tập trung vào những điểm nổi bật nhất, tạo kỷ niệm đáng nhớ trong thời gian ngắn
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Perfect for -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Hoàn hảo cho</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Những ai muốn tận hưởng kỳ nghỉ ngắn nhưng đầy ý nghĩa
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-heart text-pink-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Cặp đôi</h3>
-                    <p class="text-gray-600">Kỳ nghỉ lãng mạn cho hai người</p>
-                </div>
-
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-users text-blue-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Gia đình</h3>
-                    <p class="text-gray-600">Hoạt động phù hợp mọi lứa tuổi</p>
-                </div>
-
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-briefcase text-green-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Doanh nhân</h3>
-                    <p class="text-gray-600">Giải tỏa stress cuối tuần</p>
-                </div>
-
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-graduation-cap text-purple-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Sinh viên</h3>
-                    <p class="text-gray-600">Khám phá với ngân sách tiết kiệm</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-16 bg-yellow-500 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-4">Sẵn sàng cho kỳ nghỉ ngắn?</h2>
-            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                Liên hệ ngay để được tư vấn và đặt tour phù hợp với thời gian của bạn
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="inquire-now.html" class="bg-white text-yellow-500 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors text-lg font-semibold">
-                    <i class="fas fa-paper-plane mr-2"></i>
-                    Tư vấn ngay
-                </a>
-                <a href="tel:+84123456789" class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-yellow-500 transition-colors text-lg font-semibold">
-                    <i class="fas fa-phone mr-2"></i>
-                    Gọi ngay
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-2xl font-bold text-yellow-500 mb-4">Chôm Chôm Travel</h3>
-                    <p class="text-gray-300 mb-4">
-                        Khám phá Việt Nam với những trải nghiệm độc đáo và đáng nhớ
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Dịch vụ</h4>
-                    <ul class="space-y-2">
-                        <li><a href="experiences.html" class="text-gray-300 hover:text-yellow-500">Trải nghiệm</a></li>
-                        <li><a href="mini-escapes.html" class="text-gray-300 hover:text-yellow-500">Du lịch ngắn ngày</a></li>
-                        <li><a href="how-to-book.html" class="text-gray-300 hover:text-yellow-500">Hướng dẫn đặt tour</a></li>
-                        <li><a href="sustainability.html" class="text-gray-300 hover:text-yellow-500">Du lịch bền vững</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Thông tin</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about-us.html" class="text-gray-300 hover:text-yellow-500">Về chúng tôi</a></li>
-                        <li><a href="blog-listing.html" class="text-gray-300 hover:text-yellow-500">Blog</a></li>
-                        <li><a href="faqs.html" class="text-gray-300 hover:text-yellow-500">FAQ</a></li>
-                        <li><a href="inquire-now.html" class="text-gray-300 hover:text-yellow-500">Liên hệ</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Liên hệ</h4>
-                    <div class="space-y-2 text-gray-300">
-                        <p><i class="fas fa-phone mr-2"></i> +84 123 456 789</p>
-                        <p><i class="fas fa-envelope mr-2"></i> info@chomchomtravel.com</p>
-                        <p><i class="fas fa-map-marker-alt mr-2"></i> Hà Nội, Việt Nam</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p>&copy; 2024 Chôm Chôm Travel. Tất cả quyền được bảo lưu.</p>
-            </div>
-        </div>
-    </footer>
-
     <script src="../assets/js/main.js"></script>
-</body>
-</html> 
+    <script>
+      function toggleDropdown() {
+        const menu = document.getElementById("dropdownMenu");
+        menu.classList.toggle("hidden");
+      }
+      // Đóng dropdown khi click ra ngoài
+      document.addEventListener("click", function (event) {
+        const button = document.getElementById("dropdownButton");
+        const menu = document.getElementById("dropdownMenu");
+        if (!button.contains(event.target) && !menu.contains(event.target)) {
+          menu.classList.add("hidden");
+        }
+      });
+    </script>
+    <style>
+      .dropdown-scroll {
+        scrollbar-width: thin;
+        scrollbar-color: #e96024 #f6e7a6;
+        box-sizing: border-box;
+      }
+      .dropdown-scroll::-webkit-scrollbar {
+        width: 4px;
+        background: #faf3d3;
+        border-radius: 12px;
+      }
+      .dropdown-scroll::-webkit-scrollbar-thumb {
+        background: #e96024;
+        border-radius: 12px;
+        min-height: 40px;
+        transition: background 0.2s;
+      }
+      .dropdown-scroll::-webkit-scrollbar-thumb:hover {
+        background: #ff944d;
+      }
+    </style>
+  </body>
+</html>
