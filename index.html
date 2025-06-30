@@ -580,11 +580,11 @@
         <div
           class="bg-dark_primary relative rounded-3xl p-16 text-white shadow-lg flex flex-col md:flex-row items-start gap-10 w-full">
           <div class="md:w-1/2 flex flex-col gap-4">
-            <h3 class="text-2xl font-semibold text-[#7FD1C8]">
+            <h3 id="testimonial-name" class="text-2xl font-semibold text-[#7FD1C8]">
               The Taylor's Family (2 kids)
             </h3>
 
-            <div class="flex items-center flex-wrap gap-4 text-white text-lg font-semibold">
+            <div id="testimonial-info" class="flex items-center flex-wrap gap-4 text-white text-lg font-semibold">
               <div class="flex items-center gap-2">
                 <span>📅</span>21 days | 20 nights
               </div>
@@ -594,7 +594,7 @@
               </div>
             </div>
 
-            <div class="flex flex-wrap gap-4 mt-4">
+            <div id="testimonial-tags" class="flex flex-wrap gap-4 mt-4">
               <span class="px-3 py-1 border border-dashed rounded text-[16px]">Hà
                 Nội</span>
               <span class="px-3 py-1 border border-dashed rounded text-[16px]">Cát
@@ -610,7 +610,7 @@
                 Chí Minh</span>
             </div>
 
-            <p class="italic text-[14px] mt-4 leading-[150%] text-gray-300">
+            <p id="testimonial-content" class="italic text-[14px] mt-4 leading-[150%] text-gray-300">
               "Thanks to our superstars who did superb organization with great
               attention to detail. We especially love our local guide Tuấn in
               Cát Bà who is a helpful and lovely man. Having the team on
@@ -622,18 +622,18 @@
             </p>
 
             <div class="flex gap-4 mt-6">
-              <div class="cursor-pointer">
+              <div class="cursor-pointer" id="testimonial-prev-btn">
                 <img src="../assets/images/home/button-prev.svg" alt="button prev"
                   class=" object-contain w-[56px] h-[56px]" />
               </div>
-              <div class="cursor-pointer">
+              <div class="cursor-pointer" id="testimonial-next-btn">
                 <img src="../assets/images/home/button-next.svg" alt="button next"
                   class=" object-contain w-[56px] h-[56px]" />
               </div>
             </div>
           </div>
           <div class="md:w-1/2 absolute md:top-[-13%] lg:top-[10%] xl:top-[3%] 2xl:top-[-15%] right-[-7%]">
-            <img src="assets/images/our-travel-home.png" alt="Taylor's Family" class="w-4/5" />
+            <img id="testimonial-image" src="assets/images/our-travel-home.png" alt="Taylor's Family" class="w-4/5" />
           </div>
         </div>
       </div>
@@ -654,15 +654,15 @@
   </h1>
 
    <div class="relative h-[280px] bg-dark_primary mx-5 my-[80px] rounded-[20px] p-10">
-    <img src="assets/images/our-travel-home.png"
+    <img id="testimonial-image-mobile" src="assets/images/our-travel-home.png"
          alt="Taylor's Family"
          class="absolute top-[-25%]  left-0  object-cover" />
   </div>
 
-    <h3 class="text-[21px] font-semibold text-[#E96024] text-center my-3">
+    <h3 id="testimonial-name-mobile" class="text-[21px] font-semibold text-[#E96024] text-center my-3">
       Pambet's Family & Friends
     </h3>
-    <div class="flex items-center justify-center flex-wrap gap-4 text-[#104751] text-[14px]">
+    <div id="testimonial-info-mobile" class="flex items-center justify-center flex-wrap gap-4 text-[#104751] text-[14px]">
       <div class="flex items-center gap-2">
         <span><img src="assets/images/home/calendar.svg" alt="calendar" class="w-[16px] h-[16px]"></span>21 days | 20 nights
       </div>
@@ -672,7 +672,7 @@
       </div>
     </div>
 
-    <div class="flex flex-wrap justify-center gap-4 mt-4">
+    <div id="testimonial-tags-mobile" class="flex flex-wrap justify-center gap-4 mt-4">
       <span class="px-3 py-1 border border-dashed border-dark_primary rounded text-[16px]">Hà
         Nội</span>
       <span class="px-3 py-1 border border-dashed border-dark_primary rounded text-[16px]">Cát
@@ -688,7 +688,7 @@
       <span class="px-3 py-1 border border-dashed border-dark_primary rounded text-[16px]">Hồ
         Chí Minh</span>
     </div>
-    <p class="text-center my-4">
+    <p id="testimonial-content-mobile" class="text-center my-4">
       "Our long day trip to Vietnam was truly amazing with dozens of
       unforgettable memories with our local guides. Huge
       thanks to Chom Chom Travel's instant support and impeccable
@@ -706,10 +706,10 @@
     </p>
 
     <div class="flex gap-4  justify-center py-5">
-      <div class="cursor-pointer">
+      <div class="cursor-pointer" id="testimonial-prev-btn-mobile">
         <img src="../assets/images/home/button-prev.svg" alt="button prev" class=" object-contain w-[56px] h-[56px]" />
       </div>
-      <div class="cursor-pointer">
+      <div class="cursor-pointer" id="testimonial-next-btn-mobile">
         <img src="../assets/images/home/button-next.svg" alt="button next" class=" object-contain w-[56px] h-[56px]" />
       </div>
     </div>
@@ -975,6 +975,92 @@
           }
         });
     }, 100);
+
+    // Testimonials desktop switching logic
+    const testimonials = [
+      {
+        name: "The Taylor's Family (2 kids)",
+        content: `"Thanks to our superstars who did superb organization with great attention to detail. We especially love our local guide Tuấn in Cát Bà who is a helpful and lovely man. Having the team on WhatsApp throughout means we could truly just sit back and soak up the culture of Vietnam. Yes, you can do it on your own but honestly, this company takes away all the stress and uncertainty – which meant we could focus on having an amazing time and we've left with the most amazing memories."`,
+        image: "assets/images/our-travel-home.png",
+        tags: ["Hà Nội", "Cát Bà", "Ninh Bình", "Phong Nha", "Huế", "Hội An", "Hồ Chí Minh"],
+        info: [
+          { icon: "📅", text: "21 days | 20 nights", img: "assets/images/home/calendar.svg" },
+          { icon: "👨‍👩‍👧‍👦", text: "Family", img: "assets/images/home/person-calendar.svg" },
+          { icon: "🌍", text: "United Kingdom", img: "assets/images/home/earth.svg" }
+        ]
+      },
+      {
+        name: "Pambet's Family & Friends",
+        content: `"Our long day trip to Vietnam was truly amazing with dozens of unforgettable memories with our local guides. Huge thanks to Chom Chom Travel's instant support and impeccable organization, we could travel at ease and get to discover Vietnam's hidden gems, learn about the culture of the Hmong ethnic community, and experience adventurous activities with lots of fun! We can tell you endless stories from our Vietnam trip, but here are the highlights. There were great drivers on our motorbike tour in Mu Cang Chai with a good mix of roads and trails - nothing as we expected! The hiking trip was surprisingly less touristy which makes it even more authentic. Then during our travel to Huế, it was nice to have a guide who could speak French well and we love his personality!"`,
+        image: "assets/images/our-travel-home.png",
+        tags: ["Hà Nội", "Cát Bà", "Ninh Bình", "Huế", "Phong Nha", "Hội An", "Hồ Chí Minh"],
+        info: [
+          { icon: "📅", text: "21 days | 20 nights", img: "assets/images/home/calendar.svg" },
+          { icon: "👨‍👩‍👧‍👦", text: "Family", img: "assets/images/home/person-calendar.svg" },
+          { icon: "🌍", text: "United Kingdom", img: "assets/images/home/earth.svg" }
+        ]
+      }
+      // Có thể thêm nhiều testimonial khác ở đây
+    ];
+    let currentTestimonial = 0;
+    function renderTestimonial(index) {
+      const t = testimonials[index];
+      // Desktop
+      document.getElementById('testimonial-name').textContent = t.name;
+      document.getElementById('testimonial-content').textContent = t.content;
+      document.getElementById('testimonial-image').src = t.image;
+      const infoDiv = document.getElementById('testimonial-info');
+      if (infoDiv) {
+        infoDiv.innerHTML = t.info.map(i => `
+          <div class=\"flex items-center gap-2\">
+            <span>${i.icon}</span>${i.text}
+          </div>
+        `).join('');
+      }
+      const tagsDiv = document.getElementById('testimonial-tags');
+      if (tagsDiv) {
+        tagsDiv.innerHTML = t.tags.map(tag => `
+          <span class=\"px-3 py-1 border border-dashed rounded text-[16px]\">${tag}</span>
+        `).join('');
+      }
+      // Mobile
+      document.getElementById('testimonial-name-mobile').textContent = t.name;
+      document.getElementById('testimonial-content-mobile').textContent = t.content;
+      document.getElementById('testimonial-image-mobile').src = t.image;
+      const infoDivMobile = document.getElementById('testimonial-info-mobile');
+      if (infoDivMobile) {
+        infoDivMobile.innerHTML = t.info.map(i => `
+          <div class=\"flex items-center gap-2\">
+            <span><img src=\"${i.img}\" alt=\"icon\" class=\"w-[16px] h-[16px]\"></span>${i.text}
+          </div>
+        `).join('');
+      }
+      const tagsDivMobile = document.getElementById('testimonial-tags-mobile');
+      if (tagsDivMobile) {
+        tagsDivMobile.innerHTML = t.tags.map(tag => `
+          <span class=\"px-3 py-1 border border-dashed border-dark_primary rounded text-[16px]\">${tag}</span>
+        `).join('');
+      }
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      renderTestimonial(currentTestimonial);
+      document.getElementById('testimonial-prev-btn').addEventListener('click', function () {
+        currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+        renderTestimonial(currentTestimonial);
+      });
+      document.getElementById('testimonial-next-btn').addEventListener('click', function () {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        renderTestimonial(currentTestimonial);
+      });
+      document.getElementById('testimonial-prev-btn-mobile').addEventListener('click', function () {
+        currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+        renderTestimonial(currentTestimonial);
+      });
+      document.getElementById('testimonial-next-btn-mobile').addEventListener('click', function () {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        renderTestimonial(currentTestimonial);
+      });
+    });
   </script>
 </body>
 
