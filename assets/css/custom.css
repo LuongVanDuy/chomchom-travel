@@ -13,12 +13,114 @@
   box-sizing: border-box;
 }
 
+ /* Reset margin and padding */
+ body, html {
+  margin: 0;
+  padding: 0;
+}
+
+
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   color: #1a4952;
   box-sizing: border-box;
 }
+
+@media (min-width: 768px) {
+
+  .dropdown-group:hover .dropdown-bridge,
+  .dropdown-group:focus-within .dropdown-bridge {
+    display: block;
+  }
+
+  .dropdown-bridge {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 18px;
+    z-index: 40;
+  }
+}
+
+/* Fix header scroll issue on mobile */
+@supports (-webkit-touch-callout: none) {
+
+  /* iOS Safari */
+  .mobile-header-fixed {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
+/* Ensure header stays on top */
+.mobile-header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Ensure sideMenu is always on top */
+#sideMenu {
+  z-index: 999999 !important;
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100vh !important;
+}
+
+/* Ensure menu overlay is also on top */
+#menuOverlay {
+  z-index: 999998 !important;
+}
+
+/* Custom Swiper Pagination */
+.custom-swiper-pagination {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  z-index: 20;
+  margin-top: 25px;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet {
+  width: 18px;
+  height: 18px;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 6px;
+  opacity: 1;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet img {
+  width: 18px;
+  height: 18px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet-active img {
+  opacity: 1;
+}
+
 
 /* Typography */
 .font-heading {
@@ -257,4 +359,12 @@ body {
   color: #059669;
   font-size: 0.875rem;
   margin-top: 0.25rem;
+}
+
+.swiper-button-prev::after,
+.swiper-rtl .swiper-button-next::after,
+.swiper-button-next::after,
+.swiper-rtl .swiper-button-prev::after {
+  content: none !important;
+  display: none !important;
 }
