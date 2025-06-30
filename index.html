@@ -13,105 +13,15 @@
 
   <!-- Styles -->
   <link href="dist/output.css" rel="stylesheet" />
+  <link href="assets/css/custom.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
-    @media (min-width: 768px) {
+   
 
-      .dropdown-group:hover .dropdown-bridge,
-      .dropdown-group:focus-within .dropdown-bridge {
-        display: block;
-      }
-
-      .dropdown-bridge {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 100%;
-        width: 100%;
-        height: 18px;
-        z-index: 40;
-      }
-    }
-
-    /* Fix header scroll issue on mobile */
-    @supports (-webkit-touch-callout: none) {
-
-      /* iOS Safari */
-      .mobile-header-fixed {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-      }
-    }
-
-    /* Ensure header stays on top */
-    .mobile-header-fixed {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
-    }
-
-    /* Ensure sideMenu is always on top */
-    #sideMenu {
-      z-index: 999999 !important;
-      position: fixed !important;
-      top: 0 !important;
-      right: 0 !important;
-      left: 0 !important;
-      bottom: 0 !important;
-      width: 100% !important;
-      height: 100vh !important;
-    }
-
-    /* Ensure menu overlay is also on top */
-    #menuOverlay {
-      z-index: 999998 !important;
-    }
-
-    /* Custom Swiper Pagination */
-    .custom-swiper-pagination {
-      position: relative;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2px;
-      z-index: 20;
-      margin-top: 25px;
-    }
-
-    .custom-swiper-pagination .swiper-pagination-bullet {
-      width: 18px;
-      height: 18px;
-      background: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      margin: 0 6px;
-      opacity: 1;
-    }
-
-    .custom-swiper-pagination .swiper-pagination-bullet img {
-      width: 18px;
-      height: 18px;
-      opacity: 0.5;
-      transition: opacity 0.3s ease;
-    }
-
-    .custom-swiper-pagination .swiper-pagination-bullet-active img {
-      opacity: 1;
-    }
   </style>
 </head>
 
-<body>
+<body class="bg-[#104751]">
   <!-- header mobile -->
   <header class="mobile-header-fixed w-full z-[9999] md:hidden">
     <div class="flex items-center justify-between bg-[#15525A] px-8 py-2">
@@ -295,7 +205,7 @@
   </section>
 
   <!-- -------------- -->
-  <section class="bg-[#104751] relative">
+  <section class="bg-[#104751] relative ">
     <div>
       <img src="../assets/images/home/banner2.svg" alt="Banner mobile" class="h-auto w-full block sm:hidden" />
 
@@ -335,23 +245,23 @@
   </section>
 
   <!-- -------------- -->
-  <section class="bg-[#104751] relative mt-[-1px]">
+  <section class="bg-[#104751] relative ">
     <div>
-      <img src="../assets/images/home/banner4.svg" alt="Banner4" class="h-auto w-full block sm:hidden" />
+      <img src="../assets/images/home/banner4.png" alt="Banner4" class="h-auto w-full block sm:hidden" />
 
-      <div class="absolute w-[80%] text-center top-[175px] left-1/2 transform -translate-x-1/2">
-        <h1 class="text-[#FFC801] font-semibold leading-[125%] text-[22px] mb-3">
+      <div class="absolute w-[80%] text-center top-[8%] left-1/2 transform -translate-x-1/2">
+        <h1 class="text-[#FFC801] font-semibold leading-[125%] text-[28px] mb-3">
           Our Type of <br />
           Experiences
         </h1>
-        <p class="text-[#fff]">
+        <p class="text-[#fff] text-[14px]">
           Whether your adventure is about comfort, curiosity, or the thrill of
           the unknown, we connect you with local cultures, traditions, and
           landscapes.
         </p>
       </div>
 
-      <div class="h-[670px] w-full absolute px-[25px] top-[380px] block md:hidden">
+      <div class="h-[670px] w-full absolute px-[25px] top-[300px] block md:hidden py-10">
         <div class="swiper experiences-swiper h-full">
           <div class="swiper-wrapper">
             <div class="swiper-slide h-[468px]">
@@ -415,14 +325,32 @@
               </div>
             </div>
           </div>
-          <div class="custom-swiper-pagination flex justify-center items-center mt-6 mb-2"></div>
+     
+        </div>
+
+        <div class="flex justify-center w-full">
+          <div class="flex gap-2 justify-center my-6 relative h-[56px] w-2/5">
+            <div class="swiper-button-prev cursor-pointer !w-[56px] !h-[56px]">
+              <img src="../assets/images/home/button-prev-yellow.png" alt="button prev" class="object-contain w-full h-full" />
+            </div>
+            <div class="swiper-button-next cursor-pointer !w-[56px] !h-[56px]">
+              <img src="../assets/images/home/button-next-yellow.png" alt="button next" class="object-contain w-full h-full" />
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img src="../assets/images/faqs/button-red.svg" alt="button red"
+            class="md:w-[281px] md:h-[56px] min-w-[224px] h-[42px] mx-auto object-contain" />
+          <span
+            class="absolute inset-0 flex items-center justify-center text-[18px] font-bold text-white select-text">More Experiences</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- --------------- -->
-  <section class="bg-[#FEFCF0] block md:hidden flex flex-col items-center">
+  <section class="bg-[#FEFCF0] block md:hidden flex flex-col items-center ">
     <img src="/assets/images/home/explore-motor.png"/>
     <div class="flex flex-col text-center p-3">
       <h2 class="text-[28px] font-heading font-bold leading-tight">
@@ -442,21 +370,21 @@
   </section>
 
   <!-- Feature Experiences -->
-  <section class="relative bg-[#FEFCF0] hidden md:block">
+  <section class="relative bg-[#FEFCF0] hidden md:block ">
     <img src="assets/images/home/person.svg" alt="Vietnam landscape"
-      class="w-[480px] h-auto object-cover absolute right-[1.7%] top-[-30.5%] hidden md:block">
+      class="w-[480px] h-auto object-cover absolute xl:right-[1.7%] xl:top-[-30.5%] top-[-43%] right-[-1%] hidden md:block">
     <img src="assets/images/home/bg-experiences.svg" alt="Vietnam landscape" class="w-full h-full object-cover z-10">
 
     <div class="absolute top-[5%] left-[8%] bottom-0 right-0 flex justify-center items-center  ">
       <div class="flex gap-5 justify-around">
            <div class="w-1/5 flex flex-col gap-5">
-                   <h2 class="text-3xl md:text-[48px] font-heading font-bold text-orange whitespace-nowrap leading-[125%] ">
+                   <h2 class="text-[20px] xl:text-[48px] font-heading font-bold text-orange whitespace-nowrap leading-[125%] ">
                     Our Type of <br/> Experiences
                    </h2>
-                   <p class="text-lg text-white font-semibold leading-relaxed">
+                   <p class="text-[14px] xl:text-lg text-white font-semibold leading-relaxed">
                        Whether your adventure is about comfort, curiosity, or the thrill of the unknown, we connect you with local cultures, traditions, and landscapes 
                    </p>
-                   <div class="mt-10">
+                   <div class="mt-3 xl:mt-10">
                        <a href="pages/inquire-now.html"
                            class="text-white font-bold px-5 py-2 rounded-lg ransition-colors duration-200 hidden md:inline-block  " style="background-image: url('assets/images/bg-btn-inquire.png'); background-repeat: no-repeat; background-size: cover; background-position: center;   ">
                            More Experiences
@@ -468,19 +396,36 @@
             class="pt-5 pr-5 rounded-[22px] w-fit h-fit"
             style="background-image: url('assets/images/home/bg-card-feature.png'); background-size: cover; background-position: center;"
           >
-            <div class="w-[525px] h-[435px] border-[2px] border-white rounded-[18px] overflow-hidden relative">
-
+          <div class="relative w-[300px] xl:w-[525px] h-[250px] xl:h-[435px] border-2 border-white rounded-[18px] overflow-hidden">
+            <!-- Ảnh nền chính -->
             <img
-              src="assets/images/home/title-card-feature.png"
-              alt="Card title"
-              class="absolute bottom-0 left-0 right-0  z-10"
+              src="assets/images/card-feature-1.jpg"
+              alt="Local guide with tourists"
+              class="w-full h-full object-cover"
+              loading="lazy"
             />
-              <img
-                src="assets/images/card-feature-1.jpg"
-                alt="Local guide with tourists"
-                class="w-full h-full object-cover"
-              />
+          
+            <!-- Họa tiết giấy xé trang trí: sửa lại để full width -->
+            <img
+            src="../assets/images/home/banner5.png"
+            alt="Họa tiết giấy xé trang trí"
+            class="absolute bottom-0 left-0 z-10 w-full h-auto pointer-events-none"
+            loading="lazy"
+          />
+          
+            <!-- Nội dung text -->
+            <div class="absolute bottom-[5px] xl:bottom-[15px] left-0 w-full z-20 px-5 flex flex-col text-start h-[100px] xl:h-[120px]">
+              <h2 class="text-[12px] xl:text-[24px] font-semibold text-[#104751] leading-[150%] mb-2">Slow Adventures</h2>
+              <p class="text-[10px] xl:text-[14px]">
+                Travel that gives you time to breathe, discover, and connect. Perfect for
+                families, couples, and curious travelers who want meaningful experiences, not
+                rushed sightseeing.
+              </p>
             </div>
+          </div>
+          
+
+           
           </div>
               <div class="w-2/5 flex gap-5 pt-5">
                 <div class="flex-1 border-[2px] border-white rounded-[18px] overflow-hidden">  <img src="assets/images/card-feature-2.jpg" alt="Local guide with tourists" class="w-full h-full object-cover"></div>
@@ -494,7 +439,7 @@
   </section>
 
   <!-- Explore Vietnam -->
-  <section class="relative bg-[#FEFCF0] hidden md:block">
+  <section class="relative bg-[#FEFCF0] hidden md:block ">
     <img src="assets/images/home/viet-map.svg" alt="Vietnam landscape" class="w-full h-full object-cover">
     <div class="absolute top-[20%] left-[8%] bottom-0 right-0">
       <div class="flex flex-col gap-5 text-start max-w-[30%]">
@@ -513,19 +458,19 @@
   </section>
   
 
-  <div class="h-[400px] relative bg-[#FEFCF0] hidden md:block">
+  <div class="h-[400px] relative bg-[#FEFCF0] hidden md:block ">
     <img src="assets/images/bottom-explore-home.png" alt="Vietnam landscape"
       class=" w-full object-cover absolute bottom-0 left-0 right-0 ">
   </div>
 
   <!-- Why Travel Agency-->
-  <section class="py-16 md:py-24 bg-[#104751]  md:bg-dark_primary">
+  <section class="py-16 md:py-24 bg-[#104751] md:bg-dark_primary ">
     <div class="px-[8%] flex flex-col  items-center gap-16 px-6">
       <div class="flex flex-col md:flex-row justify-between gap-5 md:gap-20 items-center">
         <div class="relative">
           <img src="assets/images/why-use-travel.png" alt="Vietnam landscape" class="w-full h-full object-cover">
           <p
-            class="text-orange absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-start text-4xl font-bold">
+            class="text-orange absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-start text-[16px] xl:text-[28px]  font-bold">
             Why
             Use A <br />
             <span class="text-white whitespace-nowrap">Travel
@@ -533,7 +478,7 @@
           </p>
         </div>
 
-        <p class="text-white text-lg text-center md:text-start">A boutique
+        <p class="text-white text-[14px] xl:text-lg text-center md:text-start">A boutique
           travel agency like Chôm Chôm
           Travel offers a tailored and stress-free experience that goes beyond
           anything a typical DIY approach will provide.</p>
@@ -577,7 +522,7 @@
               </svg>
              <div class="relative">
               
-              <svg class="block md:hidden absolute left-[-15%]" width="76" height="100" viewBox="0 0 76 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="block md:hidden absolute left-[-15%] top-[-20%]" width="76" height="100" viewBox="0 0 76 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_3989_2802)">
                 <mask id="mask0_3989_2802" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="54" y="72" width="6" height="9">
                 <path d="M54.2804 74.7931L57.166 72.9883L59.0588 79.0321L56.1731 80.8369L54.2804 74.7931Z" fill="white"/>
@@ -623,7 +568,7 @@
   </section>
 
   <!-- Testimonials desktop -->
-  <section class="relative bg-[#FEFCF0] pt-6 hidden md:block">
+  <section class="relative bg-[#FEFCF0] pt-6 hidden md:block  min-h-[1160px] xl:min-h-[800px]">
     <img src="assets/images/home/bg-ous-love.svg" alt="Vietnam landscape" class="w-full h-full object-cover" />
     <img src="assets/images/home/bg-our-traveler-home.svg" alt="Vietnam landscape" class="w-full h-full object-cover" />
 
@@ -687,58 +632,68 @@
               </div>
             </div>
           </div>
-          <div class="md:w-1/2 absolute top-[-13%] right-[-7%]">
-            <img src="assets/images/our-travel-home.png" alt="Taylor's Family" class="rounded-3xl border-4  w-full" />
+          <div class="md:w-1/2 absolute md:top-[-13%] lg:top-[10%] xl:top-[3%] 2xl:top-[-15%] right-[-7%]">
+            <img src="assets/images/our-travel-home.png" alt="Taylor's Family" class="w-4/5" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials mobile -->
-  <section class="h-[1390px] bg-[#FEFCF0] px-[5%] md:hidden">
+  <img src="assets/images/home/our-travel-break.png" alt="Vietnam landscape" class="w-full h-full object-cover md:hidden">
 
-    <h1 class="text-primary text-center text-4xl font-semibold">
-      Our Travelers
-      <br />
-      <span class="text-orange_dark">Love Us</span>
-    </h1>
+
+  <!-- Testimonials mobile -->
+  <section class="min-h-[1390px] bg-[#FEFCF0] px-[5%] md:hidden pb-10">
+   <div class="flex justify-center"> <img src="assets/images/home/our-travel-camera.png" alt="Vietnam landscape" class="w-[200px] h-[140px] object-cover"></div>
+
+   <h1 class="text-primary text-center text-4xl font-semibold">
+    Our Travelers
+    <br />
+    <span class="text-orange_dark">Love Us</span>
+  </h1>
+
+   <div class="relative h-[280px] bg-dark_primary mx-5 my-[80px] rounded-[20px] p-10">
+    <img src="assets/images/our-travel-home.png"
+         alt="Taylor's Family"
+         class="absolute top-[-25%]  left-0  object-cover" />
+  </div>
 
     <h3 class="text-[21px] font-semibold text-[#E96024] text-center my-3">
-      Pambet’s Family & Friends
+      Pambet's Family & Friends
     </h3>
-    <div class="flex items-center flex-wrap gap-4 text-[#104751] text-[14px]">
+    <div class="flex items-center justify-center flex-wrap gap-4 text-[#104751] text-[14px]">
       <div class="flex items-center gap-2">
-        <span>📅</span>21 days | 20 nights
+        <span><img src="assets/images/home/calendar.svg" alt="calendar" class="w-[16px] h-[16px]"></span>21 days | 20 nights
       </div>
-      <div class="flex items-center gap-2"><span>👨‍👩‍👧‍👦</span>Family</div>
+      <div class="flex items-center gap-2"><span><img src="assets/images/home/person-calendar.svg" alt="calendar" class="w-[16px] h-[16px]"></span>Family</div>
       <div class="flex items-center gap-2">
-        <span>🌍</span>United Kingdom
+        <span><img src="assets/images/home/earth.svg" alt="calendar" class="w-[16px] h-[16px]"></span>United Kingdom
       </div>
     </div>
 
     <div class="flex flex-wrap justify-center gap-4 mt-4">
-      <span class="px-3 py-1 border border-dashed rounded text-[16px]">Hà
+      <span class="px-3 py-1 border border-dashed border-dark_primary rounded text-[16px]">Hà
         Nội</span>
-      <span class="px-3 py-1 border border-dashed rounded text-[16px]">Cát
+      <span class="px-3 py-1 border border-dashed border-dark_primary rounded text-[16px]">Cát
         Bà</span>
-      <span class="px-3 py-1 border border-dashed rounded text-[16px]">Ninh
+      <span class="px-3 py-1 border border-dashed border-dark_primary rounded text-[16px]">Ninh
         Bình</span>
-      <span class="px-3 py-1 border border-dashed rounded text-[16px]">Huế</span>
-      <span class="px-3 py-1 border border-dashed rounded text-[16px]">Phong
+      <span class="px-3 py-1 border border-dashed border-dark_primary rounded text-[16px]">Huế</span>
+      <span class="px-3 py-1 border border-dashed border-dark_primary rounded text-[16px]">Phong
         Nha</span>
 
-      <span class="px-3 py-1 border border-dashed rounded text-[16px]">Hội
+      <span class="px-3 py-1 border border-dashed border-dark_primary rounded text-[16px]">Hội
         An</span>
-      <span class="px-3 py-1 border border-dashed rounded text-[16px]">Hồ
+      <span class="px-3 py-1 border border-dashed border-dark_primary rounded text-[16px]">Hồ
         Chí Minh</span>
     </div>
     <p class="text-center my-4">
-      “Our long day trip to Vietnam was truly amazing with dozens of
+      "Our long day trip to Vietnam was truly amazing with dozens of
       unforgettable memories with our local guides. Huge
       thanks to Chom Chom Travel's instant support and impeccable
       organization, we could travel at ease and get to
-      discover Vietnam’s hidden gems, learn about the culture of the Hmong
+      discover Vietnam's hidden gems, learn about the culture of the Hmong
       ethnic community, and experience adventurous
       activities with lots of fun!
       We can tell you endless stories from our Vietnam trip, but here are the
@@ -747,10 +702,10 @@
       nothing as we expected! The hiking trip
       was surprisingly less touristy which makes it even more authentic. Then
       during our travel to Huế, it was nice to
-      have a guide who could speak French well and we love his personality!
+      have a guide who could speak French well and we love his personality!"
     </p>
 
-    <div class="flex gap-4 mt-6 justify-center">
+    <div class="flex gap-4  justify-center py-5">
       <div class="cursor-pointer">
         <img src="../assets/images/home/button-prev.svg" alt="button prev" class=" object-contain w-[56px] h-[56px]" />
       </div>
@@ -761,33 +716,38 @@
   </section>
 
   <!-- ---------- -->
-  <section class="relative bg-[#104751] h-[500px] md:h-auto">
-    <img src="assets/images/home/bg-our-mobile.svg" alt="Vietnam landscape"
+  <section class="relative  h-[700px] md:h-auto">
+    <img src="assets/images/home/bg-our-mobile.png" alt="Vietnam landscape"
       class="w-full h-[70px] object-cover  md:mt-[-80px] block md:hidden" />
-    <img src="assets/images/home/bg-join-us.svg" alt="Vietnam landscape"
+
+     <div class="absolute flex justify-center w-full  top-[15%] left-0 block md:hidden">
+        <img src="assets/images/home/bg-our-party-mobile.png" alt="Vietnam landscape"
+        class="w-4/5 " />
+     </div>
+    <img src="assets/images/home/bg-join-us.png" alt="Vietnam landscape"
       class="w-full h-full object-cover md:mt-[-80px] hidden md:block" />
 
     <div
-      class="absolute px-[5%] top-[50%] left-0 md:bottom-0 bottom-[-80px] right-0  justify-center items-center transform -translate-y-1/3">
+      class="absolute px-[5%] top-[50%] py-14 left-0 md:bottom-0 bottom-[-80px] right-0  justify-center items-center transform -translate-y-1/3">
       <div class="relative z-10 mx-auto text-center flex flex-col items-center gap-3 md:gap-6 md:py-20">
-        <h2 class="text-[22px] md:text-4xl font-bold text-[#fff]">
+        <h2 class="text-[28px] md:text-4xl font-bold text-[#fff]">
           Join our <br />
           <span class="text-orange">Curious Traveling Community</span>
         </h2>
 
-        <p class="text-base md:text-lg text-white/80 leading-relaxed">
+        <p class="text-[14px] md:text-lg text-white font-semibold leading-relaxed">
           Sign up to get updated on – the latest travel news, our new routes
           of hidden gems in Vietnam, sustainability initiatives, and more!
         </p>
 
         <input type="email" placeholder="Your email"
-          class="w-full max-w-md px-6 py-3 rounded-full border-[2px] border-dashed border-white/60 bg-[#E96024] text-white placeholder-white outline-none" />
+          class="w-full my-5 max-w-md px-6 py-3 rounded-full border-[2px] border-dashed border-white/60 bg-[#E96024] text-white placeholder-white outline-none" />
 
         <div class="relative">
           <img src="../assets/images/home/button-sub.svg" alt="button red"
             class="md:w-[281px] md:h-[56px] min-w-[224px] h-[42px] mx-auto object-contain" />
           <span
-            class="absolute inset-0 flex items-center justify-center md:text-[18px] text-[12px] text-[#E96024] select-text font-bold">Subscribe</span>
+            class="absolute inset-0 flex items-center justify-center md:text-[18px] text-[18px] text-[#E96024] select-text font-bold">Subscribe</span>
         </div>
       </div>
     </div>
@@ -803,7 +763,7 @@
   </div>
 
   <!-- ---------- -->
-  <section class="min-h-[350px] bg-[#104751] relative pt-[30px] md:pt-[100px] md:px-[10%] px-[10px]">
+  <section class="min-h-[350px] bg-[#104751] relative py-[40px] md:pt-[100px] md:px-[10%] px-[10px] ">
     <div class="flex flex-col gap-5">
       <div class="flex flex-col md:flex-row gap-8 order-2 md:order-1">
         <p class="text-[#fff] text-center md:text-start px-[20px]">
@@ -853,7 +813,7 @@
   </section>
 
   <!-- footer --->
-  <footer>
+  <footer class="">
     <div class="relative bg-[#FAF6EC] text-[#01363D] text-sm py-10">
       <!-- Background Image -->
       <div class="absolute inset-0 z-0">
@@ -863,7 +823,7 @@
       <!-- Content -->
       <div class="relative z-10 max-w-7xl mx-auto py-12 grid grid-cols-1 md:grid-cols-4 gap-10 px-6">
         <!-- Logo & Intro -->
-        <div class="space-y-4">
+        <div class="space-y-4 flex flex-col items-center md:items-start text-center md:text-start">
           <img src="assets/images/logo-footer.png" alt="Chôm Chôm Travel" class="h-24 w-auto" />
           <h4 class="text-xl font-bold text-orange_dark">Chom Chom Travel</h4>
           <p class="leading-relaxed text-dark_primary">
@@ -877,20 +837,25 @@
             Registered Date: <span class="font-medium">2021-03-25</span>
           </p>
         </div>
+
+        <div class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"></div>
   
         <!-- About Us -->
-        <div>
-          <h4 class="text-lg font-bold text-orange_dark mb-6">About Us</h4>
+        <div class="flex flex-col items-center md:items-start text-center md:text-start">
+          <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">About Us</h4>
           <ul class="space-y-2 text-dark_primary text-base">
             <li><a href="#" class="hover:underline">About Us</a></li>
             <li><a href="#" class="hover:underline">Sustainability</a></li>
             <li><a href="#" class="hover:underline">How to book</a></li>
           </ul>
         </div>
+
+        <div class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"></div>
+
   
         <!-- Travel with us -->
-        <div>
-          <h4 class="text-lg font-bold text-orange_dark mb-6">
+        <div class="flex flex-col items-center md:items-start text-center md:text-start">
+          <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">
             Travel with us
           </h4>
           <ul class="space-y-2 text-dark_primary text-base">
@@ -901,10 +866,13 @@
             <li><a href="#" class="hover:underline">Blog</a></li>
           </ul>
         </div>
+
+        <div class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"></div>
+
   
         <!-- Get in touch -->
-        <div class="text-dark_primary text-base space-y-2">
-          <h4 class="text-lg font-bold text-orange_dark mb-6">Get in touch</h4>
+        <div class="text-dark_primary text-base space-y-2 flex flex-col items-center md:items-start text-center md:text-start">
+          <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">Get in touch</h4>
           <a href="#" class="underline text-[#01363D] hover:text-[#F15A29]">Inquire Now</a>
           <p>11 Trần Văn Sắc, Thảo Điền, D2,<br />Hồ Chí Minh City, Vietnam.</p>
           <p>+84 833 886 750</p>
