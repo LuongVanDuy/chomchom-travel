@@ -9,163 +9,392 @@
     
     <!-- Styles -->
     <link href="../dist/output.css" rel="stylesheet">
+    <!-- Thêm Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 <body class="bg-body">
-    <!-- Header -->
-    <header class="text-white fixed top-0 z-50 w-full ">
-        <div class="container mx-auto flex items-center justify-between py-2 px-6 w-[80%] bg-no-repeat" style="background-image: url('../assets/images/background-header-2.png'); background-repeat: no-repeat; background-size: cover; background-position: center;">
-            <a href="/" class="flex items-center space-x-2">
-                <img src="../assets/images/logo.png" alt="Logo" class="h-14 w-auto">
-            </a>
-            
-            <nav class="hidden md:flex items-center space-x-16">
-                <a href="about-us.html" class="text-xl hover:text-accent transition-colors duration-200 font-medium">About us</a>
-                <a href="experiences.html" class="text-xl hover:text-accent transition-colors duration-200 font-medium">Travel</a>
-                <a href="sustainability.html" class="text-xl hover:text-accent transition-colors duration-200 font-medium">Sustainability</a>
-                <a href="faqs.html" class="text-xl hover:text-accent transition-colors duration-200 font-medium">FAQs</a>
-                <a href="blog-listing.html" class="text-xl hover:text-accent transition-colors duration-200 font-medium">Blogs</a>
-            </nav>
-            
-            <div class="flex items-center space-x-4">
-                <a href="inquire-now.html"
-                    class="text-white font-bold px-5 py-2 rounded-lg ransition-colors duration-200 hidden md:inline-block  " style="background-image: url('../assets/images/bg-btn-inquire.png'); background-repeat: no-repeat;">
-                    Inquire now
-                </a>
-             
-                <!-- Mobile menu button -->
-                <button class="md:hidden focus:outline-none focus:ring-2 focus:ring-accent rounded">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
-            </div>
-        </div>  
-        
-        <!-- Mobile menu -->
-        <div class="md:hidden hidden bg-primary px-6 pb-4 border-t border-primary/20">
-            <nav class="flex flex-col space-y-3 pt-4">
-                <a href="about-us.html" class="hover:text-accent transition-colors duration-200 font-medium py-2">About us</a>
-                <a href="experiences.html" class="hover:text-accent transition-colors duration-200 font-medium py-2">Travel</a>
-                <a href="sustainability.html" class="hover:text-accent transition-colors duration-200 font-medium py-2">Sustainability</a>
-                <a href="blog-listing.html" class="hover:text-accent transition-colors duration-200 font-medium py-2">Blogs</a>
-                <a href="inquire-now.html" class="bg-accent text-primary font-bold px-5 py-2 rounded-lg hover:bg-orange transition-colors duration-200 mt-2 text-center">Inquire now</a>
-            </nav>
+    <!-- header mobile -->
+  <header class="mobile-header-fixed w-full z-[9999] md:hidden">
+    <div class="flex items-center justify-between bg-[#15525A] px-8 py-2">
+      <a href="/" class="flex items-center">
+        <img src="../assets/images/home/logo.svg" alt="Chôm Chôm Travel Logo" class="h-[44px] w-[58px]" />
+      </a>
+
+      <button id="openMenu" type="button" class="md:hidden focus:outline-none">
+        <img src="../assets/images/home/menu.svg" alt="Open menu" class="h-[25px] w-[31px]" />
+      </button>
+    </div>
+
+    <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300">
+    </div>
+
+    <nav id="sideMenu"
+      class="fixed top-0 right-0 h-full w-full max-w-full bg-[#15525A] z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
+      <div class="flex items-center justify-between px-6 py-6">
+        <div class="flex-1 relative gap-5">
+          <img src="../assets/images/home/vector1.svg" alt="Chôm Chôm Travel Logo"
+            class="h-[82px] w-auto object-contain" />
+
+          <a href="/">
+            <img src="../assets/images/home/logo.svg" alt="Chôm Chôm Travel Logo"
+              class="h-12 w-auto absolute top-[20px] left-[20px]" />
+          </a>
         </div>
-    </header>
+        <button id="closeMenu" type="button" class="text-white text-3xl focus:outline-none">
+          <img src="../assets/images/home/close.svg" alt="Chôm Chôm Travel Logo" class="h-[17px] w-[21px]" />
+        </button>
+      </div>
+      <ul class="flex-1 flex flex-col gap-2 px-6 py-4 text-white text-lg font-semibold">
+        <li>
+          <a href="#"
+            class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2">About
+            us</a>
+        </li>
+        <li>
+          <a href="#"
+            class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2">Sustainability</a>
+        </li>
+
+        <li>
+          <a href="#"
+            class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2">Bespoke
+            Trips</a>
+        </li>
+        <li>
+          <a href="#"
+            class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2">Mini
+            Escapes</a>
+        </li>
+        <li>
+          <a href="#"
+            class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2">How
+            to book</a>
+        </li>
+        <li>
+          <a href="#"
+            class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2">FAQs</a>
+        </li>
+        <li>
+          <a href="#"
+            class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2">Blog
+          </a>
+        </li>
+
+        <li>
+          <div class="relative w-[105px] h-[26px] flex justify-start mb-4">
+            <img src="../assets/images/home/button.svg" alt="button red" class="object-contain w-full h-full" />
+            <span
+              class="absolute inset-0 flex items-center justify-center text-[15px] md:text-[22px] font-semibold text-white select-text pointer-events-none">Inquire
+              now</span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      document.getElementById("openMenu").onclick = function () {
+        document
+          .getElementById("sideMenu")
+          .classList.remove("translate-x-full");
+        document.getElementById("menuOverlay").classList.remove("hidden");
+      };
+
+      document.getElementById("closeMenu").onclick = function () {
+        document.getElementById("sideMenu").classList.add("translate-x-full");
+        document.getElementById("menuOverlay").classList.add("hidden");
+      };
+      document.getElementById("menuOverlay").onclick = function () {
+        document.getElementById("sideMenu").classList.add("translate-x-full");
+        document.getElementById("menuOverlay").classList.add("hidden");
+      };
+      // Toggle submenu
+      document.getElementById("travelMenuBtn").onclick = function (e) {
+        e.preventDefault();
+        var sub = document.getElementById("travelSubMenu");
+        sub.classList.toggle("hidden");
+      };
+    </script>
+  </header>
+
+  <!-- header tablet,desktop  -->
+  <header class="fixed top-0 left-0 w-full flex justify-center z-50 hidden md:block bg-transparent">
+    <div
+      class="relative w-4/5 mx-auto h-[84px] bg-[url('../assets/images/background-header-2.png')] bg-no-repeat bg-center bg-cover">
+      <nav class="absolute inset-0 flex items-center justify-between px-10">
+        <a href="/" class="flex items-center">
+          <img src="../assets/images/home/logo.svg" alt="Chôm Chôm Travel Logo" class="h-[84px] w-[98px]" />
+        </a>
+        <!-- Menu bên phải -->
+        <ul class="flex gap-12 items-center whitespace-nowrap">
+          <li><a href="#" class="text-white font-bold">About us</a></li>
+          <li class="relative group dropdown-group">
+            <a href="#" class="text-white font-bold flex items-center gap-1">
+              Travel
+              <img src="/assets/images/home/down.svg" alt="down"
+                class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+            </a>
+            <div class="dropdown-bridge"></div>
+            <!-- Dropdown menu -->
+            <ul
+              class="bg-[#E96024] rounded-[8px] px-5 py-2 min-w-[175px] flex flex-col shadow-lg absolute left-0 top-full mt-1 z-50 hidden group-hover:flex group-focus-within:flex">
+              <li>
+                <a href="#" class="text-white text-[16px] font-normal py-2 block">Bespoke
+                  Trips</a>
+              </li>
+              <li>
+                <div class="border-b-2 border-dashed border-[#FFE066] my-2"></div>
+              </li>
+              <li>
+                <a href="#" class="text-white text-[16px] font-normal py-2 block">Mini
+                  Escapes</a>
+              </li>
+              <li>
+                <div class="border-b-2 border-dashed border-[#FFE066] my-2"></div>
+              </li>
+              <li>
+                <a href="#" class="text-white text-[16px] font-normal py-2 block">How to
+                  book</a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="#" class="text-white font-bold">Sustainability</a></li>
+          <li><a href="#" class="text-white font-bold">FAQs</a></li>
+          <li><a href="#" class="text-white font-bold">Blog</a></li>
+        </ul>
+
+        <div class="relative w-[105px] h-[26px] flex justify-start">
+          <img src="../assets/images/home/button.svg" alt="button red" class="object-contain w-full h-full" />
+          <span
+            class="absolute inset-0 flex items-center justify-center text-[15px] font-semibold text-white select-text pointer-events-none">Inquire
+            now</span>
+        </div>
+      </nav>
+    </div>
+  </header>
  
     <!-- Section 1: Commitment -->
-    <section class="relative   bg-[#318D95] pt-[200px]">
-        <img src="../assets/images/bg-commitment.png" alt="Vietnam landscape" class="w-full h-full object-cover  ">
-        <div class="absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center  ">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Our <span class="text-[#FFCE00]">Commitment</span> To Sustainability
-                </h2>
-                <p class="text-white/80 text-lg max-w-2xl mx-auto mb-8">
-                    We are dedicated to fostering a symbiotic relationship between travelers and the destinations they visit, ensuring a balance that benefits both.
-                </p>
-                <!-- Dải ảnh chéo -->
-                <div class="flex justify-center gap-4 mt-16 mb-4 relative z-10 py-10">
-                    <div class="w-56 h-56 object-cover rounded-2xl shadow-lg rotate-[-10deg] border-4 border-white overflow-hidden"><img src="../assets/images/card-sustainability.jpg" class="w-full h-full object-cover" /></div>
-                    <div class="w-56 h-56 object-cover rounded-2xl shadow-lg rotate-[-5deg] border-4 border-white overflow-hidden"><img src="../assets/images/card-sustainability.jpg" class="w-full h-full object-cover" /></div>
-                    <div class="w-56 h-56 object-cover rounded-2xl shadow-lg rotate-[2deg] border-4 border-white overflow-hidden"><img src="../assets/images/card-sustainability.jpg" class="w-full h-full object-cover" /></div>
-                    <div class="w-56 h-56 object-cover rounded-2xl shadow-lg rotate-[8deg] border-4 border-white overflow-hidden"><img src="../assets/images/card-sustainability.jpg" class="w-full h-full object-cover" /></div>
-                    <div class="w-56 h-56 object-cover rounded-2xl shadow-lg rotate-[12deg] border-4 border-white overflow-hidden"><img src="../assets/images/card-sustainability.jpg" class="w-full h-full object-cover" /></div>
+
+    <section class="bg-[#318D95]  xl:pt-[200px] pt-[150px]">
+      <div class="bg-[url('../assets/images/bg-commitment.png')] bg-cover bg-center min-h-[575px]">
+         <div class="container mx-auto px-6 text-center relative">
+           <img src="../assets/images/sustainability/sustainability-vector1.png" alt="Decoration" class="xl:w-[227px] xl:h-[80px] w-[110px] h-[55px] absolute top-[-13%] xl:right-[8%] right-[20%]" />
+           <h2 class="text-[28px] xl:text-[48px] font-bold text-white mb-2 leading-tight">
+             Our <span class="text-[#FFCE00]">Commitment</span>
+             <span class="block xl:inline">To Sustainability</span>
+           </h2>
+           
+           <p class="text-[14px] xl:text-lg max-w-2xl mx-auto xl:mb-8 mb-0 text-white">
+             We are dedicated to fostering a symbiotic relationship between travelers and the destinations they visit, ensuring a balance that benefits both.
+           </p>
+       
+           <div class="xl:mt-16 mt-5 py-10">
+             <!-- Swiper cho xl trở xuống -->
+             <div class=" xl:hidden">
+              <div class="swiper commitment-swiper ">
+                <div class="swiper-wrapper py-10">
+                  <div class="swiper-slide">
+                    <div class="w-[320px] h-[320px] overflow-hidden rounded-2xl shadow-lg rotate-[-10deg] border-2 border-white">
+                      <img src="../assets/images/sustainability/card-sustainability1.jpg" class="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="w-[320px] h-[320px] overflow-hidden rounded-2xl shadow-lg rotate-[12deg] border-2 border-red-700">
+                      <img src="../assets/images/sustainability/card-sustainability2.jpg" class="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="w-[320px] h-[320px] overflow-hidden rounded-2xl shadow-lg rotate-[-5deg] border-2 border-yellow-500">
+                      <img src="../assets/images/sustainability/card-sustainability1.jpg" class="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="w-[320px] h-[320px] overflow-hidden rounded-2xl shadow-lg rotate-[8deg] border-2 border-black">
+                      <img src="../assets/images/sustainability/card-sustainability4.jpg" class="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="w-[320px] h-[320px] overflow-hidden rounded-2xl shadow-lg rotate-[-10deg] border-2 border-yellow-300">
+                      <img src="../assets/images/sustainability/card-sustainability5.jpg" class="w-full h-full object-cover" />
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </section>
+                <!-- Không hiển thị pagination (dot) -->
+              </div>
+          </div>
+             <!-- Hiển thị dạng cũ cho xl trở lên -->
+             <div class="hidden xl:flex justify-center gap-4">
+               <div class="w-[270px] h-[270px] rounded-2xl shadow-lg rotate-[-10deg] border-2 border-white overflow-hidden">
+                 <img src="../assets/images/sustainability/card-sustainability1.jpg" class="w-full h-full object-cover" />
+               </div>
+               <div class="w-[270px] h-[270px] rounded-2xl shadow-lg rotate-[12deg] border-2 border-red-700 overflow-hidden">
+                 <img src="../assets/images/sustainability/card-sustainability2.jpg" class="w-full h-full object-cover" />
+               </div>
+               <div class="w-[270px] h-[270px] rounded-2xl shadow-lg rotate-[-5deg] border-2 border-yellow-500 overflow-hidden">
+                 <img src="../assets/images/sustainability/card-sustainability1.jpg" class="w-full h-full object-cover" />
+               </div>
+               <div class="w-[270px] h-[270px] rounded-2xl shadow-lg rotate-[8deg] border-2 border-black overflow-hidden">
+                 <img src="../assets/images/sustainability/card-sustainability4.jpg" class="w-full h-full object-cover" />
+               </div>
+               <div class="w-[270px] h-[270px] rounded-2xl shadow-lg rotate-[-10deg] border-2 border-yellow-300 overflow-hidden">
+                 <img src="../assets/images/sustainability/card-sustainability5.jpg" class="w-full h-full object-cover" />
+               </div>
+             </div>
+           </div>
+         </div>
+      </div>
+     </section>
 
-    <img src="../assets/images/sustainability-break.png" alt="Vietnam landscape" class="w-full h-full object-cover">
+    <img src="../assets/images/sustainability-break.png" alt="Vietnam landscape" class="w-full h-full object-cover xl:block hidden">
+    <img src="../assets/images/sustainability/sustainability-break-mobile.png" alt="Vietnam landscape" class="w-full h-full object-cover xl:hidden block">
 
 
-    <section class="relative  bg-[#104751] pt-[200px]">
+    <!--  -->
+    <section class="relative  bg-[#104751] pt-[200px] hidden xl:block">
         <img src="../assets/images/sustainability-commitment.png" alt="Vietnam landscape" class="w-full h-full object-cover  ">
         <div class="absolute top-[30%] left-[5%]  flex flex-col  ">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold drop-shadow-lg mt-12 ">
                <p class=" text-orange ">Our sustainability</p>
                <p class=" text-primary mt-2">commitments</p>
             </h1>
-            <h3 class="text-orange text-2xl py-3">The 3P’s framework</h3>
+            <h3 class="text-orange text-2xl py-3">The 3P's framework</h3>
             <p class="mt-4 text-lg md:text-xl text-white font-body max-w-2xl">
                 Sustainability is a core value at Chôm Chôm Travel - and to us it means much more than just using less plastic and being mindful of our carbon footprint. We are committed to
                 <span class="text-orange">the 3Ps framework - people, planet, profit.</span> We offer eco-friendly travel but we also support local communities, ensuring every journey respects the environment and helps preserve the places you visit.
             </p>
-       
+
+    
         </div>
     </section>
 
-    
-    <section class="relative  bg-[#104751]">
-        <img src="../assets/images/container-sustainability.png" alt="Vietnam landscape" class="w-full h-full object-cover  ">
-        <div class="absolute top-0 left-[5%] bottom-0 right-[5%] flex flex-col">
-            <div class="container mx-auto space-y-12 flex flex-col items-center">
-              
-              <!-- Section 1: Image Left - Text Right -->
-              <div class="flex flex-col md:flex-row gap-16 items-center w-4/5">
-                <div class="w-full md:w-1/3">
-                  <img src="../assets/images/graphic-1.png" alt="Vietnam landscape" class="w-full h-full object-cover" />
-                </div>
-                <div class="w-full md:w-2/3">
-                  <h4 class="text-3xl font-semibold text-[#FFCE00] mb-2">PEOPLE</h4>
-                  <p class="text-xl text-white max-w-xl">
-                    We're dedicated to empowering local communities by working with passionate local guides, supporting small, locally-owned businesses, and preserving the rich cultural heritage of ethnic minorities.
-                  </p>
-                </div>
+    <section class="relative  bg-[#104751] hidden xl:block">
+      <img src="../assets/images/container-sustainability.png" alt="Vietnam landscape" class="w-full h-full object-cover  ">
+      <div class="absolute top-0 left-[5%] bottom-0 right-[5%] flex flex-col">
+          <div class="container mx-auto flex flex-col ">
+            
+            <!-- Section 1: Image Left - Text Right -->
+            <div class="flex flex-col md:flex-row gap-16 items-center w-4/5">
+              <div class="w-[447px] h-[670px] ">
+                <img src="../assets/images/graphic-1.png" alt="Vietnam landscape" class="w-full h-full object-cover" />
               </div>
-          
-              <!-- Section 2: Text Left - Image Right -->
-              <div class="flex flex-col md:flex-row-reverse gap-16 items-center">
-                <div class="w-full md:w-1/3">
-                  <img src="../assets/images/graphic-2.png" alt="Vietnam landscape" class="w-full h-full object-cover" />
-                </div>
-                <div class="w-full md:w-2/3 flex flex-col items-end text-end">
-                  <h4 class="text-3xl font-semibold text-[#FFCE00] mb-2">PLANET</h4>
-                  <p class="text-xl text-white max-w-xl">
-                    We're committed to sustainability in every step of the journey: reducing our carbon footprint, supporting eco-friendly accommodations, and ensuring that every adventure helps protect the environment.
-                  </p>
-                </div>
+              <div class="w-full md:w-2/3">
+                <h4 class="text-3xl font-semibold text-[#FFCE00] mb-2">PEOPLE</h4>
+                <p class="text-xl text-white max-w-xl">
+                  We're dedicated to empowering local communities by working with passionate local guides, supporting small, locally-owned businesses, and preserving the rich cultural heritage of ethnic minorities.
+                </p>
               </div>
-          
-              <!-- Section 3: Image Left - Text Right -->
-              <div class="flex flex-col md:flex-row gap-16 items-center">
-                <div class="w-full md:w-1/3">
-                  <img src="../assets/images/graphic-3.png" alt="Vietnam landscape" class="w-full h-full object-cover" />
-                </div>
-                <div class="w-full md:w-2/3">
-                  <h4 class="text-3xl font-semibold text-[#FFCE00] mb-2">PROFIT</h4>
-                  <p class="text-xl text-white max-w-xl">
-                    We ensure that the profits from our travels directly benefit local guides and small businesses, creating a lasting, positive impact on the local economy while promoting ethical and responsible practices.
-                  </p>
-                </div>
-              </div>
-          
             </div>
+        
+            <!-- Section 2: Text Left - Image Right -->
+            <div class="flex flex-col md:flex-row-reverse gap-16 items-center">
+              <div class="w-[447px] h-[600px] ">
+                <img src="../assets/images/graphic-2.png" alt="Vietnam landscape" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-full md:w-2/3 flex flex-col items-end text-end">
+                <h4 class="text-3xl font-semibold text-[#FFCE00] mb-2">PLANET</h4>
+                <p class="text-xl text-white max-w-xl">
+                  We're committed to sustainability in every step of the journey: reducing our carbon footprint, supporting eco-friendly accommodations, and ensuring that every adventure helps protect the environment.
+                </p>
+              </div>
+            </div>
+        
+            <!-- Section 3: Image Left - Text Right -->
+            <div class="flex flex-col md:flex-row gap-16 items-center ml-20">
+              <div class="w-[447px] h-[670px] ">
+                <img src="../assets/images/graphic-3.png" alt="Vietnam landscape" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-full md:w-2/3">
+                <h4 class="text-3xl font-semibold text-[#FFCE00] mb-2">PROFIT</h4>
+                <p class="text-xl text-white max-w-xl">
+                  We ensure that the profits from our travels directly benefit local guides and small businesses, creating a lasting, positive impact on the local economy while promoting ethical and responsible practices.
+                </p>
+              </div>
+            </div>
+        
           </div>
-          
+        </div>
+        
     </section>
-  
-  
 
+
+    <section class=" bg-[#104751]  xl:hidden">
+      <div class="flex justify-center r">
+        <img src="../assets/images/sustainability/sustainability-vector-mobile.png" alt="Vietnam landscape" class="w-[176px] h-[173px] object-cover  ">
+      </div>
+      <h1 class="text-[28px] font-bold text-center ">
+        <p class=" text-orange ">Our sustainability</p>
+        <p class=" text-primary ">commitments</p>
+     </h1>
+
+     <img src="../assets/images/sustainability/sustainability-commitment-mobile.png" alt="Vietnam landscape" class="w-full h-full object-cover  ">
+
+
+
+     <div class="text-center px-[25px]">
+      <h1 class=" text-orange text-[21px] font-semibold ">Our sustainability</h1>
+      <p class="text-[14px] text-white ">Sustainability is a core value at Chom Chom travel. It's so much more than just using less plastic and being mindful of our carbon footprint. This is why we're committed to
+        <span class="text-orange">the 3Ps framework - people, planet, profit.</span> We offer eco-friendly travel but we also support local communities, ensuring every journey respects the environment and helps preserve the places you visit.</p>
+     </div>
+
+     <div class="relative">
+      <img src="../assets/images/sustainability/bg-sustainability-mobile.png" alt="Banner" class="h-auto w-full" />
+
+
+      <div class="absolute top-0 left-0 right-0 bottom-0">
+        <div class="pt-[130px] px-[25px]">
+          <div class="text-center">
+            <h1 class=" text-orange text-[21px] font-semibold ">PEOPLE</h1>
+            <p class="text-[14px] text-white">We’re dedicated to empowering local communities by working with passionate local guides, supporting small, locally -owned businesses, and preserving the rich cultural heritage of ethnic minorities.
+            </p>
+          </div>
+
+          <img src="../assets/images/graphic-1.png" alt="Vietnam landscape" class="w-full h-full object-cover  ">
+
+          <div class="text-center">
+            <h1 class=" text-orange text-[21px] font-semibold ">PLANET</h1>
+            <p class="text-[14px] text-white">We’re committed to sustainability in every step of the journey—reducing our carbon footprint, supporting eco-friendly accommodations, and ensuring that every adventure helps protect the environment.
+            </p>
+          </div>
+
+          <img src="../assets/images/graphic-2.png" alt="Vietnam landscape" class="w-full h-full object-cover  ">
+
+
+          <div class="text-center">
+            <h1 class=" text-orange text-[21px] font-semibold ">PROFIT</h1>
+            <p class="text-[14px] text-white">We ensure that the profits from our travels directly benefit local guides and small businesses, creating a lasting, positive impact on the local economy while promoting ethical and
+            </p>
+          </div>
+
+          <img src="../assets/images/graphic-3.png" alt="Vietnam landscape" class="w-full h-full object-cover  ">
+
+        </div>
+      </div>
+     </div>
+
+  </section>
+
+    <!--  -->
 
     <!-- Section 4: How You Can Help -->
-    <img src="../assets/images/sustainability-break-2.png" alt="Vietnam landscape" class="w-full h-full object-cover">
+    <img src="../assets/images/sustainability-break-2.png" alt="Vietnam landscape" class="w-full h-full object-cover xl:block hidden">
+    <img src="../assets/images/sustainability/sustainability-mobile-break-2.png" alt="Vietnam landscape" class="w-full h-full object-cover xl:hidden block">
 
     <section class="py-16 bg-[#318D95]">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-6 relative">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-4">The Chom Chom Travel <p class="text-orange mt-2">Difference</p></h2>
-                <p class="text-xl text-white max-w-4xl mx-auto mt-2">
+              <img src="../assets/images/sustainability/sustainability-vector1.png" alt="Decoration" class="w-[178px] h-[80px] xl:w-[227px] absolute xl:top-[-13%] top-[-6%] right-[20%]" />
+
+                <h2 class="text-[28px] xl:text-[48px] font-bold text-white mb-4">How You Can <p class="text-orange mt-2">Help Make a Difference</p></h2>
+                <p class="text-[14px] xl:text-[18px] text-white max-w-4xl mx-auto mt-2">
                     The people make all the difference. With trusted, community-focused partners, we craft meaningful journeys - authentic, sustainable, unforgettable.                </p>
             </div>
 
-            <div class="container mx-auto px-6 py-16">
+            <div class="container mx-auto px-6 xl:py-16 ">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                   
                   <!-- Box 1 -->
                   <div class="flex flex-col items-center text-center gap-4">
                     <img src="../assets/images/sustainability-1.png" alt="Respect traditions" class="w-[300px] h-[250px] object-contain" />
-                    <p class="text-white">
+                    <p class="text-white text-[24px]">
                       Respect local <br /> traditions and customs.
                     </p>
                   </div>
@@ -173,7 +402,7 @@
                   <!-- Box 2 -->
                   <div class="flex flex-col items-center text-center gap-4">
                     <img src="../assets/images/sustainability-2.png" alt="Support local businesses" class="w-[300px] h-[250px] object-contain" />
-                    <p class="text-white">
+                    <p class="text-white text-[24px]">
                       Support local businesses by <br />
                       purchasing authentic, handmade products.
                     </p>
@@ -182,7 +411,7 @@
                   <!-- Box 3 -->
                   <div class="flex flex-col items-center text-center gap-4">
                     <img src="../assets/images/sustainability-3.png" alt="Reduce plastic use" class="w-[300px] h-[250px] object-contain" />
-                    <p class="text-white">
+                    <p class="text-white text-[24px]">
                       Reduce plastic use and <br />
                       dispose of waste properly.
                     </p>
@@ -196,83 +425,218 @@
     <img src="../assets/images/sustainability-break-3.png" alt="Vietnam landscape" class="w-full h-full object-cover">
 
 
-    <!-- Section 5: CTA -->
-    <section class="relative ">
-        <img src="../assets/images/bg-build-your-own-home.png" alt="Vietnam landscape" class="w-full h-full object-cover">
+    <section class="min-h-[350px] bg-[#104751] relative py-[40px] md:pt-[100px] md:px-[10%] px-[10px] ">
+      <div class="flex flex-col gap-5">
+        <div class="flex flex-col md:flex-row gap-8 order-2 md:order-1">
+          <p class="text-[#fff] text-center md:text-start px-[20px]">
+            We believe in adventure because it transcends scale, from grand
+            treks to simple discoveries. It fuels the soul with the thrill of
+            the unknown, unlocking courage and curiosity.
+          </p>
+  
+          <div class="relative">
+            <img src="../assets/images/faqs/button-red.svg" alt="button red"
+              class="md:w-[281px] md:h-[56px] min-w-[224px] h-[42px] mx-auto object-contain" />
+            <span
+              class="absolute inset-0 flex items-center justify-center md:text-[18px] text-[12px] text-white select-text">Build
+              your own trip</span>
+          </div>
+        </div>
+  
+        <div class="swiper own-swiper w-full h-full order-1 md:order-2">
+          <div class="swiper-wrapper flex items-center">
+            <div class="swiper-slide flex items-center justify-center">
+              <img src="../assets/images/faqs/out1.svg" alt="out1"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto" />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img src="../assets/images/faqs/out2.svg" alt="out2"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto" />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img src="../assets/images/faqs/out3.svg" alt="out3"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto" />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img src="../assets/images/faqs/out4.svg" alt="out4"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto" />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img src="../assets/images/faqs/out5.svg" alt="out5"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto" />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img src="../assets/images/faqs/out6.svg" alt="out6"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto" />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="relative bg-[#FAF6EC] text-[#01363D] text-sm">
-            <!-- Background Image -->
-            <div class="absolute inset-0 z-0">
-              <img src="../assets/images/bg-footer.png" alt="Vietnam landscape" class="w-full h-full object-cover">
-            </div>
-          
-            <!-- Content -->
-            <div class="relative z-10 container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
-              <!-- Logo & Intro -->
-              <div class="space-y-4">
-                <img src="../assets/images/logo-footer.png" alt="Chôm Chôm Travel" class="h-24 w-auto">
-                <h4 class="text-xl font-bold text-orange_dark">Chom Chom Travel</h4>
-                <p class="leading-relaxed text-dark_primary">
-                  Chôm Chôm Travel is a boutique adventure travel agency specializing in curating the best experiences in Vietnam.
-                </p>
-                <p class="text-dark_primary">Tax code: <span class="font-medium">0316767612</span></p>
-                <p class="text-dark_primary">Registered Date: <span class="font-medium">2021-03-25</span></p>
-              </div>
-          
-              <!-- About Us -->
-              <div>
-                <h4 class="text-lg font-bold text-orange_dark mb-6">About Us</h4>
-                <ul class="space-y-2 text-dark_primary text-base">
-                  <li><a href="#" class="hover:underline">About Us</a></li>
-                  <li><a href="#" class="hover:underline">Sustainability</a></li>
-                  <li><a href="#" class="hover:underline">How to book</a></li>
-                </ul>
-              </div>
-          
-              <!-- Travel with us -->
-              <div>
-                <h4 class="text-lg font-bold text-orange_dark mb-6">Travel with us</h4>
-                <ul class="space-y-2 text-dark_primary text-base">
-                  <li><a href="#" class="hover:underline">Explore Vietnam</a></li>
-                  <li><a href="#" class="hover:underline">Bespoke Experiences</a></li>
-                  <li><a href="#" class="hover:underline">Mini Escapes</a></li>
-                  <li><a href="#" class="hover:underline">FAQs</a></li>
-                  <li><a href="#" class="hover:underline">Blog</a></li>
-                </ul>
-              </div>
-          
-              <!-- Get in touch -->
-              <div class="text-dark_primary text-base space-y-2">
-                <h4 class="text-lg font-bold text-orange_dark mb-6">Get in touch</h4>
-                <a href="#" class="underline text-[#01363D] hover:text-[#F15A29]">Inquire Now</a>
-                <p>11 Trần Văn Sắc, Thảo Điền, D2,<br>Hồ Chí Minh City, Vietnam.</p>
-                <p>+84 833 886 750</p>
-                <p>info@chomchomtravel.com</p>
-                <div class="flex space-x-4 pt-2 text-[#01363D]">
-                  <a href="#" class="hover:text-[#F15A29]">
-                    <i class="fab fa-facebook-f text-2xl"></i>
-                  </a>
-                  <a href="#" class="hover:text-[#F15A29]">
-                    <i class="fab fa-instagram text-2xl"></i>
-                  </a>
-                </div>
-              </div>
+    <footer class="">
+      <div class="relative bg-[#FAF6EC] text-[#01363D] text-sm py-10">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+          <img src="../assets/images/bg-footer.png" alt="Vietnam landscape" class="w-full h-full object-cover" />
+        </div>
+    
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto py-12 grid grid-cols-1 md:grid-cols-4 gap-10 px-6">
+          <!-- Logo & Intro -->
+          <div class="space-y-4 flex flex-col items-center md:items-start text-center md:text-start">
+            <img src="../assets/images/logo-footer.png" alt="Chôm Chôm Travel" class="h-24 w-auto" />
+            <h4 class="text-xl font-bold text-orange_dark">Chom Chom Travel</h4>
+            <p class="leading-relaxed text-dark_primary">
+              Chôm Chôm Travel is a boutique adventure travel agency
+              specializing in curating the best experiences in Vietnam.
+            </p>
+            <p class="text-dark_primary">
+              Tax code: <span class="font-medium">0316767612</span>
+            </p>
+            <p class="text-dark_primary">
+              Registered Date: <span class="font-medium">2021-03-25</span>
+            </p>
+          </div>
+  
+          <div class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"></div>
+    
+          <!-- About Us -->
+          <div class="flex flex-col items-center md:items-start text-center md:text-start">
+            <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">About Us</h4>
+            <ul class="space-y-2 text-dark_primary text-base">
+              <li><a href="#" class="hover:underline">About Us</a></li>
+              <li><a href="#" class="hover:underline">Sustainability</a></li>
+              <li><a href="#" class="hover:underline">How to book</a></li>
+            </ul>
+          </div>
+  
+          <div class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"></div>
+  
+    
+          <!-- Travel with us -->
+          <div class="flex flex-col items-center md:items-start text-center md:text-start">
+            <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">
+              Travel with us
+            </h4>
+            <ul class="space-y-2 text-dark_primary text-base">
+              <li><a href="#" class="hover:underline">Explore Vietnam</a></li>
+              <li><a href="#" class="hover:underline">Bespoke Experiences</a></li>
+              <li><a href="#" class="hover:underline">Mini Escapes</a></li>
+              <li><a href="#" class="hover:underline">FAQs</a></li>
+              <li><a href="#" class="hover:underline">Blog</a></li>
+            </ul>
+          </div>
+  
+          <div class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"></div>
+  
+    
+          <!-- Get in touch -->
+          <div class="text-dark_primary text-base space-y-2 flex flex-col items-center md:items-start text-center md:text-start">
+            <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">Get in touch</h4>
+            <a href="#" class="underline text-[#01363D] hover:text-[#F15A29]">Inquire Now</a>
+            <p>11 Trần Văn Sắc, Thảo Điền, D2,<br />Hồ Chí Minh City, Vietnam.</p>
+            <p>+84 833 886 750</p>
+            <p>info@chomchomtravel.com</p>
+            <div class="flex space-x-4 pt-2 text-[#01363D]">
+              <a href="#" class="hover:text-[#F15A29]">
+                <i class="fab fa-facebook-f text-2xl"></i>
+              </a>
+              <a href="#" class="hover:text-[#F15A29]">
+                <i class="fab fa-instagram text-2xl"></i>
+              </a>
             </div>
           </div>
-          <div class=" bg-dark_primary ">
-           <div class="container mx-auto text-white text-center py-4 text-sm flex flex-col md:flex-row justify-between items-center px-6">
-                <p>&copy; 2025 Chôm Chôm Travel. All right reserved.</p>
-                <div class="flex gap-4 pt-2 md:pt-0">
-                  <a href="#" class="hover:underline">Terms and conditions</a>
-                  <a href="#" class="hover:underline">Privacy Policy</a>
-                </div>
-           </div>
+        </div>
+      </div>
+    
+      <div class="bg-dark_primary">
+        <div class="max-w-7xl mx-auto text-white text-center py-4 text-sm flex flex-col md:flex-row justify-between items-center px-6">
+          <p>&copy; 2025 Chôm Chôm Travel. All right reserved.</p>
+          <div class="flex gap-4 pt-2 md:pt-0">
+            <a href="#" class="hover:underline">Terms and conditions</a>
+            <a href="#" class="hover:underline">Privacy Policy</a>
           </div>
+        </div>
+      </div>
     </footer>
 
     <script src="../assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const experiencesSwiper = new Swiper(".experiences-swiper", {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: { delay: 500000, disableOnInteraction: false },
+        pagination: {
+          el: ".custom-swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<span class="${className}">
+                <img src="../assets/images/experiences/pagination.svg" class="pagination-dot" />
+              </span>`;
+          },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          slideChange: function () {
+            setTimeout(() => {
+              document
+                .querySelectorAll(
+                  ".custom-swiper-pagination .swiper-pagination-bullet"
+                )
+                .forEach((el, idx) => {
+                  const img = el.querySelector("img");
+                  if (
+                    el.classList.contains("swiper-pagination-bullet-active")
+                  ) {
+                    img.src =
+                      "../assets/images/experiences/pagination-active.svg";
+                  } else {
+                    img.src = "../assets/images/experiences/pagination.svg";
+                  }
+                });
+            }, 10);
+          },
+        },
+      });
+  
+      // Own Swiper initialization
+      var ownSwiper = new Swiper(".own-swiper", {
+        slidesPerView: 4,
+        spaceBetween: 8,
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 18,
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 24,
+          },
+        },
+        loop: true,
+        navigation: false,
+      });
+  
+      setTimeout(() => {
+        document
+          .querySelectorAll(
+            ".custom-swiper-pagination .swiper-pagination-bullet"
+          )
+          .forEach((el, idx) => {
+            const img = el.querySelector("img");
+            if (el.classList.contains("swiper-pagination-bullet-active")) {
+              img.src = "../assets/images/experiences/pagination-active.svg";
+            } else {
+              img.src = "../assets/images/experiences/pagination.svg";
+            }
+          });
+      }, 100);
+    </script>
 </body>
 </html> 

@@ -96,4 +96,44 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     images.forEach(img => imageObserver.observe(img));
+
+    // Khởi tạo Swiper cho slider ngang Commitment (mobile/tablet dưới xl)
+    let commitmentSwiperInstance = null;
+    function handleCommitmentSwiper() {
+        const isMobile = window.innerWidth < 1280;
+        const swiperEl = document.querySelector('.commitment-swiper');
+        if (swiperEl) {
+            if (isMobile && !commitmentSwiperInstance) {
+                commitmentSwiperInstance = new Swiper('.commitment-swiper', {
+                    slidesPerView: 1.3,
+                    spaceBetween: 2,
+                    grabCursor: true,
+                    freeMode: true,
+                    centeredSlides: false,
+                });
+            } else if (!isMobile && commitmentSwiperInstance) {
+                commitmentSwiperInstance.destroy(true, true);
+                commitmentSwiperInstance = null;
+                // Xóa các class và style Swiper đã thêm để trả lại layout desktop
+                swiperEl.classList.remove('swiper');
+                const wrapper = swiperEl.querySelector('.swiper-wrapper');
+                if (wrapper) wrapper.removeAttribute('style');
+                wrapper && wrapper.classList.remove('swiper-wrapper');
+                swiperEl.querySelectorAll('.swiper-slide').forEach(slide => {
+                    slide.classList.remove('swiper-slide');
+                    slide.removeAttribute('style');
+                });
+            } else if (isMobile && !swiperEl.classList.contains('swiper')) {
+                // Nếu quay lại mobile, thêm lại class
+                swiperEl.classList.add('swiper');
+                const wrapper = swiperEl.querySelector('div');
+                if (wrapper) wrapper.classList.add('swiper-wrapper');
+                swiperEl.querySelectorAll('div > div').forEach(slide => {
+                    slide.classList.add('swiper-slide');
+                });
+            }
+        }
+    }
+    window.addEventListener('resize', handleCommitmentSwiper);
+    handleCommitmentSwiper();
 }); 
