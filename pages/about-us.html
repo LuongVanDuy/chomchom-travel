@@ -14,136 +14,291 @@
     <link href="../dist/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/custom.css" />
   </head>
-  <body class="bg-body">
-    <!-- Header -->
-    <header class="text-white fixed top-0 z-50 w-full">
-      <div
-        class="container mx-auto flex items-center justify-between py-2 px-6 w-[80%] bg-no-repeat"
-        style="
-          background-image: url('../assets/images/background-header.png');
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-        "
-      >
-        <a href="/" class="flex items-center space-x-2">
-          <img src="../assets/images/logo.png" alt="Logo" class="h-14 w-auto" />
+  <body class="bg-dark_primary">
+    <!-- header mobile -->
+    <!-- header mobile -->
+    <header class="mobile-header-fixed w-full z-[9999] md:hidden">
+      <div class="flex items-center justify-between bg-[#15525A] px-8 py-2">
+        <a href="/" class="flex items-center">
+          <img
+            src="../assets/images/home/logo.svg"
+            alt="Chôm Chôm Travel Logo"
+            class="h-[44px] w-[58px]"
+          />
         </a>
 
-        <nav class="hidden md:flex items-center space-x-16">
-          <a
-            href="about-us.html"
-            class="text-xl hover:text-accent transition-colors duration-200 font-medium"
-            >About us</a
-          >
-          <a
-            href="experiences.html"
-            class="text-xl hover:text-accent transition-colors duration-200 font-medium"
-            >Travel</a
-          >
-          <a
-            href="sustainability.html"
-            class="text-xl hover:text-accent transition-colors duration-200 font-medium"
-            >Sustainability</a
-          >
-          <a
-            href="faqs.html"
-            class="text-xl hover:text-accent transition-colors duration-200 font-medium"
-            >FAQs</a
-          >
-          <a
-            href="blog-listing.html"
-            class="text-xl hover:text-accent transition-colors duration-200 font-medium"
-            >Blogs</a
-          >
-        </nav>
-
-        <div class="flex items-center space-x-4">
-          <a
-            href="inquire-now.html"
-            class="text-white font-bold px-5 py-2 rounded-lg ransition-colors duration-200 hidden md:inline-block"
-            style="
-              background-image: url('../assets/images/bg-btn-inquire.png');
-              background-repeat: no-repeat;
-            "
-          >
-            Inquire now
-          </a>
-
-          <!-- Mobile menu button -->
-          <button
-            class="md:hidden focus:outline-none focus:ring-2 focus:ring-accent rounded"
-          >
-            <svg
-              class="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
+        <button
+          id="openMenu"
+          type="button"
+          class="md:hidden focus:outline-none"
+        >
+          <img
+            src="../assets/images/home/menu.svg"
+            alt="Open menu"
+            class="h-[25px] w-[31px]"
+          />
+        </button>
       </div>
 
-      <!-- Mobile menu -->
       <div
-        class="md:hidden hidden bg-primary px-6 pb-4 border-t border-primary/20"
+        id="menuOverlay"
+        class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"
+      ></div>
+
+      <nav
+        id="sideMenu"
+        class="fixed top-0 right-0 h-full w-full max-w-full bg-[#15525A] z-50 transform translate-x-full transition-transform duration-300 flex flex-col"
       >
-        <nav class="flex flex-col space-y-3 pt-4">
-          <a
-            href="about-us.html"
-            class="hover:text-accent transition-colors duration-200 font-medium py-2"
-            >About us</a
+        <div class="flex items-center justify-between px-6 py-6">
+          <div class="flex-1 relative gap-5">
+            <img
+              src="../assets/images/home/vector1.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[82px] w-auto object-contain"
+            />
+
+            <a href="/">
+              <img
+                src="../assets/images/home/logo.svg"
+                alt="Chôm Chôm Travel Logo"
+                class="h-12 w-auto absolute top-[20px] left-[20px]"
+              />
+            </a>
+          </div>
+          <button
+            id="closeMenu"
+            type="button"
+            class="text-white text-3xl focus:outline-none"
           >
-          <a
-            href="experiences.html"
-            class="hover:text-accent transition-colors duration-200 font-medium py-2"
-            >Travel</a
-          >
-          <a
-            href="sustainability.html"
-            class="hover:text-accent transition-colors duration-200 font-medium py-2"
-            >Sustainability</a
-          >
-          <a
-            href="blog-listing.html"
-            class="hover:text-accent transition-colors duration-200 font-medium py-2"
-            >Blogs</a
-          >
-          <a
-            href="inquire-now.html"
-            class="bg-accent text-primary font-bold px-5 py-2 rounded-lg hover:bg-orange transition-colors duration-200 mt-2 text-center"
-            >Inquire now</a
-          >
+            <img
+              src="../assets/images/home/close.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[17px] w-[21px]"
+            />
+          </button>
+        </div>
+        <ul
+          class="flex-1 flex flex-col gap-2 px-6 py-4 text-white text-lg font-semibold"
+        >
+          <li>
+            <a
+              href="pages/about-us.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >About us</a
+            >
+          </li>
+          <li>
+            <a
+              href="pages/sustainability.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Sustainability</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Bespoke Trips</a
+            >
+          </li>
+          <li>
+            <a
+              href="pages/mini-escapes.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Mini Escapes</a
+            >
+          </li>
+          <li>
+            <a
+              href="pages/how-to-book.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >How to book</a
+            >
+          </li>
+          <li>
+            <a
+              href="pages/faqs.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >FAQs</a
+            >
+          </li>
+          <li>
+            <a
+              href="pages/blog-listing.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Blog
+            </a>
+          </li>
+          <li>
+            <div class="relative w-[105px] h-[26px] flex justify-start mb-4">
+              <a
+                href="pages/inquire-now.html"
+                class="absolute inset-0 flex items-center justify-center text-[15px] md:text-[22px] font-semibold text-white select-text"
+                >Inquire now</a
+              >
+              <img
+                src="../assets/images/home/button.svg"
+                alt="button red"
+                class="object-contain w-full h-full"
+              />
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <script>
+        document.getElementById("openMenu").onclick = function () {
+          document
+            .getElementById("sideMenu")
+            .classList.remove("translate-x-full");
+          document.getElementById("menuOverlay").classList.remove("hidden");
+        };
+
+        document.getElementById("closeMenu").onclick = function () {
+          document.getElementById("sideMenu").classList.add("translate-x-full");
+          document.getElementById("menuOverlay").classList.add("hidden");
+        };
+        document.getElementById("menuOverlay").onclick = function () {
+          document.getElementById("sideMenu").classList.add("translate-x-full");
+          document.getElementById("menuOverlay").classList.add("hidden");
+        };
+        // Toggle submenu
+        document.getElementById("travelMenuBtn").onclick = function (e) {
+          e.preventDefault();
+          var sub = document.getElementById("travelSubMenu");
+          sub.classList.toggle("hidden");
+        };
+      </script>
+    </header>
+
+    <!-- header tablet,desktop  -->
+    <header
+      class="fixed top-0 left-0 w-full flex justify-center z-50 hidden md:block bg-transparent"
+    >
+      <div
+        class="relative w-4/5 mx-auto h-[84px] bg-[url('/assets/images/home/header.svg')] bg-no-repeat bg-center bg-cover"
+      >
+        <nav class="absolute inset-0 flex items-center justify-between px-10">
+          <a href="/" class="flex items-center">
+            <img
+              src="../assets/images/home/logo.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[84px] w-[98px]"
+            />
+          </a>
+          <!-- Menu bên phải -->
+          <ul class="flex gap-12 items-center whitespace-nowrap">
+            <li>
+              <a href="about-us.html" class="text-white font-bold">About us</a>
+            </li>
+            <li class="relative group dropdown-group">
+              <a href="#" class="text-white font-bold flex items-center gap-1">
+                Travel
+                <img
+                  src="/assets/images/home/down.svg"
+                  alt="down"
+                  class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                />
+              </a>
+              <div class="dropdown-bridge"></div>
+              <!-- Dropdown menu -->
+              <ul
+                class="bg-[#E96024] rounded-[8px] px-5 py-2 min-w-[175px] flex flex-col shadow-lg absolute left-0 top-full mt-1 z-50 hidden group-hover:flex group-focus-within:flex"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >Bespoke Trips</a
+                  >
+                </li>
+                <li>
+                  <div
+                    class="border-b-2 border-dashed border-[#FFE066] my-2"
+                  ></div>
+                </li>
+                <li>
+                  <a
+                    href="mini-escapes.html"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >Mini Escapes</a
+                  >
+                </li>
+                <li>
+                  <div
+                    class="border-b-2 border-dashed border-[#FFE066] my-2"
+                  ></div>
+                </li>
+                <li>
+                  <a
+                    href="how-to-book.html"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >How to book</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="sustainability.html" class="text-white font-bold"
+                >Sustainability</a
+              >
+            </li>
+            <li>
+              <a href="faqs.html" class="text-white font-bold">FAQs</a>
+            </li>
+            <li>
+              <a href="blog-listing.html" class="text-white font-bold">Blog</a>
+            </li>
+          </ul>
+
+          <div class="relative w-[105px] h-[26px] flex justify-start">
+            <a
+              href="inquire-now.html"
+              class="absolute inset-0 flex items-center justify-center text-[15px] font-semibold text-white select-text"
+              >Inquire now</a
+            >
+            <img
+              src="../assets/images/home/button.svg"
+              alt="button red"
+              class="object-contain w-full h-full"
+            />
+          </div>
         </nav>
       </div>
     </header>
 
     <!-- Page Header -->
-    <section class="relative bg-dark_primary">
-      <img
-        src="../assets/images/about-us/bg-page-header.png"
-        alt="Vietnam landscape"
-        class="w-full h-full object-cover"
-      />
+    <section class="bg-dark_primary">
+      <div class="mt-[100px] xl:mt-0 relative">
+        <img
+          src="../assets/images/about-us/bg-page-header.png"
+          alt="Vietnam landscape"
+          class="w-full h-full object-cover hidden xl:block"
+        />
+        <img
+          src="../assets/images/about-us/page-header-mobile1.png"
+          alt="Vietnam landscape"
+          class="w-full h-full object-cover block xl:hidden"
+        />
+        <img
+          src="../assets/images/about-us/page-header-mobile2.png"
+          alt="Vietnam landscape"
+          class="w-full h-full object-cover block xl:hidden absolute top-0 left-0 right-0 bottom-0"
+        />
 
-      <div
-        class="absolute top-[20%] left-0 bottom-0 right-0 flex justify-center"
-      >
-        <div class="relative text-[28px] xl:text-[62px] font-bold text-center">
-          <img
-            src="../assets/images/sustainability/sustainability-vector1.png"
-            alt="Decoration"
-            class="xl:w-[227px] xl:h-[80px] w-[110px] h-[55px] absolute top-[-5%] right-[-30%]"
-          />
-          <h1 class="text-primary mb-2 leading-tight">Feel The</h1>
-          <span class="block text-orange">Chôm Chôm Spirit</span>
+        <div
+          class="absolute top-[30%] xl:top-[20%] left-0 bottom-0 right-0 flex justify-center"
+        >
+          <div
+            class="relative text-[28px] xl:text-[62px] font-bold text-center"
+          >
+            <img
+              src="../assets/images/sustainability/sustainability-vector1.png"
+              alt="Decoration"
+              class="xl:w-[227px] xl:h-[80px] w-[110px] h-[55px] absolute top-[-5%] right-[-30%]"
+            />
+            <h1 class="text-primary mb-2 leading-tight">Feel The</h1>
+            <span class="block text-orange">Chôm Chôm Spirit</span>
+          </div>
         </div>
       </div>
     </section>
@@ -153,16 +308,23 @@
       <img
         src="../assets/images/bg-about-us-2.png"
         alt="Vietnam landscape"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover hidden xl:block"
       />
+
+      <img
+        src="../assets/images/about-us/bg-about-us-mobile-2.png"
+        alt="Vietnam landscape"
+        class="w-full h-full object-cover block xl:hidden"
+      />
+
       <div
-        class="absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center"
+        class="absolute top-0 left-0 bottom-0 right-0 xl:flex justify-center items-center"
       >
         <div
-          class="flex flex-col gap-5 text-center justify-center items-center w-1/2"
+          class="flex flex-col gap-5 text-center justify-center items-center w-full xl:w-1/2 px-10 xl:px-0 mt-[150px] xl:mt-0"
         >
           <h2
-            class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white"
+            class="text-[28px] xl:text-[48px] font-heading font-bold text-white"
           >
             <p class="text-secondary">
               We <span class="text-orange_dark">change perceptions</span>
@@ -173,7 +335,7 @@
             </p>
           </h2>
           <p
-            class="text-lg text-secondary font-semibold leading-relaxed max-w-2xl text-center"
+            class="text-[16px] xl:text-[18px] text-secondary font-semibold leading-relaxed max-w-2xl text-center"
           >
             Our 'thing' is immersing you in Vietnam. From flavours, traditions
             and local connections, we make sure every adventure is authentic,
@@ -181,18 +343,18 @@
           </p>
         </div>
       </div>
-    </section>
 
-    <section class="bg-body">
-      <div class="px-[5%]">
-        <div class="grid grid-cols-3 gap-20">
+      <div class="px-[5%] py-10">
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-20 px-5 xl:px-0">
           <div
             class="flex flex-col gap-4 relative w-full aspect-[360/457] rounded-[15px] border-2 border-[#318D95] overflow-hidden"
           >
             <div
               class="absolute top-0 h-2/6 w-full bg-[url('../assets/images/about-us/about-us-card-bg-title.png')] bg-cover bg-center"
             >
-              <h1 class="text-primary text-start text-[28px] font-bold p-4">
+              <h1
+                class="text-primary text-center xl:text-start font-bold p-4 whitespace-nowrap text-[21px] xl:text-[28px]"
+              >
                 Unforgettable
                 <p class="text-orange_dark">Travel Adventures</p>
               </h1>
@@ -228,7 +390,9 @@
             <div
               class="absolute top-0 h-2/6 w-full bg-[url('../assets/images/about-us/about-us-card-bg-title.png')] bg-cover bg-center"
             >
-              <h1 class="text-primary text-start text-[28px] font-bold p-4">
+              <h1
+                class="text-primary text-center xl:text-start font-bold p-4 whitespace-nowrap text-[21px]"
+              >
                 Experts in Authentic
                 <p class="text-orange_dark">Vietnam Journeys</p>
               </h1>
@@ -265,7 +429,9 @@
             <div
               class="absolute top-0 h-2/6 w-full bg-[url('../assets/images/about-us/about-us-card-bg-title.png')] bg-cover bg-center"
             >
-              <h1 class="text-primary text-start text-[28px] font-bold p-4">
+              <h1
+                class="text-primary text-center xl:text-start font-bold p-4 whitespace-nowrap text-[21px]"
+              >
                 Redefining Adventure
                 <p class="text-orange_dark">and Discovery</p>
               </h1>
@@ -304,31 +470,39 @@
     <img
       src="../assets/images/about-us-mission-1.png"
       alt="Vietnam landscape"
-      class="w-full h-full object-cover"
+      class="w-full h-full object-cover bg-body"
     />
     <section class="bg-dark_primary">
-      <div class="py-5 bg-dark_primary">
+      <div class="py-20 xl:py-5 bg-dark_primary px-[5%]">
         <div class="relative text-center">
           <img
             src="../assets/images/sustainability/sustainability-vector1.png"
             alt="Decoration"
             class="xl:w-[227px] xl:h-[80px] w-[110px] h-[55px] absolute top-[-35%] right-[30%]"
           />
-          <h1 class="text-orange font-semibold mb-2 leading-tight text-[48px]">
+          <h1
+            class="text-orange font-semibold mb-2 leading-tight text-[28px] xl:text-[48px]"
+          >
             Our Mission
           </h1>
-          <span class="block text-white text-[18px] max-w-2xl mx-auto mt-3"
+          <span
+            class="block text-white text-[14px] xl:text-[18px] max-w-2xl mx-auto mt-3"
             >To provide thoughtfully curated, deeply immersive, and
             adventure-driven travel experiences that go beyond the ordinary,
             ensuring that all our travelers leave Vietnam with unforgettable
             stories and meaningful connections.</span
           >
         </div>
-        <div class="px-[5%]">
+        <div>
           <img
             src="../assets/images/map.png"
             alt="Vietnam landscape"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover hidden xl:block"
+          />
+          <img
+            src="../assets/images/map-mobile.png"
+            alt="Vietnam landscape"
+            class="w-full h-full object-cover block xl:hidden"
           />
         </div>
       </div>
@@ -348,12 +522,12 @@
           <img
             src="../assets/images/sustainability/sustainability-vector1.png"
             alt="Decoration"
-            class="w-[178px] h-[80px] xl:w-[227px] absolute xl:top-[-50%] top-[-50%] right-[35%]"
+            class="w-[110px] h-[55px] xl:w-[227px] absolute xl:top-[-50%] top-[-30%] right-[35%]"
           />
 
-          <h2 class="text-[28px] xl:text-[48px] font-bold text-white mb-4">
+          <h2 class="text-[28px] xl:text-[48px] font-bold text-orange mb-4">
             The Chom Chom Travel
-            <p class="text-orange mt-2">Difference</p>
+            <p class="text-white xl:mt-2">Difference</p>
           </h2>
           <p
             class="text-[14px] xl:text-[18px] text-white max-w-2xl mx-auto mt-2"
@@ -364,7 +538,7 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-3 gap-12">
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-12 px-5 xl:px-0">
           <div
             class="w-full aspect-[377/556] relative shadow-lg card-toggle card-closed cursor-pointer"
           >
@@ -381,7 +555,7 @@
 
             <!-- Vùng nội dung nghiêng -->
             <div
-              class="box-content border-2 border-dashed border-[#318D95] absolute top-[10%] left-0 w-full h-3/5 z-50 flex justify-center items-center transition-all duration-500 ease-in-out"
+              class="box-content absolute top-[10%] left-0 w-full h-3/5 z-50 flex justify-center items-center transition-all duration-500 ease-in-out"
             >
               <div
                 class="rotate-[-12deg] bg-white shadow-md w-[95%] h-[95%] rounded-[20px] p-4 transition-all duration-500 ease-in-out"
@@ -553,7 +727,7 @@
     <!-- CTA Section -->
     <section class="py-16 bg-[#104751]">
       <div class="px-[5%] text-center">
-        <div class="flex gap-10">
+        <div class="flex flex-col xl:flex-row gap-10">
           <div class="flex-1">
             <img
               src="../assets/images/about-us-adventure.png"
@@ -562,18 +736,20 @@
             />
           </div>
           <div
-            class="flex-1 relative z-10 mx-auto text-center flex flex-col gap-6 px-20 gap-5 leading-8"
+            class="flex-1 relative z-10 mx-auto text-center flex flex-col gap-6 px-[5%] gap-5 leading-8"
           >
             <!-- Heading -->
             <div
-              class="flex flex-col gap-3 text-3xl md:text-[48px] font-bold text-primary"
+              class="flex flex-col text-[28px] xl:text-[48px] font-bold text-primary"
             >
               <span>What is an</span>
-              <span class="text-orange mt-2">Adventure Coordinator?</span>
+              <span class="text-orange xl:mt-2">Adventure Coordinator?</span>
             </div>
 
             <!-- Sub text -->
-            <p class="text-base md:text-lg text-white leading-relaxed px-10">
+            <p
+              class="text-[16px] xl:text-lg text-white leading-relaxed px-[5%]"
+            >
               At Chôm Chôm Travel, your journey is guided not just by a plan but
               by a person. Our Adventure Coordinators are your personal travel
               partners and problem-solvers rolled into one.
@@ -594,71 +770,94 @@
           />
         </div>
 
-        <div class="mt-20">
+        <div class="mt-20 px-[5%]">
           <div
-            class="px-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 xl:gap-20"
+            class="grid grid-cols-1 xl:grid-cols-4 gap-20 bg-[url('../assets/images/about-us/line.png')] bg-cover bg-center xl:bg-none py-16 xl:p-0"
           >
-            <!-- Icon Block -->
-            <div class="flex flex-col items-center text-center h-full">
+            <div
+              class="flex flex-col items-center text-center h-full w-3/5 xl:w-full mx-auto"
+            >
               <img
                 src="../assets/images/about-us/about-us-icon1.svg"
-                class="w-[136px] h-[136px] object-cover mb-4"
+                class="w-[52px] h-[52px] xl:w-[136px] xl:h-[136px] object-cover mb-4"
               />
               <div class="min-h-[64px] flex items-center justify-center">
-                <p class="text-orange text-[24px] font-semibold leading-tight">
+                <p
+                  class="text-orange text-[21px] xl:text-[24px] font-semibold leading-tight"
+                >
                   Personalized Support
                 </p>
               </div>
-              <p class="text-white text-[16px] leading-relaxed mt-5">
+              <p
+                class="text-white text-[14px] xl:text-[16px] leading-relaxed xl:mt-5"
+              >
                 One dedicated contact from start to finish.
               </p>
             </div>
 
             <!-- Repeat for 3 others -->
-            <div class="flex flex-col items-center text-center h-full">
+            <div
+              class="flex flex-col items-center text-center h-full w-3/5 xl:w-full mx-auto"
+            >
               <img
                 src="../assets/images/about-us/about-us-icon2.svg"
-                class="w-[136px] h-[136px] object-cover mb-4"
+                class="w-[52px] h-[52px] xl:w-[136px] xl:h-[136px] object-cover mb-4"
               />
               <div class="min-h-[64px] flex items-center justify-center">
-                <p class="text-orange text-[24px] font-semibold leading-tight">
+                <p
+                  class="text-orange text-[21px] xl:text-[24px] font-semibold leading-tight"
+                >
                   Real-Time Assistance
                 </p>
               </div>
-              <p class="text-white text-[16px] leading-relaxed mt-5">
-                We’re just a WhatsApp away if plans shift or questions arise.
+              <p
+                class="text-white text-[14px] xl:text-[16px] leading-relaxed xl:mt-5"
+              >
+                We're just a WhatsApp away if plans shift or questions arise.
               </p>
             </div>
 
-            <div class="flex flex-col items-center text-center h-full">
+            <div
+              class="flex flex-col items-center text-center h-full w-3/5 xl:w-full mx-auto"
+            >
               <img
                 src="../assets/images/about-us/about-us-icon3.svg"
-                class="w-[136px] h-[136px] object-cover mb-4"
+                class="w-[52px] h-[52px] xl:w-[136px] xl:h-[136px] object-cover mb-4"
               />
               <div class="min-h-[64px] flex items-center justify-center">
-                <p class="text-orange text-[24px] font-semibold leading-tight">
+                <p
+                  class="text-orange text-[21px] xl:text-[24px] font-semibold leading-tight"
+                >
                   Local Knowledge, Global Standards
                 </p>
               </div>
-              <p class="text-white text-[16px] leading-relaxed mt-5">
+              <p
+                class="text-white text-[14px] xl:text-[16px] leading-relaxed xl:mt-5"
+              >
                 Based in Vietnam, our team offers insider access while upholding
                 personalized service.
               </p>
             </div>
 
-            <div class="flex flex-col items-center text-center h-full">
+            <div
+              class="flex flex-col items-center text-center h-full w-3/5 xl:w-full mx-auto"
+            >
               <img
                 src="../assets/images/about-us/about-us-icon4.svg"
-                class="w-[136px] h-[136px] object-cover mb-4"
+                class="w-[52px] h-[52px] xl:w-[136px] xl:h-[136px] object-cover mb-4"
               />
               <div class="min-h-[64px] flex items-center justify-center">
-                <p class="text-orange text-[24px] font-semibold leading-tight">
+                <p
+                  class="text-orange text-[21px] xl:text-[24px] font-semibold leading-tight"
+                >
                   Smoother Travel
                 </p>
               </div>
-              <p class="text-white text-[16px] leading-relaxed mt-5">
+              <p
+                class="text-white text-[14px] xl:text-[16px] leading-relaxed xl:mt-5"
+              >
                 From surprise detours to last-minute changes, we handle the
-                stress so you don’t have to.
+                stress so you don't have to.
               </p>
             </div>
           </div>
@@ -666,21 +865,25 @@
       </div>
     </section>
 
+    <!-- Meet the A-Team (New UI/UX Section) -->
     <section
-      class="py-16 bg-body relative overflow-x-hidden"
+      class="py-16 bg-body relative overflow-x-hidden min-h-[950px]"
+      id="a-team-slider-section"
       style="
         background-image: url('../assets/images/bg-meet-a-team.png');
         background-repeat: no-repeat;
       "
     >
       <div class="px-[5%] text-center">
-        <!-- Tiêu đề -->
         <div class="flex flex-col justify-center items-center">
-          <h2 class="text-[48px] font-bold mb-2">
-            Meet the <span class="text-orange_dark">'A - Team'</span>
+          <h2 class="text-[28px] xl:text-[48px] font-bold mb-2">
+            Meet the
+            <span class="text-orange_dark inline-block xl:inline"
+              >“A - Team”</span
+            >
           </h2>
           <p
-            class="text-dark_primary font-semibold mb-2 text-center max-w-3xl text-[18px]"
+            class="text-dark_primary font-semibold mb-2 text-center max-w-3xl text-[14px] xl:text-[18px]"
           >
             <span class="text-primary"
               >The heart of Chôm Chôm Travel lies in our people.</span
@@ -690,150 +893,65 @@
             unique.
           </p>
         </div>
-        <div class="relative flex justify-center items-center mt-12 mb-8">
-          <div class="flex gap-10 z-10">
-            <div
-              class="border-orange rounded-full border-2 overflow-hidden bg-primary"
-            >
-              <img
-                src="../assets/images/avatar1.png"
-                class="w-40 h-40 border-4 object-cover"
-              />
-            </div>
-            <div
-              class="border-orange rounded-full border-2 overflow-hidden bg-primary"
-            >
-              <img
-                src="../assets/images/avatar1.png"
-                class="w-40 h-40 border-4 object-cover"
-              />
-            </div>
-            <div
-              class="border-orange rounded-full border-2 overflow-hidden bg-primary"
-            >
-              <img
-                src="../assets/images/avatar1.png"
-                class="w-40 h-40 border-4 object-cover"
-              />
-            </div>
-          </div>
-          <div class="mx-8 z-10">
-            <div
-              class="border-orange rounded-full border-2 overflow-hidden bg-primary"
-            >
-              <img
-                src="../assets/images/avatar1.png"
-                class="w-56 h-56 border-4 object-cover"
-              />
-            </div>
-          </div>
-          <div class="flex gap-10 z-10">
-            <div
-              class="border-orange rounded-full border-2 overflow-hidden bg-primary"
-            >
-              <img
-                src="../assets/images/avatar1.png"
-                class="w-40 h-40 border-4 object-cover"
-              />
-            </div>
-            <div
-              class="border-orange rounded-full border-2 overflow-hidden bg-primary"
-            >
-              <img
-                src="../assets/images/avatar1.png"
-                class="w-40 h-40 border-4 object-cover"
-              />
-            </div>
-            <div
-              class="border-orange rounded-full border-2 overflow-hidden bg-primary"
-            >
-              <img
-                src="../assets/images/avatar1.png"
-                class="w-40 h-40 border-4 object-cover"
-              />
-            </div>
+        <div class="relative flex flex-col items-center mt-12 mb-8">
+          <div
+            id="a-team-slider"
+            class="flex items-end justify-center gap-4 w-full"
+          >
+            <!-- Avatars will be injected by JS -->
           </div>
         </div>
-        <div class="mt-6">
-          <h3 class="text-2xl text-dark_primary">
-            Dorothée Perrault Le Hunsec
-          </h3>
-          <div class="flex justify-center mt-2 mb-4">
-            <div>
-              <a
-                href="inquire-now.html"
-                class="text-white font-bold px-5 py-2 rounded-lg transition-colors duration-200 hidden md:inline-block"
-                style="
-                  background-image: url('../assets/images/bg-btn-inquire.png');
-                  background-repeat: no-repeat;
-                  background-size: cover;
-                  background-position: center;
-                "
-              >
-                Founder & Director
-              </a>
-            </div>
-          </div>
-
-          <ul class="text-lg text-dark_primary font-medium space-y-1">
-            <li>
-              Develop and maintain company's vision, operations and strategic
-              plan
-            </li>
-            <li>Develop relationships with partners and local guides</li>
-            <li>
-              Identify new opportunities for revenue growth & sustainable
-              tourism development
-            </li>
-          </ul>
-          <div class="flex justify-center items-center gap-4 mt-6">
-            <button
-              class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-orange text-orange hover:bg-orange hover:text-white transition"
+        <div id="a-team-content" class="mt-6 max-w-2xl mx-auto"></div>
+        <div class="flex justify-center items-center gap-4 mt-8">
+          <button
+            id="a-team-prev"
+            class="w-30 h-30 flex items-center justify-center text-orange_dark hover:text-orange transition"
+          >
+            <svg
+              width="19"
+              height="30"
+              viewBox="0 0 19 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                width="20"
-                height="20"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M13 17l-5-5 5-5" />
-              </svg>
-            </button>
-            <div class="flex gap-2">
-              <span class="w-4 h-4 rounded-full bg-orange inline-block"></span>
-              <span
-                class="w-4 h-4 rounded-full bg-[#D9D9D9] inline-block"
-              ></span>
-              <span
-                class="w-4 h-4 rounded-full bg-[#D9D9D9] inline-block"
-              ></span>
-            </div>
-            <button
-              class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-orange text-orange hover:bg-orange hover:text-white transition"
+              <path
+                d="M7.12272 15.1025L18.0742 4.00757L14.7412 0.630859L0.456589 15.1025L14.7412 29.5741L18.0742 26.1974L7.12272 15.1025Z"
+                fill="#E96024"
+              />
+            </svg>
+          </button>
+          <div id="a-team-dots" class="flex gap-2"></div>
+          <button
+            id="a-team-next"
+            class="w-30 h-30 flex items-center justify-center text-orange_dark hover:text-orange transition"
+          >
+            <svg
+              width="19"
+              height="29"
+              viewBox="0 0 19 29"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                width="20"
-                height="20"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M7 7l5 5-5 5" />
-              </svg>
-            </button>
-          </div>
+              <path
+                d="M11.8773 14.7879L0.925781 3.93416L4.25885 0.630859L18.5434 14.7879L4.25885 28.9449L0.925781 25.6416L11.8773 14.7879Z"
+                fill="#E96024"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
+    <!-- End Meet the A-Team (New UI/UX Section) -->
+
     <img
       src="../assets/images/about-us-line.png"
       alt="Vietnam landscape"
-      class="w-full h-full object-cover"
+      class="w-full h-full object-cover bg-[#FFFCF0]"
     />
 
-    <footer>
-      <div class="relative bg-[#FAF6EC] text-[#01363D] text-sm">
+    <!-- Footer -->
+    <footer class="">
+      <div class="relative bg-[#FAF6EC] text-[#01363D] text-sm py-10">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
           <img
@@ -845,10 +963,12 @@
 
         <!-- Content -->
         <div
-          class="relative z-10 container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10"
+          class="relative z-10 max-w-7xl mx-auto py-12 grid grid-cols-1 md:grid-cols-4 gap-10 px-6"
         >
           <!-- Logo & Intro -->
-          <div class="space-y-4">
+          <div
+            class="space-y-4 flex flex-col items-center md:items-start text-center md:text-start"
+          >
             <img
               src="../assets/images/logo-footer.png"
               alt="Chôm Chôm Travel"
@@ -867,9 +987,17 @@
             </p>
           </div>
 
+          <div
+            class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"
+          ></div>
+
           <!-- About Us -->
-          <div>
-            <h4 class="text-lg font-bold text-orange_dark mb-6">About Us</h4>
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-start"
+          >
+            <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">
+              About Us
+            </h4>
             <ul class="space-y-2 text-dark_primary text-base">
               <li><a href="#" class="hover:underline">About Us</a></li>
               <li><a href="#" class="hover:underline">Sustainability</a></li>
@@ -877,9 +1005,15 @@
             </ul>
           </div>
 
+          <div
+            class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"
+          ></div>
+
           <!-- Travel with us -->
-          <div>
-            <h4 class="text-lg font-bold text-orange_dark mb-6">
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-start"
+          >
+            <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">
               Travel with us
             </h4>
             <ul class="space-y-2 text-dark_primary text-base">
@@ -893,9 +1027,15 @@
             </ul>
           </div>
 
+          <div
+            class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"
+          ></div>
+
           <!-- Get in touch -->
-          <div class="text-dark_primary text-base space-y-2">
-            <h4 class="text-lg font-bold text-orange_dark mb-6">
+          <div
+            class="text-dark_primary text-base space-y-2 flex flex-col items-center md:items-start text-center md:text-start"
+          >
+            <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">
               Get in touch
             </h4>
             <a href="#" class="underline text-[#01363D] hover:text-[#F15A29]"
@@ -917,9 +1057,10 @@
           </div>
         </div>
       </div>
+
       <div class="bg-dark_primary">
         <div
-          class="container mx-auto text-white text-center py-4 text-sm flex flex-col md:flex-row justify-between items-center px-6"
+          class="max-w-7xl mx-auto text-white text-center py-4 text-sm flex flex-col md:flex-row justify-between items-center px-6"
         >
           <p>&copy; 2025 Chôm Chôm Travel. All right reserved.</p>
           <div class="flex gap-4 pt-2 md:pt-0">
