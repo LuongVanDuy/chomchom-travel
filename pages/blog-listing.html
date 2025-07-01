@@ -109,6 +109,7 @@
       z-index: 20;
       margin-top: 25px;
     }
+
     .custom-swiper-pagination .swiper-pagination-bullet {
       width: 18px;
       height: 18px;
@@ -120,16 +121,19 @@
       margin: 0 6px;
       opacity: 1;
     }
+
     .custom-swiper-pagination .swiper-pagination-bullet img {
       width: 18px;
       height: 18px;
       opacity: 0.5;
       transition: opacity 0.3s ease;
     }
+
     .custom-swiper-pagination .swiper-pagination-bullet-active img {
       opacity: 1;
     }
   </style>
+
   <body>
     <main>
       <header>
@@ -539,30 +543,52 @@
                     <path d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
-                <!-- Dropdown example, expand as needed -->
+                <!-- Bridge div: giúp hover không bị mất khi di chuyển chuột từ button xuống dropdown -->
+                <div class="absolute left-0 w-40 h-4" style="top: 100%"></div>
+
                 <ul
-                  class="absolute left-0 mt-2 w-40 bg-white border rounded shadow-lg hidden group-hover:block z-10"
-                  role="menu"
+                  class="absolute left-1/2 -translate-x-1/2 md:left-auto md:right-0 mt-2 min-w-[300px] rounded-[20px] hidden group-hover:block z-50 bg-[#E7BD11] p-5"
                 >
-                  <li role="menuitem">
+                  <li>
                     <a
                       href="#"
-                      class="block px-4 py-2 text-[#188188] hover:bg-gray-100 text-sm"
-                      >Tips</a
+                      class="block py-3 text-[#188188] md:text-[18px] border-b border-dashed border-[#E96024] whitespace-nowrap hover:text-[#26353f] transition-colors"
+                      >Family experiences in Vietnam</a
                     >
                   </li>
-                  <li role="menuitem">
+                  <li>
                     <a
                       href="#"
-                      class="block px-4 py-2 text-[#188188] hover:bg-gray-100 text-sm"
-                      >Guides</a
+                      class="block py-3 text-[#188188] md:text-[18px] border-b border-dashed border-[#E96024] whitespace-nowrap hover:text-[#26353f] transition-colors"
+                      >Nature lovers</a
                     >
                   </li>
-                  <li role="menuitem" class="sm:hidden">
+                  <li>
                     <a
                       href="#"
-                      class="block px-4 py-2 text-[#188188] hover:bg-gray-100 text-sm"
+                      class="block py-3 text-[#188188] md:text-[18px] border-b border-dashed border-[#E96024] whitespace-nowrap hover:text-[#26353f] transition-colors"
                       >Sustainable tourism</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-3 text-[#188188] md:text-[18px] border-b border-dashed border-[#E96024] whitespace-nowrap hover:text-[#26353f] transition-colors"
+                      >Vietnam travelling tips</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-3 text-[#188188] md:text-[18px] border-b border-dashed border-[#E96024] whitespace-nowrap hover:text-[#26353f] transition-colors"
+                      >Northern Vietnam</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-3 text-[#188188] md:text-[18px] whitespace-nowrap hover:text-[#26353f] transition-colors"
+                      >Human of Chôm Chôm Travel</a
                     >
                   </li>
                 </ul>

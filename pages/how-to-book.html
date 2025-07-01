@@ -1,207 +1,252 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hướng dẫn đặt tour - Chôm Chôm Travel</title>
 
-
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Styles -->
-    <link href="../dist/output.css" rel="stylesheet">
-</head>
-<body class="bg-body">
-    <!-- Header -->
-    <header class="text-white fixed top-0 z-50 w-full ">
-        <div class="container mx-auto flex items-center justify-between py-2 px-6 w-[80%] bg-no-repeat" style="background-image: url('../assets/images/background-header.png'); background-repeat: no-repeat; background-size: cover; background-position: center;">
-            <a href="/" class="flex items-center space-x-2">
-                <img src="../assets/images/logo.png" alt="Logo" class="h-14 w-auto">
-            </a>
-            
-            <nav class="hidden md:flex items-center space-x-16">
-                <a href="about-us.html" class="text-xl hover:text-accent transition-colors duration-200 font-medium">About us</a>
-                <a href="experiences.html" class="text-xl hover:text-accent transition-colors duration-200 font-medium">Travel</a>
-                <a href="sustainability.html" class="text-xl hover:text-accent transition-colors duration-200 font-medium">Sustainability</a>
-                <a href="faqs.html" class="text-xl hover:text-accent transition-colors duration-200 font-medium">FAQs</a>
-                <a href="blog-listing.html" class="text-xl hover:text-accent transition-colors duration-200 font-medium">Blogs</a>
-            </nav>
-            
-            <div class="flex items-center space-x-4">
-                <a href="inquire-now.html"
-                    class="text-white font-bold px-5 py-2 rounded-lg ransition-colors duration-200 hidden md:inline-block  " style="background-image: url('../assets/images/bg-btn-inquire.png'); background-repeat: no-repeat;">
-                    Inquire now
-                </a>
-             
-                <!-- Mobile menu button -->
-                <button class="md:hidden focus:outline-none focus:ring-2 focus:ring-accent rounded">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
-            </div>
+    <link href="../dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-body">
+    <!-- Hero Section -->
+    <section class="relative">
+      <div class="hidden md:block bg-[#104751]">
+        <div class="">
+          <img
+            src="../assets/images/how-to-book.svg"
+            alt="Vietnam how to book"
+            class="w-full h-auto object-cover mx-auto"
+          />
+          <div class="relative w-fit mx-auto z-10 mt-[-45px] cursor-pointer">
+            <img
+              src="../assets/images/button-how-to-book.svg"
+              alt="How to book"
+              class="w-full h-auto object-cover"
+            />
+            <span
+              class="absolute inset-0 flex items-center justify-center text-white font-bold text-[22px] pb-1"
+              >Inquire now</span
+            >
+          </div>
         </div>
-        
-        <!-- Mobile menu -->
-        <div class="md:hidden hidden bg-primary px-6 pb-4 border-t border-primary/20">
-            <nav class="flex flex-col space-y-3 pt-4">
-                <a href="about-us.html" class="hover:text-accent transition-colors duration-200 font-medium py-2">About us</a>
-                <a href="experiences.html" class="hover:text-accent transition-colors duration-200 font-medium py-2">Travel</a>
-                <a href="sustainability.html" class="hover:text-accent transition-colors duration-200 font-medium py-2">Sustainability</a>
-                <a href="blog-listing.html" class="hover:text-accent transition-colors duration-200 font-medium py-2">Blogs</a>
-                <a href="inquire-now.html" class="bg-accent text-primary font-bold px-5 py-2 rounded-lg hover:bg-orange transition-colors duration-200 mt-2 text-center">Inquire now</a>
-            </nav>
+      </div>
+      <img
+        src="../assets/images/how-to-book-line.svg"
+        alt="Vietnam landscape"
+        class="w-full h-full object-cover"
+      />
+      <div class="block md:hidden bg-[#104751] min-h-[583px] relative">
+        <div>
+          <img
+            src="../assets/images/how-to-book-mobile.svg"
+            alt="How to book"
+            class="w-full h-auto object-cover pr-[10px]"
+          />
+          <div
+            class="w-[190px] min-h-[200px] bg-[#E7BD11] px-3 py-5 rounded-[20px] text-center mx-auto mt-[-20px] text-[#104751]"
+          >
+            Forget cookie-cutter experiences. We create
+            <b> bespoke itineraries </b> and unforgettable experiences tailored
+            to your interests and desires
+          </div>
+          <img
+            src="../assets/images/how-to-book-mobile4.svg"
+            alt="How to book"
+            class="w-auto mx-auto h-auto object-cover rotate-[0.2deg] mb-[-8px]"
+          />
+          <div class="relative w-fit mx-auto z-10">
+            <img
+              src="../assets/images/button-how-to-book-mobile.svg"
+              alt="How to book"
+              class="w-full h-auto object-cover"
+            />
+            <span
+              class="absolute inset-0 flex items-center justify-center text-white font-bold text-[14px] pb-1"
+              >Inquire now</span
+            >
+          </div>
         </div>
-    </header>
-
-
-     <!-- Hero Section -->
-     <section class="relative  bg-[#FFFCF0] ">
-        <img src="../assets/images/how-to-book.png" alt="Vietnam landscape" class="w-full h-full object-cover">
-        <div class="absolute bottom-0 w-full flex justify-center  ">
-            <a href="pages/inquire-now.html"
-                class="text-white font-bold text-xl px-5 py-3 text-center  rounded-lg ransition-colors duration-200 hidden md:inline-block  " style="background-image: url('../assets/images/bg-btn-inquire.png'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 200px;">
-                Book now
-            </a>
-        </div>
-        <img src="../assets/images/how-to-book-line.png" alt="Vietnam landscape" class="w-full h-full object-cover ">
+        <img
+          src="../assets/images/how-to-book-mobile3.svg"
+          alt="How to book"
+          class="w-full h-[118px] object-cover rotate-[0.2deg] mt-[-35px]"
+        />
+        <div
+          class="absolute left-0 right-0 bottom-[-4px] h-4 bg-[#FFFCF0] z-20"
+        ></div>
+      </div>
     </section>
 
     <!-- Booking Steps -->
-    <section class="relative bg-[#FFFCF0]">
-        <img id="step-image" src="../assets/images/how-to-book-step-1.png" alt="Step 1" class="w-full h-full object-cover cursor-pointer transition-all duration-300">
-        <div class="text-center mb-12 absolute top-0  w-full">
-            <h2 class="text-4xl text-primary font-bold text-gray-800 mb-4 leading-tight mt-12">Our Step-by-Step Process</h2>
-            <p class="text-2xl mx-auto text-dark_primary font-semibold">
-                The process that ensures your trip is <br/>
-                perfectly planned and stress-free.
-            </p>
-        </div>
+    <section class="relative bg-[#FFFCF0] mt-[100px] hidden md:block">
+      <div class="text-center absolute w-full">
+        <h2
+          class="md:text-[45px] text-primary font-semibold leading-tight mb-4"
+        >
+          Our Step-by-Step Process
+        </h2>
+        <p class="text-[22px] mx-auto text-[#104751] font-semibold py-1">
+          The process that ensures your trip is <br />
+          perfectly planned and stress-free.
+        </p>
+      </div>
+      <div>
+        <img
+          id="step-image-desktop"
+          src="../assets/images/how-to-book-step-1.png"
+          alt="Step 1"
+          class="w-full h-full object-cover cursor-pointer transition-all duration-300 mt-[-10px]"
+        />
+      </div>
     </section>
-    <img src="../assets/images/break-how-to-use.png" alt="Vietnam landscape" class="w-full h-full object-cover ">
+
+    <section class="relative bg-[#FFFCF0] mt-[10px] block md:hidden">
+      <div class="text-center w-full mb-8">
+        <img
+          src="../assets/images/step-mobile-line.svg"
+          alt="step-mobile-line"
+          class="w-auto h-auto object-cover mx-auto"
+        />
+        <h2 class="text-[28px] text-primary font-semibold leading-tight mb-2">
+          Our Step-by-Step
+          <br />
+          <span class="text-[#E96024]">Process</span>
+        </h2>
+        <p class="text-[14px] mx-auto text-[#104751] font-semibold py-1">
+          The process that ensures your trip is <br />
+          perfectly planned and stress-free.
+        </p>
+      </div>
+      <img
+        id="step-image-mobile"
+        src="../assets/images/how-to-book-step-mobile1.png"
+        alt="Step 1"
+        class="w-full h-full object-cover cursor-pointer transition-all duration-300 mt-[-10px]"
+      />
+    </section>
+    <img
+      src="../assets/images/break-how-to-use.png"
+      alt="Vietnam landscape"
+      class="w-full h-full object-cover"
+    />
 
     <!-- Booking Methods -->
     <section class="py-16 bg-body">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">What Guides <span class="text-orange_dark">Our Planning</span></h2>
-                <p class="text-xl text-dark_primary max-w-2xl mx-auto">
-                    Our planning is guided by four core values, shared by everyone <br/>
-                    we work with - <span class="text-primary">our team, our travelers and our partners</span>
-                </p>
-            </div>
-
-            <div class="flex gap-3 justify-around">
-                <!-- Phone Booking -->
-                <div class="flex flex-col gap-20">
-                    <img src="../assets/images/respect.png" alt="Vietnam landscape" class="">
-                    <img src="../assets/images/friendly-invironment.png" alt="Vietnam landscape" class="">
-
-                </div>
-                <div class="flex flex-col gap-20 mt-[200px]">
-                    <img src="../assets/images/invested-interest.png" alt="Vietnam landscape" class="">
-
-                    <img src="../assets/images/reliability.png" alt="Vietnam landscape" class="">
-              </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            What Guides <span class="text-orange_dark">Our Planning</span>
+          </h2>
+          <p
+            class="text-[14px] md:text-[18px] text-[#104751] max-w-2xl mx-auto"
+          >
+            Our planning is guided by four core values, shared by everyone
+            <br />
+            we work with -
+            <span class="text-primary"
+              >our team, our travelers and our partners</span
+            >
+          </p>
         </div>
+
+        <div class="hidden md:flex gap-3 justify-around">
+          <div class="flex flex-col gap-20">
+            <img
+              src="../assets/images/respect.png"
+              alt="Vietnam landscape"
+              class=""
+            />
+            <img
+              src="../assets/images/friendly-invironment.png"
+              alt="Vietnam landscape"
+              class=""
+            />
+          </div>
+          <div class="flex flex-col gap-20 mt-[200px]">
+            <img
+              src="../assets/images/invested-interest.png"
+              alt="Vietnam landscape"
+              class=""
+            />
+
+            <img
+              src="../assets/images/reliability.png"
+              alt="Vietnam landscape"
+              class=""
+            />
+          </div>
+        </div>
+
+        <div class="block md:hidden">
+          <img
+            src="../assets/images/planing-how-to-book1.svg"
+            alt="Vietnam landscape"
+            class="w-full"
+          />
+          <img
+            src="../assets/images/planing-how-to-book2.svg"
+            alt="Vietnam landscape"
+            class="w-full"
+          />
+          <img
+            src="../assets/images/planing-how-to-book3.svg"
+            alt="Vietnam landscape"
+            class="w-full"
+          />
+          <img
+            src="../assets/images/planing-how-to-book4.svg"
+            alt="Vietnam landscape"
+            class="w-full"
+          />
+        </div>
+      </div>
     </section>
 
-
-    <section class="relative ">
-        <div class="bg-body"><img src="../assets/images/how-to-use-break.png" alt="Vietnam landscape" class="w-full h-full object-cover"></div>
-        <img src="../assets/images/bg-build-your-own-home.png" alt="Vietnam landscape" class="w-full h-full object-cover">
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="relative bg-[#FAF6EC] text-[#01363D] text-sm">
-            <!-- Background Image -->
-            <div class="absolute inset-0 z-0">
-              <img src="../assets/images/bg-footer.png" alt="Vietnam landscape" class="w-full h-full object-cover">
-            </div>
-          
-            <!-- Content -->
-            <div class="relative z-10 container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
-              <!-- Logo & Intro -->
-              <div class="space-y-4">
-                <img src="../assets/images/logo-footer.png" alt="Chôm Chôm Travel" class="h-24 w-auto">
-                <h4 class="text-xl font-bold text-orange_dark">Chom Chom Travel</h4>
-                <p class="leading-relaxed text-dark_primary">
-                  Chôm Chôm Travel is a boutique adventure travel agency specializing in curating the best experiences in Vietnam.
-                </p>
-                <p class="text-dark_primary">Tax code: <span class="font-medium">0316767612</span></p>
-                <p class="text-dark_primary">Registered Date: <span class="font-medium">2021-03-25</span></p>
-              </div>
-          
-              <!-- About Us -->
-              <div>
-                <h4 class="text-lg font-bold text-orange_dark mb-6">About Us</h4>
-                <ul class="space-y-2 text-dark_primary text-base">
-                  <li><a href="#" class="hover:underline">About Us</a></li>
-                  <li><a href="#" class="hover:underline">Sustainability</a></li>
-                  <li><a href="#" class="hover:underline">How to book</a></li>
-                </ul>
-              </div>
-          
-              <!-- Travel with us -->
-              <div>
-                <h4 class="text-lg font-bold text-orange_dark mb-6">Travel with us</h4>
-                <ul class="space-y-2 text-dark_primary text-base">
-                  <li><a href="#" class="hover:underline">Explore Vietnam</a></li>
-                  <li><a href="#" class="hover:underline">Bespoke Experiences</a></li>
-                  <li><a href="#" class="hover:underline">Mini Escapes</a></li>
-                  <li><a href="#" class="hover:underline">FAQs</a></li>
-                  <li><a href="#" class="hover:underline">Blog</a></li>
-                </ul>
-              </div>
-          
-              <!-- Get in touch -->
-              <div class="text-dark_primary text-base space-y-2">
-                <h4 class="text-lg font-bold text-orange_dark mb-6">Get in touch</h4>
-                <a href="#" class="underline text-[#01363D] hover:text-[#F15A29]">Inquire Now</a>
-                <p>11 Trần Văn Sắc, Thảo Điền, D2,<br>Hồ Chí Minh City, Vietnam.</p>
-                <p>+84 833 886 750</p>
-                <p>info@chomchomtravel.com</p>
-                <div class="flex space-x-4 pt-2 text-[#01363D]">
-                  <a href="#" class="hover:text-[#F15A29]">
-                    <i class="fab fa-facebook-f text-2xl"></i>
-                  </a>
-                  <a href="#" class="hover:text-[#F15A29]">
-                    <i class="fab fa-instagram text-2xl"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class=" bg-dark_primary ">
-           <div class="container mx-auto text-white text-center py-4 text-sm flex flex-col md:flex-row justify-between items-center px-6">
-                <p>&copy; 2025 Chôm Chôm Travel. All right reserved.</p>
-                <div class="flex gap-4 pt-2 md:pt-0">
-                  <a href="#" class="hover:underline">Terms and conditions</a>
-                  <a href="#" class="hover:underline">Privacy Policy</a>
-                </div>
-           </div>
-          </div>
-    </footer>
-
+    <!-- -------------------- -->
     <script>
-        const stepImages = [
-            '../assets/images/how-to-book-step-1.png',
-            '../assets/images/how-to-book-step-2.png',
-            '../assets/images/how-to-book-step-3.png',
-            '../assets/images/how-to-book-step-4.png'
-        ];
-        let currentStep = 0;
+      const desktopStepImages = [
+        "../assets/images/how-to-book-step-1.png",
+        "../assets/images/how-to-book-step-2.png",
+        "../assets/images/how-to-book-step-3.png",
+        "../assets/images/how-to-book-step-4.png",
+      ];
 
-        const stepImage = document.getElementById('step-image');
+      const mobileStepImages = [
+        "../assets/images/how-to-book-step-mobile1.png",
+        "../assets/images/how-to-book-step-mobile2.png",
+        "../assets/images/how-to-book-step-mobile3.png",
+        "../assets/images/how-to-book-step-mobile4.png",
+      ];
 
-        stepImage.addEventListener('click', () => {
-            currentStep = (currentStep + 1) % stepImages.length;
-            stepImage.src = stepImages[currentStep];
-            stepImage.alt = `Step ${currentStep + 1}`;
+      let currentDesktopStep = 0;
+      let currentMobileStep = 0;
+
+      const stepImageDesktop = document.getElementById("step-image-desktop");
+      const stepImageMobile = document.getElementById("step-image-mobile");
+
+      if (stepImageDesktop) {
+        stepImageDesktop.addEventListener("click", () => {
+          currentDesktopStep =
+            (currentDesktopStep + 1) % desktopStepImages.length;
+          stepImageDesktop.src = desktopStepImages[currentDesktopStep];
+          stepImageDesktop.alt = `Step ${currentDesktopStep + 1}`;
         });
+      }
+
+      if (stepImageMobile) {
+        stepImageMobile.addEventListener("click", () => {
+          currentMobileStep = (currentMobileStep + 1) % mobileStepImages.length;
+          stepImageMobile.src = mobileStepImages[currentMobileStep];
+          stepImageMobile.alt = `Step ${currentMobileStep + 1}`;
+        });
+      }
     </script>
-</body>
-</html> 
+  </body>
+</html>
