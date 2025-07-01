@@ -136,325 +136,568 @@
 
   <body>
     <main>
-      <header>
-        <section>
-          <div
-            class="min-h-[800px] md:min-h-[600px] lg:min-h-[770px] bg-[#123E51] flex flex-col items-center justify-center relative px-[5%]"
+      <!-- header mobile -->
+      <header class="mobile-header-fixed w-full z-[9999] md:hidden">
+        <div class="flex items-center justify-between bg-[#15525A] px-8 py-2">
+          <a href="/" class="flex items-center">
+            <img
+              src="../assets/images/home/logo.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[44px] w-[58px]"
+            />
+          </a>
+
+          <button
+            id="openMenu"
+            type="button"
+            class="md:hidden focus:outline-none"
           >
             <img
-              src="../assets/images/blog-list/Vector.svg"
-              alt="Trang trí header blog Chôm Chôm Travel"
-              class="relative w-full object-contain"
-              aria-hidden="true"
-              loading="lazy"
+              src="../assets/images/home/menu.svg"
+              alt="Open menu"
+              class="h-[25px] w-[31px]"
             />
+          </button>
+        </div>
 
-            <div class="absolute w-full px-[8%]">
-              <div
-                class="flex justify-between items-center flex-col md:flex-row"
+        <div
+          id="menuOverlay"
+          class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"
+        ></div>
+
+        <nav
+          id="sideMenu"
+          class="fixed top-0 right-0 h-full w-full max-w-full bg-[#15525A] z-50 transform translate-x-full transition-transform duration-300 flex flex-col"
+        >
+          <div class="flex items-center justify-between px-6 py-6">
+            <div class="flex-1 relative gap-5">
+              <img
+                src="../assets/images/home/vector1.svg"
+                alt="Chôm Chôm Travel Logo"
+                class="h-[82px] w-auto object-contain"
+              />
+
+              <a href="/">
+                <img
+                  src="../assets/images/home/logo.svg"
+                  alt="Chôm Chôm Travel Logo"
+                  class="h-12 w-auto absolute top-[20px] left-[20px]"
+                />
+              </a>
+            </div>
+            <button
+              id="closeMenu"
+              type="button"
+              class="text-white text-3xl focus:outline-none"
+            >
+              <img
+                src="../assets/images/home/close.svg"
+                alt="Chôm Chôm Travel Logo"
+                class="h-[17px] w-[21px]"
+              />
+            </button>
+          </div>
+          <ul
+            class="flex-1 flex flex-col gap-2 px-6 py-4 text-white text-lg font-semibold"
+          >
+            <li>
+              <a
+                href="#"
+                class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+                >About us</a
               >
-                <div class="relative bg-transparent md:left-[5%] mb-[50px]">
-                  <h1
-                    class="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 text-center md:text-start"
-                  >
-                    Inspiration for<br />
-                    <span class="text-yellow-500">Your Next Adventure</span>
-                  </h1>
-                  <p
-                    class="text-sm sm:text-base md:text-lg text-gray-200 mt-4 text-center md:text-start"
-                  >
-                    Explore stories, tips, and insights from our travels <br />
-                    across
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+                >Sustainability</a
+              >
+            </li>
 
-                    <span class="text-yellow-400 font-medium">Vietnam</span>.
-                    From cultural experiences to hidden
-                    <br />
-                    gems, our blog will inspire your next journey.
-                  </p>
-                </div>
+            <li>
+              <a
+                href="#"
+                class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+                >Bespoke Trips</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+                >Mini Escapes</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+                >How to book</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+                >FAQs</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+                >Blog
+              </a>
+            </li>
 
-                <div
-                  class="relative w-full max-w-sm sm:max-w-md md:w-[386px] md:h-[490px] h-[490px]"
+            <li>
+              <div class="relative w-[105px] h-[26px] flex justify-start mb-4">
+                <img
+                  src="../assets/images/home/button.svg"
+                  alt="button red"
+                  class="object-contain w-full h-full"
+                />
+                <span
+                  class="absolute inset-0 flex items-center justify-center text-[15px] md:text-[22px] font-semibold text-white select-text pointer-events-none"
+                  >Inquire now</span
                 >
-                  <div class="swiper blog-swiper h-full">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <article
-                          class="relative rounded-xl overflow-hidden flex flex-col h-full"
-                          itemscope
-                          itemtype="https://schema.org/BlogPosting"
-                        >
-                          <meta itemprop="datePublished" content="2025-04-09" />
-                          <meta itemprop="dateModified" content="2025-04-09" />
-                          <meta itemprop="author" content="Chôm Chôm Travel" />
-                          <meta
-                            itemprop="publisher"
-                            content="Chôm Chôm Travel"
-                          />
-                          <meta itemprop="wordCount" content="1500" />
-                          <meta itemprop="timeRequired" content="PT9M" />
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <script>
+          document.getElementById("openMenu").onclick = function () {
+            document
+              .getElementById("sideMenu")
+              .classList.remove("translate-x-full");
+            document.getElementById("menuOverlay").classList.remove("hidden");
+          };
 
-                          <div class="h-full">
-                            <img
-                              src="../assets/images/blog-list/Vector1.svg"
-                              alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
-                              class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div
-                            class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#318D95] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+          document.getElementById("closeMenu").onclick = function () {
+            document
+              .getElementById("sideMenu")
+              .classList.add("translate-x-full");
+            document.getElementById("menuOverlay").classList.add("hidden");
+          };
+          document.getElementById("menuOverlay").onclick = function () {
+            document
+              .getElementById("sideMenu")
+              .classList.add("translate-x-full");
+            document.getElementById("menuOverlay").classList.add("hidden");
+          };
+          // Toggle submenu
+          document.getElementById("travelMenuBtn").onclick = function (e) {
+            e.preventDefault();
+            var sub = document.getElementById("travelSubMenu");
+            sub.classList.toggle("hidden");
+          };
+        </script>
+      </header>
+
+      <!-- header tablet,desktop  -->
+      <header
+        class="fixed top-0 left-0 w-full flex justify-center z-50 hidden md:block bg-transparent"
+      >
+        <div
+          class="relative w-4/5 mx-auto h-[84px] bg-[url('/assets/images/home/header.svg')] bg-no-repeat bg-center bg-cover"
+        >
+          <nav class="absolute inset-0 flex items-center justify-between px-10">
+            <a href="/" class="flex items-center">
+              <img
+                src="../assets/images/home/logo.svg"
+                alt="Chôm Chôm Travel Logo"
+                class="h-[84px] w-[98px]"
+              />
+            </a>
+            <!-- Menu bên phải -->
+            <ul class="flex gap-12 items-center whitespace-nowrap">
+              <li><a href="#" class="text-white font-bold">About us</a></li>
+              <li class="relative group dropdown-group">
+                <a
+                  href="#"
+                  class="text-white font-bold flex items-center gap-1"
+                >
+                  Travel
+                  <img
+                    src="/assets/images/home/down.svg"
+                    alt="down"
+                    class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                  />
+                </a>
+                <div class="dropdown-bridge"></div>
+                <!-- Dropdown menu -->
+                <ul
+                  class="bg-[#E96024] rounded-[8px] px-5 py-2 min-w-[175px] flex flex-col shadow-lg absolute left-0 top-full mt-1 z-50 hidden group-hover:flex group-focus-within:flex"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="text-white text-[16px] font-normal py-2 block"
+                      >Bespoke Trips</a
+                    >
+                  </li>
+                  <li>
+                    <div
+                      class="border-b-2 border-dashed border-[#FFE066] my-2"
+                    ></div>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-white text-[16px] font-normal py-2 block"
+                      >Mini Escapes</a
+                    >
+                  </li>
+                  <li>
+                    <div
+                      class="border-b-2 border-dashed border-[#FFE066] my-2"
+                    ></div>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-white text-[16px] font-normal py-2 block"
+                      >How to book</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" class="text-white font-bold">Sustainability</a>
+              </li>
+              <li><a href="#" class="text-white font-bold">FAQs</a></li>
+              <li><a href="#" class="text-white font-bold">Blog</a></li>
+            </ul>
+
+            <div class="relative w-[105px] h-[26px] flex justify-start">
+              <img
+                src="../assets/images/home/button.svg"
+                alt="button red"
+                class="object-contain w-full h-full"
+              />
+              <span
+                class="absolute inset-0 flex items-center justify-center text-[15px] font-semibold text-white select-text pointer-events-none"
+                >Inquire now</span
+              >
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <section>
+        <div
+          class="min-h-[800px] md:min-h-[600px] lg:min-h-[770px] bg-[#123E51] pt-[100px] flex flex-col items-center justify-center relative px-[5%]"
+        >
+          <img
+            src="../assets/images/blog-list/Vector.svg"
+            alt="Trang trí header blog Chôm Chôm Travel"
+            class="relative w-full object-contain"
+            aria-hidden="true"
+            loading="lazy"
+          />
+
+          <div class="absolute w-full px-[8%]">
+            <div class="flex justify-between items-center flex-col md:flex-row">
+              <div class="relative bg-transparent md:left-[5%] mb-[50px]">
+                <h1
+                  class="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 text-center md:text-start"
+                >
+                  Inspiration for<br />
+                  <span class="text-yellow-500">Your Next Adventure</span>
+                </h1>
+                <p
+                  class="text-sm sm:text-base md:text-lg text-gray-200 mt-4 text-center md:text-start"
+                >
+                  Explore stories, tips, and insights from our travels <br />
+                  across
+
+                  <span class="text-yellow-400 font-medium">Vietnam</span>. From
+                  cultural experiences to hidden
+                  <br />
+                  gems, our blog will inspire your next journey.
+                </p>
+              </div>
+
+              <div
+                class="relative w-full max-w-sm sm:max-w-md md:w-[386px] md:h-[490px] h-[490px]"
+              >
+                <div class="swiper blog-swiper h-full">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <article
+                        class="relative rounded-xl overflow-hidden flex flex-col h-full"
+                        itemscope
+                        itemtype="https://schema.org/BlogPosting"
+                      >
+                        <meta itemprop="datePublished" content="2025-04-09" />
+                        <meta itemprop="dateModified" content="2025-04-09" />
+                        <meta itemprop="author" content="Chôm Chôm Travel" />
+                        <meta itemprop="publisher" content="Chôm Chôm Travel" />
+                        <meta itemprop="wordCount" content="1500" />
+                        <meta itemprop="timeRequired" content="PT9M" />
+
+                        <div class="h-full">
+                          <img
+                            src="../assets/images/blog-list/Vector1.svg"
+                            alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
+                            class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div
+                          class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#318D95] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+                        >
+                          <img
+                            src="../assets/images/blog-list/blog-item.png"
+                            alt="Ảnh minh họa bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                            class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
+                            itemprop="image"
+                            loading="lazy"
+                          />
+                          <img
+                            src="../assets/images/blog-list/paper-torn.png"
+                            alt="Họa tiết giấy xé trang trí bài viết"
+                            class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div
+                          class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
+                        >
+                          <h2
+                            class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                            itemprop="headline"
                           >
-                            <img
-                              src="../assets/images/blog-list/blog-item.png"
-                              alt="Ảnh minh họa bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
-                              class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
-                              itemprop="image"
-                              loading="lazy"
-                            />
-                            <img
-                              src="../assets/images/blog-list/paper-torn.png"
-                              alt="Họa tiết giấy xé trang trí bài viết"
-                              class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div
-                            class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
-                          >
-                            <h2
-                              class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
-                              itemprop="headline"
+                            <a
+                              href="/blog/is-saigon-worth-it"
+                              class="hover:text-[#318D95]"
+                              aria-label="Đọc bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                              >Is Saigon Worth It? 5 Reasons Why This Bustling
+                              City Should Be on Your Travel Itinerary</a
                             >
+                          </h2>
+                          <div
+                            class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                          >
+                            <div
+                              class="flex items-center gap-2 text-[14px] font-semibold"
+                              itemprop="timeRequired"
+                              content="PT9M"
+                            >
+                              <span>9 min read</span>
+
+                              <img
+                                src="../assets/images/blog-list/read.svg"
+                                alt="Biểu tượng thời lượng đọc"
+                                class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="relative">
                               <a
                                 href="/blog/is-saigon-worth-it"
-                                class="hover:text-[#318D95]"
-                                aria-label="Đọc bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
-                                >Is Saigon Worth It? 5 Reasons Why This Bustling
-                                City Should Be on Your Travel Itinerary</a
+                                aria-label="Đọc thêm bài viết"
                               >
-                            </h2>
-                            <div
-                              class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
-                            >
-                              <div
-                                class="flex items-center gap-2 text-[14px] font-semibold"
-                                itemprop="timeRequired"
-                                content="PT9M"
-                              >
-                                <span>9 min read</span>
-
                                 <img
-                                  src="../assets/images/blog-list/read.svg"
-                                  alt="Biểu tượng thời lượng đọc"
-                                  class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
-                                  loading="lazy"
+                                  src="../assets/images/blog-list/button.svg"
+                                  alt="Nút đọc thêm bài viết"
+                                  class="w-[148px] h-[42px] mx-auto object-contain"
                                 />
-                              </div>
-                              <div class="relative">
-                                <a
-                                  href="/blog/is-saigon-worth-it"
-                                  aria-label="Đọc thêm bài viết"
+                                <span
+                                  class="absolute inset-0 flex items-center justify-center text-[16px] text-white select-text"
+                                  >Read more</span
                                 >
-                                  <img
-                                    src="../assets/images/blog-list/button.svg"
-                                    alt="Nút đọc thêm bài viết"
-                                    class="w-[148px] h-[42px] mx-auto object-contain"
-                                  />
-                                  <span
-                                    class="absolute inset-0 flex items-center justify-center text-[16px] text-white select-text"
-                                    >Read more</span
-                                  >
-                                </a>
-                              </div>
+                              </a>
                             </div>
                           </div>
-                        </article>
-                      </div>
-                      <!-- Slide 2  -->
-                      <div class="swiper-slide">
-                        <article
-                          class="relative rounded-xl overflow-hidden flex flex-col h-full"
-                          itemscope
-                          itemtype="https://schema.org/BlogPosting"
+                        </div>
+                      </article>
+                    </div>
+                    <!-- Slide 2  -->
+                    <div class="swiper-slide">
+                      <article
+                        class="relative rounded-xl overflow-hidden flex flex-col h-full"
+                        itemscope
+                        itemtype="https://schema.org/BlogPosting"
+                      >
+                        <div class="h-full">
+                          <img
+                            src="../assets/images/blog-list/Vector1.svg"
+                            alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
+                            class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
+                            itemprop="image"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div
+                          class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#318D95] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
                         >
-                          <div class="h-full">
-                            <img
-                              src="../assets/images/blog-list/Vector1.svg"
-                              alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
-                              class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
-                              itemprop="image"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div
-                            class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#318D95] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
-                          >
-                            <img
-                              src="../assets/images/blog-list/blog-item.png"
-                              alt="Ảnh minh họa bài viết Vietnam Isn't a Checklist"
-                              class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
-                              itemprop="image"
-                              loading="lazy"
-                            />
-                            <img
-                              src="../assets/images/blog-list/paper-torn.png"
-                              alt="Họa tiết giấy xé trang trí bài viết"
-                              class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
-                              itemprop="image"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div
-                            class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
-                          >
-                            <h2
-                              class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
-                              itemprop="headline"
-                            >
-                              <a
-                                href="#"
-                                class="hover:text-[#318D95]"
-                                aria-label="Vietnam Isn't a Checklist — Here's How to Really Experience It"
-                                >Is Saigon Worth It? 5 Reasons Why This Bustling
-                                City Should Be on Your Travel Itinerary</a
-                              >
-                            </h2>
-                            <div
-                              class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
-                            >
-                              <div
-                                class="flex items-center gap-2 text-[14px] font-semibold"
-                              >
-                                9 min read
-
-                                <img
-                                  src="../assets/images/blog-list/read.svg"
-                                  alt="Biểu tượng thời lượng đọc"
-                                  class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
-                                  itemprop="image"
-                                  loading="lazy"
-                                />
-                              </div>
-                              <div class="relative">
-                                <a href="#">
-                                  <img
-                                    src="../assets/images/blog-list/button.svg"
-                                    alt="button red"
-                                    class="w-[148px] h-[42px] mx-auto object-contain"
-                                  />
-                                  <span
-                                    class="absolute inset-0 flex items-center justify-center text-[16px] text-white select-text"
-                                    >Read more</span
-                                  >
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </article>
-                      </div>
-                      <!-- Slide 3-->
-                      <div class="swiper-slide">
-                        <article
-                          class="relative rounded-xl overflow-hidden flex flex-col h-full"
-                          itemscope
-                          itemtype="https://schema.org/BlogPosting"
+                          <img
+                            src="../assets/images/blog-list/blog-item.png"
+                            alt="Ảnh minh họa bài viết Vietnam Isn't a Checklist"
+                            class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
+                            itemprop="image"
+                            loading="lazy"
+                          />
+                          <img
+                            src="../assets/images/blog-list/paper-torn.png"
+                            alt="Họa tiết giấy xé trang trí bài viết"
+                            class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
+                            itemprop="image"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div
+                          class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
                         >
-                          <div class="h-full">
-                            <img
-                              src="../assets/images/blog-list/Vector1.svg"
-                              alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
-                              class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
-                              itemprop="image"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div
-                            class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#318D95] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+                          <h2
+                            class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                            itemprop="headline"
                           >
-                            <img
-                              src="../assets/images/blog-list/blog-item.png"
-                              alt="Ảnh minh họa bài viết Vietnam Isn't a Checklist"
-                              class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
-                              itemprop="image"
-                              loading="lazy"
-                            />
-                            <img
-                              src="../assets/images/blog-list/paper-torn.png"
-                              alt="Họa tiết giấy xé trang trí bài viết"
-                              class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
-                              itemprop="image"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div
-                            class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
-                          >
-                            <h2
-                              class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
-                              itemprop="headline"
+                            <a
+                              href="#"
+                              class="hover:text-[#318D95]"
+                              aria-label="Vietnam Isn't a Checklist — Here's How to Really Experience It"
+                              >Is Saigon Worth It? 5 Reasons Why This Bustling
+                              City Should Be on Your Travel Itinerary</a
                             >
-                              <a
-                                href="#"
-                                class="hover:text-[#318D95]"
-                                aria-label="Vietnam Isn't a Checklist — Here's How to Really Experience It"
-                                >Is Saigon Worth It? 5 Reasons Why This Bustling
-                                City Should Be on Your Travel Itinerary</a
-                              >
-                            </h2>
+                          </h2>
+                          <div
+                            class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                          >
                             <div
-                              class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                              class="flex items-center gap-2 text-[14px] font-semibold"
                             >
-                              <div
-                                class="flex items-center gap-2 text-[14px] font-semibold"
-                              >
-                                9 min read
+                              9 min read
 
+                              <img
+                                src="../assets/images/blog-list/read.svg"
+                                alt="Biểu tượng thời lượng đọc"
+                                class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
+                                itemprop="image"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="relative">
+                              <a href="#">
                                 <img
-                                  src="../assets/images/blog-list/read.svg"
-                                  alt="Biểu tượng thời lượng đọc"
-                                  class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
-                                  itemprop="image"
-                                  loading="lazy"
+                                  src="../assets/images/blog-list/button.svg"
+                                  alt="button red"
+                                  class="w-[148px] h-[42px] mx-auto object-contain"
                                 />
-                              </div>
-                              <div class="relative">
-                                <a href="#">
-                                  <img
-                                    src="../assets/images/blog-list/button.svg"
-                                    alt="button red"
-                                    class="w-[148px] h-[42px] mx-auto object-contain"
-                                  />
-                                  <span
-                                    class="absolute inset-0 flex items-center justify-center text-[16px] text-white select-text"
-                                    >Read more</span
-                                  >
-                                </a>
-                              </div>
+                                <span
+                                  class="absolute inset-0 flex items-center justify-center text-[16px] text-white select-text"
+                                  >Read more</span
+                                >
+                              </a>
                             </div>
                           </div>
-                        </article>
-                      </div>
+                        </div>
+                      </article>
+                    </div>
+                    <!-- Slide 3-->
+                    <div class="swiper-slide">
+                      <article
+                        class="relative rounded-xl overflow-hidden flex flex-col h-full"
+                        itemscope
+                        itemtype="https://schema.org/BlogPosting"
+                      >
+                        <div class="h-full">
+                          <img
+                            src="../assets/images/blog-list/Vector1.svg"
+                            alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
+                            class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
+                            itemprop="image"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div
+                          class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#318D95] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+                        >
+                          <img
+                            src="../assets/images/blog-list/blog-item.png"
+                            alt="Ảnh minh họa bài viết Vietnam Isn't a Checklist"
+                            class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
+                            itemprop="image"
+                            loading="lazy"
+                          />
+                          <img
+                            src="../assets/images/blog-list/paper-torn.png"
+                            alt="Họa tiết giấy xé trang trí bài viết"
+                            class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
+                            itemprop="image"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div
+                          class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
+                        >
+                          <h2
+                            class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                            itemprop="headline"
+                          >
+                            <a
+                              href="#"
+                              class="hover:text-[#318D95]"
+                              aria-label="Vietnam Isn't a Checklist — Here's How to Really Experience It"
+                              >Is Saigon Worth It? 5 Reasons Why This Bustling
+                              City Should Be on Your Travel Itinerary</a
+                            >
+                          </h2>
+                          <div
+                            class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                          >
+                            <div
+                              class="flex items-center gap-2 text-[14px] font-semibold"
+                            >
+                              9 min read
+
+                              <img
+                                src="../assets/images/blog-list/read.svg"
+                                alt="Biểu tượng thời lượng đọc"
+                                class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
+                                itemprop="image"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="relative">
+                              <a href="#">
+                                <img
+                                  src="../assets/images/blog-list/button.svg"
+                                  alt="button red"
+                                  class="w-[148px] h-[42px] mx-auto object-contain"
+                                />
+                                <span
+                                  class="absolute inset-0 flex items-center justify-center text-[16px] text-white select-text"
+                                  >Read more</span
+                                >
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
                     </div>
                   </div>
-                  <div
-                    class="custom-swiper-pagination flex justify-center items-center mt-6 mb-2"
-                  ></div>
                 </div>
+                <div
+                  class="custom-swiper-pagination flex justify-center items-center mt-6 mb-2"
+                ></div>
               </div>
             </div>
           </div>
-          <div class="w-full">
-            <img
-              src="../assets/images/blog-list/Break.svg"
-              alt="Họa tiết chia khung blog"
-              class="block w-full h-auto object-contain mt-[-2px] pointer-events-none select-none"
-              aria-hidden="true"
-              loading="lazy"
-            />
-          </div>
-        </section>
-      </header>
+        </div>
+        <div class="w-full">
+          <img
+            src="../assets/images/blog-list/Break.svg"
+            alt="Họa tiết chia khung blog"
+            class="block w-full h-auto object-contain mt-[-2px] pointer-events-none select-none"
+            aria-hidden="true"
+            loading="lazy"
+          />
+        </div>
+      </section>
 
       <section class="px-4 sm:px-6 lg:px-0 bg-[#FFFCF0]">
         <form
@@ -530,6 +773,7 @@
                   class="flex items-center text-[#188188] hover:underline focus:outline-none px-2 py-1 rounded"
                   aria-haspopup="true"
                   aria-expanded="false"
+                  type="button"
                 >
                   More
                   <svg
@@ -543,11 +787,11 @@
                     <path d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
-                <!-- Bridge div: giúp hover không bị mất khi di chuyển chuột từ button xuống dropdown -->
-                <div class="absolute left-0 w-40 h-4" style="top: 100%"></div>
+
+                <div class="absolute left-0 w-40 h-4 top-[100%]"></div>
 
                 <ul
-                  class="absolute left-1/2 -translate-x-1/2 md:left-auto md:right-0 mt-2 min-w-[300px] rounded-[20px] hidden group-hover:block z-50 bg-[#E7BD11] p-5"
+                  class="absolute right-[-50px] md:right-0 mt-2 min-w-[300px] hidden rounded-[20px] group-hover:block z-50 bg-[#E7BD11] p-5"
                 >
                   <li>
                     <a

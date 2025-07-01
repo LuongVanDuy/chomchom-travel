@@ -12,8 +12,249 @@
     />
   </head>
   <body>
+    <!-- header mobile -->
+    <header class="mobile-header-fixed w-full z-[9999] md:hidden">
+      <div class="flex items-center justify-between bg-[#15525A] px-8 py-2">
+        <a href="/" class="flex items-center">
+          <img
+            src="../assets/images/home/logo.svg"
+            alt="Chôm Chôm Travel Logo"
+            class="h-[44px] w-[58px]"
+          />
+        </a>
+
+        <button
+          id="openMenu"
+          type="button"
+          class="md:hidden focus:outline-none"
+        >
+          <img
+            src="../assets/images/home/menu.svg"
+            alt="Open menu"
+            class="h-[25px] w-[31px]"
+          />
+        </button>
+      </div>
+
+      <div
+        id="menuOverlay"
+        class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"
+      ></div>
+
+      <nav
+        id="sideMenu"
+        class="fixed top-0 right-0 h-full w-full max-w-full bg-[#15525A] z-50 transform translate-x-full transition-transform duration-300 flex flex-col"
+      >
+        <div class="flex items-center justify-between px-6 py-6">
+          <div class="flex-1 relative gap-5">
+            <img
+              src="../assets/images/home/vector1.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[82px] w-auto object-contain"
+            />
+
+            <a href="/">
+              <img
+                src="../assets/images/home/logo.svg"
+                alt="Chôm Chôm Travel Logo"
+                class="h-12 w-auto absolute top-[20px] left-[20px]"
+              />
+            </a>
+          </div>
+          <button
+            id="closeMenu"
+            type="button"
+            class="text-white text-3xl focus:outline-none"
+          >
+            <img
+              src="../assets/images/home/close.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[17px] w-[21px]"
+            />
+          </button>
+        </div>
+        <ul
+          class="flex-1 flex flex-col gap-2 px-6 py-4 text-white text-lg font-semibold"
+        >
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >About us</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Sustainability</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Bespoke Trips</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Mini Escapes</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >How to book</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >FAQs</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Blog
+            </a>
+          </li>
+
+          <li>
+            <div class="relative w-[105px] h-[26px] flex justify-start mb-4">
+              <img
+                src="../assets/images/home/button.svg"
+                alt="button red"
+                class="object-contain w-full h-full"
+              />
+              <span
+                class="absolute inset-0 flex items-center justify-center text-[15px] md:text-[22px] font-semibold text-white select-text pointer-events-none"
+                >Inquire now</span
+              >
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <script>
+        document.getElementById("openMenu").onclick = function () {
+          document
+            .getElementById("sideMenu")
+            .classList.remove("translate-x-full");
+          document.getElementById("menuOverlay").classList.remove("hidden");
+        };
+
+        document.getElementById("closeMenu").onclick = function () {
+          document.getElementById("sideMenu").classList.add("translate-x-full");
+          document.getElementById("menuOverlay").classList.add("hidden");
+        };
+        document.getElementById("menuOverlay").onclick = function () {
+          document.getElementById("sideMenu").classList.add("translate-x-full");
+          document.getElementById("menuOverlay").classList.add("hidden");
+        };
+        // Toggle submenu
+        document.getElementById("travelMenuBtn").onclick = function (e) {
+          e.preventDefault();
+          var sub = document.getElementById("travelSubMenu");
+          sub.classList.toggle("hidden");
+        };
+      </script>
+    </header>
+
+    <!-- header tablet,desktop  -->
+    <header
+      class="fixed top-0 left-0 w-full flex justify-center z-50 hidden md:block bg-transparent"
+    >
+      <div
+        class="relative w-4/5 mx-auto h-[84px] bg-[url('/assets/images/home/header.svg')] bg-no-repeat bg-center bg-cover"
+      >
+        <nav class="absolute inset-0 flex items-center justify-between px-10">
+          <a href="/" class="flex items-center">
+            <img
+              src="../assets/images/home/logo.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[84px] w-[98px]"
+            />
+          </a>
+          <!-- Menu bên phải -->
+          <ul class="flex gap-12 items-center whitespace-nowrap">
+            <li><a href="#" class="text-white font-bold">About us</a></li>
+            <li class="relative group dropdown-group">
+              <a href="#" class="text-white font-bold flex items-center gap-1">
+                Travel
+                <img
+                  src="/assets/images/home/down.svg"
+                  alt="down"
+                  class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                />
+              </a>
+              <div class="dropdown-bridge"></div>
+              <!-- Dropdown menu -->
+              <ul
+                class="bg-[#E96024] rounded-[8px] px-5 py-2 min-w-[175px] flex flex-col shadow-lg absolute left-0 top-full mt-1 z-50 hidden group-hover:flex group-focus-within:flex"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >Bespoke Trips</a
+                  >
+                </li>
+                <li>
+                  <div
+                    class="border-b-2 border-dashed border-[#FFE066] my-2"
+                  ></div>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >Mini Escapes</a
+                  >
+                </li>
+                <li>
+                  <div
+                    class="border-b-2 border-dashed border-[#FFE066] my-2"
+                  ></div>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >How to book</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li><a href="#" class="text-white font-bold">Sustainability</a></li>
+            <li><a href="#" class="text-white font-bold">FAQs</a></li>
+            <li><a href="#" class="text-white font-bold">Blog</a></li>
+          </ul>
+
+          <div class="relative w-[105px] h-[26px] flex justify-start">
+            <img
+              src="../assets/images/home/button.svg"
+              alt="button red"
+              class="object-contain w-full h-full"
+            />
+            <span
+              class="absolute inset-0 flex items-center justify-center text-[15px] font-semibold text-white select-text pointer-events-none"
+              >Inquire now</span
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+
     <section
-      class="bg-[#104751] flex flex-col items-center px-2 sm:px-4 md:px-0"
+      class="bg-[#104751] flex flex-col items-center px-2 sm:px-4 md:px-0 pt-[100px]"
     >
       <img
         src="../assets/images/mini-escapes/element.svg"
@@ -40,7 +281,7 @@
         </div>
       </div>
 
-      <div class="relative w-full flex justify-center mb-4">
+      <div class="relative w-full flex justify-center mb-4 cursor-pointer">
         <img
           src="../assets/images/mini-escapes/button.svg"
           alt="button red"
@@ -53,11 +294,43 @@
       </div>
     </section>
 
-    <section class="py-6 md:py-10 bg-[#104751] px-2 xs:px-4 md:px-[10%]">
+    <section class="py-6 md:py-10 bg-[#104751] px-[5%]">
       <div
         class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-0 my-3"
       >
-        <div class="flex gap-3 md:gap-5 justify-center md:justify-start">
+        <!-- Dropdown filter mobile -->
+        <div class="w-full flex flex-col items-center gap-2 md:hidden">
+          <div
+            id="mobileTourDropdownBtn"
+            class="w-[70%] rounded-full bg-[#318D95] px-4 py-2 flex items-center justify-between cursor-pointer"
+          >
+            <span class="text-white font-semibold">All Tour</span>
+            <div
+              class="rounded-full bg-[#E7BD11] md:bg-transparent w-[24px] h-[24px] flex justify-center items-center"
+            >
+              <i
+                class="fa-solid fa-chevron-down text-[14px] md:text-[16px] mx-auto"
+              ></i>
+            </div>
+          </div>
+          <div
+            id="mobileTourDropdownMenu"
+            class="w-[70%] bg-[#E7BD11] rounded-[18px] mt-2 p-4 flex-col gap-2 shadow-lg hidden"
+          >
+            <div class="text-[#15525A] font-bold text-[18px] mb-2">
+              Day Tours
+            </div>
+            <div class="border-b-2 border-dashed border-[#318D95] mb-2"></div>
+            <div class="text-[#15525A] font-bold text-[18px]">
+              Weekend Getaways
+            </div>
+          </div>
+        </div>
+        <!-- End Dropdown filter mobile -->
+        <!-- Filter desktop -->
+        <div
+          class="hidden md:flex gap-3 md:gap-5 justify-center md:justify-start"
+        >
           <div
             class="w-[120px] h-[40px] md:w-[163px] md:h-[51px] rounded-[40px] bg-[#E96024] flex justify-center items-center text-[14px] md:text-[16px] font-semibold text-[#fff] cursor-pointer"
           >
@@ -69,31 +342,33 @@
             Weekend Getaways
           </div>
         </div>
-
-        <div
-          class="relative flex justify-center md:justify-end w-full md:w-auto"
-        >
+        <!-- End Filter desktop -->
+        <div class="relative flex justify-center md:justify-end md:w-full">
           <button
             id="dropdownButton"
-            class="flex items-center justify-center gap-3 md:gap-5 w-full md:min-w-[271px] max-w-xs h-[40px] md:h-[54px] px-4 md:px-8 border-2 border-dashed border-[#E7BD11] rounded-full text-white text-[14px] md:text-[16px] font-semibold cursor-pointer focus:outline-none"
+            class="flex items-center justify-between gap-3 md:gap-5 w-[70%] md:min-w-[271px] max-w-xs h-[40px] md:h-[54px] px-4 md:px-8 border-2 border-dashed border-[#E7BD11] rounded-full text-white text-[14px] md:text-[16px] font-semibold cursor-pointer focus:outline-none"
             onclick="toggleDropdown()"
             type="button"
           >
             <span>All Destinations</span>
-            <i
-              class="fa-solid fa-chevron-down text-[14px] md:text-[16px] ml-2 md:ml-4"
-            ></i>
+            <div
+              class="rounded-full bg-[#E96024] md:bg-transparent w-[24px] h-[24px] flex justify-center items-center"
+            >
+              <i
+                class="fa-solid fa-chevron-down text-[14px] md:text-[16px] mx-auto"
+              ></i>
+            </div>
           </button>
           <div
             id="dropdownMenu"
-            class="hidden absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-full mt-2 w-[95vw] max-w-xs md:w-[350px] rounded-[14px] md:rounded-[24px] bg-white border-2 border-dashed border-[#E7BD11] shadow-lg z-10 p-0 py-3 md:py-5"
+            class="hidden absolute md:translate-x-0 top-full w-[70%] mt-2 max-w-xs md:w-[350px] rounded-[14px] md:rounded-[24px] bg-white border-2 border-dashed border-[#E7BD11] shadow-lg z-10 p-0 py-3 md:py-5"
           >
             <div
-              class="dropdown-scroll max-h-[220px] md:max-h-[340px] w-full overflow-y-auto px-3 md:px-6"
+              class="dropdown-scroll max-h-[220px] md:max-h-[340px] right-0 w-[95%] overflow-y-auto px-3 md:px-6"
             >
               <div class="pl-2 pr-2 md:pl-6 md:pr-3">
                 <div
-                  class="text-[#104751] text-[15px] md:text-[16px] font-bold mb-2 border-b-2 border-dashed border-[#2CA6A4]"
+                  class="text-[#104751] text-[15px] md:text-[16px] font-bold mb-2 py-2 border-b-2 border-dashed border-[#2CA6A4]"
                 >
                   North
                 </div>
@@ -102,35 +377,35 @@
                   <li>
                     <a
                       href="#"
-                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-2 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
                       >Ha Noi</a
                     >
                   </li>
                   <li>
                     <a
                       href="#"
-                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-2 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
                       >Ninh Binh</a
                     >
                   </li>
                   <li>
                     <a
                       href="#"
-                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-2 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
                       >Ha Long</a
                     >
                   </li>
                   <li>
                     <a
                       href="#"
-                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-2 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
                       >Mai Chau</a
                     >
                   </li>
                   <li>
                     <a
                       href="#"
-                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-1 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
+                      class="block text-[#104751] text-[15px] md:text-[16px] font-bold px-2 py-2 border-b-2 border-dashed border-[#E96024] mb-2 bg-white"
                       >Pu Luong</a
                     >
                   </li>
@@ -184,13 +459,14 @@
         </div>
       </div>
 
-      <div class="text-[#FFFCF0] my-2 text-center md:text-start">
+      <div class="text-[#FFFCF0] my-3 py-2 text-center md:text-start">
         Showing <b>4</b> of <b>15</b> results
       </div>
+
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-8 md:gap-8 w-full max-w-6xl mx-auto"
+        class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 py-8 md:gap-8 w-full mx-auto"
       >
-        <div
+        <article
           class="bg-[#2CA6A4] rounded-[18px] md:rounded-[24px] p-4 md:p-5 flex flex-col items-center h-[420px] md:h-[498px] w-full"
         >
           <div class="flex justify-between w-full mb-2">
@@ -200,6 +476,11 @@
           <div
             class="relative w-full h-[180px] md:h-[260px] rounded-[14px] md:rounded-[16px] overflow-hidden mb-4 flex-1"
           >
+            <img
+              src="../assets/images/mini-escapes/favourite-escapes.svg"
+              alt="Saigon Scavenger Hunt"
+              class="absolute w-[65px] h-[65px] object-cover right-2 top-2"
+            />
             <img
               src="../assets/images/mini-escapes/blog1.png"
               alt="Saigon Scavenger Hunt"
@@ -214,11 +495,12 @@
             </div>
           </div>
           <button
+            type="button"
             class="w-full bg-[#E7BD11] rounded-full py-2 md:py-3 text-[#104751] text-[15px] md:text-[18px] transition hover:brightness-95"
           >
             Download Brochure
           </button>
-        </div>
+        </article>
       </div>
 
       <div class="flex justify-center mt-8">
@@ -227,6 +509,84 @@
         </a>
       </div>
     </section>
+    <div>
+      <img
+        src="../assets/images/mini-escapes/bg-experience-mini_escapes.png"
+        alt="Vietnam landscape"
+        class="w-full object-cover"
+      />
+    </div>
+
+    <!-- explore mini escape -->
+    <section class="bg-[#FFFCF0]">
+      <div
+        class="flex flex-col md:flex-row justify-center md:justify-between items-center px-[5%] gap-10 md:gap-5"
+      >
+        <div
+          class="flex-1 relative order-2 md:order-1 text-center md:text-start"
+        >
+          <img
+            src="../assets/images/mini-escapes/explore-vector-mobile.svg"
+            alt="Vietnam landscape"
+            class="w-auto h-auto object-contain mx-auto"
+          />
+          <h2
+            class="text-[28px] md:text-[48px] font-heading font-bold leading-tight mb-3"
+          >
+            <span class="text-primary block">We Care</span>
+            <span class="text-orange_dark mt-3 block">as You Explore</span>
+          </h2>
+          <p
+            class="text-[14px] md:text-[18px] text-[#318D95] font-semibold leading-relaxed py-3 my-2"
+          >
+            It's Vietnam: a place where culture, history, and jaw-dropping
+            scenery come together. A place where all 5 senses are always
+            engaged. We're inspired by its hidden treasures, the kind you won't
+            find in your average travel brochure.
+          </p>
+
+          <p
+            class="text-[14px] md:text-[18px] text-[#104751] font-semibold leading-relaxed py-3 my-2"
+          >
+            This means that when you travel with us, there's an in-built safety
+            net as our Vietnamese operations team provides personal assistance
+            with unforeseen circumstances that naturally pop up when one
+            travels. We can easily overcome language barriers, technological
+            limitations and cultural differences that would otherwise pose a
+            challenge for travelers.
+          </p>
+
+          <img
+            src="../assets/images/mini-escapes/explore-vector1.svg"
+            alt="Vietnam landscape"
+            class="w-[270px] h-auto object-cover absolute top-[-10%] right-[20%] hidden md:block"
+          />
+          <img
+            src="../assets/images/mini-escapes/explore-vector2.svg"
+            alt="Vietnam landscape"
+            class="w-[105px] h-auto object-cover absolute top-[-10%] left-[-10%] hidden md:block"
+          />
+        </div>
+        <div class="flex-1 order-1 md:order-2">
+          <img
+            src="../assets/images/mini-escapes/explore-mini_escapes.png"
+            alt="Vietnam landscape"
+            class="w-full object-cover hidden md:block"
+          />
+          <img
+            src="../assets/images/mini-escapes/explore-mini_escapes-mobile.png"
+            alt="Vietnam landscape"
+            class="w-full object-cover block md:hidden"
+          />
+        </div>
+      </div>
+      <img
+        src="../assets/images/mini-escapes/bg-explore-mini_escapes.png"
+        alt="Vietnam landscape"
+        class="w-auto h-auto object-cover"
+      />
+    </section>
+    <!-- -------------------------- -->
     <script src="../assets/js/main.js"></script>
     <script>
       function toggleDropdown() {
@@ -241,6 +601,27 @@
           menu.classList.add("hidden");
         }
       });
+      // Mobile tour dropdown
+      const mobileTourDropdownBtn = document.getElementById(
+        "mobileTourDropdownBtn"
+      );
+      const mobileTourDropdownMenu = document.getElementById(
+        "mobileTourDropdownMenu"
+      );
+      if (mobileTourDropdownBtn && mobileTourDropdownMenu) {
+        mobileTourDropdownBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          mobileTourDropdownMenu.classList.toggle("hidden");
+        });
+        document.addEventListener("click", function (e) {
+          if (
+            !mobileTourDropdownBtn.contains(e.target) &&
+            !mobileTourDropdownMenu.contains(e.target)
+          ) {
+            mobileTourDropdownMenu.classList.add("hidden");
+          }
+        });
+      }
     </script>
     <style>
       .dropdown-scroll {
