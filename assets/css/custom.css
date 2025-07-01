@@ -13,8 +13,9 @@
   box-sizing: border-box;
 }
 
- /* Reset margin and padding */
- body, html {
+/* Reset margin and padding */
+body,
+html {
   margin: 0;
   padding: 0;
 }
@@ -134,7 +135,7 @@ body {
 
 /* Custom container */
 .container {
-  max-width: 1200px;
+  max-width: 1248px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -210,11 +211,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(26, 73, 82, 0.3) 0%,
-    rgba(26, 73, 82, 0.1) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(26, 73, 82, 0.3) 0%,
+      rgba(26, 73, 82, 0.1) 100%);
   z-index: 1;
 }
 
@@ -229,6 +228,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -367,4 +367,40 @@ body {
 .swiper-rtl .swiper-button-prev::after {
   content: none !important;
   display: none !important;
+}
+
+/* Hiệu ứng đóng/mở cho box content trong card */
+.card-toggle .box-content {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(-12deg);
+  pointer-events: auto;
+}
+
+.card-toggle.card-closed .box-content {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95) rotate(-12deg);
+  pointer-events: none;
+}
+
+/* Ẩn vùng trắng bottom khi card mở, hiện khi card đóng */
+.card-toggle .box-content-bottom {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.5s;
+}
+
+.card-toggle.card-closed .box-content-bottom {
+  opacity: 1;
+  pointer-events: auto;
+  /* z-index sẽ được JS điều khiển */
+}
+
+/* Khi card đóng, đưa phần text nền lên trên box content nghiêng */
+.card-toggle.card-closed .card-bottom-text {
+  z-index: 50;
+}
+
+.card-toggle.card-closed .box-content {
+  z-index: 40;
 }
