@@ -10,6 +10,25 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <style>
+      .experience-swiper .swiper-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+      }
+      .experience-swiper .swiper-slide {
+        width: 100% !important;
+        flex-shrink: 0 !important;
+        display: block !important;
+        box-sizing: border-box;
+        padding: 0 10px;
+      }
+      #blogModal .experience-swiper {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
     <!-- header mobile -->
@@ -341,6 +360,64 @@
               />
             </button>
           </article>
+          <article
+            class="border border-[#FFFCF0] md:h-[495px] h-[380px] rounded-[12px] overflow-hidden relative group"
+          >
+            <div class="block h-full">
+              <img
+                src="../assets/images/experiences/blog-item1.jpg"
+                alt="Tiêu đề bài viết 1"
+                class="w-full h-full object-cover"
+              />
+
+              <div
+                class="absolute bottom-0 left-0 h-[20%] rounded-tl-[12px] rounded-tr-[12px] w-full bg-[#FFFCF0] text-[#318D95] flex justify-center items-center text-[22px] font-semibold"
+              >
+                <h3>Slow Adventures</h3>
+              </div>
+            </div>
+            <button
+              onclick="openModal()"
+              class="absolute left-1/2 top-1/3 z-20 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-lg p-3 hover:bg-orange-100 transition opacity-0 group-hover:opacity-100 focus:opacity-100"
+              aria-label="Xem chi tiết"
+              type="button"
+            >
+              <img
+                src="../assets/images/experiences/click.svg"
+                alt="Click"
+                class="w-[68px] h-[68px]"
+              />
+            </button>
+          </article>
+          <article
+            class="border border-[#FFFCF0] md:h-[495px] h-[380px] rounded-[12px] overflow-hidden relative group"
+          >
+            <div class="block h-full">
+              <img
+                src="../assets/images/experiences/blog-item1.jpg"
+                alt="Tiêu đề bài viết 1"
+                class="w-full h-full object-cover"
+              />
+
+              <div
+                class="absolute bottom-0 left-0 h-[20%] rounded-tl-[12px] rounded-tr-[12px] w-full bg-[#FFFCF0] text-[#318D95] flex justify-center items-center text-[22px] font-semibold"
+              >
+                <h3>Slow Adventures</h3>
+              </div>
+            </div>
+            <button
+              onclick="openModal()"
+              class="absolute left-1/2 top-1/3 z-20 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-lg p-3 hover:bg-orange-100 transition opacity-0 group-hover:opacity-100 focus:opacity-100"
+              aria-label="Xem chi tiết"
+              type="button"
+            >
+              <img
+                src="../assets/images/experiences/click.svg"
+                alt="Click"
+                class="w-[68px] h-[68px]"
+              />
+            </button>
+          </article>
         </div>
 
         <div class="relative my-8">
@@ -444,7 +521,7 @@
           <div
             class="flex flex-col md:flex-row mt-5 px-[5%] gap-10 h-full pt-[30px]"
           >
-            <div class="w-full md:w-[45%] h-full relative">
+            <div class="w-full md:w-[50%] h-full relative">
               <h1
                 class="text-[#318D95] text-[28px] text-center md:text-start md:text-[48px] leading-[125%] font-semibold mb-3 md:mb-10 mt-5"
               >
@@ -452,7 +529,7 @@
                 Adventures
               </h1>
 
-              <div class="relative py-2 text-center">
+              <div class="relative py-2 text-center md:text-start">
                 <p
                   class="leading-[150%] text-[14px] md:text-[18px] text-[#104751] font-semibold"
                 >
@@ -487,8 +564,13 @@
                 </a>
               </div>
             </div>
-            <div class="w-full md:w-[55%] relative">
+            <div class="w-full md:w-[50%] relative">
               <div>
+                <img
+                  src="../assets/images/experiences/button-recomment-modal.svg"
+                  alt="button recomment"
+                  class="absolute top-[-7%] left-1/2 -translate-x-1/2 object-contain z-10"
+                />
                 <!-- Swiper container -->
                 <div class="swiper experience-swiper">
                   <div class="swiper-wrapper">
@@ -496,11 +578,29 @@
                       <article
                         class="border-[3px] border-[#318D95] md:h-[495px] h-[380px] rounded-[12px] relative group bg-[#318D95] flex flex-col justify-between"
                       >
-                        <img
-                          src="../assets/images/experiences/button-recomment-modal.svg"
-                          alt="button recomment"
-                          class="absolute top-[-10%] left-1/2 -translate-x-1/2 object-contain z-10"
-                        />
+                        <div class="block relative h-full overflow-hidden">
+                          <div class="relative w-full h-full overflow-hidden">
+                            <img
+                              src="../assets/images/experiences/blog-item1.jpg"
+                              alt="Tiêu đề bài viết 1"
+                              class="w-full h-full object-cover rounded-[12px]"
+                            />
+                          </div>
+                          <div
+                            class="absolute bottom-0 left-0 h-[20%] rounded-[10px] w-full bg-[#318D95] text-[#fff] flex justify-center items-center text-[14px] px-5"
+                          >
+                            <p>
+                              Hop on the back of a bike and join one of our city
+                              food tours
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="swiper-slide">
+                      <article
+                        class="border-[3px] border-[#318D95] md:h-[495px] h-[380px] rounded-[12px] relative group bg-[#318D95] flex flex-col justify-between"
+                      >
                         <div class="block relative h-full overflow-hidden">
                           <div class="relative w-full h-full overflow-hidden">
                             <img
@@ -550,40 +650,6 @@
                     />
                   </button>
                 </div>
-                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-                <script>
-                  // Số slide thực tế
-                  const totalExperienceSlides = document.querySelectorAll(
-                    ".experience-swiper .swiper-slide"
-                  ).length;
-                  // Swiper cho experience
-                  const experienceSwiper = new Swiper(".experience-swiper", {
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    loop: true,
-                    navigation: {
-                      nextEl: ".experience-swiper-button-next",
-                      prevEl: ".experience-swiper-button-prev",
-                    },
-                    on: {
-                      slideChange: function () {
-                        updateExperiencePagination();
-                      },
-                      afterInit: function () {
-                        updateExperiencePagination();
-                      },
-                    },
-                  });
-                  function updateExperiencePagination() {
-                    const pag = document.querySelector(
-                      ".experience-swiper-pagination"
-                    );
-                    if (pag) {
-                      const realIndex = experienceSwiper.realIndex + 1;
-                      pag.innerHTML = `<span class='text-[#E96024]'>${realIndex}</span><span class='mx-1 text-[#E96024]'>/</span><span class='text-[#E96024]'>${totalExperienceSlides}</span>`;
-                    }
-                  }
-                </script>
               </div>
             </div>
           </div>
@@ -592,16 +658,54 @@
     </div>
 
     <!-- -------------s -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+      let experienceSwiper = null;
       function openModal() {
         var modal = document.getElementById("blogModal");
         modal.classList.remove("hidden");
         modal.classList.add("flex");
+        // Khởi tạo Swiper sau khi modal hiển thị
+        setTimeout(() => {
+          if (!experienceSwiper) {
+            experienceSwiper = new Swiper(".experience-swiper", {
+              slidesPerView: 1,
+              spaceBetween: 0,
+              loop: true,
+              navigation: {
+                nextEl: ".experience-swiper-button-next",
+                prevEl: ".experience-swiper-button-prev",
+              },
+              on: {
+                slideChange: function () {
+                  updateExperiencePagination();
+                },
+                afterInit: function () {
+                  updateExperiencePagination();
+                },
+              },
+            });
+            updateExperiencePagination();
+          } else {
+            experienceSwiper.update();
+            updateExperiencePagination();
+          }
+        }, 100); // Đợi modal render xong
       }
       function closeModal() {
         var modal = document.getElementById("blogModal");
         modal.classList.remove("flex");
         modal.classList.add("hidden");
+      }
+      function updateExperiencePagination() {
+        const pag = document.querySelector(".experience-swiper-pagination");
+        if (pag && experienceSwiper) {
+          const realIndex = experienceSwiper.realIndex + 1;
+          const totalExperienceSlides = document.querySelectorAll(
+            ".experience-swiper .swiper-slide"
+          ).length;
+          pag.innerHTML = `<span class='text-[#E96024]'>${realIndex}</span><span class='mx-1 text-[#E96024]'>/</span><span class='text-[#E96024]'>${totalExperienceSlides}</span>`;
+        }
       }
     </script>
   </body>

@@ -72,6 +72,251 @@
     </style>
   </head>
   <body>
+    <!-- header mobile -->
+    <header class="mobile-header-fixed w-full z-[9999] md:hidden">
+      <div class="flex items-center justify-between bg-[#15525A] px-8 py-2">
+        <a href="/" class="flex items-center">
+          <img
+            src="../assets/images/home/logo.svg"
+            alt="Chôm Chôm Travel Logo"
+            class="h-[44px] w-[58px]"
+          />
+        </a>
+
+        <button
+          id="openMenu"
+          type="button"
+          class="md:hidden focus:outline-none"
+        >
+          <img
+            src="../assets/images/home/menu.svg"
+            alt="Open menu"
+            class="h-[25px] w-[31px]"
+          />
+        </button>
+      </div>
+
+      <div
+        id="menuOverlay"
+        class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"
+      ></div>
+
+      <nav
+        id="sideMenu"
+        class="fixed top-0 right-0 h-full w-full max-w-full bg-[#15525A] z-50 transform translate-x-full transition-transform duration-300 flex flex-col"
+      >
+        <div class="flex items-center justify-between px-6 py-6">
+          <div class="flex-1 relative gap-5">
+            <img
+              src="../assets/images/home/vector1.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[82px] w-auto object-contain"
+            />
+
+            <a href="/">
+              <img
+                src="../assets/images/home/logo.svg"
+                alt="Chôm Chôm Travel Logo"
+                class="h-12 w-auto absolute top-[20px] left-[20px]"
+              />
+            </a>
+          </div>
+          <button
+            id="closeMenu"
+            type="button"
+            class="text-white text-3xl focus:outline-none"
+          >
+            <img
+              src="../assets/images/home/close.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[17px] w-[21px]"
+            />
+          </button>
+        </div>
+        <ul
+          class="flex-1 flex flex-col gap-2 px-6 py-4 text-white text-lg font-semibold"
+        >
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >About us</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Sustainability</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Bespoke Trips</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Mini Escapes</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >How to book</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >FAQs</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Blog
+            </a>
+          </li>
+
+          <li>
+            <div class="relative w-[105px] h-[26px] flex justify-start mb-4">
+              <img
+                src="../assets/images/home/button.svg"
+                alt="button red"
+                class="object-contain w-full h-full"
+              />
+              <span
+                class="absolute inset-0 flex items-center justify-center text-[15px] md:text-[22px] font-semibold text-white select-text pointer-events-none"
+                >Inquire now</span
+              >
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <script>
+        document.getElementById("openMenu").onclick = function () {
+          document
+            .getElementById("sideMenu")
+            .classList.remove("translate-x-full");
+          document.getElementById("menuOverlay").classList.remove("hidden");
+        };
+
+        document.getElementById("closeMenu").onclick = function () {
+          document.getElementById("sideMenu").classList.add("translate-x-full");
+          document.getElementById("menuOverlay").classList.add("hidden");
+        };
+        document.getElementById("menuOverlay").onclick = function () {
+          document.getElementById("sideMenu").classList.add("translate-x-full");
+          document.getElementById("menuOverlay").classList.add("hidden");
+        };
+        // Toggle submenu
+        var travelMenuBtn = document.getElementById("travelMenuBtn");
+        if (travelMenuBtn) {
+          travelMenuBtn.onclick = function (e) {
+            e.preventDefault();
+            var sub = document.getElementById("travelSubMenu");
+            if (sub) sub.classList.toggle("hidden");
+          };
+        }
+      </script>
+    </header>
+
+    <!-- header tablet,desktop  -->
+    <header
+      class="fixed top-0 left-0 w-full flex justify-center z-50 hidden md:block bg-transparent"
+    >
+      <div
+        class="relative w-4/5 mx-auto h-[84px] bg-[url('/assets/images/home/header.svg')] bg-no-repeat bg-center bg-cover"
+      >
+        <nav class="absolute inset-0 flex items-center justify-between px-10">
+          <a href="/" class="flex items-center">
+            <img
+              src="../assets/images/home/logo.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[84px] w-[98px]"
+            />
+          </a>
+          <!-- Menu bên phải -->
+          <ul class="flex gap-12 items-center whitespace-nowrap">
+            <li><a href="#" class="text-white font-bold">About us</a></li>
+            <li class="relative group dropdown-group">
+              <a href="#" class="text-white font-bold flex items-center gap-1">
+                Travel
+                <img
+                  src="/assets/images/home/down.svg"
+                  alt="down"
+                  class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                />
+              </a>
+              <div class="dropdown-bridge"></div>
+              <!-- Dropdown menu -->
+              <ul
+                class="bg-[#E96024] rounded-[8px] px-5 py-2 min-w-[175px] flex flex-col shadow-lg absolute left-0 top-full mt-1 z-50 hidden group-hover:flex group-focus-within:flex"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >Bespoke Trips</a
+                  >
+                </li>
+                <li>
+                  <div
+                    class="border-b-2 border-dashed border-[#FFE066] my-2"
+                  ></div>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >Mini Escapes</a
+                  >
+                </li>
+                <li>
+                  <div
+                    class="border-b-2 border-dashed border-[#FFE066] my-2"
+                  ></div>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >How to book</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" class="text-white font-bold">Sustainability</a>
+            </li>
+            <li><a href="#" class="text-white font-bold">FAQs</a></li>
+            <li><a href="#" class="text-white font-bold">Blog</a></li>
+          </ul>
+
+          <div class="relative w-[105px] h-[26px] flex justify-start">
+            <img
+              src="../assets/images/home/button.svg"
+              alt="button red"
+              class="object-contain w-full h-full"
+            />
+            <span
+              class="absolute inset-0 flex items-center justify-center text-[15px] font-semibold text-white select-text pointer-events-none"
+              >Inquire now</span
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
     <div
       class="bg-[#104751] h-[350px] sm:h-[500px] md:h-[719px] flex items-center"
     >
@@ -79,13 +324,13 @@
         <img
           src="../assets/images/faqs/Vietnam.svg"
           alt="Vietnam landscape"
-          class="w-full h-[38vw] min-h-[120px] max-h-[220px] sm:max-h-[320px] md:max-h-[430px] object-contain sm:object-cover mx-auto"
+          class="w-full h-[38vw] min-h-[120px] max-h-[220px] sm:max-h-[320px] md:max-h-[430px] object-contain mx-auto"
         />
 
         <img
           src="../assets/images/faqs/Vietnam3.svg"
           alt="Vietnam 2"
-          class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 rotate-0 w-[98vw] max-w-[360px] sm:max-w-[500px] md:max-w-[745px] h-auto max-h-[220px] sm:max-h-[320px] md:max-h-[455px] object-cover"
+          class="absolute bottom-[10px] md:bottom-[-10px] left-1/2 transform -translate-x-1/2 rotate-0 w-[98vw] max-w-[360px] sm:max-w-[500px] md:max-w-[745px] h-auto max-h-[220px] sm:max-h-[320px] md:max-h-[455px] object-cover"
         />
         <div
           class="absolute z-10 left-1/2 bottom-0 transform -translate-x-1/2 flex flex-col items-center justify-center w-[92vw] max-w-[320px] sm:max-w-[420px] md:max-w-[600px] md:pb-8 sm:pb-2"
@@ -106,7 +351,7 @@
       </div>
     </div>
 
-    <section class="pb-[120px] bg-[#FFFCF1] mb-5">
+    <section class="pb-[120px] bg-[#FFFCF1]">
       <!-- Swiper Tabs -->
       <div class="w-full py-6">
         <div
