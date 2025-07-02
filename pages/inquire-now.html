@@ -321,6 +321,7 @@
             <!-- Build Your Own Trip Button -->
             <a
               href="#"
+              id="buildTripBtn"
               class="ml-auto xl:translate-y-[-25%] transform rotate-6 border-2 border-dashed border-white bg-[#E96024] text-white px-10 py-4 rounded-2xl shadow-lg flex items-center gap-4 text-2xl font-semibold hover:scale-105 transition-all duration-200 w-full xl:w-3/5"
             >
               <div class="p-5 bg-[#E7BD11] rounded-[10px]">
@@ -339,6 +340,548 @@
               class="absolute top-[-20%] right-[30%] w-[60px] hidden md:block"
             />
           </div>
+        </div>
+
+        <!-- Multi-step Build Your Own Trip Form (ẩn mặc định) -->
+        <div
+          id="buildTripFormWrapper"
+          class="hidden flex flex-col items-center w-full mt-10"
+        >
+          <!-- Title & Description -->
+          <div id="buildTripHeader" class="flex flex-col items-center mb-8">
+            <h1
+              class="text-4xl md:text-5xl font-bold text-center"
+              style="font-family: 'Montserrat', sans-serif"
+            >
+              <span class="text-[#41BFBF]">Build Your </span
+              ><span class="text-[#FFCE00]">Own Trip</span>
+            </h1>
+            <p
+              class="mt-4 text-[#41BFBF] text-lg md:text-xl text-center max-w-2xl font-medium"
+            >
+              We're here to help you design a personalized journey that brings
+              your travel dreams to life. Answer a few quick questions, and
+              Dorothee will reach out with a tailored itinerary and
+              consultation.
+            </p>
+          </div>
+          <form
+            id="buildTripForm"
+            class="w-full max-w-2xl flex flex-col gap-10 items-center"
+          >
+            <!-- Progress Bar -->
+            <div class="w-full flex flex-col gap-2">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-[#FFCE00] font-bold text-lg" id="stepTitle"
+                  >Travel Basics</span
+                >
+                <span class="text-white text-base" id="stepSubtitle"
+                  >Let's Get to Know Your Trip</span
+                >
+              </div>
+              <div class="flex items-center w-full gap-2">
+                <div
+                  class="flex-1 h-2 rounded-full bg-[#FFCE00]"
+                  id="bar1"
+                ></div>
+                <div
+                  class="flex-1 h-2 rounded-full bg-white/30"
+                  id="bar2"
+                ></div>
+                <div
+                  class="flex-1 h-2 rounded-full bg-white/30"
+                  id="bar3"
+                ></div>
+                <div
+                  class="flex-1 h-2 rounded-full bg-white/30"
+                  id="bar4"
+                ></div>
+                <div
+                  class="flex-1 h-2 rounded-full bg-white/30"
+                  id="bar5"
+                ></div>
+              </div>
+              <div
+                class="flex justify-between text-[#FFCE00] font-bold mt-1 text-sm"
+              >
+                <span>01</span><span>02</span><span>03</span><span>04</span
+                ><span>05</span>
+              </div>
+            </div>
+            <!-- Step 1 -->
+            <div class="step-content w-full" id="step1">
+              <div class="flex flex-col gap-5">
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >What type of trip are you looking for?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >How many adults will be travelling?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Any places or experiences you're eyeing?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="4"
+                          y="4"
+                          width="16"
+                          height="16"
+                          rx="4"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Any places or experiences you're eyeing?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="4"
+                          y="4"
+                          width="16"
+                          height="16"
+                          rx="4"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-between mt-8">
+                <button
+                  type="button"
+                  class="prev-step bg-[#15525A] text-white font-bold py-2 px-8 rounded-full"
+                >
+                  Back
+                </button>
+                <button
+                  type="button"
+                  class="next-step bg-[#E96024] text-white font-bold py-2 px-8 rounded-full ml-4"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="step-content w-full hidden" id="step2">
+              <div class="flex flex-col gap-8">
+                <div class="text-[#FFCE00] text-2xl font-bold text-center mb-2">
+                  Travel Preferences
+                </div>
+                <div class="text-white text-center mb-4">
+                  Your Ideal Experience
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >What's your preferred travel style?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >What type of accommodation do you prefer?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="4"
+                          y="4"
+                          width="16"
+                          height="16"
+                          rx="4"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex justify-between mt-8">
+                  <button
+                    type="button"
+                    class="prev-step bg-[#15525A] text-white font-bold py-2 px-8 rounded-full"
+                  >
+                    Back
+                  </button>
+                  <button
+                    type="button"
+                    class="next-step bg-[#E96024] text-white font-bold py-2 px-8 rounded-full ml-4"
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="step-content w-full hidden" id="step3">
+              <div class="flex flex-col gap-8">
+                <div class="text-[#FFCE00] text-2xl font-bold text-center mb-2">
+                  Timing & Duration
+                </div>
+                <div class="text-white text-center mb-4">
+                  When Are You Planning to Travel?
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >What's your preferred travel date?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >How long do you plan to travel?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="4"
+                          y="4"
+                          width="16"
+                          height="16"
+                          rx="4"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex justify-between mt-8">
+                  <button
+                    type="button"
+                    class="prev-step bg-[#15525A] text-white font-bold py-2 px-8 rounded-full"
+                  >
+                    Back
+                  </button>
+                  <button
+                    type="button"
+                    class="next-step bg-[#E96024] text-white font-bold py-2 px-8 rounded-full ml-4"
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="step-content w-full hidden" id="step4">
+              <div class="flex flex-col gap-8">
+                <div class="text-[#FFCE00] text-2xl font-bold text-center mb-2">
+                  Interests & Customization
+                </div>
+                <div class="text-white text-center mb-4">
+                  Tell Us More About Your Ideal Experience
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Do you have any special requests or must-haves?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Do you have a total budget in mind?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="4"
+                          y="4"
+                          width="16"
+                          height="16"
+                          rx="4"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex justify-between mt-8">
+                  <button
+                    type="button"
+                    class="prev-step bg-[#15525A] text-white font-bold py-2 px-8 rounded-full"
+                  >
+                    Back
+                  </button>
+                  <button
+                    type="button"
+                    class="next-step bg-[#E96024] text-white font-bold py-2 px-8 rounded-full ml-4"
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Step 5 -->
+            <div class="step-content w-full hidden" id="step5">
+              <div class="flex flex-col gap-8">
+                <div class="text-[#FFCE00] text-2xl font-bold text-center mb-2">
+                  You're almost there!
+                </div>
+                <div class="text-white text-center mb-4">
+                  We just need a few more details so your personal travel
+                  consultant can finalize your request.
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Your Name *</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Your Nationality</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Your Email *</label
+                  >
+                  <input
+                    type="email"
+                    class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Your Phone Number *</label
+                  >
+                  <input
+                    type="tel"
+                    class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Preferred Language *</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Your message</label
+                  >
+                  <textarea
+                    class="w-full p-4 rounded-2xl bg-[#41BFBF] text-white text-base font-semibold min-h-[100px] outline-none resize-none"
+                  ></textarea>
+                </div>
+                <div class="flex justify-between mt-8">
+                  <button
+                    type="button"
+                    class="prev-step bg-[#15525A] text-white font-bold py-2 px-8 rounded-full"
+                  >
+                    Back
+                  </button>
+                  <button
+                    type="submit"
+                    class="bg-[#E96024] text-white font-bold py-2 px-8 rounded-full ml-4"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
 
         <!-- FORM ĐĂNG KÝ (ẩn mặc định) -->
@@ -743,7 +1286,11 @@
         document
           .getElementById("dayTourFormWrapper")
           .classList.remove("hidden");
-        // Thay đổi tiêu đề và mô tả
+        document.getElementById("buildTripFormWrapper").classList.add("hidden");
+        document.getElementById("thankYouWrapper").classList.add("hidden");
+        document.getElementById("inquireTitle").style.display = "";
+        document.getElementById("inquireDesc").style.display = "";
+        document.getElementById("buildTripHeader").style.display = "none";
         document.getElementById(
           "inquireTitle"
         ).innerHTML = `<p class="text-white"">Let's Plan Your<br><span class='text-[#FFCE00]'>Mini Escape</span></p>`;
@@ -755,6 +1302,55 @@
       document.getElementById("dayTourForm").onsubmit = function (e) {
         e.preventDefault();
         document.getElementById("dayTourFormWrapper").classList.add("hidden");
+        document.getElementById("thankYouWrapper").classList.remove("hidden");
+      };
+    </script>
+    <script>
+      // Ẩn/hiện form khi click Build Your Own Trip
+      document.getElementById("buildTripBtn").onclick = function (e) {
+        e.preventDefault();
+        document
+          .querySelector(".flex.flex-col.items-center.mt-20.gap-8.w-full")
+          .classList.add("hidden");
+        document
+          .getElementById("buildTripFormWrapper")
+          .classList.remove("hidden");
+        document.getElementById("dayTourFormWrapper").classList.add("hidden");
+        document.getElementById("thankYouWrapper").classList.add("hidden");
+        document.getElementById("buildTripHeader").style.display = "";
+        document.getElementById("inquireTitle").style.display = "none";
+        document.getElementById("inquireDesc").style.display = "none";
+        // Hiện bước đầu tiên
+        showStep(1);
+      };
+      // Multi-step logic
+      let currentStep = 1;
+      function showStep(step) {
+        currentStep = step;
+        for (let i = 1; i <= 5; i++) {
+          document.getElementById("step" + i).classList.add("hidden");
+          document.getElementById("bar" + i).classList.remove("bg-[#FFCE00]");
+          document.getElementById("bar" + i).classList.add("bg-white/30");
+        }
+        document.getElementById("step" + step).classList.remove("hidden");
+        for (let i = 1; i <= step; i++) {
+          document.getElementById("bar" + i).classList.add("bg-[#FFCE00]");
+          document.getElementById("bar" + i).classList.remove("bg-white/30");
+        }
+      }
+      // Next/Back buttons
+      document.addEventListener("click", function (e) {
+        if (e.target.closest("#buildTripForm .next-step")) {
+          if (currentStep < 5) showStep(currentStep + 1);
+        }
+        if (e.target.closest("#buildTripForm .prev-step")) {
+          if (currentStep > 1) showStep(currentStep - 1);
+        }
+      });
+      // Submit
+      document.getElementById("buildTripForm").onsubmit = function (e) {
+        e.preventDefault();
+        document.getElementById("buildTripFormWrapper").classList.add("hidden");
         document.getElementById("thankYouWrapper").classList.remove("hidden");
       };
     </script>
