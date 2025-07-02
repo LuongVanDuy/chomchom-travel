@@ -972,6 +972,11 @@ video {
   margin-bottom: 80px;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -1448,6 +1453,18 @@ video {
   height: 100%;
 }
 
+.h-\[1000px\] {
+  height: 1000px;
+}
+
+.h-\[1500px\] {
+  height: 1500px;
+}
+
+.h-\[1542px\] {
+  height: 1542px;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -1516,6 +1533,10 @@ video {
   min-height: 64px;
 }
 
+.min-h-\[680px\] {
+  min-height: 680px;
+}
+
 .min-h-\[700px\] {
   min-height: 700px;
 }
@@ -1530,6 +1551,14 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-\[\] {
+  min-height: ;
+}
+
+.min-h-\[1542px\] {
+  min-height: 1542px;
 }
 
 .\!w-\[120px\] {
@@ -1602,6 +1631,10 @@ video {
 
 .w-\[100\%\] {
   width: 100%;
+}
+
+.w-\[1020px\] {
+  width: 1020px;
 }
 
 .w-\[105px\] {
@@ -1800,6 +1833,14 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-\[1440px\] {
+  width: 1440px;
+}
+
+.w-\[\] {
+  width: ;
 }
 
 .min-w-\[100px\] {
@@ -2526,6 +2567,14 @@ video {
   background-image: url('../assets/images/bg-commitment.png');
 }
 
+.bg-\[url\(\'\.\.\/assets\/images\/inquire-now\/bg-inquire\.png\'\)\] {
+  background-image: url('../assets/images/inquire-now/bg-inquire.png');
+}
+
+.bg-\[url\(\'\.\.\/assets\/images\/inquire-now\/bg-thank-you\.png\'\)\] {
+  background-image: url('../assets/images/inquire-now/bg-thank-you.png');
+}
+
 .bg-\[url\(\'\/assets\/images\/home\/header\.svg\'\)\] {
   background-image: url('/assets/images/home/header.svg');
 }
@@ -2891,6 +2940,10 @@ video {
   font-size: 12px;
 }
 
+.text-\[142px\] {
+  font-size: 142px;
+}
+
 .text-\[14px\] {
   font-size: 14px;
 }
@@ -2929,10 +2982,6 @@ video {
 
 .text-\[28px\] {
   font-size: 28px;
-}
-
-.text-\[80px\] {
-  font-size: 80px;
 }
 
 .text-base {
@@ -2994,6 +3043,10 @@ video {
 
 .leading-\[125\%\] {
   line-height: 125%;
+}
+
+.leading-\[130px\] {
+  line-height: 130px;
 }
 
 .leading-\[140\%\] {
@@ -4154,6 +4207,11 @@ video {
 
   .xl\:top-\[3\%\] {
     top: 3%;
+  }
+
+  .xl\:my-\[100px\] {
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 
   .xl\:mb-8 {
