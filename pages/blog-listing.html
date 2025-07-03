@@ -388,19 +388,26 @@
 
       <section>
         <div
-          class="min-h-[890px] md:min-h-[600px] lg:min-h-[770px] bg-[#123E51] pt-[100px] flex flex-col items-center justify-center relative px-[5%]"
+          class="min-h-[850px] md:min-h-[760px] bg-[#123E51] pt-[100px] flex flex-col items-center justify-start md:justify-center relative px-[5%]"
         >
           <img
             src="../assets/images/blog-list/Vector.svg"
             alt="Trang trí header blog Chôm Chôm Travel"
-            class="relative w-full object-contain"
+            class="relative w-full object-contain hidden md:block"
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <img
+            src="../assets/images/blog-list/Vector2.svg"
+            alt="Vector2"
+            class="relative w-auto h-auto object-contain block md:hidden"
             aria-hidden="true"
             loading="lazy"
           />
 
-          <div class="absolute w-full px-[8%]">
+          <div class="absolute w-full px-[5%] md:px-[10%]">
             <div class="flex justify-between items-center flex-col md:flex-row">
-              <div class="relative bg-transparent md:left-[5%] mb-[50px]">
+              <div class="relative bg-transparent md:left-[5%] mb-5 pt-[45px]">
                 <h1
                   class="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 text-center md:text-start"
                 >
@@ -421,7 +428,7 @@
               </div>
 
               <div
-                class="relative w-full max-w-sm sm:max-w-md md:w-[386px] md:h-[490px] h-[490px]"
+                class="relative max-w-sm sm:max-w-md md:w-[390px] md:h-[510px] h-[390px] w-[300px]"
               >
                 <div class="swiper blog-swiper h-full">
                   <div class="swiper-wrapper">
@@ -467,7 +474,7 @@
                           class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
                         >
                           <h2
-                            class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                            class="text-[14px] md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
                             itemprop="headline"
                           >
                             <a
@@ -682,12 +689,21 @@
                   </div>
                 </div>
                 <div
-                  class="custom-swiper-pagination flex justify-center items-center mt-6 mb-2"
+                  class="custom-swiper-pagination hidden md:flex justify-center items-center mt-6 mb-2"
                 ></div>
               </div>
             </div>
           </div>
+
+          <img
+            src="../assets/images/blog-list/scroll.svg"
+            alt=""
+            class="absolute w-[120px] h-[69px] object-contain left-1/2 -translate-x-1/2 bottom-[25px] md:bottom-0"
+            aria-hidden="true"
+            loading="lazy"
+          />
         </div>
+
         <div class="w-full">
           <img
             src="../assets/images/blog-list/Break.svg"
@@ -701,7 +717,7 @@
 
       <section class="px-4 sm:px-6 lg:px-0 bg-[#FFFCF0]">
         <form
-          class="flex items-center w-[80%] mx-auto md:w-[600px] border border-[#188188] rounded-full px-3 sm:px-4 py-2 md:mt-0"
+          class="flex items-center w-[80%] mx-auto md:w-[600px] border-[2px] border-[#188188] rounded-full px-3 sm:px-4 py-2 md:mt-0"
           role="search"
           aria-label="Search blog"
         >
@@ -1164,6 +1180,23 @@
               </li>
             </ul>
           </nav>
+        </div>
+
+        <!-- Search result -->
+        <div class="flex justify-center flex-col text-center">
+          <img
+            src="../assets/images/blog-list/result.png"
+            alt="Search Result"
+            class="relative w-[210px] h-[185pxs] object-contain mx-auto"
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <h1 class="text-[28px] text-[#E7BD11] my-2 py-2">
+            No search results found
+          </h1>
+          <p class="text-[#41B4B4] text-[14px]">
+            We can’t find any blog matching your search term
+          </p>
         </div>
       </section>
     </main>

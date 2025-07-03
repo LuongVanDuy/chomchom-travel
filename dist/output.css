@@ -648,6 +648,10 @@ video {
   bottom: 210px;
 }
 
+.bottom-\[25px\] {
+  bottom: 25px;
+}
+
 .bottom-\[30px\] {
   bottom: 30px;
 }
@@ -1061,10 +1065,6 @@ video {
   margin-bottom: -8px;
 }
 
-.mb-\[50px\] {
-  margin-bottom: 50px;
-}
-
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -1308,6 +1308,10 @@ video {
   height: 180px;
 }
 
+.h-\[185pxs\] {
+  height: 185pxs;
+}
+
 .h-\[20\%\] {
   height: 20%;
 }
@@ -1374,6 +1378,10 @@ video {
 
 .h-\[38vw\] {
   height: 38vw;
+}
+
+.h-\[390px\] {
+  height: 390px;
 }
 
 .h-\[400px\] {
@@ -1446,6 +1454,10 @@ video {
 
 .h-\[68px\] {
   height: 68px;
+}
+
+.h-\[69px\] {
+  height: 69px;
 }
 
 .h-\[700px\] {
@@ -1589,8 +1601,8 @@ video {
   min-height: 715px;
 }
 
-.min-h-\[890px\] {
-  min-height: 890px;
+.min-h-\[850px\] {
+  min-height: 850px;
 }
 
 .min-h-\[950px\] {
@@ -2955,6 +2967,10 @@ video {
   padding-top: 40px;
 }
 
+.pt-\[45px\] {
+  padding-top: 45px;
+}
+
 .pt-\[60px\] {
   padding-top: 60px;
 }
@@ -3815,10 +3831,6 @@ video {
     height: 35px;
   }
 
-  .md\:h-\[490px\] {
-    height: 490px;
-  }
-
   .md\:h-\[495px\] {
     height: 495px;
   }
@@ -3871,8 +3883,8 @@ video {
     max-height: 455px;
   }
 
-  .md\:min-h-\[600px\] {
-    min-height: 600px;
+  .md\:min-h-\[760px\] {
+    min-height: 760px;
   }
 
   .md\:w-1\/2 {
@@ -3935,8 +3947,8 @@ video {
     width: 380px;
   }
 
-  .md\:w-\[386px\] {
-    width: 386px;
+  .md\:w-\[390px\] {
+    width: 390px;
   }
 
   .md\:w-\[45\%\] {
@@ -4028,6 +4040,10 @@ video {
     justify-content: flex-end;
   }
 
+  .md\:justify-center {
+    justify-content: center;
+  }
+
   .md\:justify-between {
     justify-content: space-between;
   }
@@ -4115,6 +4131,11 @@ video {
   .md\:px-\[20\%\] {
     padding-left: 20%;
     padding-right: 20%;
+  }
+
+  .md\:px-\[8\%\] {
+    padding-left: 8%;
+    padding-right: 8%;
   }
 
   .md\:py-10 {
@@ -4253,10 +4274,6 @@ video {
 @media (min-width: 1024px) {
   .lg\:top-\[10\%\] {
     top: 10%;
-  }
-
-  .lg\:min-h-\[770px\] {
-    min-height: 770px;
   }
 
   .lg\:max-w-\[280px\] {
