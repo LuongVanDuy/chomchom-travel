@@ -24,7 +24,7 @@
       }
       #blogModal .experience-swiper {
         width: 100%;
-        max-width: 420px;
+        max-width: 95%;
         margin: 0 auto;
         overflow: hidden;
       }
@@ -495,12 +495,13 @@
     <!-- Modal overlay -->
     <div
       id="blogModal"
-      class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50"
+      class="fixed inset-0 bg-black/40 hidden items-center justify-center z-[20000]"
+      style="z-index: 20000"
     >
       <div
-        class="bg-[#FFFCF0] rounded-[7px] w-[1215px] min-h-[700px] p-8 relative flex"
+        class="bg-[#FFFCF0] rounded-[7px] mx-3 w-[1215px] p-2 min-h-[715px] relative flex items-center"
       >
-        <div class="absolute right-10 top-5">
+        <div class="absolute right-5 top-5">
           <button
             onclick="closeModal()"
             aria-label="Đóng modal"
@@ -517,17 +518,45 @@
             >
           </button>
         </div>
-        <div class="flex-1 h-full">
-          <div
-            class="flex flex-col md:flex-row mt-5 px-[5%] gap-10 h-full pt-[30px]"
-          >
-            <div class="w-full md:w-[50%] h-full relative">
-              <h1
-                class="text-[#318D95] text-[28px] text-center md:text-start md:text-[48px] leading-[125%] font-semibold mb-3 md:mb-10 mt-5"
-              >
-                Slow <br />
-                Adventures
-              </h1>
+        <img
+          src="../assets/images/experiences/frame5.svg"
+          alt="button recomment"
+          class="absolute bottom-[40px] left-[30px] w-auto object-contain z-10 hidden md:block"
+        />
+
+        <img
+          src="../assets/images/experiences/frame1.svg"
+          alt="button recomment"
+          class="absolute block md:hidden w-[63px] h-[63px] top-5 left-8 object-contain z-10"
+        />
+        <div class="flex-1 h-full bg-red">
+          <div class="flex flex-col md:flex-row px-[6%] gap-12 h-full pt-5">
+            <div class="w-full md:w-[45%] h-full relative">
+              <img
+                src="../assets/images/experiences/frame7.svg"
+                alt="button recomment"
+                class="w-[92px] h-[92px] top-[-35px] right-[20px] object-contain z-10 block md:hidden mx-auto"
+              />
+
+              <div class="flex justify-center md:justify-between">
+                <h1
+                  class="text-[#318D95] flex-1 text-[28px] text-center md:text-start md:text-[48px] leading-[125%] font-semibold mb-3 md:mb-8 py-1"
+                >
+                  Slow Adventures
+                </h1>
+                <div class="relative hidden md:block">
+                  <img
+                    src="../assets/images/experiences/frame1.svg"
+                    alt="button recomment"
+                    class="hidden md:block w-[63px] h-[63px] md:w-[120px] md:h-[120px] object-contain z-10"
+                  />
+                  <img
+                    src="../assets/images/experiences/frame2.svg"
+                    alt="button recomment"
+                    class="absolute hidden md:block md:w-[198px] md:h-[159px] object-contain z-10 top-[-45px] right-[-5px]"
+                  />
+                </div>
+              </div>
 
               <div class="relative py-2 text-center md:text-start">
                 <p
@@ -539,44 +568,57 @@
                   multi-day journeys in the same place, scenic countryside
                   stays, and immersive cultural activities.
                 </p>
+              </div>
 
+              <div class="flex justify-between">
+                <div class="relative mt-8 hidden md:block cursor-pointer">
+                  <a href="#" aria-label="Đọc thêm bài viết">
+                    <div class="relative inline-block">
+                      <img
+                        src="../assets/images/experiences/button-click.svg"
+                        alt="Nút đọc thêm bài viết"
+                        class="min-w-[272px] h-[56px] object-contain"
+                      />
+                      <span
+                        class="absolute inset-0 flex items-center justify-center md:text-[22px] text-white select-text font-semibold"
+                      >
+                        Build your own trip
+                      </span>
+                    </div>
+                  </a>
+                </div>
                 <img
                   src="../assets/images/experiences/arrow.svg"
                   alt="Kid"
-                  class="absolute w-[79px] h-[79px] bottom-[-30px] right-0 object-contain hidden md:block"
+                  class="w-[79px] h-[79px] object-contain hidden md:block"
                 />
               </div>
-
-              <div class="relative mt-10 hidden md:block">
-                <a href="#" aria-label="Đọc thêm bài viết">
-                  <div class="relative inline-block">
-                    <img
-                      src="../assets/images/experiences/button-click.svg"
-                      alt="Nút đọc thêm bài viết"
-                      class="min-w-[272px] h-[56px] object-contain"
-                    />
-                    <span
-                      class="absolute inset-0 flex items-center justify-center md:text-[24px] text-white select-text font-semibold"
-                    >
-                      Build your own trip
-                    </span>
-                  </div>
-                </a>
-              </div>
             </div>
-            <div class="w-full md:w-[50%] relative">
+            <div class="w-full md:w-[55%] relative">
               <div>
                 <img
                   src="../assets/images/experiences/button-recomment-modal.svg"
                   alt="button recomment"
                   class="absolute top-[-7%] left-1/2 -translate-x-1/2 object-contain z-10"
                 />
+                <img
+                  src="../assets/images/experiences/frame3.svg"
+                  alt="button recomment"
+                  class="absolute right-[-20px] md:bottom-[17px] md:right-[-30px] object-contain z-10 w-[65px] h-[65px] md:w-[88px] md:h-[88px] hidden md:block"
+                />
+
+                <img
+                  src="../assets/images/experiences/frame3.svg"
+                  alt="button recomment"
+                  class="absolute top-[-75px] right-[-25px] object-contain z-10 w-[65px] h-[65px] md:w-[88px] md:h-[88px] block md:hidden"
+                />
+
                 <!-- Swiper container -->
                 <div class="swiper experience-swiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <article
-                        class="border-[3px] border-[#318D95] md:h-[495px] h-[380px] rounded-[12px] relative group bg-[#318D95] flex flex-col justify-between"
+                        class="border-[3px] border-[#318D95] md:h-[510px] h-[380px] rounded-[12px] relative group bg-[#318D95] flex flex-col justify-between"
                       >
                         <div class="block relative h-full overflow-hidden">
                           <div class="relative w-full h-full overflow-hidden">
@@ -587,7 +629,7 @@
                             />
                           </div>
                           <div
-                            class="absolute bottom-0 left-0 h-[20%] rounded-[10px] w-full bg-[#318D95] text-[#fff] flex justify-center items-center text-[14px] px-5"
+                            class="absolute bottom-0 left-0 h-[20%] rounded-[10px] w-full bg-[#318D95] text-[#fff] flex justify-center items-center text-[14px] md:text-[18px] px-10"
                           >
                             <p>
                               Hop on the back of a bike and join one of our city
@@ -599,7 +641,7 @@
                     </div>
                     <div class="swiper-slide">
                       <article
-                        class="border-[3px] border-[#318D95] md:h-[495px] h-[380px] rounded-[12px] relative group bg-[#318D95] flex flex-col justify-between"
+                        class="border-[3px] border-[#318D95] md:h-[510px] h-[380px] rounded-[12px] relative group bg-[#318D95] flex flex-col justify-between"
                       >
                         <div class="block relative h-full overflow-hidden">
                           <div class="relative w-full h-full overflow-hidden">
@@ -610,7 +652,53 @@
                             />
                           </div>
                           <div
-                            class="absolute bottom-0 left-0 h-[20%] rounded-[10px] w-full bg-[#318D95] text-[#fff] flex justify-center items-center text-[14px] px-5"
+                            class="absolute bottom-0 left-0 h-[20%] rounded-[10px] w-full bg-[#318D95] text-[#fff] flex justify-center items-center text-[14px] md:text-[18px] px-10"
+                          >
+                            <p>
+                              Hop on the back of a bike and join one of our city
+                              food tours
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="swiper-slide">
+                      <article
+                        class="border-[3px] border-[#318D95] md:h-[510px] h-[380px] rounded-[12px] relative group bg-[#318D95] flex flex-col justify-between"
+                      >
+                        <div class="block relative h-full overflow-hidden">
+                          <div class="relative w-full h-full overflow-hidden">
+                            <img
+                              src="../assets/images/experiences/blog-item1.jpg"
+                              alt="Tiêu đề bài viết 1"
+                              class="w-full h-full object-cover rounded-[12px]"
+                            />
+                          </div>
+                          <div
+                            class="absolute bottom-0 left-0 h-[20%] rounded-[10px] w-full bg-[#318D95] text-[#fff] flex justify-center items-center text-[14px] md:text-[18px] px-10"
+                          >
+                            <p>
+                              Hop on the back of a bike and join one of our city
+                              food tours
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="swiper-slide">
+                      <article
+                        class="border-[3px] border-[#318D95] md:h-[510px] h-[380px] rounded-[12px] relative group bg-[#318D95] flex flex-col justify-between"
+                      >
+                        <div class="block relative h-full overflow-hidden">
+                          <div class="relative w-full h-full overflow-hidden">
+                            <img
+                              src="../assets/images/experiences/blog-item1.jpg"
+                              alt="Tiêu đề bài viết 1"
+                              class="w-full h-full object-cover rounded-[12px]"
+                            />
+                          </div>
+                          <div
+                            class="absolute bottom-0 left-0 h-[20%] rounded-[10px] w-full bg-[#318D95] text-[#fff] flex justify-center items-center text-[14px] md:text-[18px] px-10"
                           >
                             <p>
                               Hop on the back of a bike and join one of our city
@@ -623,7 +711,7 @@
                   </div>
                 </div>
                 <!-- navigation -->
-                <div class="w-full flex items-center justify-center gap-8 mt-2">
+                <div class="w-full flex items-center justify-center gap-8 mt-5">
                   <button
                     aria-label="Previous"
                     class="experience-swiper-button-prev group"
@@ -649,6 +737,33 @@
                       class="w-10 h-10 opacity-70 group-hover:opacity-100 transition"
                     />
                   </button>
+                </div>
+                <img
+                  src="../assets/images/experiences/arrow-mobile.svg"
+                  alt="Next"
+                  class="absolute w-[50px] h-[59px] left-0 bottom-[65px] opacity-70 group-hover:opacity-100 transition block md:hidden"
+                />
+                <img
+                  src="../assets/images/experiences/frame8-mobile.svg"
+                  alt="Next"
+                  class="absolute w-[65px] h-[113px] right-0 bottom-[30px] opacity-70 group-hover:opacity-100 transition block md:hidden"
+                />
+
+                <div class="relative mt-3 mb-4 flex justify-center md:hidden">
+                  <a href="#" aria-label="Đọc thêm bài viết">
+                    <div class="relative inline-block">
+                      <img
+                        src="../assets/images/experiences/button-click.svg"
+                        alt="Nút đọc thêm bài viết"
+                        class="min-w-[272px] h-[42px] object-contain"
+                      />
+                      <span
+                        class="absolute inset-0 flex items-center justify-center md:text-[24px] text-white select-text font-semibold"
+                      >
+                        Build your own trip
+                      </span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
