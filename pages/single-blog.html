@@ -157,7 +157,7 @@
   </style>
 
   <body>
-    <div class="bg-[#FFFCF0] h-[100vh]">
+    <div class="bg-[#FFFCF0]">
       <!-- header mobile -->
       <header class="mobile-header-fixed w-full z-[9999] md:hidden">
         <div class="flex items-center justify-between bg-[#15525A] px-8 py-2">
@@ -322,7 +322,7 @@
 
       <!-- header tablet,desktop  -->
       <header
-        class="fixed top-0 left-0 w-full flex justify-center z-50 hidden md:block bg-transparent"
+        class="fixed top-0 left-0 w-full md:flex justify-center z-50 hidden bg-transparent"
       >
         <div
           class="relative w-4/5 mx-auto h-[84px] bg-[url('/assets/images/home/header.svg')] bg-no-repeat bg-center bg-cover"
@@ -412,11 +412,11 @@
       </header>
 
       <section
-        class="w-full max-w-[815px] mx-auto px-4 pt-[150px] sm:px-6 md:px-8"
+        class="w-full max-w-[815px] pt-[100px] mx-auto px-4 md:pt-[150px] sm:px-6 md:px-8"
       >
-        <nav class="text-base sm:text-sm md:text-base" aria-label="Breadcrumb">
+        <nav aria-label="Breadcrumb">
           <ol
-            class="list-reset flex flex-wrap justify-center text-xs sm:text-sm md:text-base"
+            class="list-reset flex flex-wrap justify-center text-[14px] md:text-[18px]"
           >
             <li>
               <a href="/" class="text-[#318D95] font-semibold hover:underline"
@@ -439,17 +439,17 @@
         </nav>
         <article class="mx-auto text-center px-2 sm:px-4 py-6 sm:py-8 md:py-10">
           <h1
-            class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 leading-tight"
+            class="text-[26px] md:text-4xl font-bold text-[#104751] leading-tight"
           >
             Vietnam Isn't a Checklist — Here's How to Really Experience It
           </h1>
-          <p class="mt-4 text-lg sm:text-xl text-teal-700 font-semibold">
+          <p class="mt-4 md:text-lg text-[14px] text-[#318D95]">
             In a world obsessed with bucket lists and fast-paced itineraries,
             slow travel in Vietnam is more than just a trend — it's a return to
             the kind of travel that truly transforms.
           </p>
           <div
-            class="mt-6 flex flex-col sm:flex-row w-full items-center justify-center gap-6 text-slate-700"
+            class="mt-6 flex flex-row w-full items-center justify-center gap-6 text-[#104751]"
           >
             <div class="flex items-center gap-2 justify-center">
               <img
@@ -459,17 +459,50 @@
               />
               <span class="font-semibold">Loc Tran</span>
             </div>
-            <div class="bg-[#E96024] w-[2px] h-[15px] hidden sm:block"></div>
+            <div class="bg-[#E96024] w-[2px] h-[15px]"></div>
             <div
-              class="flex items-center gap-1 text-sm sm:text-base justify-center"
+              class="flex items-center gap-2 text-[14px] md:text-[18px] justify-center"
             >
               <span class="font-semibold">5 min read</span>
+              <img
+                src="../assets/images/blog-list/read.svg"
+                alt="Read"
+                class="w-[18px] h-[21px] object-contain"
+                loading="lazy"
+              />
             </div>
           </div>
-          <div class="mt-4 text-xs sm:text-sm text-gray-500">
+          <div
+            class="mt-4 text-[14px] md:text-[16px] font-semibold text-[#104751]"
+          >
             Updated: Apr 9, 2025
           </div>
         </article>
+      </section>
+
+      <!-- content -->
+      <section class="px-[5%] md:px-[20%]">
+        <img
+          src="../assets/images/single-blog/blog-content.png"
+          alt="Blog Content"
+          class="w-full h-auto mx-auto object-contain"
+        />
+        <h3 class="text-[18px] font-semibold text-[#318D95] py-2">
+          What is Slow Travel?
+        </h3>
+        <p>
+          In a world obsessed with bucket lists and fast-paced itineraries, slow
+          travel in Vietnam is more than just a trend — it's a return to the
+          kind of travel that truly transforms.
+        </p>
+
+        <p>
+          Nam tempor finibus lorem, nec varius arcu convallis sed. Nunc id orci
+          a neque vehicula malesuada. Donec vehicula libero vel leo convallis,
+          nec tincidunt felis tincidunt. Maecenas euismod tristique leo, vel
+          malesuada ligula malesuada sed. Donec eget libero id leo congue
+          venenatis.
+        </p>
       </section>
 
       <section class="text-center py-10 bg-[#FFFCF0]">
@@ -543,450 +576,475 @@
           </div>
         </div>
       </section>
-      <section>
-        <div>
-          <div class="relative w-[100%]">
-            <img
-              src="../assets/images/single-blog/Break.svg"
-              alt="Khung chia sẻ"
-              class="block inset-0 w-full h-full object-contain pointer-events-none select-none"
-              aria-hidden="true"
-              loading="lazy"
-            />
-            <div
-              class="absolute bottom-0 left-0 w-full h-[5px] bg-[#123E51] pointer-events-none select-none"
-            ></div>
+
+      <section class="pt-12">
+        <div class="relative w-[100%]">
+          <img
+            src="../assets/images/single-blog/Break.svg"
+            alt="Khung chia sẻ"
+            class="block inset-0 w-full h-full object-contain pointer-events-none select-none"
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-full h-[5px] bg-[#123E51] pointer-events-none select-none"
+          ></div>
+        </div>
+        <div class="bg-[#123E51] mt-[-2px] min-h-[500px] relative pb-[50px]">
+          <div
+            class="flex flex-col items-center max-w-[339px] mx-auto pt-[40px]"
+          >
+            <div class="w-full flex justify-end">
+              <img
+                src="../assets/images/single-blog/single1.svg"
+                alt=""
+                class="w-[210px] h-[65px] object-contain"
+                aria-hidden="true"
+                loading="lazy"
+              />
+            </div>
+            <h1
+              class="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#fff] leading-tight text-center"
+            >
+              Related Posts
+            </h1>
           </div>
-          <div class="bg-[#123E51] mt-[-2px] min-h-[500px] relative pb-[50px]">
-            <div class="flex flex-col items-center max-w-[339px] mx-auto">
-              <div class="w-full flex justify-end">
+
+          <!-- Swiper container -->
+          <div class="relative w-full max-w-6xl pl-2 mx-auto sm:px-4 mt-10">
+            <div class="swiper blog-swiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 1  -->
+                <div
+                  class="swiper-slide w-[85vw] max-w-xs flex-shrink-0 sm:w-full sm:max-w-sm md:max-w-md"
+                >
+                  <article
+                    class="relative flex flex-col h-full rounded-2xl border-yellow-400 overflow-hidden"
+                    itemscope
+                    itemtype="https://schema.org/BlogPosting"
+                  >
+                    <meta itemprop="datePublished" content="2025-04-09" />
+                    <meta itemprop="dateModified" content="2025-04-09" />
+                    <meta itemprop="author" content="Chôm Chôm Travel" />
+                    <meta itemprop="publisher" content="Chôm Chôm Travel" />
+                    <meta itemprop="wordCount" content="1500" />
+                    <meta itemprop="timeRequired" content="PT9M" />
+                    <div class="h-full">
+                      <img
+                        src="../assets/images/single-blog/Vector.svg"
+                        alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
+                        class="absolute inset-0 w-full top-2 h-full pl-[10px] pb-2 object-cover z-0"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div
+                      class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+                    >
+                      <img
+                        src="../assets/images/blog-list/blog-item.png"
+                        alt="Ảnh minh họa bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                        class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
+                        itemprop="image"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../assets/images/blog-list/paper-torn.png"
+                        alt="Họa tiết giấy xé trang trí bài viết"
+                        class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div
+                      class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
+                    >
+                      <h2
+                        class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                        itemprop="headline"
+                      >
+                        <a
+                          href="/blog/is-saigon-worth-it"
+                          class="hover:text-[#318D95]"
+                          aria-label="Đọc bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                          >Is Saigon Worth It? 5 Reasons Why This Bustling City
+                          Should Be on Your Travel Itinerary</a
+                        >
+                      </h2>
+                      <div
+                        class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                      >
+                        <div
+                          class="flex items-center gap-2 text-[14px] font-semibold"
+                          itemprop="timeRequired"
+                          content="PT9M"
+                        >
+                          <span>9 min read</span>
+                          <img
+                            src="../assets/images/blog-list/read.svg"
+                            alt="Read"
+                            class="w-[18px] h-[21px] object-contain"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div
+                          class="flex items-center text-[14px] md:text-[16px] text-[#E96024]"
+                        >
+                          <time datetime="2025-04-09"
+                            >Updated: Apr 9, 2025</time
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <!-- Slide 2  -->
+                <div
+                  class="swiper-slide w-[85vw] max-w-xs flex-shrink-0 sm:w-full sm:max-w-sm md:max-w-md"
+                >
+                  <article
+                    class="relative flex flex-col h-full rounded-2xl border-yellow-400 overflow-hidden"
+                    itemscope
+                    itemtype="https://schema.org/BlogPosting"
+                  >
+                    <meta itemprop="datePublished" content="2025-04-09" />
+                    <meta itemprop="dateModified" content="2025-04-09" />
+                    <meta itemprop="author" content="Chôm Chôm Travel" />
+                    <meta itemprop="publisher" content="Chôm Chôm Travel" />
+                    <meta itemprop="wordCount" content="1500" />
+                    <meta itemprop="timeRequired" content="PT9M" />
+                    <div class="h-full">
+                      <img
+                        src="../assets/images/single-blog/Vector.svg"
+                        alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
+                        class="absolute inset-0 w-full top-2 h-full pl-[10px] pb-2 object-cover z-0"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div
+                      class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+                    >
+                      <img
+                        src="../assets/images/blog-list/blog-item.png"
+                        alt="Ảnh minh họa bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                        class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
+                        itemprop="image"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../assets/images/blog-list/paper-torn.png"
+                        alt="Họa tiết giấy xé trang trí bài viết"
+                        class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div
+                      class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
+                    >
+                      <h2
+                        class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                        itemprop="headline"
+                      >
+                        <a
+                          href="/blog/is-saigon-worth-it"
+                          class="hover:text-[#318D95]"
+                          aria-label="Đọc bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                          >Is Saigon Worth It? 5 Reasons Why This Bustling City
+                          Should Be on Your Travel Itinerary</a
+                        >
+                      </h2>
+                      <div
+                        class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                      >
+                        <div
+                          class="flex items-center gap-2 text-[14px] font-semibold"
+                          itemprop="timeRequired"
+                          content="PT9M"
+                        >
+                          <span>9 min read</span>
+                          <img
+                            src="../assets/images/blog-list/read.svg"
+                            alt="Biểu tượng thời lượng đọc"
+                            class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div
+                          class="flex items-center text-[14px] md:text-[16px] text-[#E96024]"
+                        >
+                          <time datetime="2025-04-09"
+                            >Updated: Apr 9, 2025</time
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <!-- Slide 3-->
+                <div
+                  class="swiper-slide w-[85vw] max-w-xs flex-shrink-0 sm:w-full sm:max-w-sm md:max-w-md"
+                >
+                  <article
+                    class="relative flex flex-col h-full rounded-2xl border-yellow-400 overflow-hidden"
+                    itemscope
+                    itemtype="https://schema.org/BlogPosting"
+                  >
+                    <meta itemprop="datePublished" content="2025-04-09" />
+                    <meta itemprop="dateModified" content="2025-04-09" />
+                    <meta itemprop="author" content="Chôm Chôm Travel" />
+                    <meta itemprop="publisher" content="Chôm Chôm Travel" />
+                    <meta itemprop="wordCount" content="1500" />
+                    <meta itemprop="timeRequired" content="PT9M" />
+                    <div class="h-full">
+                      <img
+                        src="../assets/images/single-blog/Vector.svg"
+                        alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
+                        class="absolute inset-0 w-full top-2 h-full pl-[10px] pb-2 object-cover z-0"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div
+                      class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+                    >
+                      <img
+                        src="../assets/images/blog-list/blog-item.png"
+                        alt="Ảnh minh họa bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                        class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
+                        itemprop="image"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../assets/images/blog-list/paper-torn.png"
+                        alt="Họa tiết giấy xé trang trí bài viết"
+                        class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div
+                      class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
+                    >
+                      <h2
+                        class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                        itemprop="headline"
+                      >
+                        <a
+                          href="/blog/is-saigon-worth-it"
+                          class="hover:text-[#318D95]"
+                          aria-label="Đọc bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                          >Is Saigon Worth It? 5 Reasons Why This Bustling City
+                          Should Be on Your Travel Itinerary</a
+                        >
+                      </h2>
+                      <div
+                        class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                      >
+                        <div
+                          class="flex items-center gap-2 text-[14px] font-semibold"
+                          itemprop="timeRequired"
+                          content="PT9M"
+                        >
+                          <span>9 min read</span>
+                          <img
+                            src="../assets/images/blog-list/read.svg"
+                            alt="Biểu tượng thời lượng đọc"
+                            class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div
+                          class="flex items-center text-[14px] md:text-[16px] text-[#E96024]"
+                        >
+                          <time datetime="2025-04-09"
+                            >Updated: Apr 9, 2025</time
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <!-- Slide 4-->
+                <div
+                  class="swiper-slide w-[85vw] max-w-xs flex-shrink-0 sm:w-full sm:max-w-sm md:max-w-md"
+                >
+                  <article
+                    class="relative flex flex-col h-full rounded-2xl border-yellow-400 overflow-hidden"
+                    itemscope
+                    itemtype="https://schema.org/BlogPosting"
+                  >
+                    <meta itemprop="datePublished" content="2025-04-09" />
+                    <meta itemprop="dateModified" content="2025-04-09" />
+                    <meta itemprop="author" content="Chôm Chôm Travel" />
+                    <meta itemprop="publisher" content="Chôm Chôm Travel" />
+                    <meta itemprop="wordCount" content="1500" />
+                    <meta itemprop="timeRequired" content="PT9M" />
+                    <div class="h-full">
+                      <img
+                        src="../assets/images/single-blog/Vector.svg"
+                        alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
+                        class="absolute inset-0 w-full top-2 h-full pl-[10px] pb-2 object-cover z-0"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div
+                      class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+                    >
+                      <img
+                        src="../assets/images/blog-list/blog-item.png"
+                        alt="Ảnh minh họa bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                        class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
+                        itemprop="image"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../assets/images/blog-list/paper-torn.png"
+                        alt="Họa tiết giấy xé trang trí bài viết"
+                        class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div
+                      class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
+                    >
+                      <h2
+                        class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                        itemprop="headline"
+                      >
+                        <a
+                          href="/blog/is-saigon-worth-it"
+                          class="hover:text-[#318D95]"
+                          aria-label="Đọc bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                          >Is Saigon Worth It? 5 Reasons Why This Bustling City
+                          Should Be on Your Travel Itinerary</a
+                        >
+                      </h2>
+                      <div
+                        class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                      >
+                        <div
+                          class="flex items-center gap-2 text-[14px] font-semibold"
+                          itemprop="timeRequired"
+                          content="PT9M"
+                        >
+                          <span>9 min read</span>
+                          <img
+                            src="../assets/images/blog-list/read.svg"
+                            alt="Biểu tượng thời lượng đọc"
+                            class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div
+                          class="flex items-center text-[14px] md:text-[16px] text-[#E96024]"
+                        >
+                          <time datetime="2025-04-09"
+                            >Updated: Apr 9, 2025</time
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <!-- Slide 5-->
+                <div
+                  class="swiper-slide w-[85vw] max-w-xs flex-shrink-0 sm:w-full sm:max-w-sm md:max-w-md"
+                >
+                  <article
+                    class="relative flex flex-col h-full rounded-2xl border-yellow-400 overflow-hidden"
+                    itemscope
+                    itemtype="https://schema.org/BlogPosting"
+                  >
+                    <meta itemprop="datePublished" content="2025-04-09" />
+                    <meta itemprop="dateModified" content="2025-04-09" />
+                    <meta itemprop="author" content="Chôm Chôm Travel" />
+                    <meta itemprop="publisher" content="Chôm Chôm Travel" />
+                    <meta itemprop="wordCount" content="1500" />
+                    <meta itemprop="timeRequired" content="PT9M" />
+                    <div class="h-full">
+                      <img
+                        src="../assets/images/single-blog/Vector.svg"
+                        alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
+                        class="absolute inset-0 w-full top-2 h-full pl-[10px] pb-2 object-cover z-0"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div
+                      class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
+                    >
+                      <img
+                        src="../assets/images/blog-list/blog-item.png"
+                        alt="Ảnh minh họa bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                        class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
+                        itemprop="image"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../assets/images/blog-list/paper-torn.png"
+                        alt="Họa tiết giấy xé trang trí bài viết"
+                        class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div
+                      class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
+                    >
+                      <h2
+                        class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
+                        itemprop="headline"
+                      >
+                        <a
+                          href="/blog/is-saigon-worth-it"
+                          class="hover:text-[#318D95]"
+                          aria-label="Đọc bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
+                          >Is Saigon Worth It? 5 Reasons Why This Bustling City
+                          Should Be on Your Travel Itinerary</a
+                        >
+                      </h2>
+                      <div
+                        class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
+                      >
+                        <div
+                          class="flex items-center gap-2 text-[14px] font-semibold"
+                          itemprop="timeRequired"
+                          content="PT9M"
+                        >
+                          <span>9 min read</span>
+                          <img
+                            src="../assets/images/blog-list/read.svg"
+                            alt="Biểu tượng thời lượng đọc"
+                            class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div
+                          class="flex items-center text-[14px] md:text-[16px] text-[#E96024]"
+                        >
+                          <time datetime="2025-04-09"
+                            >Updated: Apr 9, 2025</time
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center mt-6 mb-2 custom-swiper-nav-wrap"
+            >
+              <div class="custom-swiper-button-prev">
                 <img
-                  src="../assets/images/single-blog/single1.svg"
-                  alt=""
-                  class="w-[210px] h-[65px] object-contain"
-                  aria-hidden="true"
-                  loading="lazy"
+                  src="../assets/images/blog-list/left.svg"
+                  alt="Previous"
+                  class="w-[17px] h-[26px]"
                 />
               </div>
-              <h1
-                class="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#fff] leading-tight text-center"
-              >
-                Related Posts
-              </h1>
-            </div>
-
-            <!-- Swiper container -->
-            <div class="relative w-full max-w-6xl mx-auto px-4 mt-10">
-              <div class="swiper blog-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <article
-                      class="relative rounded-xl overflow-hidden flex flex-col h-full"
-                      itemscope
-                      itemtype="https://schema.org/BlogPosting"
-                    >
-                      <meta itemprop="datePublished" content="2025-04-09" />
-                      <meta itemprop="dateModified" content="2025-04-09" />
-                      <meta itemprop="author" content="Chôm Chôm Travel" />
-                      <meta itemprop="publisher" content="Chôm Chôm Travel" />
-                      <meta itemprop="wordCount" content="1500" />
-                      <meta itemprop="timeRequired" content="PT9M" />
-
-                      <div class="h-full">
-                        <img
-                          src="../assets/images/single-blog/Vector.svg"
-                          alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
-                          class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div
-                        class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
-                      >
-                        <img
-                          src="../assets/images/blog-list/blog-item.png"
-                          alt="Ảnh minh họa bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
-                          class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
-                          itemprop="image"
-                          loading="lazy"
-                        />
-                        <img
-                          src="../assets/images/blog-list/paper-torn.png"
-                          alt="Họa tiết giấy xé trang trí bài viết"
-                          class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div
-                        class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
-                      >
-                        <h2
-                          class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
-                          itemprop="headline"
-                        >
-                          <a
-                            href="/blog/is-saigon-worth-it"
-                            class="hover:text-[#318D95]"
-                            aria-label="Đọc bài viết: Is Saigon Worth It? 5 Reasons Why This Bustling City Should Be on Your Travel Itinerary"
-                            >Is Saigon Worth It? 5 Reasons Why This Bustling
-                            City Should Be on Your Travel Itinerary</a
-                          >
-                        </h2>
-                        <div
-                          class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
-                        >
-                          <div
-                            class="flex items-center gap-2 text-[14px] font-semibold"
-                            itemprop="timeRequired"
-                            content="PT9M"
-                          >
-                            <span>9 min read</span>
-
-                            <img
-                              src="../assets/images/blog-list/read.svg"
-                              alt="Biểu tượng thời lượng đọc"
-                              class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div
-                            class="flex items-center text-[16px] text-[#E96024]"
-                          >
-                            <time datetime="2025-04-09"
-                              >Updated: Apr 9, 2025</time
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <!-- Slide 2  -->
-                  <div class="swiper-slide">
-                    <article
-                      class="relative rounded-xl overflow-hidden flex flex-col h-full"
-                      itemscope
-                      itemtype="https://schema.org/BlogPosting"
-                    >
-                      <div class="h-full">
-                        <img
-                          src="../assets/images/single-blog/Vector.svg"
-                          alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
-                          class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
-                          itemprop="image"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div
-                        class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
-                      >
-                        <img
-                          src="../assets/images/blog-list/blog-item.png"
-                          alt="Ảnh minh họa bài viết Vietnam Isn't a Checklist"
-                          class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
-                          itemprop="image"
-                          loading="lazy"
-                        />
-                        <img
-                          src="../assets/images/blog-list/paper-torn.png"
-                          alt="Họa tiết giấy xé trang trí bài viết"
-                          class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
-                          itemprop="image"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div
-                        class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
-                      >
-                        <h2
-                          class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
-                          itemprop="headline"
-                        >
-                          <a
-                            href="#"
-                            class="hover:text-[#318D95]"
-                            aria-label="Vietnam Isn't a Checklist — Here's How to Really Experience It"
-                            >Is Saigon Worth It? 5 Reasons Why This Bustling
-                            City Should Be on Your Travel Itinerary</a
-                          >
-                        </h2>
-                        <div
-                          class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
-                        >
-                          <div
-                            class="flex items-center gap-2 text-[14px] font-semibold"
-                          >
-                            9 min read
-
-                            <img
-                              src="../assets/images/blog-list/read.svg"
-                              alt="Biểu tượng thời lượng đọc"
-                              class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
-                              itemprop="image"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div
-                            class="flex items-center text-[16px] text-[#E96024]"
-                          >
-                            <time datetime="2025-04-09"
-                              >Updated: Apr 9, 2025</time
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <!-- Slide 3-->
-                  <div class="swiper-slide">
-                    <article
-                      class="relative rounded-xl overflow-hidden flex flex-col h-full"
-                      itemscope
-                      itemtype="https://schema.org/BlogPosting"
-                    >
-                      <div class="h-full">
-                        <img
-                          src="../assets/images/single-blog/Vector.svg"
-                          alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
-                          class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
-                          itemprop="image"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div
-                        class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
-                      >
-                        <img
-                          src="../assets/images/blog-list/blog-item.png"
-                          alt="Ảnh minh họa bài viết Vietnam Isn't a Checklist"
-                          class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
-                          itemprop="image"
-                          loading="lazy"
-                        />
-                        <img
-                          src="../assets/images/blog-list/paper-torn.png"
-                          alt="Họa tiết giấy xé trang trí bài viết"
-                          class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
-                          itemprop="image"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div
-                        class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
-                      >
-                        <h2
-                          class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
-                          itemprop="headline"
-                        >
-                          <a
-                            href="#"
-                            class="hover:text-[#318D95]"
-                            aria-label="Vietnam Isn't a Checklist — Here's How to Really Experience It"
-                            >Is Saigon Worth It? 5 Reasons Why This Bustling
-                            City Should Be on Your Travel Itinerary</a
-                          >
-                        </h2>
-                        <div
-                          class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
-                        >
-                          <div
-                            class="flex items-center gap-2 text-[14px] font-semibold"
-                          >
-                            9 min read
-
-                            <img
-                              src="../assets/images/blog-list/read.svg"
-                              alt="Biểu tượng thời lượng đọc"
-                              class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
-                              itemprop="image"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div
-                            class="flex items-center text-[16px] text-[#E96024]"
-                          >
-                            <time datetime="2025-04-09"
-                              >Updated: Apr 9, 2025</time
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <!-- Slide 4-->
-                  <div class="swiper-slide">
-                    <article
-                      class="relative rounded-xl overflow-hidden flex flex-col h-full"
-                      itemscope
-                      itemtype="https://schema.org/BlogPosting"
-                    >
-                      <div class="h-full">
-                        <img
-                          src="../assets/images/single-blog/Vector.svg"
-                          alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
-                          class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
-                          itemprop="image"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div
-                        class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
-                      >
-                        <img
-                          src="../assets/images/blog-list/blog-item.png"
-                          alt="Ảnh minh họa bài viết Vietnam Isn't a Checklist"
-                          class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
-                          itemprop="image"
-                          loading="lazy"
-                        />
-                        <img
-                          src="../assets/images/blog-list/paper-torn.png"
-                          alt="Họa tiết giấy xé trang trí bài viết"
-                          class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
-                          itemprop="image"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div
-                        class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
-                      >
-                        <h2
-                          class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
-                          itemprop="headline"
-                        >
-                          <a
-                            href="#"
-                            class="hover:text-[#318D95]"
-                            aria-label="Vietnam Isn't a Checklist — Here's How to Really Experience It"
-                            >Is Saigon Worth It? 5 Reasons Why This Bustling
-                            City Should Be on Your Travel Itinerary</a
-                          >
-                        </h2>
-                        <div
-                          class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
-                        >
-                          <div
-                            class="flex items-center gap-2 text-[14px] font-semibold"
-                          >
-                            9 min read
-
-                            <img
-                              src="../assets/images/blog-list/read.svg"
-                              alt="Biểu tượng thời lượng đọc"
-                              class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
-                              itemprop="image"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div
-                            class="flex items-center text-[16px] text-[#E96024]"
-                          >
-                            <time datetime="2025-04-09"
-                              >Updated: Apr 9, 2025</time
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-
-                  <!-- Slide 5-->
-                  <div class="swiper-slide">
-                    <article
-                      class="relative rounded-xl overflow-hidden flex flex-col h-full"
-                      itemscope
-                      itemtype="https://schema.org/BlogPosting"
-                    >
-                      <div class="h-full">
-                        <img
-                          src="../assets/images/single-blog/Vector.svg"
-                          alt="Họa tiết nền bài viết blog Chôm Chôm Travel"
-                          class="absolute inset-0 w-full top-2 h-full pb-2 object-cover z-0"
-                          itemprop="image"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div
-                        class="absolute overflow-hidden border-[2px] rounded-[23px] border-[#E7BD11] bottom-0 left-0 w-full h-[96.5%] z-10 pb-[6px]"
-                      >
-                        <img
-                          src="../assets/images/blog-list/blog-item.png"
-                          alt="Ảnh minh họa bài viết Vietnam Isn't a Checklist"
-                          class="rounded-[23px] object-cover w-full h-full z-10 overflow-hidden"
-                          itemprop="image"
-                          loading="lazy"
-                        />
-                        <img
-                          src="../assets/images/blog-list/paper-torn.png"
-                          alt="Họa tiết giấy xé trang trí bài viết"
-                          class="absolute bottom-0 left-0 right-0 object-cover z-20 w-full pointer-events-none"
-                          itemprop="image"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div
-                        class="absolute bottom-0 left-0 w-full z-30 flex flex-col items-start justify-between p-5 h-[150px] md:h-[180px]"
-                      >
-                        <h2
-                          class="text-sm sm:text-base md:text-[16px] leading-[140%] sm:leading-[150%] font-semibold mb-2 text-[#104751] drop-shadow-md text-start line-clamp-2"
-                          itemprop="headline"
-                        >
-                          <a
-                            href="#"
-                            class="hover:text-[#318D95]"
-                            aria-label="Vietnam Isn't a Checklist — Here's How to Really Experience It"
-                            >Is Saigon Worth It? 5 Reasons Why This Bustling
-                            City Should Be on Your Travel Itinerary</a
-                          >
-                        </h2>
-                        <div
-                          class="flex flex-row items-center justify-between w-full gap-1 sm:gap-2"
-                        >
-                          <div
-                            class="flex items-center gap-2 text-[14px] font-semibold"
-                          >
-                            9 min read
-
-                            <img
-                              src="../assets/images/blog-list/read.svg"
-                              alt="Biểu tượng thời lượng đọc"
-                              class="w-3 h-3 sm:w-4 sm:h-4 md:w-[16px] md:h-[18px]"
-                              itemprop="image"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div
-                            class="flex items-center text-[16px] text-[#E96024]"
-                          >
-                            <time datetime="2025-04-09"
-                              >Updated: Apr 9, 2025</time
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
               <div
-                class="flex justify-center items-center mt-6 mb-2 custom-swiper-nav-wrap"
-              >
-                <div class="custom-swiper-button-prev">
-                  <img
-                    src="../assets/images/blog-list/left.svg"
-                    alt="Previous"
-                    class="w-[17px] h-[26px]"
-                  />
-                </div>
-                <div
-                  class="custom-swiper-pagination flex justify-center items-center !w-[120px]"
-                ></div>
-                <div class="custom-swiper-button-next">
-                  <img
-                    src="../assets/images/blog-list/right.svg"
-                    alt="Next"
-                    class="w-[17px] h-[26px]"
-                  />
-                </div>
+                class="custom-swiper-pagination flex justify-center items-center !w-[120px]"
+              ></div>
+              <div class="custom-swiper-button-next">
+                <img
+                  src="../assets/images/blog-list/right.svg"
+                  alt="Next"
+                  class="w-[17px] h-[26px]"
+                />
               </div>
             </div>
           </div>
@@ -1133,19 +1191,11 @@
       const slidesPerGroup = Math.ceil(totalSlides / PAGINATION_DOTS);
 
       const blogSwiper = new Swiper(".blog-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 20,
+        slidesPerView: 1.2,
+        spaceBetween: 6,
         loop: true,
         autoplay: { delay: 100000, disableOnInteraction: false },
-        pagination: {
-          el: ".custom-swiper-pagination",
-          clickable: true,
-          renderBullet: function (index, className) {
-            return `<span class="${className}">
-              <img src="../assets/images/blog-list/pagination.svg" class="pagination-dot" />
-            </span>`;
-          },
-        },
+        pagination: false,
         navigation: {
           nextEl: ".custom-swiper-button-next",
           prevEl: ".custom-swiper-button-prev",
@@ -1153,7 +1203,7 @@
         breakpoints: {
           640: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 5,
           },
           1024: {
             slidesPerView: 3,
@@ -1179,27 +1229,29 @@
           },
           slideChange: function () {
             setTimeout(() => {
-              document
-                .querySelectorAll(
-                  ".custom-swiper-pagination .swiper-pagination-bullet"
-                )
-                .forEach((el, idx) => {
-                  const img = el.querySelector("img");
-                  if (
-                    el.classList.contains("swiper-pagination-bullet-active")
-                  ) {
-                    img.src =
-                      "../assets/images/blog-list/pagination-active.svg";
-                  } else {
-                    img.src = "../assets/images/blog-list/pagination.svg";
-                  }
-                });
+              // Cập nhật trạng thái active cho 3 chấm
+              const pagBullets = document.querySelectorAll(
+                ".custom-swiper-pagination .swiper-pagination-bullet"
+              );
+              pagBullets.forEach((el, idx) => {
+                const img = el.querySelector("img");
+                // Tính toán nhóm hiện tại
+                const realIndex = blogSwiper.realIndex || 0;
+                const groupIdx = Math.floor(realIndex / slidesPerGroup);
+                if (idx === groupIdx) {
+                  el.classList.add("swiper-pagination-bullet-active");
+                  img.src = "../assets/images/blog-list/pagination-active.svg";
+                } else {
+                  el.classList.remove("swiper-pagination-bullet-active");
+                  img.src = "../assets/images/blog-list/pagination.svg";
+                }
+              });
             }, 10);
           },
         },
       });
 
-      // Tạo đúng 3 chấm pagination
+      // Tạo đúng 3 chấm pagination thủ công
       setTimeout(() => {
         const pag = document.querySelector(".custom-swiper-pagination");
         if (pag) {
