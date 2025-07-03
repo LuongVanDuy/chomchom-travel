@@ -13,227 +13,1154 @@
     <link href="../dist/output.css" rel="stylesheet" />
   </head>
   <body class="font-sans">
-    <!-- Header -->
-    <header class="text-white fixed top-0 z-50 w-full">
-      <div
-        class="container mx-auto flex items-center justify-between py-2 px-6 w-[80%] bg-no-repeat"
-        style="
-          background-image: url('../assets/images/background-header-2.png');
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-        "
-      >
-        <a href="/" class="flex items-center space-x-2">
-          <img src="../assets/images/logo.png" alt="Logo" class="h-14 w-auto" />
+    <header class="mobile-header-fixed w-full z-[9999] md:hidden">
+      <div class="flex items-center justify-between bg-[#15525A] px-8 py-2">
+        <a href="/" class="flex items-center">
+          <img
+            src="../assets/images/home/logo.svg"
+            alt="Chôm Chôm Travel Logo"
+            class="h-[44px] w-[58px]"
+          />
         </a>
 
-        <nav class="hidden md:flex items-center space-x-16">
-          <a
-            href="about-us.html"
-            class="text-xl hover:text-accent transition-colors duration-200 font-medium"
-            >About us</a
-          >
-          <a
-            href="experiences.html"
-            class="text-xl hover:text-accent transition-colors duration-200 font-medium"
-            >Travel</a
-          >
-          <a
-            href="sustainability.html"
-            class="text-xl hover:text-accent transition-colors duration-200 font-medium"
-            >Sustainability</a
-          >
-          <a
-            href="faqs.html"
-            class="text-xl hover:text-accent transition-colors duration-200 font-medium"
-            >FAQs</a
-          >
-          <a
-            href="blog-listing.html"
-            class="text-xl hover:text-accent transition-colors duration-200 font-medium"
-            >Blogs</a
-          >
-        </nav>
-
-        <div class="flex items-center space-x-4">
-          <a
-            href="inquire-now.html"
-            class="text-white font-bold px-5 py-2 rounded-lg ransition-colors duration-200 hidden md:inline-block"
-            style="
-              background-image: url('../assets/images/bg-btn-inquire.png');
-              background-repeat: no-repeat;
-            "
-          >
-            Inquire now
-          </a>
-
-          <!-- Mobile menu button -->
-          <button
-            class="md:hidden focus:outline-none focus:ring-2 focus:ring-accent rounded"
-          >
-            <svg
-              class="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
+        <button
+          id="openMenu"
+          type="button"
+          class="md:hidden focus:outline-none"
+        >
+          <img
+            src="../assets/images/home/menu.svg"
+            alt="Open menu"
+            class="h-[25px] w-[31px]"
+          />
+        </button>
       </div>
 
-      <!-- Mobile menu -->
       <div
-        class="md:hidden hidden bg-primary px-6 pb-4 border-t border-primary/20"
+        id="menuOverlay"
+        class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"
+      ></div>
+
+      <nav
+        id="sideMenu"
+        class="fixed top-0 right-0 h-full w-full max-w-full bg-[#15525A] z-50 transform translate-x-full transition-transform duration-300 flex flex-col"
       >
-        <nav class="flex flex-col space-y-3 pt-4">
-          <a
-            href="about-us.html"
-            class="hover:text-accent transition-colors duration-200 font-medium py-2"
-            >About us</a
+        <div class="flex items-center justify-between px-6 py-6">
+          <div class="flex-1 relative gap-5">
+            <img
+              src="../assets/images/home/vector1.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[82px] w-auto object-contain"
+            />
+
+            <a href="/">
+              <img
+                src="../assets/images/home/logo.svg"
+                alt="Chôm Chôm Travel Logo"
+                class="h-12 w-auto absolute top-[20px] left-[20px]"
+              />
+            </a>
+          </div>
+          <button
+            id="closeMenu"
+            type="button"
+            class="text-white text-3xl focus:outline-none"
           >
-          <a
-            href="experiences.html"
-            class="hover:text-accent transition-colors duration-200 font-medium py-2"
-            >Travel</a
-          >
-          <a
-            href="sustainability.html"
-            class="hover:text-accent transition-colors duration-200 font-medium py-2"
-            >Sustainability</a
-          >
-          <a
-            href="blog-listing.html"
-            class="hover:text-accent transition-colors duration-200 font-medium py-2"
-            >Blogs</a
-          >
-          <a
-            href="inquire-now.html"
-            class="bg-accent text-primary font-bold px-5 py-2 rounded-lg hover:bg-orange transition-colors duration-200 mt-2 text-center"
-            >Inquire now</a
-          >
+            <img
+              src="../assets/images/home/close.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[17px] w-[21px]"
+            />
+          </button>
+        </div>
+        <ul
+          class="flex-1 flex flex-col gap-2 px-6 py-4 text-white text-lg font-semibold"
+        >
+          <li>
+            <a
+              href="about-us.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >About us</a
+            >
+          </li>
+          <li>
+            <a
+              href="sustainability.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Sustainability</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Bespoke Trips</a
+            >
+          </li>
+          <li>
+            <a
+              href="mini-escapes.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Mini Escapes</a
+            >
+          </li>
+          <li>
+            <a
+              href="how-to-book.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >How to book</a
+            >
+          </li>
+          <li>
+            <a
+              href="faqs.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >FAQs</a
+            >
+          </li>
+          <li>
+            <a
+              href="blog-listing.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Blog
+            </a>
+          </li>
+          <li>
+            <div class="relative w-[105px] h-[26px] flex justify-start mb-4">
+              <a
+                href="inquire-now.html"
+                class="absolute inset-0 flex items-center justify-center text-[15px] md:text-[22px] font-semibold text-white select-text"
+                >Inquire now</a
+              >
+              <img
+                src="../assets/images/home/button.svg"
+                alt="button red"
+                class="object-contain w-full h-full"
+              />
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <script>
+        document.getElementById("openMenu").onclick = function () {
+          document
+            .getElementById("sideMenu")
+            .classList.remove("translate-x-full");
+          document.getElementById("menuOverlay").classList.remove("hidden");
+        };
+
+        document.getElementById("closeMenu").onclick = function () {
+          document.getElementById("sideMenu").classList.add("translate-x-full");
+          document.getElementById("menuOverlay").classList.add("hidden");
+        };
+        document.getElementById("menuOverlay").onclick = function () {
+          document.getElementById("sideMenu").classList.add("translate-x-full");
+          document.getElementById("menuOverlay").classList.add("hidden");
+        };
+        // Toggle submenu
+        document.getElementById("travelMenuBtn").onclick = function (e) {
+          e.preventDefault();
+          var sub = document.getElementById("travelSubMenu");
+          sub.classList.toggle("hidden");
+        };
+      </script>
+    </header>
+
+    <!-- header tablet,desktop  -->
+    <header
+      class="fixed top-0 left-0 w-full flex justify-center z-50 hidden md:block bg-transparent"
+    >
+      <div
+        class="relative w-4/5 mx-auto h-[84px] bg-[url('/assets/images/home/header.svg')] bg-no-repeat bg-center bg-cover"
+      >
+        <nav class="absolute inset-0 flex items-center justify-between px-10">
+          <a href="/" class="flex items-center">
+            <img
+              src="../assets/images/home/logo.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[84px] w-[98px]"
+            />
+          </a>
+          <!-- Menu bên phải -->
+          <ul class="flex gap-12 items-center whitespace-nowrap">
+            <li>
+              <a href="about-us.html" class="text-white font-bold">About us</a>
+            </li>
+            <li class="relative group dropdown-group">
+              <a href="#" class="text-white font-bold flex items-center gap-1">
+                Travel
+                <img
+                  src="/assets/images/home/down.svg"
+                  alt="down"
+                  class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                />
+              </a>
+              <div class="dropdown-bridge"></div>
+              <!-- Dropdown menu -->
+              <ul
+                class="bg-[#E96024] rounded-[8px] px-5 py-2 min-w-[175px] flex flex-col shadow-lg absolute left-0 top-full mt-1 z-50 hidden group-hover:flex group-focus-within:flex"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >Bespoke Trips</a
+                  >
+                </li>
+                <li>
+                  <div
+                    class="border-b-2 border-dashed border-[#FFE066] my-2"
+                  ></div>
+                </li>
+                <li>
+                  <a
+                    href="mini-escapes.html"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >Mini Escapes</a
+                  >
+                </li>
+                <li>
+                  <div
+                    class="border-b-2 border-dashed border-[#FFE066] my-2"
+                  ></div>
+                </li>
+                <li>
+                  <a
+                    href="how-to-book.html"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >How to book</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="sustainability.html" class="text-white font-bold"
+                >Sustainability</a
+              >
+            </li>
+            <li>
+              <a href="faqs.html" class="text-white font-bold">FAQs</a>
+            </li>
+            <li>
+              <a href="blog-listing.html" class="text-white font-bold">Blog</a>
+            </li>
+          </ul>
+
+          <div class="relative w-[105px] h-[26px] flex justify-start">
+            <a
+              href="inquire-now.html"
+              class="absolute inset-0 flex items-center justify-center text-[15px] font-semibold text-white select-text"
+              >Inquire now</a
+            >
+            <img
+              src="../assets/images/home/button.svg"
+              alt="button red"
+              class="object-contain w-full h-full"
+            />
+          </div>
         </nav>
       </div>
     </header>
 
     <!-- Hero Section Custom Inquire Now -->
     <section
-      class="relative min-h-screen flex flex-col justify-center items-center bg-[#0D4952] overflow-hidden"
+      class="relative flex flex-col xl:justify-center items-center bg-[#0D4952] overflow-hidden px-[5%] pt-10 pb-[150px] xl:py-[100px]"
     >
       <!-- Decorative bottom left -->
       <img
-        src="../assets/images/graphic-1.png"
+        src="../assets/images/inquire-now/icon-left.png"
         alt="left-illustration"
         class="hidden md:block absolute left-0 bottom-0 w-48 opacity-70 z-0"
       />
       <!-- Decorative bottom right -->
       <img
-        src="../assets/images/graphic-2.png"
+        src="../assets/images/inquire-now/icon-right.png"
         alt="right-illustration"
         class="hidden md:block absolute right-0 bottom-0 w-48 opacity-70 z-0"
       />
 
       <div class="relative z-10 flex flex-col items-center w-full">
-        <h1 class="text-4xl md:text-5xl font-bold text-center mt-12">
+        <h1
+          id="inquireTitle"
+          class="text-4xl md:text-5xl font-bold text-center mt-12"
+        >
           <span class="text-[#FFCE00]">Your Journey</span>
           <span class="text-[#7FD1C8]"> Starts Here!</span>
         </h1>
-        <p class="mt-6 text-lg md:text-xl text-white text-center max-w-2xl">
+        <p
+          id="inquireDesc"
+          class="mt-6 text-lg md:text-xl text-white text-center max-w-2xl"
+        >
           Please
           <span class="text-[#FFCE00] font-semibold"
             >choose the type of trip</span
           >
-          you're interested in and help us craft a personalized<br
-            class="hidden md:block"
-          />
-          adventure just for you.
+          you're interested in and help us craft a personalized adventure just
+          for you.
         </p>
 
-        <div class="relative flex flex-col items-center mt-16 gap-8 w-full">
+        <div class="flex flex-col items-center mt-20 gap-8 w-full">
           <!-- Arrow -->
-          <svg
-            class="absolute -top-16 right-1/4 w-32 h-24 hidden md:block"
-            fill="none"
-            viewBox="0 0 140 80"
-          >
-            <path
-              d="M10 70 Q70 10 130 40"
-              stroke="#FFCE00"
-              stroke-width="4"
-              fill="none"
-            />
-            <path
-              d="M130 40 l-10 -5 l5 10"
-              stroke="#FFCE00"
-              stroke-width="4"
-              fill="none"
-            />
-          </svg>
 
-          <div class="flex flex-col md:flex-row gap-8 items-center">
+          <div class="flex relative flex-col gap-8 w-full xl:w-[690px]">
             <!-- Day Tours Button -->
             <a
               href="#"
-              class="transform -rotate-6 border-4 border-dashed border-[#7FD1C8] bg-[#2CA6A4] text-white px-10 py-8 rounded-2xl shadow-lg flex items-center gap-4 text-2xl font-semibold hover:scale-105 transition-all duration-200 min-w-[320px]"
+              id="dayToursBtn"
+              class="mr-auto transform -rotate-6 border-2 border-dashed border-white bg-[#2CA6A4] text-white px-10 py-4 rounded-2xl shadow-lg flex items-center gap-4 text-2xl font-semibold hover:scale-105 transition-all duration-200 w-full xl:w-3/5"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-10 h-10 text-[#FFCE00] flex-shrink-0"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <rect
-                  x="4"
-                  y="5"
-                  width="16"
-                  height="15"
-                  rx="3"
-                  stroke-width="2"
+              <div class="p-5 bg-dark_primary rounded-[10px]">
+                <img
+                  src="../assets/images/inquire-now/icon-day-tour.svg"
+                  alt="day tour"
+                  class="w-10 h-10 m-auto"
                 />
-                <path d="M8 3v4M16 3v4M4 10h16" stroke-width="2" />
-              </svg>
+              </div>
               <span>Day Tours /<br />Weekend Getaways</span>
             </a>
             <!-- Build Your Own Trip Button -->
             <a
               href="#"
-              class="transform rotate-6 border-4 border-dashed border-[#F8C625] bg-[#E96024] text-white px-10 py-8 rounded-2xl shadow-lg flex items-center gap-4 text-2xl font-semibold hover:scale-105 transition-all duration-200 min-w-[320px]"
+              id="buildTripBtn"
+              class="ml-auto xl:translate-y-[-25%] transform rotate-6 border-2 border-dashed border-white bg-[#E96024] text-white px-10 py-4 rounded-2xl shadow-lg flex items-center gap-4 text-2xl font-semibold hover:scale-105 transition-all duration-200 w-full xl:w-3/5"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-10 h-10 text-[#FFCE00] flex-shrink-0"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <rect
-                  x="6"
-                  y="4"
-                  width="12"
-                  height="16"
-                  rx="2"
-                  stroke-width="2"
+              <div class="p-5 bg-[#E7BD11] rounded-[10px]">
+                <img
+                  src="../assets/images/inquire-now/icon-build.svg"
+                  alt="day tour"
+                  class="w-10 h-10 m-auto"
                 />
-                <path d="M9 8h6M9 12h6M9 16h2" stroke-width="2" />
-              </svg>
+              </div>
               <span>Build Your Own Trip</span>
             </a>
+
+            <img
+              src="../assets/images/inquire-now/vector.png"
+              alt="arrow"
+              class="absolute top-[-20%] right-[30%] w-[60px] hidden md:block"
+            />
+          </div>
+        </div>
+
+        <!-- Multi-step Build Your Own Trip Form (ẩn mặc định) -->
+        <div
+          id="buildTripFormWrapper"
+          class="hidden flex flex-col items-center w-full mt-10"
+        >
+          <!-- Title & Description -->
+          <div id="buildTripHeader" class="flex flex-col items-center mb-8">
+            <h1
+              class="text-4xl md:text-5xl font-bold text-center"
+              style="font-family: 'Montserrat', sans-serif"
+            >
+              <span class="text-[#41BFBF]">Build Your </span
+              ><span class="text-[#FFCE00]">Own Trip</span>
+            </h1>
+            <p
+              class="mt-4 text-[#41BFBF] text-lg md:text-xl text-center max-w-2xl font-medium"
+            >
+              We're here to help you design a personalized journey that brings
+              your travel dreams to life. Answer a few quick questions, and
+              Dorothee will reach out with a tailored itinerary and
+              consultation.
+            </p>
+          </div>
+          <form
+            id="buildTripForm"
+            class="w-full max-w-2xl flex flex-col gap-10 items-center"
+          >
+            <!-- Progress Bar -->
+            <div class="w-full flex flex-col gap-2">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-[#FFCE00] font-bold text-lg" id="stepTitle"
+                  >Travel Basics</span
+                >
+                <span class="text-white text-base" id="stepSubtitle"
+                  >Let's Get to Know Your Trip</span
+                >
+              </div>
+              <div class="flex items-center w-full gap-2">
+                <div
+                  class="flex-1 h-2 rounded-full bg-[#FFCE00]"
+                  id="bar1"
+                ></div>
+                <div
+                  class="flex-1 h-2 rounded-full bg-white/30"
+                  id="bar2"
+                ></div>
+                <div
+                  class="flex-1 h-2 rounded-full bg-white/30"
+                  id="bar3"
+                ></div>
+                <div
+                  class="flex-1 h-2 rounded-full bg-white/30"
+                  id="bar4"
+                ></div>
+                <div
+                  class="flex-1 h-2 rounded-full bg-white/30"
+                  id="bar5"
+                ></div>
+              </div>
+              <div
+                class="flex justify-between text-[#FFCE00] font-bold mt-1 text-sm"
+              >
+                <span>01</span><span>02</span><span>03</span><span>04</span
+                ><span>05</span>
+              </div>
+            </div>
+            <!-- Step 1 -->
+            <div class="step-content w-full" id="step1">
+              <div class="flex flex-col gap-5">
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >What type of trip are you looking for?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >How many adults will be travelling?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Any places or experiences you're eyeing?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="4"
+                          y="4"
+                          width="16"
+                          height="16"
+                          rx="4"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Any places or experiences you're eyeing?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="4"
+                          y="4"
+                          width="16"
+                          height="16"
+                          rx="4"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-between mt-8">
+                <button
+                  type="button"
+                  class="prev-step bg-[#15525A] text-white font-bold py-2 px-8 rounded-full"
+                >
+                  Back
+                </button>
+                <button
+                  type="button"
+                  class="next-step bg-[#E96024] text-white font-bold py-2 px-8 rounded-full ml-4"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="step-content w-full hidden" id="step2">
+              <div class="flex flex-col gap-8">
+                <div class="text-[#FFCE00] text-2xl font-bold text-center mb-2">
+                  Travel Preferences
+                </div>
+                <div class="text-white text-center mb-4">
+                  Your Ideal Experience
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >What's your preferred travel style?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >What type of accommodation do you prefer?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="4"
+                          y="4"
+                          width="16"
+                          height="16"
+                          rx="4"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex justify-between mt-8">
+                  <button
+                    type="button"
+                    class="prev-step bg-[#15525A] text-white font-bold py-2 px-8 rounded-full"
+                  >
+                    Back
+                  </button>
+                  <button
+                    type="button"
+                    class="next-step bg-[#E96024] text-white font-bold py-2 px-8 rounded-full ml-4"
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="step-content w-full hidden" id="step3">
+              <div class="flex flex-col gap-8">
+                <div class="text-[#FFCE00] text-2xl font-bold text-center mb-2">
+                  Timing & Duration
+                </div>
+                <div class="text-white text-center mb-4">
+                  When Are You Planning to Travel?
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >What's your preferred travel date?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >How long do you plan to travel?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="4"
+                          y="4"
+                          width="16"
+                          height="16"
+                          rx="4"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex justify-between mt-8">
+                  <button
+                    type="button"
+                    class="prev-step bg-[#15525A] text-white font-bold py-2 px-8 rounded-full"
+                  >
+                    Back
+                  </button>
+                  <button
+                    type="button"
+                    class="next-step bg-[#E96024] text-white font-bold py-2 px-8 rounded-full ml-4"
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="step-content w-full hidden" id="step4">
+              <div class="flex flex-col gap-8">
+                <div class="text-[#FFCE00] text-2xl font-bold text-center mb-2">
+                  Interests & Customization
+                </div>
+                <div class="text-white text-center mb-4">
+                  Tell Us More About Your Ideal Experience
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Do you have any special requests or must-haves?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Do you have a total budget in mind?</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                    />
+                    <span
+                      class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="4"
+                          y="4"
+                          width="16"
+                          height="16"
+                          rx="4"
+                          stroke="#15525A"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="flex justify-between mt-8">
+                  <button
+                    type="button"
+                    class="prev-step bg-[#15525A] text-white font-bold py-2 px-8 rounded-full"
+                  >
+                    Back
+                  </button>
+                  <button
+                    type="button"
+                    class="next-step bg-[#E96024] text-white font-bold py-2 px-8 rounded-full ml-4"
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Step 5 -->
+            <div class="step-content w-full hidden" id="step5">
+              <div class="flex flex-col gap-8">
+                <div class="text-[#FFCE00] text-2xl font-bold text-center mb-2">
+                  You're almost there!
+                </div>
+                <div class="text-white text-center mb-4">
+                  We just need a few more details so your personal travel
+                  consultant can finalize your request.
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Your Name *</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Your Nationality</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Your Email *</label
+                  >
+                  <input
+                    type="email"
+                    class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Your Phone Number *</label
+                  >
+                  <input
+                    type="tel"
+                    class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Preferred Language *</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-white text-base font-semibold mb-1"
+                    >Your message</label
+                  >
+                  <textarea
+                    class="w-full p-4 rounded-2xl bg-[#41BFBF] text-white text-base font-semibold min-h-[100px] outline-none resize-none"
+                  ></textarea>
+                </div>
+                <div class="flex justify-between mt-8">
+                  <button
+                    type="button"
+                    class="prev-step bg-[#15525A] text-white font-bold py-2 px-8 rounded-full"
+                  >
+                    Back
+                  </button>
+                  <button
+                    type="submit"
+                    class="bg-[#E96024] text-white font-bold py-2 px-8 rounded-full ml-4"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- FORM ĐĂNG KÝ (ẩn mặc định) -->
+        <div
+          id="dayTourFormWrapper"
+          class="hidden flex flex-col items-center w-full mt-10"
+        >
+          <form
+            id="dayTourForm"
+            class="w-full max-w-xl flex flex-col gap-5 items-center"
+          >
+            <div class="w-full flex flex-col gap-2">
+              <label class="text-white text-base font-semibold mb-1" for="name"
+                >Your Name <span class="text-[#FFCE00]">*</span></label
+              >
+              <div class="relative">
+                <input
+                  id="name"
+                  required
+                  type="text"
+                  placeholder=""
+                  class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                  style="font-family: 'Montserrat', sans-serif"
+                />
+                <span
+                  class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                >
+                  <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                    <path
+                      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                      fill="#15525A"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="w-full flex flex-col gap-2">
+              <label
+                class="text-white text-base font-semibold mb-1"
+                for="nationality"
+                >Your Nationality</label
+              >
+              <div class="relative">
+                <input
+                  id="nationality"
+                  type="text"
+                  placeholder=""
+                  class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                  style="font-family: 'Montserrat', sans-serif"
+                />
+                <span
+                  class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                >
+                  <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="#15525A"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="w-full flex flex-col gap-2">
+              <label class="text-white text-base font-semibold mb-1" for="email"
+                >Your Email <span class="text-[#FFCE00]">*</span></label
+              >
+              <div class="relative">
+                <input
+                  id="email"
+                  required
+                  type="email"
+                  placeholder=""
+                  class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                  style="font-family: 'Montserrat', sans-serif"
+                />
+                <span
+                  class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                >
+                  <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                    <rect
+                      x="3"
+                      y="5"
+                      width="18"
+                      height="14"
+                      rx="2"
+                      stroke="#15525A"
+                      stroke-width="2"
+                    />
+                    <path d="M3 7l9 6 9-6" stroke="#15525A" stroke-width="2" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="w-full flex flex-col gap-2">
+              <label class="text-white text-base font-semibold mb-1" for="phone"
+                >Your Phone Number <span class="text-[#FFCE00]">*</span></label
+              >
+              <div class="relative">
+                <input
+                  id="phone"
+                  required
+                  type="tel"
+                  placeholder=""
+                  class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none"
+                  style="font-family: 'Montserrat', sans-serif"
+                />
+                <span
+                  class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                >
+                  <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3.09 5.18 2 2 0 0 1 5.11 3h3a2 2 0 0 1 2 1.72c.13 1.05.37 2.07.72 3.06a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.29 6.29l1.27-1.27a2 2 0 0 1 2.11-.45c.99.35 2.01.59 3.06.72A2 2 0 0 1 22 16.92z"
+                      stroke="#15525A"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="w-full flex flex-col gap-2">
+              <label class="text-white text-base font-semibold mb-1" for="date"
+                >Preferred Travel Date
+                <span class="text-[#FFCE00]">*</span></label
+              >
+              <div class="relative">
+                <input
+                  id="date"
+                  required
+                  type="text"
+                  placeholder=""
+                  class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none cursor-pointer"
+                  style="font-family: 'Montserrat', sans-serif"
+                  readonly
+                />
+                <span
+                  class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                >
+                  <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                    <path d="M6 9l6 6 6-6" stroke="#15525A" stroke-width="2" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="w-full flex flex-col gap-2">
+              <label
+                class="text-white text-base font-semibold mb-1"
+                for="adults"
+                >Number of Adults <span class="text-[#FFCE00]">*</span></label
+              >
+              <div class="relative flex items-center">
+                <button
+                  type="button"
+                  class="w-8 h-8 rounded-full bg-[#15525A] text-white text-lg flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2"
+                >
+                  −
+                </button>
+                <input
+                  id="adults"
+                  required
+                  type="number"
+                  min="1"
+                  value="1"
+                  class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold text-center px-12 outline-none"
+                  style="font-family: 'Montserrat', sans-serif"
+                />
+                <button
+                  type="button"
+                  class="w-8 h-8 rounded-full bg-[#15525A] text-white text-lg flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+            <div class="w-full flex flex-col gap-2">
+              <label
+                class="text-white text-base font-semibold mb-1"
+                for="language"
+                >Preferred Language <span class="text-[#FFCE00]">*</span></label
+              >
+              <div class="relative">
+                <input
+                  id="language"
+                  required
+                  type="text"
+                  placeholder=""
+                  class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none cursor-pointer"
+                  style="font-family: 'Montserrat', sans-serif"
+                  readonly
+                />
+                <span
+                  class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+                >
+                  <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                    <path d="M6 9l6 6 6-6" stroke="#15525A" stroke-width="2" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="w-full flex flex-col gap-2">
+              <label
+                class="text-white text-base font-semibold mb-1"
+                for="experience"
+                >What experience do you want to book?</label
+              >
+              <div class="relative">
+                <textarea
+                  id="experience"
+                  class="w-full p-4 rounded-2xl bg-[#41BFBF] text-white text-base font-semibold min-h-[120px] outline-none resize-none"
+                  style="font-family: 'Montserrat', sans-serif"
+                ></textarea>
+                <span class="absolute right-4 top-4 text-xl text-[#15525A]">
+                  <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                    <rect
+                      x="4"
+                      y="4"
+                      width="16"
+                      height="16"
+                      rx="4"
+                      stroke="#15525A"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="relative w-[215px] h-[55px] flex justify-start"
+            >
+              <p
+                class="absolute inset-0 flex items-center justify-center text-[28px] font-semibold text-white select-text"
+              >
+                Inquire now
+              </p>
+              <img
+                src="../assets/images/home/button.svg"
+                alt="button red"
+                class="object-contain w-full h-full"
+              />
+            </button>
+          </form>
+        </div>
+
+        <!-- THANK YOU (ẩn mặc định) -->
+        <div
+          id="thankYouWrapper"
+          class="hidden flex flex-col items-center min-h-[680px] w-[1020px] mx-auto mt-10 bg-[url('../assets/images/inquire-now/bg-thank-you.png')] bg-cover bg-center"
+        >
+          <div
+            class="flex flex-col items-center justify-center min-h-[400px] m-auto"
+          >
+            <div
+              class="text-[142px] text-center font-bold text-[#FFCE00] leading-[130px]"
+            >
+              Thank
+              <p class="text-[#41BFBF]">you!</p>
+            </div>
+            <div class="text-[#FFCE00] text-xl mb-4">for reaching out!</div>
+            <div class="text-white text-center mb-8 max-w-lg">
+              Our team will contact you shortly to give you the most suitable
+              options for your upcoming getaway.
+            </div>
+            <a
+              href="/"
+              class="bg-[#E96024] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#d94e1f] transition"
+              >Return to homepage</a
+            >
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="relative bg-[#FAF6EC] text-[#01363D] text-sm">
+    <!-- footer --->
+    <footer class="">
+      <div class="relative bg-[#FAF6EC] text-[#01363D] text-sm py-10">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
           <img
@@ -245,10 +1172,12 @@
 
         <!-- Content -->
         <div
-          class="relative z-10 container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10"
+          class="relative z-10 max-w-7xl mx-auto py-12 grid grid-cols-1 md:grid-cols-4 gap-10 px-6"
         >
           <!-- Logo & Intro -->
-          <div class="space-y-4">
+          <div
+            class="space-y-4 flex flex-col items-center md:items-start text-center md:text-start"
+          >
             <img
               src="../assets/images/logo-footer.png"
               alt="Chôm Chôm Travel"
@@ -267,9 +1196,17 @@
             </p>
           </div>
 
+          <div
+            class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"
+          ></div>
+
           <!-- About Us -->
-          <div>
-            <h4 class="text-lg font-bold text-orange_dark mb-6">About Us</h4>
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-start"
+          >
+            <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">
+              About Us
+            </h4>
             <ul class="space-y-2 text-dark_primary text-base">
               <li><a href="#" class="hover:underline">About Us</a></li>
               <li><a href="#" class="hover:underline">Sustainability</a></li>
@@ -277,9 +1214,15 @@
             </ul>
           </div>
 
+          <div
+            class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"
+          ></div>
+
           <!-- Travel with us -->
-          <div>
-            <h4 class="text-lg font-bold text-orange_dark mb-6">
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-start"
+          >
+            <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">
               Travel with us
             </h4>
             <ul class="space-y-2 text-dark_primary text-base">
@@ -293,9 +1236,15 @@
             </ul>
           </div>
 
+          <div
+            class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"
+          ></div>
+
           <!-- Get in touch -->
-          <div class="text-dark_primary text-base space-y-2">
-            <h4 class="text-lg font-bold text-orange_dark mb-6">
+          <div
+            class="text-dark_primary text-base space-y-2 flex flex-col items-center md:items-start text-center md:text-start"
+          >
+            <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">
               Get in touch
             </h4>
             <a href="#" class="underline text-[#01363D] hover:text-[#F15A29]"
@@ -317,9 +1266,10 @@
           </div>
         </div>
       </div>
+
       <div class="bg-dark_primary">
         <div
-          class="container mx-auto text-white text-center py-4 text-sm flex flex-col md:flex-row justify-between items-center px-6"
+          class="max-w-7xl mx-auto text-white text-center py-4 text-sm flex flex-col md:flex-row justify-between items-center px-6"
         >
           <p>&copy; 2025 Chôm Chôm Travel. All right reserved.</p>
           <div class="flex gap-4 pt-2 md:pt-0">
@@ -331,5 +1281,83 @@
     </footer>
 
     <script src="../assets/js/main.js"></script>
+    <script>
+      // Ẩn/hiện form khi click Day Tours
+      document.getElementById("dayToursBtn").onclick = function (e) {
+        e.preventDefault();
+        document
+          .querySelector(".flex.flex-col.items-center.mt-20.gap-8.w-full")
+          .classList.add("hidden");
+        document
+          .getElementById("dayTourFormWrapper")
+          .classList.remove("hidden");
+        document.getElementById("buildTripFormWrapper").classList.add("hidden");
+        document.getElementById("thankYouWrapper").classList.add("hidden");
+        document.getElementById("inquireTitle").style.display = "";
+        document.getElementById("inquireDesc").style.display = "";
+        document.getElementById("buildTripHeader").style.display = "none";
+        document.getElementById(
+          "inquireTitle"
+        ).innerHTML = `<p class="text-white"">Let's Plan Your<br><span class='text-[#FFCE00]'>Mini Escape</span></p>`;
+        document.getElementById(
+          "inquireDesc"
+        ).innerHTML = `⏳ We prefer at least 3 days' notice to create something amazing for day tours. We know, spontaneity is fun — but so is sleeping in a hammock we booked for you in advance! We'll do our best to meet your timing requests`;
+      };
+      // Khi submit form, hiện màn hình cảm ơn
+      document.getElementById("dayTourForm").onsubmit = function (e) {
+        e.preventDefault();
+        document.getElementById("dayTourFormWrapper").classList.add("hidden");
+        document.getElementById("thankYouWrapper").classList.remove("hidden");
+      };
+    </script>
+    <script>
+      // Ẩn/hiện form khi click Build Your Own Trip
+      document.getElementById("buildTripBtn").onclick = function (e) {
+        e.preventDefault();
+        document
+          .querySelector(".flex.flex-col.items-center.mt-20.gap-8.w-full")
+          .classList.add("hidden");
+        document
+          .getElementById("buildTripFormWrapper")
+          .classList.remove("hidden");
+        document.getElementById("dayTourFormWrapper").classList.add("hidden");
+        document.getElementById("thankYouWrapper").classList.add("hidden");
+        document.getElementById("buildTripHeader").style.display = "";
+        document.getElementById("inquireTitle").style.display = "none";
+        document.getElementById("inquireDesc").style.display = "none";
+        // Hiện bước đầu tiên
+        showStep(1);
+      };
+      // Multi-step logic
+      let currentStep = 1;
+      function showStep(step) {
+        currentStep = step;
+        for (let i = 1; i <= 5; i++) {
+          document.getElementById("step" + i).classList.add("hidden");
+          document.getElementById("bar" + i).classList.remove("bg-[#FFCE00]");
+          document.getElementById("bar" + i).classList.add("bg-white/30");
+        }
+        document.getElementById("step" + step).classList.remove("hidden");
+        for (let i = 1; i <= step; i++) {
+          document.getElementById("bar" + i).classList.add("bg-[#FFCE00]");
+          document.getElementById("bar" + i).classList.remove("bg-white/30");
+        }
+      }
+      // Next/Back buttons
+      document.addEventListener("click", function (e) {
+        if (e.target.closest("#buildTripForm .next-step")) {
+          if (currentStep < 5) showStep(currentStep + 1);
+        }
+        if (e.target.closest("#buildTripForm .prev-step")) {
+          if (currentStep > 1) showStep(currentStep - 1);
+        }
+      });
+      // Submit
+      document.getElementById("buildTripForm").onsubmit = function (e) {
+        e.preventDefault();
+        document.getElementById("buildTripFormWrapper").classList.add("hidden");
+        document.getElementById("thankYouWrapper").classList.remove("hidden");
+      };
+    </script>
   </body>
 </html>

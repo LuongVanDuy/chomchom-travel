@@ -15,6 +15,255 @@
     <link href="../dist/output.css" rel="stylesheet" />
   </head>
   <body class="bg-body">
+    <header class="mobile-header-fixed w-full z-[9999] md:hidden">
+      <div class="flex items-center justify-between bg-[#15525A] px-8 py-2">
+        <a href="/" class="flex items-center">
+          <img
+            src="../assets/images/home/logo.svg"
+            alt="Chôm Chôm Travel Logo"
+            class="h-[44px] w-[58px]"
+          />
+        </a>
+
+        <button
+          id="openMenu"
+          type="button"
+          class="md:hidden focus:outline-none"
+        >
+          <img
+            src="../assets/images/home/menu.svg"
+            alt="Open menu"
+            class="h-[25px] w-[31px]"
+          />
+        </button>
+      </div>
+
+      <div
+        id="menuOverlay"
+        class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"
+      ></div>
+
+      <nav
+        id="sideMenu"
+        class="fixed top-0 right-0 h-full w-full max-w-full bg-[#15525A] z-50 transform translate-x-full transition-transform duration-300 flex flex-col"
+      >
+        <div class="flex items-center justify-between px-6 py-6">
+          <div class="flex-1 relative gap-5">
+            <img
+              src="../assets/images/home/vector1.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[82px] w-auto object-contain"
+            />
+
+            <a href="/">
+              <img
+                src="../assets/images/home/logo.svg"
+                alt="Chôm Chôm Travel Logo"
+                class="h-12 w-auto absolute top-[20px] left-[20px]"
+              />
+            </a>
+          </div>
+          <button
+            id="closeMenu"
+            type="button"
+            class="text-white text-3xl focus:outline-none"
+          >
+            <img
+              src="../assets/images/home/close.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[17px] w-[21px]"
+            />
+          </button>
+        </div>
+        <ul
+          class="flex-1 flex flex-col gap-2 px-6 py-4 text-white text-lg font-semibold"
+        >
+          <li>
+            <a
+              href="about-us.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >About us</a
+            >
+          </li>
+          <li>
+            <a
+              href="sustainability.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Sustainability</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Bespoke Trips</a
+            >
+          </li>
+          <li>
+            <a
+              href="mini-escapes.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Mini Escapes</a
+            >
+          </li>
+          <li>
+            <a
+              href="how-to-book.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >How to book</a
+            >
+          </li>
+          <li>
+            <a
+              href="faqs.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >FAQs</a
+            >
+          </li>
+          <li>
+            <a
+              href="blog-listing.html"
+              class="block text-[#fff] text-[15px] md:text-[16px] font-bold pb-3 border-b-2 border-dashed border-[#E7BD11] mb-2"
+              >Blog
+            </a>
+          </li>
+          <li>
+            <div class="relative w-[105px] h-[26px] flex justify-start mb-4">
+              <a
+                href="inquire-now.html"
+                class="absolute inset-0 flex items-center justify-center text-[15px] md:text-[22px] font-semibold text-white select-text"
+                >Inquire now</a
+              >
+              <img
+                src="../assets/images/home/button.svg"
+                alt="button red"
+                class="object-contain w-full h-full"
+              />
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <script>
+        document.getElementById("openMenu").onclick = function () {
+          document
+            .getElementById("sideMenu")
+            .classList.remove("translate-x-full");
+          document.getElementById("menuOverlay").classList.remove("hidden");
+        };
+
+        document.getElementById("closeMenu").onclick = function () {
+          document.getElementById("sideMenu").classList.add("translate-x-full");
+          document.getElementById("menuOverlay").classList.add("hidden");
+        };
+        document.getElementById("menuOverlay").onclick = function () {
+          document.getElementById("sideMenu").classList.add("translate-x-full");
+          document.getElementById("menuOverlay").classList.add("hidden");
+        };
+        // Toggle submenu
+        document.getElementById("travelMenuBtn").onclick = function (e) {
+          e.preventDefault();
+          var sub = document.getElementById("travelSubMenu");
+          sub.classList.toggle("hidden");
+        };
+      </script>
+    </header>
+
+    <!-- header tablet,desktop  -->
+    <header
+      class="fixed top-0 left-0 w-full flex justify-center z-50 hidden md:block bg-transparent"
+    >
+      <div
+        class="relative w-4/5 mx-auto h-[84px] bg-[url('../assets/images/background-header.png')] bg-no-repeat bg-center bg-cover"
+      >
+        <nav class="absolute inset-0 flex items-center justify-between px-10">
+          <a href="/" class="flex items-center">
+            <img
+              src="../assets/images/home/logo.svg"
+              alt="Chôm Chôm Travel Logo"
+              class="h-[84px] w-[98px]"
+            />
+          </a>
+          <!-- Menu bên phải -->
+          <ul class="flex gap-12 items-center whitespace-nowrap">
+            <li>
+              <a href="about-us.html" class="text-white font-bold">About us</a>
+            </li>
+            <li class="relative group dropdown-group">
+              <a href="#" class="text-white font-bold flex items-center gap-1">
+                Travel
+                <img
+                  src="/assets/images/home/down.svg"
+                  alt="down"
+                  class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                />
+              </a>
+              <div class="dropdown-bridge"></div>
+              <!-- Dropdown menu -->
+              <ul
+                class="bg-[#E96024] rounded-[8px] px-5 py-2 min-w-[175px] flex flex-col shadow-lg absolute left-0 top-full mt-1 z-50 hidden group-hover:flex group-focus-within:flex"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >Bespoke Trips</a
+                  >
+                </li>
+                <li>
+                  <div
+                    class="border-b-2 border-dashed border-[#FFE066] my-2"
+                  ></div>
+                </li>
+                <li>
+                  <a
+                    href="mini-escapes.html"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >Mini Escapes</a
+                  >
+                </li>
+                <li>
+                  <div
+                    class="border-b-2 border-dashed border-[#FFE066] my-2"
+                  ></div>
+                </li>
+                <li>
+                  <a
+                    href="how-to-book.html"
+                    class="text-white text-[16px] font-normal py-2 block"
+                    >How to book</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="sustainability.html" class="text-white font-bold"
+                >Sustainability</a
+              >
+            </li>
+            <li>
+              <a href="faqs.html" class="text-white font-bold">FAQs</a>
+            </li>
+            <li>
+              <a href="blog-listing.html" class="text-white font-bold">Blog</a>
+            </li>
+          </ul>
+
+          <div class="relative w-[105px] h-[26px] flex justify-start">
+            <a
+              href="inquire-now.html"
+              class="absolute inset-0 flex items-center justify-center text-[15px] font-semibold text-white select-text"
+              >Inquire now</a
+            >
+            <img
+              src="../assets/images/home/button.svg"
+              alt="button red"
+              class="object-contain w-full h-full"
+            />
+          </div>
+        </nav>
+      </div>
+    </header>
+
     <!-- Hero Section -->
     <section class="relative">
       <div class="hidden md:block bg-[#104751]">
@@ -40,7 +289,7 @@
       <img
         src="../assets/images/how-to-book-line.svg"
         alt="Vietnam landscape"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover hidden md:block"
       />
       <div class="block md:hidden bg-[#104751] min-h-[583px] relative">
         <div>
@@ -141,16 +390,16 @@
     <section class="py-16 bg-body">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+          <h2 class="text-[28px] xl:text-[48px] font-bold text-gray-800 mb-4">
             What Guides <span class="text-orange_dark">Our Planning</span>
           </h2>
           <p
-            class="text-[14px] md:text-[18px] text-[#104751] max-w-2xl mx-auto"
+            class="text-[14px] md:text-[18px] text-[#104751] max-w-2xl mx-auto font-semibold"
           >
             Our planning is guided by four core values, shared by everyone
             <br />
             we work with -
-            <span class="text-primary"
+            <span class="text-[#318D95]"
               >our team, our travelers and our partners</span
             >
           </p>
@@ -209,8 +458,279 @@
       </div>
     </section>
 
+    <section
+      class="min-h-[350px] bg-[#104751] relative py-[40px] md:pt-[100px] md:px-[10%] px-[10px]"
+    >
+      <div class="flex flex-col gap-5">
+        <div class="flex flex-col md:flex-row gap-8 order-2 md:order-1">
+          <p class="text-[#fff] text-center md:text-start px-[20px]">
+            We believe in adventure because it transcends scale, from grand
+            treks to simple discoveries. It fuels the soul with the thrill of
+            the unknown, unlocking courage and curiosity.
+          </p>
+
+          <div class="relative">
+            <img
+              src="../assets/images/faqs/button-red.svg"
+              alt="button red"
+              class="md:w-[281px] md:h-[56px] min-w-[224px] h-[42px] mx-auto object-contain"
+            />
+            <span
+              class="absolute inset-0 flex items-center justify-center md:text-[18px] text-[12px] text-white select-text"
+              >Build your own trip</span
+            >
+          </div>
+        </div>
+
+        <div class="swiper own-swiper w-full h-full order-1 md:order-2">
+          <div class="swiper-wrapper flex items-center">
+            <div class="swiper-slide flex items-center justify-center">
+              <img
+                src="../assets/images/faqs/out1.svg"
+                alt="out1"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto"
+              />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img
+                src="../assets/images/faqs/out2.svg"
+                alt="out2"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto"
+              />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img
+                src="../assets/images/faqs/out3.svg"
+                alt="out3"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto"
+              />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img
+                src="../assets/images/faqs/out4.svg"
+                alt="out4"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto"
+              />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img
+                src="../assets/images/faqs/out5.svg"
+                alt="out5"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto"
+              />
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <img
+                src="../assets/images/faqs/out6.svg"
+                alt="out6"
+                class="w-[80px] h-[95px] md:w-[160px] md:h-[130px] object-contain mx-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer --->
+    <footer class="">
+      <div class="relative bg-[#FAF6EC] text-[#01363D] text-sm py-10">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+          <img
+            src="../assets/images/bg-footer.png"
+            alt="Vietnam landscape"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Content -->
+        <div
+          class="relative z-10 max-w-7xl mx-auto py-12 grid grid-cols-1 md:grid-cols-4 gap-10 px-6"
+        >
+          <!-- Logo & Intro -->
+          <div
+            class="space-y-4 flex flex-col items-center md:items-start text-center md:text-start"
+          >
+            <img
+              src="../assets/images/logo-footer.png"
+              alt="Chôm Chôm Travel"
+              class="h-24 w-auto"
+            />
+            <h4 class="text-xl font-bold text-orange_dark">Chom Chom Travel</h4>
+            <p class="leading-relaxed text-dark_primary">
+              Chôm Chôm Travel is a boutique adventure travel agency
+              specializing in curating the best experiences in Vietnam.
+            </p>
+            <p class="text-dark_primary">
+              Tax code: <span class="font-medium">0316767612</span>
+            </p>
+            <p class="text-dark_primary">
+              Registered Date: <span class="font-medium">2021-03-25</span>
+            </p>
+          </div>
+
+          <div
+            class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"
+          ></div>
+
+          <!-- About Us -->
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-start"
+          >
+            <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">
+              About Us
+            </h4>
+            <ul class="space-y-2 text-dark_primary text-base">
+              <li><a href="#" class="hover:underline">About Us</a></li>
+              <li><a href="#" class="hover:underline">Sustainability</a></li>
+              <li><a href="#" class="hover:underline">How to book</a></li>
+            </ul>
+          </div>
+
+          <div
+            class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"
+          ></div>
+
+          <!-- Travel with us -->
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-start"
+          >
+            <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">
+              Travel with us
+            </h4>
+            <ul class="space-y-2 text-dark_primary text-base">
+              <li><a href="#" class="hover:underline">Explore Vietnam</a></li>
+              <li>
+                <a href="#" class="hover:underline">Bespoke Experiences</a>
+              </li>
+              <li><a href="#" class="hover:underline">Mini Escapes</a></li>
+              <li><a href="#" class="hover:underline">FAQs</a></li>
+              <li><a href="#" class="hover:underline">Blog</a></li>
+            </ul>
+          </div>
+
+          <div
+            class="w-full h-[2px] border-t-2 border-dashed border-orange_dark my-4 md:hidden"
+          ></div>
+
+          <!-- Get in touch -->
+          <div
+            class="text-dark_primary text-base space-y-2 flex flex-col items-center md:items-start text-center md:text-start"
+          >
+            <h4 class="text-lg font-bold text-orange_dark md:mb-6 mb-3">
+              Get in touch
+            </h4>
+            <a href="#" class="underline text-[#01363D] hover:text-[#F15A29]"
+              >Inquire Now</a
+            >
+            <p>
+              11 Trần Văn Sắc, Thảo Điền, D2,<br />Hồ Chí Minh City, Vietnam.
+            </p>
+            <p>+84 833 886 750</p>
+            <p>info@chomchomtravel.com</p>
+            <div class="flex space-x-4 pt-2 text-[#01363D]">
+              <a href="#" class="hover:text-[#F15A29]">
+                <i class="fab fa-facebook-f text-2xl"></i>
+              </a>
+              <a href="#" class="hover:text-[#F15A29]">
+                <i class="fab fa-instagram text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-dark_primary">
+        <div
+          class="max-w-7xl mx-auto text-white text-center py-4 text-sm flex flex-col md:flex-row justify-between items-center px-6"
+        >
+          <p>&copy; 2025 Chôm Chôm Travel. All right reserved.</p>
+          <div class="flex gap-4 pt-2 md:pt-0">
+            <a href="#" class="hover:underline">Terms and conditions</a>
+            <a href="#" class="hover:underline">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- -------------------- -->
     <script>
+      const experiencesSwiper = new Swiper(".experiences-swiper", {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: { delay: 500000, disableOnInteraction: false },
+        pagination: {
+          el: ".custom-swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<span class="${className}">
+            <img src="../assets/images/experiences/pagination.svg" class="pagination-dot" />
+          </span>`;
+          },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          slideChange: function () {
+            setTimeout(() => {
+              document
+                .querySelectorAll(
+                  ".custom-swiper-pagination .swiper-pagination-bullet"
+                )
+                .forEach((el, idx) => {
+                  const img = el.querySelector("img");
+                  if (
+                    el.classList.contains("swiper-pagination-bullet-active")
+                  ) {
+                    img.src =
+                      "../assets/images/experiences/pagination-active.svg";
+                  } else {
+                    img.src = "../assets/images/experiences/pagination.svg";
+                  }
+                });
+            }, 10);
+          },
+        },
+      });
+
+      // Own Swiper initialization
+      var ownSwiper = new Swiper(".own-swiper", {
+        slidesPerView: 4,
+        spaceBetween: 8,
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 18,
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 24,
+          },
+        },
+        loop: true,
+        navigation: false,
+      });
+
+      setTimeout(() => {
+        document
+          .querySelectorAll(
+            ".custom-swiper-pagination .swiper-pagination-bullet"
+          )
+          .forEach((el, idx) => {
+            const img = el.querySelector("img");
+            if (el.classList.contains("swiper-pagination-bullet-active")) {
+              img.src = "../assets/images/experiences/pagination-active.svg";
+            } else {
+              img.src = "../assets/images/experiences/pagination.svg";
+            }
+          });
+      }, 100);
+
+      // ----------------------------------------- //
+
       const desktopStepImages = [
         "../assets/images/how-to-book-step-1.png",
         "../assets/images/how-to-book-step-2.png",
