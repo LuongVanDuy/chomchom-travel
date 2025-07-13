@@ -11,8 +11,81 @@
 
     <!-- Styles -->
     <link href="../dist/output.css" rel="stylesheet" />
+    <!-- Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <style>
+      .flatpickr-calendar {
+        background: #e96024 !important;
+        border-radius: 2rem !important;
+        color: #ffe066 !important;
+        box-shadow: 0 4px 32px rgba(0, 0, 0, 0.15) !important;
+        border: none !important;
+        padding: 1.5rem !important;
+        width: 600px !important;
+        min-width: 310px !important;
+        max-width: 93vw;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        box-sizing: border-box !important;
+      }
+      .flatpickr-innerContainer {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+      }
+      .flatpickr-months,
+      .flatpickr-weekdays,
+      .flatpickr-days {
+        background: transparent !important;
+      }
+      .flatpickr-day {
+        color: #fff !important;
+        border-radius: 9999px !important;
+        font-family: "Montserrat", sans-serif;
+      }
+      .flatpickr-day.selected,
+      .flatpickr-day.startRange,
+      .flatpickr-day.endRange {
+        background: #ffce00 !important;
+        color: #e96024 !important;
+        font-weight: bold;
+      }
+      .flatpickr-day:hover {
+        background: #ffce00 !important;
+        color: #e96024 !important;
+      }
+      .flatpickr-months {
+        color: #e7bd11 !important;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+      }
+      .flatpickr-current-month input.cur-year {
+        color: #e7bd11 !important;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        background: transparent !important;
+        border: none !important;
+      }
+      .flatpickr-weekday {
+        color: #fff !important;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+      }
+      .flatpickr-next-month,
+      .flatpickr-prev-month {
+        color: #e7bd11 !important;
+        fill: #e7bd11 !important;
+      }
+    </style>
   </head>
-  <body class="font-sans">
+
+  <body>
     <header class="mobile-header-fixed w-full z-[9999] md:hidden">
       <div class="flex items-center justify-between bg-[#15525A] px-8 py-2">
         <a href="/" class="flex items-center">
@@ -57,7 +130,7 @@
               <img
                 src="../assets/images/home/logo.svg"
                 alt="Chôm Chôm Travel Logo"
-                class="h-12 w-auto absolute top-[20px] left-[20px]"
+                class="h-12 w-auto absolute top-[20px] left-[15px]"
               />
             </a>
           </div>
@@ -174,7 +247,7 @@
         class="relative w-4/5 mx-auto h-[84px] bg-[url('/assets/images/home/header.svg')] bg-no-repeat bg-center bg-cover"
       >
         <nav class="absolute inset-0 flex items-center justify-between px-10">
-          <a href="/" class="flex items-center">
+          <a href="/" class="flex items-center -ml-2">
             <img
               src="../assets/images/home/logo.svg"
               alt="Chôm Chôm Travel Logo"
@@ -670,6 +743,7 @@
                     </span>
                   </div>
                 </div>
+
                 <div class="flex flex-col gap-2">
                   <label class="text-white text-base font-semibold mb-1"
                     >How long do you plan to travel?</label
@@ -848,15 +922,119 @@
                     class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none"
                   />
                 </div>
+
                 <div class="flex flex-col gap-2">
                   <label class="text-white text-base font-semibold mb-1"
                     >Preferred Language *</label
                   >
-                  <input
-                    type="text"
-                    class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none"
-                  />
+                  <div class="relative w-full group">
+                    <button
+                      type="button"
+                      class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none min-h-[56px] flex items-center justify-between focus:outline-none"
+                      tabindex="0"
+                    >
+                      <span class="truncate">
+                        English, Vietnamese, French, Japanese
+                      </span>
+                      <span class="ml-2">
+                        <svg
+                          width="22"
+                          height="22"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="#15525A"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M9 10l3 3 3-3"
+                            stroke="#15525A"
+                            stroke-width="2"
+                            fill="none"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+
+                    <div
+                      class="absolute left-0 top-[110%] z-50 w-full bg-[#E96024] rounded-3xl shadow-xl p-4 mt-2 hidden group-focus-within:block"
+                    >
+                      <ul class="flex flex-col gap-0">
+                        <li
+                          class="border-b border-dashed border-[#FFE066] last:border-b-0"
+                        >
+                          <button
+                            type="button"
+                            class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                          >
+                            <span>Select All</span>
+                            <span class="text-2xl">+</span>
+                          </button>
+                        </li>
+                        <li
+                          class="border-b border-dashed border-[#FFE066] last:border-b-0"
+                        >
+                          <button
+                            type="button"
+                            class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                          >
+                            <span>English</span>
+                            <span class="text-2xl">−</span>
+                          </button>
+                        </li>
+                        <li
+                          class="border-b border-dashed border-[#FFE066] last:border-b-0"
+                        >
+                          <button
+                            type="button"
+                            class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                          >
+                            <span>Vietnamese</span>
+                            <span class="text-2xl">−</span>
+                          </button>
+                        </li>
+                        <li
+                          class="border-b border-dashed border-[#FFE066] last:border-b-0"
+                        >
+                          <button
+                            type="button"
+                            class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                          >
+                            <span>French</span>
+                            <span class="text-2xl">−</span>
+                          </button>
+                        </li>
+                        <li
+                          class="border-b border-dashed border-[#FFE066] last:border-b-0"
+                        >
+                          <button
+                            type="button"
+                            class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                          >
+                            <span>Japanese</span>
+                            <span class="text-2xl">−</span>
+                          </button>
+                        </li>
+                        <li
+                          class="border-b border-dashed border-[#FFE066] last:border-b-0"
+                        >
+                          <button
+                            type="button"
+                            class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                          >
+                            <span>Other</span>
+                            <span class="text-2xl">+</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="flex flex-col gap-2">
                   <label class="text-white text-base font-semibold mb-1"
                     >Your message</label
@@ -1004,6 +1182,7 @@
                 </span>
               </div>
             </div>
+
             <div class="w-full flex flex-col gap-2">
               <label class="text-white text-base font-semibold mb-1" for="date"
                 >Preferred Travel Date
@@ -1028,6 +1207,99 @@
                 </span>
               </div>
             </div>
+
+            <div class="w-full flex flex-col gap-2">
+              <label
+                class="text-white text-base font-semibold mb-1"
+                for="language"
+                >Preferred Language <span class="text-[#FFCE00]">*</span></label
+              >
+              <div class="relative w-full group">
+                <button
+                  type="button"
+                  class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none min-h-[56px] flex items-center justify-between focus:outline-none"
+                  tabindex="0"
+                >
+                  <span class="truncate">
+                    English, Vietnamese, French, Japanese
+                  </span>
+                  <span class="ml-2">
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="#15525A"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M9 10l3 3 3-3"
+                        stroke="#15525A"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <div
+                  class="absolute left-0 top-[110%] z-50 w-full bg-[#E96024] rounded-3xl shadow-xl p-4 flex flex-col gap-2 mt-2 hidden group-focus-within:block"
+                >
+                  <button
+                    type="button"
+                    class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                  >
+                    <span>Select All</span>
+                    <span class="text-2xl">+</span>
+                  </button>
+                  <div
+                    class="border-b border-dashed border-[#FFE066] my-1"
+                  ></div>
+                  <div class="flex flex-col gap-1">
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                    >
+                      <span>English</span>
+                      <span class="text-2xl">−</span>
+                    </button>
+                    <div class="border-b border-dashed border-[#FFE066]"></div>
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                    >
+                      <span>Vietnamese</span>
+                      <span class="text-2xl">−</span>
+                    </button>
+                    <div class="border-b border-dashed border-[#FFE066]"></div>
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                    >
+                      <span>French</span>
+                      <span class="text-2xl">−</span>
+                    </button>
+                    <div class="border-b border-dashed border-[#FFE066]"></div>
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                    >
+                      <span>Japanese</span>
+                      <span class="text-2xl">−</span>
+                    </button>
+                    <div class="border-b border-dashed border-[#FFE066]"></div>
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                    >
+                      <span>Other</span>
+                      <span class="text-2xl">+</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="w-full flex flex-col gap-2">
               <label
                 class="text-white text-base font-semibold mb-1"
@@ -1064,23 +1336,89 @@
                 for="language"
                 >Preferred Language <span class="text-[#FFCE00]">*</span></label
               >
-              <div class="relative">
-                <input
-                  id="language"
-                  required
-                  type="text"
-                  placeholder=""
-                  class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold pr-12 outline-none cursor-pointer"
-                  style="font-family: 'Montserrat', sans-serif"
-                  readonly
-                />
-                <span
-                  class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#15525A]"
+              <div class="relative w-full group">
+                <button
+                  type="button"
+                  class="w-full p-4 rounded-full bg-[#41BFBF] text-white text-base font-semibold outline-none min-h-[56px] flex items-center justify-between focus:outline-none"
+                  tabindex="0"
                 >
-                  <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
-                    <path d="M6 9l6 6 6-6" stroke="#15525A" stroke-width="2" />
-                  </svg>
-                </span>
+                  <span class="truncate">
+                    English, Vietnamese, French, Japanese
+                  </span>
+                  <span class="ml-2">
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="#15525A"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M9 10l3 3 3-3"
+                        stroke="#15525A"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <!-- Dropdown: chỉ hiện khi focus hoặc hover -->
+                <div
+                  class="absolute left-0 top-[110%] z-50 w-full bg-[#E96024] rounded-3xl shadow-xl p-4 flex flex-col gap-2 mt-2 hidden group-focus-within:block"
+                >
+                  <button
+                    type="button"
+                    class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                  >
+                    <span>Select All</span>
+                    <span class="text-2xl">+</span>
+                  </button>
+                  <div
+                    class="border-b border-dashed border-[#FFE066] my-1"
+                  ></div>
+                  <div class="flex flex-col gap-1">
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                    >
+                      <span>English</span>
+                      <span class="text-2xl">−</span>
+                    </button>
+                    <div class="border-b border-dashed border-[#FFE066]"></div>
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                    >
+                      <span>Vietnamese</span>
+                      <span class="text-2xl">−</span>
+                    </button>
+                    <div class="border-b border-dashed border-[#FFE066]"></div>
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                    >
+                      <span>French</span>
+                      <span class="text-2xl">−</span>
+                    </button>
+                    <div class="border-b border-dashed border-[#FFE066]"></div>
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                    >
+                      <span>Japanese</span>
+                      <span class="text-2xl">−</span>
+                    </button>
+                    <div class="border-b border-dashed border-[#FFE066]"></div>
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full text-white font-semibold py-2 rounded-lg"
+                    >
+                      <span>Other</span>
+                      <span class="text-2xl">+</span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="w-full flex flex-col gap-2">
@@ -1132,25 +1470,47 @@
         <!-- THANK YOU (ẩn mặc định) -->
         <div
           id="thankYouWrapper"
-          class="hidden flex flex-col items-center min-h-[680px] w-[1020px] mx-auto mt-10 bg-[url('../assets/images/inquire-now/bg-thank-you.png')] bg-cover bg-center"
+          class="flex flex-col items-center w-full min-h-[680px] md:w-[1020px] mx-auto mt-10 md:bg-[url('../assets/images/inquire-now/bg-thank-you.png')] bg-cover bg-center"
         >
+          <img
+            src="../assets/images/inquire-vector.svg"
+            alt="chom-chom"
+            class="w-full block md:hidden ml-[-35px]"
+          />
           <div
-            class="flex flex-col items-center justify-center min-h-[400px] m-auto"
+            class="absolute md:flex flex-col items-center justify-center min-h-[400px] m-auto md:mt-[80px]"
           >
-            <div
-              class="text-[142px] text-center font-bold text-[#FFCE00] leading-[130px]"
-            >
-              Thank
-              <p class="text-[#41BFBF]">you!</p>
+            <div class="md:pb-[40px] mt-[40px] md:mt-0">
+              <img
+                src="../assets/images/logo-inquried-chom.svg"
+                alt=""
+                class="block md:hidden w-[90px] h-[86px] mx-auto mr-[105px]"
+              />
+              <h1
+                class="text-[73px] md:text-[142px] text-center font-bold text-[#FFCE00] leading-[42px] md:leading-[125%] tracking-[0.08em] md:pl-4"
+              >
+                Thank
+              </h1>
+              <span
+                class="block text-[#41BFBF] text-[73px] md:text-[142px] text-center font-bold leading-none md:mt-[-40px] tracking-[0.08em] md:pl-7"
+                >you!</span
+              >
+              <p
+                class="text-[#FFCE00] sm:text-[14px] md:text-[24px] font-thin -rotate-6 origin-left text-start ml-[100px] md:ml-[110px] md:mt-[15px] mt-[10px]"
+              >
+                for reaching out!
+              </p>
             </div>
-            <div class="text-[#FFCE00] text-xl mb-4">for reaching out!</div>
-            <div class="text-white text-center mb-8 max-w-lg">
+
+            <p
+              class="text-white text-center text-[14px] md:text-[18px] mb-8 max-w-lg mt-4 md:mt-0 px-[40px]"
+            >
               Our team will contact you shortly to give you the most suitable
               options for your upcoming getaway.
-            </div>
+            </p>
             <a
               href="/"
-              class="bg-[#E96024] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#d94e1f] transition"
+              class="bg-[#E96024] md:w-[365px] w-[75%] text-[14px] md:text-[18px] mx-auto text-white px-8 py-3 rounded-full hover:bg-[#d94e1f] transition border-2 border-dashed text-center block"
               >Return to homepage</a
             >
           </div>
@@ -1281,6 +1641,11 @@
     </footer>
 
     <script src="../assets/js/main.js"></script>
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      flatpickr("#date", {});
+    </script>
     <script>
       // Ẩn/hiện form khi click Day Tours
       document.getElementById("dayToursBtn").onclick = function (e) {
